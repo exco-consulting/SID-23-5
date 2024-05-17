@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.25 - Customer Billing Account Balance, Part 1</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA821.png" usemap="#EA821" border="0" />
+
+<MAP NAME="EA821">
+<area shape="rect" coords="10,269,191,335" href="EA828.htm" target="_self">
+<area shape="rect" coords="32,10,192,62" href="EA829.htm" target="_self">
+<area shape="rect" coords="439,305,611,356" href="../EA6/EA783.htm" target="_self">
+<area shape="rect" coords="685,424,802,475" href="../EA6/EA785.htm" target="_self">
+<area shape="rect" coords="192,155,419,247" href="../EA6/EA787.htm" target="_self">
+<area shape="rect" coords="183,357,348,475" href="../EA6/EA786.htm" target="_self">
+<area shape="rect" coords="619,147,758,219" href="EA830.htm" target="_self">
+<area shape="rect" coords="459,12,596,71" href="../EA1/EA687.htm" target="_self">
+<area shape="rect" coords="251,10,360,67" href="../../EA3/EA4/EA1189.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.25 - Customer Billing Account Balance, Part 1 diagram</div>
+	<div class="ObjectDetailsNotes">Three key associated areas are product charge relationship area, core balance area and payment activity area. &lt;br/&gt;Product charge relationship area contains relationships between product charge and CustomerBillingAccount and relationships between product charge and financial charge specification. Product charge relationship helps to relate product charge to certain CustomerBillingAccount(s) and carries out charging activities which result in possible financial charge. &lt;br/&gt;Core balance area contains CustomerBillingAccountBalance management entity and relates certain CustomerBillingAccountBalance(s) with calculated amount waiting to be paid after charging process.&lt;br/&gt;Payment activity area contains payment plan and carries out payment activities. Payment plan is associated with possible payment methods/sources and all kinds of payment target with different priority.&lt;br/&gt;ProductFinancialAccountRelationship entity relates product charge to one or more CustomerBillingAccount(s) via which associated charging information is maintained. ProductFinancialAccountRelationship uses rule information(from ChargeSplittingRule and ChargeAmountThreshold) and charge information held by FinancialChargeSpec and AtomicAppliedCustomerBillingRate to decide the charge relationship, such as which charge from one product usage should be directed to which CustomerBillingAccount(s) and the charge amount. It is different from old FCAccumulatesAACBR where the CustomerBillingAccount which pays for the charge was already decided.&lt;br/&gt;ChargeAmountThreshold constrains relationship between product charges and CustomerBillingAccount(s) by specifying a limited amount beyond which product charges will not be affordable by associated CustomerBillingAccount.&lt;br/&gt;ChargeSplittingRule is charge-level/account-level rule information describing which product charge should be directed to which CustomerBillingAccounts. It can base on time and/or percentage. For example, if A gets a phone from the company and A pays 10% of the charges while the company pays 90% of the charges. For another example, the company pays all charges during the working time and the employee pays all charges out of the working time.&lt;br/&gt;FinancialChargeSpec defines one specification for certain kind(s) of FinancialCharge. Instance of FinancialChargeSpec could be like long-distance call FinancialChargeSpec in contrast with local call FinancialChargeSpec. Based on FinancialChargeSpec, product charges could be directed to different CustomerBillingAccounts. For example, one enterprise customer only pays for the local call fee of its employees which means its employees need to pay long-distance call fee via their own CustomerBillingAccounts. Moreover, recorded in ProductFinancialAccountRelationship, Product or Product component is in align with certain FinancialChargeSpec which means charging fee for this Product or Product component will be aggregated as certain associated FinancialCharge under certain CustomerBillingAccount(s). One FinancialChargeSpec can be used in many different ProductFinancialAccountRelationships instances. Reversely one ProductFinancialAccountRelationship can use several different FinancialChargeSpecs.&#160;&#160;For example, ProductInvolvementRole is a long-distance call user. Here FCS might be one long-distance call FinancialChargeSpec. Moreover, FinancialChargeSpec might also be several FinancialChargeSpecs (one might be local call FinancialChargeSpec, the other might be long-distance call FinancialChargeSpec). Here one or several FinancialChargeSpecs might be determined by how to design FCS and the government&#8217;s regulation on how to charge on one product usage. One more example is that the charging policy is changed based on time (such as peak time charging policy and off-peak time charging policy) while the calling is going through the border between peak time and non-peak time.&#160;&#160;So the calling is associated with two FinancialChargeSpecs at last. &lt;br/&gt;&lt;br/&gt;Product charge relationship area is as shown in the Figure below.&#160;&#160;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/9/2022 6:34:52 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{45961995-704D-4213-A413-F846DB6B5301}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RA.03 - RA Parameter</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3234.png" usemap="#EA3234" border="0" />
+
+<MAP NAME="EA3234">
+<area shape="rect" coords="428,131,624,203" href="./EA3/EA3297.htm" target="_self">
+<area shape="rect" coords="97,10,287,131" href="./EA3/EA3296.htm" target="_self">
+<area shape="rect" coords="10,230,182,263" href="./EA3/EA3293.htm" target="_self">
+<area shape="rect" coords="209,230,381,263" href="./EA4/EA3301.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RA.03 - RA Parameter diagram</div>
+	<div class="ObjectDetailsNotes">The Revenue Assurance Control ABE defines rules that represent the logical definition of comparisons, validations, reconciliation&#8217;s, and so forth performed on entities, such as bills and call detail records (CDRs), to identify Revenue Assurance Violations.&#160;&#160;Simple rules can be stated using RevenueAssuranceObjectives; complex rules can be stated using PolicySets.&#160;&#160;Revenue Assurance KPI ABE models KPIs and Revenue Assurance Objectives whose violation trigger Revenue Assurance Trouble Tickets.&lt;br/&gt;Revenue Assurance Controls and Revenue Assurance KPIs serve similar purposes; violating thresholds or other rules associated with them create a discrepancy.&#160;&#160;In the case of a Revenue Assurance Control, the discrepancy is a Revenue Assurance Violation; in the case of a Revenue Assurance KPI the discrepancy is a Revenue Assurance Trouble Ticket.&#160;&#160;The identification of discrepancies begins with calculating a value for the control or KPI.&lt;br/&gt;An example of a simple rule expressed as a RevenueAssuranceObjectiive is a value (true [1] or false [0]) determined every day for each customer to be billed that day, that has services and associated usage, but the usage has not been rated and will therefore not appear on the bill.&#160;&#160;The values are calculated by a defined algorithm, at a specified frequency, and are valid for a certain period of time.&#160;&#160;In this case the parameter is a RevenueAssuranceControl.&#160;&#160;If the value is true a RevenueAssuranceViolation is created that identifies the customer as not being billed for services used.&lt;br/&gt;An example of a complex rule expressed as a PolicySet is billing for a higher or lower bandwidth than provided on a circuit.&#160;&#160;This rule requires an &#8220;or&#8221; condition not available via RevenueAssuranceObjective.&lt;br/&gt;From a SID perspective controls and KPIs can be viewed as types of RevenueAssuranceParameters as shown in the following Figure.&lt;br/&gt;The following Figure also reveals that RevenueAssuranceControls can also serve as a base for RevenueAssuranceKPIs.&#160;&#160;For example, if a control exceeds a certain threshold, the action taken may be that the control is considered to be a KPI also.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/2/2022 11:37:03 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F6AD98B3-911B-4320-8F07-F58FCFFAEEFC}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

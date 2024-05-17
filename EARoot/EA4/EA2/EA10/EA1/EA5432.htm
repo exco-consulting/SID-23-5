@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure P.12 - Demographic Characteristic Business Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5433.png" usemap="#EA5433" border="0" />
+
+<MAP NAME="EA5433">
+<area shape="rect" coords="420,10,591,150" href="./EA5/EA5536.htm" target="_self">
+<area shape="rect" coords="10,10,193,172" href="./EA5/EA5537.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure P.12 - Demographic Characteristic Business Entities diagram</div>
+	<div class="ObjectDetailsNotes">Demographics deal with the study of individuals and organizations (Parties), including their size, growth, density, and distribution, as well as statistics regarding birth, marriage, disease, and death.&#160;&#160;Demographic data is information about parties that allows decisions to be made such as the make-up and size of a market segment, classification and ranking of customers, and so forth.&#160;&#160;Demographics provide the key &#8220;what&#8221; information and can be broken down into two categories:&#160;&#160;individual demographics and organization demographics.&lt;br/&gt;Individual demographic data provides information pertaining to the consumer market.&#160;&#160;Examples of this type of demographic are:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Age, income, education, vehicle registration, gender, ethnicity, and the source of the information&lt;/li&gt;&lt;li&gt;Geography, or sizing, demographics &lt;/li&gt;&lt;li&gt;Number of households&lt;/li&gt;&lt;li&gt;Number of telephone lines (single vs. multiple, switched vs. dedicated)&lt;/li&gt;&lt;li&gt;Population&lt;/li&gt;&lt;li&gt;Telecom spending by segment related back to another demographic (wireless, calling features, calling card, etc.)&lt;/li&gt;&lt;/ul&gt;<br />Organization demographic data provides information pertaining to the non-consumer market.&#160;&#160;Examples of business demographic data are:&#160;&#160;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Standard industry (SIC) code (for vertical industries)&lt;/li&gt;&lt;li&gt;Geographic dispersal&lt;/li&gt;&lt;li&gt;Headquarters location, number and location of offices (domestic vs. international, regions/triads); each have different access requirements&lt;/li&gt;&lt;li&gt;By hierarchy (headquarters vs. regions vs. sales offices)&lt;/li&gt;&lt;li&gt;Existing networks&lt;/li&gt;&lt;li&gt;Private vs. frame relay&lt;/li&gt;&lt;li&gt;WAN/LAN (in every office vs. stand-alone)&lt;/li&gt;&lt;li&gt;By SIC code (partially)&lt;/li&gt;&lt;li&gt;Network equipment&lt;/li&gt;&lt;li&gt;Centralized vs. distributed processing&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Applications (Human Resources, Payroll, FTP, Intranet, and so forth)&lt;/li&gt;&lt;li&gt;Voice mail, audio/video&lt;/li&gt;&lt;li&gt;Infrastructure setup (type of computer) by geography&lt;/li&gt;&lt;li&gt;Usage (switched vs. dedicated, intra-company vs. intercompany)&lt;/li&gt;&lt;li&gt;Features (large sales force could indicate use of calling cards); related to number and type of employees&lt;/li&gt;&lt;li&gt;Number of employees by type (for example, sales force)&lt;/li&gt;&lt;li&gt;Number of customers and prospects&lt;/li&gt;&lt;li&gt;Geographies covered&lt;/li&gt;&lt;li&gt;Target markets&lt;/li&gt;&lt;li&gt;Sales channels &lt;/li&gt;&lt;li&gt;Current telecom spending by product (inbound vs. outbound vs. calling card)&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Date acquired, current provider, provider products&lt;/li&gt;&lt;li&gt;Percent of existing telecom bill spent with the service provider by product&lt;/li&gt;&lt;li&gt;Public information (revenue, profit, employees, and so forth)&lt;/li&gt;&lt;/ul&gt;<br />The business entities that support PartyDemographic (and also support PartyProfileType and MarketSegment as described later) should be generic enough to allow new demographic characteristics and other types of characteristics to be defined as needed.&#160;&#160;To accomplish this, the Demographic entity employs the Characteristic Spec/Characteristic pattern used throughout the SID.&#160;&#160;PartyDemographic also employs the Composite/Atomic pattern to represent collections of related DemographicCharacteristics.&lt;br/&gt;&lt;i&gt;Note: This pattern is used throughout the Market/Sales domain.&#160;&#160;Additional information about the Characteristic pattern can be found in GB922 Root guide book. The application of the pattern in the Market/Sales domain does not use all the association classes defined by the pattern; if needed, they can be added by a SID implementer.&lt;/i&gt;&lt;br/&gt;An example of the use of the Composite/Atomic pattern from the list of example demographics above is a CompositeDemographicCharacteristic called &#8220;employee type and number&#8221; that aggregates the AtomicDemographicCharacteristics &#8220;type employee&#8221; and &#8220;number of employees&#8221;.&lt;br/&gt;The DemographicCharacteristicValues for &quot;type employee&quot; might be engineer, salesperson, administrator and the values for &quot;&quot;number of employee&quot; might be 0-50, 51-100, 101-500, +500.&lt;br/&gt;A PartyDemographic is a feature or quality used to make recognizable or to define a Party playing a PartyRole, such as age, income, education, revenue, and so forth.&#160;&#160;The figure below shows the entities that make up the PartyDemographic ABE.&#160;&#160;Notice that PartyDemographic also uses the Composite/Atomic pattern for defining PartyDemographics that are aggregates of other PartyDemographics.&#160;&#160;For example, a standard of living composite may be the aggregation of income level, value of investments, and home value (assuming a home is not an investment!).&lt;br/&gt;Note that one of the members of the associations from PartyDemographicValue to DemographicCharacteristic and DemographciCharacteristicValue are of cardinality of 0,1.&#160;&#160;This is because not all DemographicCharacteristics have a set of defined values.&#160;&#160;For example, a characteristic of children&#8217;s names does not have set of &#8220;valid&#8221; values, but is entered as text for an instance of PartyDemographicValue; in this example there is not an instance of the association between PartyDemographicValue and DemographicCharacteristicValue.&#160;&#160;Similarly, if there is a set of DemographicCharacteristic values (1, 2, 3 or more) for number of children living at home, there is an instance of the association between PartyDemographicValue and DemographicCharacteristicValue, but not one between PartyDemographicValue and DemogrpahicCharacteristic.&#160;&#160;This second association is derived via the first association.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">4/12/2022 12:20:55 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/7/2022 11:49:40 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8423A238-12BD-4c3e-B726-C9FC276F5147}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

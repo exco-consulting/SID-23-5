@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Product Specification & Offering Management::Product Specification & Offering Development</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Product Specification & Offering Development", " : "))</script>   &lt;&lt;TMF_AF&gt;&gt; </span>
+	
+		<div class="ObjectDetailsNotes">The Product Specification &amp; Offering Development Aggregate Function enables to create and update the catalogue. This function covers the impact on the offer and product catalogue of new offers and products launches, modifications and withdrawals. This function manages the lifecycle of offers and products and includes the various possibilities of offer or product search and browse (wizard, multicriterion search, category browse&#8230;).&lt;br/&gt;&lt;br/&gt;At the Offer level, the catalogue describes:&lt;br/&gt;&#8226; packaging rules of the contract: mandatory offers, optional offers, offers that can be ordered in number (ex: 1 to 4 mobile lines)&lt;br/&gt;&#8226; commercial incompatibilities or pre-requisites (ex: necessary to be the holder of a X contract to subscribe Y contract)&lt;br/&gt;&#8226; available commercial operations (ex: contract migration)&lt;br/&gt;&#8226; available commitment durations&lt;br/&gt;&#8226; any commercial criteria such as authorized sales channel or geographic area, customer criteria, &#8230;&lt;br/&gt;&#8226; tariff specifications &#8211; and possible alterations. They are associated to the offer, to commercial operations or usage types and can be recurring or one shot. They are expressed as rules that can take into account many criteria (ex: commitment duration, product configuration, sales channel, customer&#8217;s age, &#8230;) and will be evaluated during the order capture process, or during the rating process for usage.&lt;br/&gt;&lt;br/&gt;At the Product level, for every product commercialized through one or several offers, the catalogue describes:&lt;br/&gt;&#8226; characteristics of the product, and their possible values (ex: speed, volume, duration, phone number, &#8230;)&lt;br/&gt;&#8226; available functional operations (ex: change of speed)&lt;br/&gt;&#8226; functional incompatibilities or pre-requisites (deducted from CFS specification incompatibilities or pre-requisites)&lt;br/&gt;&#8226; link with the know-how type (CFS specification) from which the intangible product is a restriction (ex: mobile line, VOIP, &#8230;), or directly with the Stock Item for tangible products (ex: smartphone, SIM Card), or to the Supplier product type in case of purchase products.&lt;br/&gt;&lt;br/&gt;The Product Catalogue describes all the tangible and intangible products that can be commercialized through standard offers, loyalty offers.&lt;br/&gt;Example:&lt;br/&gt;&#8226; goodies can be sold or offered as a reward in exchange of fidelity points (same product commercialized through 2 offers)&lt;br/&gt;&#8226; a special discount can be granted through a retention offer&lt;br/&gt;&#8226; etc.&lt;br/&gt;&lt;br/&gt;The Offers or Products described in the catalogue can be associated to different types of documentation:&lt;br/&gt;&#8226; sales leaflet, standard and specific sales terms&lt;br/&gt;&#8226; photos or videos&lt;br/&gt;&#8226; QR codes, that can be sent to the customer or available on a poster, in a magazine, &#8230; to ease access to any type of catalogue documents&lt;br/&gt;ratings and reviews from customers or CSP experts&lt;br/&gt;&#8226; etc.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:52:34 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA10609.htm">Product Domain</a>, <a href="EA10619.htm">Product Specification & Offering Management</a>, <a href="../EA10460.htm">FF by Domains - All</a>, <a href="../../EA4/EA13675.htm">Domains - AF - Function</a>, <a href="../../EA3/EA3/EA4/EA11847.htm">Product Specification & Offering Management</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{0B710658-8BDA-4b3b-86A2-32EBD7F5AA4E}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">8/15/2022 6:29:07 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA10632.htm">«TMF_AF» Product Specification & Offering Management</a><br />
+						Aggregated Function «TMF_AFAggregatesAF» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62620" onclick="parent.toggleDiv('detailsDIVLink62620','DetailsImageLink62620')" />Details:
+							<div id="detailsDIVLink62620" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11873.htm">«TMF_Function» External Product Specification Development</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62621" onclick="parent.toggleDiv('detailsDIVLink62621','DetailsImageLink62621')" />Details:
+							<div id="detailsDIVLink62621" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11867.htm">«TMF_Function» Product Specification Design</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62622" onclick="parent.toggleDiv('detailsDIVLink62622','DetailsImageLink62622')" />Details:
+							<div id="detailsDIVLink62622" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA6/EA11882.htm">«TMF_Function» Product Agreement Specification Design
+</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62623" onclick="parent.toggleDiv('detailsDIVLink62623','DetailsImageLink62623')" />Details:
+							<div id="detailsDIVLink62623" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11871.htm">«TMF_Function» Customer Loyalty Rules Management</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62624" onclick="parent.toggleDiv('detailsDIVLink62624','DetailsImageLink62624')" />Details:
+							<div id="detailsDIVLink62624" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11870.htm">«TMF_Function» Product Compatibility Checking</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62625" onclick="parent.toggleDiv('detailsDIVLink62625','DetailsImageLink62625')" />Details:
+							<div id="detailsDIVLink62625" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11872.htm">«TMF_Function» Product Modeling Support</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62626" onclick="parent.toggleDiv('detailsDIVLink62626','DetailsImageLink62626')" />Details:
+							<div id="detailsDIVLink62626" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA7/EA11884.htm">«TMF_Function» Product Retirement</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62627" onclick="parent.toggleDiv('detailsDIVLink62627','DetailsImageLink62627')" />Details:
+							<div id="detailsDIVLink62627" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA2/EA11258.htm">«TMF_Function» Product Requirement Specification (Deleted)</a><br />
+						Function «TMF_DomainAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62628" onclick="parent.toggleDiv('detailsDIVLink62628','DetailsImageLink62628')" />Details:
+							<div id="detailsDIVLink62628" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11868.htm">«TMF_Function» Product Specification and Offering Change Auditing</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62629" onclick="parent.toggleDiv('detailsDIVLink62629','DetailsImageLink62629')" />Details:
+							<div id="detailsDIVLink62629" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA2/EA11253.htm">«TMF_Function» Marketing & Offer Strategies Implementation (Deleted)</a><br />
+						Function «TMF_DomainAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62630" onclick="parent.toggleDiv('detailsDIVLink62630','DetailsImageLink62630')" />Details:
+							<div id="detailsDIVLink62630" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11869.htm">«TMF_Function» Product Specification and Offering Repository Management</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62631" onclick="parent.toggleDiv('detailsDIVLink62631','DetailsImageLink62631')" />Details:
+							<div id="detailsDIVLink62631" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11866.htm">«TMF_Function» Product Offering Design</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62632" onclick="parent.toggleDiv('detailsDIVLink62632','DetailsImageLink62632')" />Details:
+							<div id="detailsDIVLink62632" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA2/EA11256.htm">«TMF_Function» New Product Introduction and Maintenance (Deleted)</a><br />
+						Function «TMF_DomainAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62633" onclick="parent.toggleDiv('detailsDIVLink62633','DetailsImageLink62633')" />Details:
+							<div id="detailsDIVLink62633" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11865.htm">«TMF_Function» Product Catalog Browsing</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62634" onclick="parent.toggleDiv('detailsDIVLink62634','DetailsImageLink62634')" />Details:
+							<div id="detailsDIVLink62634" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA4/EA3/EA11874.htm">«TMF_Function» External Product Offering Development</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62635" onclick="parent.toggleDiv('detailsDIVLink62635','DetailsImageLink62635')" />Details:
+							<div id="detailsDIVLink62635" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">FunctionID</td>
+				<td width="50%" class="TableRow" valign="top">2.3.1.2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario62636" onclick="parent.toggleDiv('detailsDIVScenario62636','DetailsImageScenario62636')" />Specification:
+						<div id="detailsDIVScenario62636" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">HierarchyLevel</td>
+				<td width="50%" class="TableRow" valign="top">2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario62637" onclick="parent.toggleDiv('detailsDIVScenario62637','DetailsImageScenario62637')" />Specification:
+						<div id="detailsDIVScenario62637" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the level of this object in the hierarchy (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">UID</td>
+				<td width="50%" class="TableRow" valign="top">46</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario62638" onclick="parent.toggleDiv('detailsDIVScenario62638','DetailsImageScenario62638')" />Specification:
+						<div id="detailsDIVScenario62638" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.31 - CompoundResource, ResourceCollection, and ResourceElement</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1861.png" usemap="#EA1861" border="0" />
+
+<MAP NAME="EA1861">
+<area shape="rect" coords="286,172,410,231" href="./EA1/EA1957.htm" target="_self">
+<area shape="rect" coords="156,10,280,69" href="EA1944.htm" target="_self">
+<area shape="rect" coords="377,307,501,366" href="./EA1/EA1959.htm" target="_self">
+<area shape="rect" coords="152,172,276,231" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="10,172,134,231" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="205,307,329,366" href="./EA1/EA1960.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.31 - CompoundResource, ResourceCollection, and ResourceElement diagram</div>
+	<div class="ObjectDetailsNotes">PhysicalResource and its subclasses are designed to model the physical aspects of a managed Resource in as much detail as is necessary. Similarly, LogicalResource and its subclasses are designed to model the logical aspects of a managed Resource in as much detail as is necessary. Sometimes, however, it is easier to think of device components using a slightly higher level of abstraction. Note, for example, that it is common to think of a &#8220;device&#8221; &#8211; this has the connotation of aggregating the physical and logical aspects of the device together into a single managed entity.&lt;br/&gt;The purpose of the CompoundResource hierarchy is to provide this abstraction. Conceptually, the CompoundResource class hierarchy provides a framework in which the PhysicalResource and LogicalResource class hierarchies can be aggregated into. This enables the application to construct application-specific views of the Resource or set of Resources that are being managed.&lt;br/&gt;The reason that the ability to construct views is deemed so important is because different applications have different purposes and need to focus on different parts of the network and/or different aspects of devices. The CompoundResource framework enables an application-specific view to be constructed from a standard template.&lt;br/&gt;The CompoundResource may contain:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	one or more PhysicalResources must be present&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	one or more LogicalResources must be present&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	and CompoundResources can be aggregated as well&lt;br/&gt;For example, a Router could be modeled as a CompoundResource, composed of physical (e.g., Cards) and logical (e.g., route processing) aspects to it.&lt;br/&gt;Note that CompoundResource is a subclass of Resource. This enables a CompoundResource to inherit all of the characteristics and behavior of a Resource. Even more importantly, ResourceSpecification can be subclassed to templatize the creation of CompoundResources. This also applies to Characteristics, CharacteristicValues, Versions, and other entities. If CompoundResource wasn&#8217;t a subclass of Resource, all of this work would have to be repeated. This would make it very difficult to synchronize these characteristics of CompoundResource with the same characteristics of PhysicalResource and LogicalResource.&lt;br/&gt;The CompoundResource class hierarchy is shown in the Figure below.&lt;br/&gt;A key point is that each managed entity that is part of a CompoundResource can be individually managed. The CompoundResource is an abstraction that enables the physical and logical aspects of a complex entity, such as a Router, to be looked at using one (instead of multiple) objects. As such, it (and its subclasses) facilitates the coordination of configuration, monitoring, troubleshooting commands to be applied to different aspects of the CompoundResource. It also enables policies to be written that coordinate the physical and logical aspects of the CompoundResource.&lt;br/&gt;The *-* cardinality of the association between CompoundResource and Resource enables additional PhysicalResources, LogicalResources, and optionally CompoundResources to be aggregated into this specific CompoundResource.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:16:23 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{483186D9-5720-4223-A2E1-3802605F26C8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

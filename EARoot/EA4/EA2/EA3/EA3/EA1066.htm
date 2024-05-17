@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.26 - Pricing Logic Algorithm Base Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1067.png" usemap="#EA1067" border="0" />
+
+<MAP NAME="EA1067">
+<area shape="rect" coords="527,10,705,38" href="../../EA9/EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="350,80,494,148" href="../../EA9/EA2/EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="524,382,700,410" href="./EA3/EA1146.htm" target="_self">
+<area shape="rect" coords="529,221,694,311" href="./EA1/EA1125.htm" target="_self">
+<area shape="rect" coords="10,282,204,310" href="./EA1/EA1/EA1134.htm" target="_self">
+<area shape="rect" coords="17,10,196,38" href="../../EA9/EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="37,162,177,222" href="../../EA9/EA2/EA3779.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.26 - Pricing Logic Algorithm Base Entities diagram</div>
+	<div class="ObjectDetailsNotes">What we try to model in the SID is the interface to these algorithms. The algorithms can be implemented in many different ways by different systems but we need to model the interface to them with all the parameters in order to be able to use these algorithms in our systems&lt;br/&gt;PricingLogicAlgorithm is a classic case of the EntitySpec/Entity pattern as described in the above use cases. &lt;br/&gt;&lt;br/&gt;This diagram uses the generic EntitySpec/Entity pattern so that PricingLogicAlgorithmSpec automatically gets the characteristics that are associated with EntitySpecification. The PricingLogicAlgorithm is an instantiation of PricingLogicAlgorithmSpec after the parameters were set, so in the case of the simple use case above it represents linear usage rating, $0.10/minute with 6 seconds interval. The parameters ($0.10 and 6) are characteristic values.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 8:39:13 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CACF98D6-FE64-480d-8053-79C31EB26312}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

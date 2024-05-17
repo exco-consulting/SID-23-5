@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Service Analysis::Service Diagnostic and Test Relevance Quality Loop</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Service Diagnostic and Test Relevance Quality Loop", " : "))</script>   &lt;&lt;TMF_AF&gt;&gt; </span>
+	
+		<div class="ObjectDetailsNotes">Service Diagnostic and Test Relevance Quality Loop Aggregate Function provides the necessary functionalities to manage a quality loop on diagnostic to continually tweak and improve it.&lt;br/&gt;Functionalities include:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Management of success/failure result feedback of diagnostic and correction provided by technicians or the systems after a correction&lt;/li&gt;&lt;li&gt;Offline analysis of the success/failure data compared to the diagnostic and correction rules to provide modifications to improve them. This analysis is done using statistical diagnostic data and test results to evaluate their relevance and the needed updates.&lt;/li&gt;&lt;/ul&gt;<br />The provided improvements can be used to update the definition of diagnostic rules and correction actions in the Service Problem Policy Management function and the definition of tests in the Service Test Policy Management function.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:52:34 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA10686.htm">Service Domain</a>, <a href="EA10674.htm">Service Analysis</a>, <a href="EA10676.htm">Service Analysis</a>, <a href="../../EA3/EA4/EA2/EA12062.htm">Service Analysis</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{BFC596E9-E72D-4301-9E8F-4855100DA6C6}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">12/8/2022 10:31:57 AM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA10730.htm">«TMF_AF» Service Analysis</a><br />
+						Aggregated Function «TMF_AFAggregatesAF» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink63141" onclick="parent.toggleDiv('detailsDIVLink63141','DetailsImageLink63141')" />Details:
+							<div id="detailsDIVLink63141" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA4/EA2/EA1/EA12068.htm">«TMF_Function» Service Diagnostic and Test Improvement</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink63142" onclick="parent.toggleDiv('detailsDIVLink63142','DetailsImageLink63142')" />Details:
+							<div id="detailsDIVLink63142" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">FunctionID</td>
+				<td width="50%" class="TableRow" valign="top">4.1.2.2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario63143" onclick="parent.toggleDiv('detailsDIVScenario63143','DetailsImageScenario63143')" />Specification:
+						<div id="detailsDIVScenario63143" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">HierarchyLevel</td>
+				<td width="50%" class="TableRow" valign="top">2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario63144" onclick="parent.toggleDiv('detailsDIVScenario63144','DetailsImageScenario63144')" />Specification:
+						<div id="detailsDIVScenario63144" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the level of this object in the hierarchy (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">UID</td>
+				<td width="50%" class="TableRow" valign="top">131</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario63145" onclick="parent.toggleDiv('detailsDIVScenario63145','DetailsImageScenario63145')" />Specification:
+						<div id="detailsDIVScenario63145" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

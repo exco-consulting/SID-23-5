@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>MTOSI ASA Profile Mechanisms</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4126.png" usemap="#EA4126" border="0" />
+
+<MAP NAME="EA4126">
+<area shape="rect" coords="5,5,904,187" href="EA4145.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">MTOSI ASA Profile Mechanisms diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;MTOSI TCA Profile Mechanism - 1&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Current parameter values are in Configuration only&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done by setting explicit attributes in the Configuration or just using Characteristics and no ConfigurationSpecification#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Modification of a ConfigurationSpecification parameter value overwrites the associated parameter value in the Configuration&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done by applying a ConfigurationSpecification, that may consist of a spec with explicit attributes and with Characteristics#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;(Re-)setting pointer to ConfigurationSpecification overwrites all corresponding parameter values in Configuration&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done removing the association to existing ConfigurationSpecification with an operation (auto apply / remove all) and apply a new ConfigurationSpecification with an operation (auto apply / apply all#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;MTOSI TCA Profile Mechanism - 2&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Removing pointer from ConfigurationSpecification does not change parameter values in Configuration&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done via an operation (auto apply / remove association only) between ConfigurationSpecification and Configuration#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ConfigurationSpecification can have more parameters than Configuration&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done via an operation (manually apply / select ConfigurationSpecification attributes#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Configuration can have more parameters than ConfigurationSpecification&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done using various operations, such as using Characteristic without a ConfigurationSpecification, then applying a ConfigurationSpecification that has fewer equivalent attributes #gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Same as the TMD pattern except that there is no Verify Assignment operation in this case&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;Since this appears to be a comment no explanation of how the model supports this is necessary#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;MTOSI ASA Profile Mechanism&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Current parameter values are in ConfigurationSpecification only&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done via an operation (auto apply / associate only) or (manually apply / associate only) or an attribute#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Modification of a ConfigurationSpecification parameter changes behavior of Configuration immediately&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;Explained on earlier slide#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Removing pointer to Profile removes all parameters from Configuration&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;Explained on earlier slide#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;This is similar to Characteristic Specifications and Characteristic Specification Values in the SID model.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;Since this appears to be a comment no explanation of how the model supports this is necessary#gt;#gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;#lt;#lt;This can be done via an operation (auto apply / associate only) or (manually apply / associate only) or an attribute#gt;#gt; - mentioned on last diagram&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;MTOSI TC Profile Mechanism&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Current parameter values are in ConfigurationSpecification only&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Modification of a ConfigurationSpecification parameter changes behavior of Configuration immediately&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Removing pointer to ConfigurationSpecification removes all traffic conditioning from Configuration (for this frame grouping)&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;This case is more complex in that the Configuration has a transmission parameter which is essentially a table. Based on various characteristics, each row of the table points to a different ConfigurationSpecification&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 9:36:57 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 9:41:07 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BBDA2BE7-ABEA-4abc-98BF-1B9F89117D2F}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

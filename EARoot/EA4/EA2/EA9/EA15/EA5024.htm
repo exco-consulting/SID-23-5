@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Sgt.02 - Segmentation and Segment Specifications</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5025.png" usemap="#EA5025" border="0" />
+
+<MAP NAME="EA5025">
+<area shape="rect" coords="407,389,557,417" href="../EA2/EA2/EA3852.htm" target="_self">
+<area shape="rect" coords="29,316,168,344" href="../EA2/EA3822.htm" target="_self">
+<area shape="rect" coords="230,389,351,417" href="EA5043.htm" target="_self">
+<area shape="rect" coords="486,263,664,315" href="EA5040.htm" target="_self">
+<area shape="rect" coords="266,263,442,291" href="EA5037.htm" target="_self">
+<area shape="rect" coords="387,142,526,170" href="EA5045.htm" target="_self">
+<area shape="rect" coords="21,142,175,235" href="EA5047.htm" target="_self">
+<area shape="rect" coords="8,10,189,80" href="EA5048.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Sgt.02 - Segmentation and Segment Specifications diagram</div>
+	<div class="ObjectDetailsNotes">A SegmentationSpecification specifies rules (CriterionCondition) to divide a large set of Entity&#8217;s instances into subsets according to criteria. These subsets are called segments.&lt;br/&gt;Segmentation might be defined so that segments might be disjoined or not, continuous or discontinuous.&lt;br/&gt;For example, Market segmentation divides a broad target market into subsets of consumers, businesses, or countries that have, or are perceived to have, common needs, interests, and priorities, and then designing and implementing strategies to target them.&lt;br/&gt;We mainly consider Parties&#8217; segmentation, but we could also segment other concepts such as Resources, Projects&#8230;&lt;br/&gt;For example, we could define rules to identify Resources that have a high level of risk of failure.&lt;br/&gt;The SegmentationSpecification is evaluated to produce the corresponding Segmentation according to a triggering event. It might be &#8220;one shot&#8221;, a periodicity or at any update of criteria.&lt;br/&gt;The SegmentSpecification attributes lowerSize and upperSize specify the targeted limits for the size of the calculated Segment.&lt;br/&gt;A Segmentation might be decomposed as Segments each of them being a combination of Conditions (combined with AND or OR). These Segments are specified thanks to the SegmentSpecification.&lt;br/&gt;A SegmentSpecification is described by Criteria that all concern the same RootEntityType.&lt;br/&gt;For example, a market segmentation may contain several segmentations Pan European, Sub-Saharan Africa&#8230;, each of&#160;&#160;them being decomposed as combined conditions (Ex: Pan European Segmentation decomposed as Mobile reluctant, Basic Communicators, Pragmatics&#8230;segments)&lt;br/&gt;A CriterionCondition specifies a condition expressed using Criteria and might be Atomic or Composite.&lt;br/&gt;Each AtomicCriterionCondition specifies a condition on a Criterion such as &#8220;If Age #gt; 36&#8221;.&lt;br/&gt;Each CompositeCriterionCondition combines two or more AtomicCriterionConditions specifying if all the AtomicCriterionConditions must be True (AND) or if at least one of them must be True (OR).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">4/8/2022 12:00:00 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 1:10:28 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DE25DCBF-3A65-4080-8455-F42105539A18}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

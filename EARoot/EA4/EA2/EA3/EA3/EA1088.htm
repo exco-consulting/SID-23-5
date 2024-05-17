@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Tax.03 – I01 – Tax Exemption Example</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1089.png" usemap="#EA1089" border="0" />
+
+<MAP NAME="EA1089">
+<area shape="rect" coords="5,5,530,530" href="EA1096.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Tax.03 – I01 – Tax Exemption Example diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;The following example explains how to use the tax exemption model.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The example shows a TaxJurisdiction that defines that defines two TaxDefinitions for the same type and category: a basic and an exemption tax definition for Standard Sales Tax.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The basic tax is 15% and the reduced one is 10% if the Party has specific characteristics such as &#8220;younger than 26 years old&#8221;.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Both tax definitions impact the same charge (ProdOfferPriceCharge) but the exemption tax is only applied if the Party has a tax exemption certificate granting the exemption tax definition.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;John Smith is a Party (Individual) that is granted by this exemption certificate.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;So the pricing process will apply for John Smith the exemption tax.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 10:52:28 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/6/2022 1:44:03 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4CA9315D-BA80-4f0d-8C86-77815C706854}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

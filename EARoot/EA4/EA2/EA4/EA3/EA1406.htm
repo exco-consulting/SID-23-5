@@ -1,0 +1,712 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ServiceSpecification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("ServiceSpecification", " : "))</script>   &lt;&lt;TMF_BusinessEntity&gt;&gt; </span>
+	
+		<div class="ObjectDetailsNotes">ServiceSpecification is the base entity for defining the ServiceSpecification hierarchy. All Services are characterized as either being related to Products or Resources. Each instance of a Service is made up of changeable as well as invariant attributes, relationships and constraints. A ServiceSpecification defines the shared characteristics of a Service. It can be conceptually thought of as a template that different Service instances can be instantiated from. Each of these Service instances will have the same shared characteristics. However, the characteristics&#39; values of the instantiated Service will be specific to each instance.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;This class can be thought of as a template, which represents a generic specification for implementing a particular type of Service. A ServiceSpecification may consist of other ServiceSpecifications supplied together as a collection.&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;ServiceSpecification inherits from EntitySpecification, which inherits from RootEntity.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:04:53 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA6/EA1523.htm">Figure SOr.01 - Service Order Entities</a>, <a href="EA1362.htm">Figure SO.08 - Service Specifications and other Domains</a>, <a href="EA1364.htm">Figure SO.09 - VPNService – VPNServiceSpecification Example </a>, <a href="EA1358.htm">Figure SO.03 - Subclassing ServiceSpecification (OLD SO.10)</a>, <a href="EA1366.htm">Figure SO.11 - Modeling Stand-Alone and Aggregate ServiceSpecifications</a>, <a href="EA1368.htm">Figure SO.13 - Modeling the Versioning of a ServiceSpecification</a>, <a href="EA1370.htm">Figure SO.14 - The Concept of a ServiceSpecificationType</a>, <a href="EA1374.htm">Figure SO.18 - Interaction Between ServiceSpecRoles and ResourceSpecRoles</a>, <a href="EA1372.htm">Figure SO.17 - The Concept of ServiceSpecificationRoles (OLD SO.21)</a>, <a href="EA1376.htm">Figure SO.22 -The Concept of ServiceSpecCharacteristic</a>, <a href="EA1380.htm">Figure SO.23 - ServiceCharacteristicValue and ServiceSpecCharacteristicValue</a>, <a href="EA1390.htm">Figure SO.28 - Relationship Between ServiceBundleSpec and ServicePackageSpec</a>, DUPLICATE Cat.05 – Service Catalog Entities and Associations, DUPLICATE Figure CP.01 - Configuration Spec and Configuration, DUPLICATE Figure U.04 - Resource/Service Usage, <a href="../EA9/EA1553.htm">Figure SO.39 - Associating Service Level Specifications with Products and  Services</a>, <a href="../EA13/EA1600.htm">Figure SO.32 TIP Service Management - Service Characteristics</a>, <a href="../EA13/EA1598.htm">Figure SO.31 TIP Service Management - Service Definition and Service Template</a>, <a href="../EA8/EA1544.htm">Figure T.04 - Product,  Service and Resource Test Entities (Copy from Common)</a>, <a href="../../EA5/EA9/EA2435.htm">Figure PF.02 - Service,  Resource,  and Performance</a>, <a href="../../EA5/EA4/EA2365.htm">Figure CP.01 - Configuration Spec and Configuration (copy from Common)</a>, <a href="../../EA5/EA7/EA2409.htm">Figure T.04 - Product,  Service and Resource Test Entities (Copy from Common)</a>, NOT USEFUL Figure PR.33 - Relationship Between ProductSpec,  ResourceSpec and ServiceSpec, DUPLICATE Figure CP.01 - Configuration Spec and Configuration, DUPLICATE Figure U.04 - Resource/Service Usage, DUPLICATE Figure T.04 - Product,  Service,   and Resource Test Entities, DUPLICATE Figure CP.01 - Configuration Spec and Configuration, <a href="../../EA3/EA2/EA914.htm">Figure Pr.02a - Product,  Service,  Resource Domain Relationships</a>, <a href="../../EA3/EA2/EA948.htm">Figure Pr.44a - Product and Service Characteristic Associations</a>, <a href="../../EA9/EA5/EA3989.htm">Figure A.06 - Aggrement Item Inherited Associations With Product,  Service,  and Resource</a>, <a href="../../EA9/EA5/EA3997.htm">Figure A.10 - Commitment Deliverables</a>, <a href="../../EA9/EA4/EA3929.htm">Figure BI.09 - Business Interaction Item Association with Product,  Service,  and Resource Domain Entities</a>, <a href="../../EA9/EA4/EA3941.htm">Figure BI.15 - Business Interaction Model (BusinessInteractionVersion not shown)</a>, <a href="../../EA9/EA6/EA4028.htm">Figure CM.06 - Basic Service Capacity Entities</a>, <a href="../../EA9/EA6/EA4034.htm">Figure CM.09 - Basic Service Demand Entities</a>, <a href="../../EA9/EA7/EA4052.htm">Figure Cat.02 – Catalog Entities and Associations</a>, <a href="../../EA9/EA7/EA4058.htm">Figure Cat.05 – Service Catalog Entities and Associations</a>, <a href="../../EA9/EA8/EA4080.htm">Figure CP.01 - Configuration Spec and Configuration</a>, <a href="../../EA9/EA10/EA4362.htm">Figure PF.02 - Service,  Resource,  and Performance</a>, <a href="../../EA9/EA10/EA4366.htm">Figure PF.04 - Performance Specification Interval</a>, <a href="../../EA9/EA12/EA4709.htm">Figure Proj.00b - project deliverables</a>, <a href="../../EA9/EA2/EA3625.htm">Figure R.05 - View of the EntitySpecification Class Hierarchy</a>, <a href="../../EA9/EA2/EA3631.htm">Figure R.08 - Interaction Between EntitySpecification and Entity Classes</a>, <a href="../../EA9/EA2/EA3629.htm">Figure R.07 - EntitySpecificationType Inheritance</a>, <a href="../../EA9/EA13/EA4922.htm">Figure PT.01 - Product,  Service and Resource Test Entities</a>, <a href="../../EA9/EA14/EA4944.htm">Figure U.04 - Resource and Service Usage</a>, UNUSED Figure P.13 - Resource/Service Usage, <a href="../../EA9/EA16/EA5055.htm">Figure An.02 - Anomaly Management Entity Relationship With Other SID Entities</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{FA0C5DD9-4363-428f-A57D-6FFB2BB003BC}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">1/10/2022 12:00:40 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA5/EA1521.htm">«TMF_BusinessEntity» ServiceConfigSpec</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification2<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceConfigSpec<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10380" onclick="parent.toggleDiv('detailsDIVLink10380','DetailsImageLink10380')" />Details:
+							<div id="detailsDIVLink10380" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA4/EA1478.htm">«TMF_BusinessEntity» Service</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _service<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10381" onclick="parent.toggleDiv('detailsDIVLink10381','DetailsImageLink10381')" />Details:
+							<div id="detailsDIVLink10381" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA1404.htm">«TMF_BusinessEntity» ServiceSpecRelationship</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification2<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecRelationship2<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10382" onclick="parent.toggleDiv('detailsDIVLink10382','DetailsImageLink10382')" />Details:
+							<div id="detailsDIVLink10382" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA1404.htm">«TMF_BusinessEntity» ServiceSpecRelationship</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecRelationship<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10383" onclick="parent.toggleDiv('detailsDIVLink10383','DetailsImageLink10383')" />Details:
+							<div id="detailsDIVLink10383" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA1407.htm">«TMF_BusinessEntity» ServiceSpecificationRole</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecificationRole<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10384" onclick="parent.toggleDiv('detailsDIVLink10384','DetailsImageLink10384')" />Details:
+							<div id="detailsDIVLink10384" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA8/EA1548.htm">«TMF_BusinessEntity» ServiceTestSpec</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceTestSpec<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10385" onclick="parent.toggleDiv('detailsDIVLink10385','DetailsImageLink10385')" />Details:
+							<div id="detailsDIVLink10385" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../../EA1/EA7/EA477.htm">«TMF_ABE» Service Specification ABE</a><br />
+						ABE «TMF_ABEIsComposedByEntity» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10386" onclick="parent.toggleDiv('detailsDIVLink10386','DetailsImageLink10386')" />Details:
+							<div id="detailsDIVLink10386" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA1405.htm">«TMF_BusinessEntity» ServiceSpecVersion</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecVersion<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10387" onclick="parent.toggleDiv('detailsDIVLink10387','DetailsImageLink10387')" />Details:
+							<div id="detailsDIVLink10387" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA9/EA2/EA1583.htm">«TMF_BusinessEntity» ServicePerformanceSpec</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _servicePerformanceSpec<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10388" onclick="parent.toggleDiv('detailsDIVLink10388','DetailsImageLink10388')" />Details:
+							<div id="detailsDIVLink10388" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA1400.htm">«TMF_BusinessEntity» ServiceSpecCharUse</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecCharUse<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10389" onclick="parent.toggleDiv('detailsDIVLink10389','DetailsImageLink10389')" />Details:
+							<div id="detailsDIVLink10389" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA7/EA1543.htm">«TMF_BusinessEntity» ServiceUsageSpec</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceUsageSpec<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10390" onclick="parent.toggleDiv('detailsDIVLink10390','DetailsImageLink10390')" />Details:
+							<div id="detailsDIVLink10390" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA9/EA12/EA4787.htm">«TMF_BusinessEntity» ProjectDeliverable</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> projectdeliverable<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10391" onclick="parent.toggleDiv('detailsDIVLink10391','DetailsImageLink10391')" />Details:
+							<div id="detailsDIVLink10391" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA13/EA1613.htm">«TMF_BusinessEntity» ServiceDefinition</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _servicedefinition<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10392" onclick="parent.toggleDiv('detailsDIVLink10392','DetailsImageLink10392')" />Details:
+							<div id="detailsDIVLink10392" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA9/EA1/EA1580.htm">«TMF_BusinessEntity» ServiceLevelSpecification</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceLevelSpecification<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10393" onclick="parent.toggleDiv('detailsDIVLink10393','DetailsImageLink10393')" />Details:
+							<div id="detailsDIVLink10393" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA1408.htm">«TMF_BusinessEntity» ServiceSpecificationType</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecificationType<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10394" onclick="parent.toggleDiv('detailsDIVLink10394','DetailsImageLink10394')" />Details:
+							<div id="detailsDIVLink10394" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA9/EA16/EA2/EA5146.htm">«TMF_BusinessEntity» ServiceAnomalySpecification</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10395" onclick="parent.toggleDiv('detailsDIVLink10395','DetailsImageLink10395')" />Details:
+							<div id="detailsDIVLink10395" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA9/EA4/EA3949.htm">«TMF_BusinessEntity» BusinessInteractionItem</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _businessInteractionItem<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10396" onclick="parent.toggleDiv('detailsDIVLink10396','DetailsImageLink10396')" />Details:
+							<div id="detailsDIVLink10396" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="./EA3/EA1460.htm">«TMF_BusinessEntity» ServiceCandidate</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceCandidate<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10397" onclick="parent.toggleDiv('detailsDIVLink10397','DetailsImageLink10397')" />Details:
+							<div id="detailsDIVLink10397" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA13/EA1614.htm">«TMF_BusinessEntity» ServiceTemplate</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _servicetemplate<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> _serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10398" onclick="parent.toggleDiv('detailsDIVLink10398','DetailsImageLink10398')" />Details:
+							<div id="detailsDIVLink10398" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA10/EA1594.htm">«TMF_BusinessEntity» ServiceCapacityDemand</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceCapacityDemand<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10399" onclick="parent.toggleDiv('detailsDIVLink10399','DetailsImageLink10399')" />Details:
+							<div id="detailsDIVLink10399" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../EA10/EA1593.htm">«TMF_BusinessEntity» ServiceCapacity</a><br />
+						Business Entity &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceCapacity<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> serviceSpecification<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink10400" onclick="parent.toggleDiv('detailsDIVLink10400','DetailsImageLink10400')" />Details:
+							<div id="detailsDIVLink10400" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">IsCoreEntity</td>
+				<td width="50%" class="TableRow" valign="top">true</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario10401" onclick="parent.toggleDiv('detailsDIVScenario10401','DetailsImageScenario10401')" />Specification:
+						<div id="detailsDIVScenario10401" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: true,false<br />Default: False<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">rsa_guid</td>
+				<td width="50%" class="TableRow" valign="top">_3E3F0EC000E93D5092210347</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario10402" onclick="parent.toggleDiv('detailsDIVScenario10402','DetailsImageScenario10402')" />Specification:
+						<div id="detailsDIVScenario10402" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isActive:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA9/EA2/EA3779.htm">«TMF_BusinessEntity» EntitySpecification</a></td>
+					<td width="10%" class="TableRow" valign="top">Business Entity</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA5/EA1/EA4/EA7690.htm">«TMF_Process» Activate Service</a></td>
+					<td width="10%" class="TableRow" valign="top">eTOM Process</td>
+					<td width="10%" class="TableRow" valign="top">Dependency</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA2/EA1440.htm">«TMF_BusinessEntity» ResourceFacingServiceSpec</a></td>
+					<td width="10%" class="TableRow" valign="top">Business Entity</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA5/EA1/EA4/EA7718.htm">«TMF_Process» Monitor and Analyze Service Performance Reports, and Identify Issues</a></td>
+					<td width="10%" class="TableRow" valign="top">eTOM Process</td>
+					<td width="10%" class="TableRow" valign="top">Dependency</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA1416.htm">«TMF_BusinessEntity» CustomerFacingServiceSpec</a></td>
+					<td width="10%" class="TableRow" valign="top">Business Entity</td>
+					<td width="10%" class="TableRow" valign="top">Generalization</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA5/EA1/EA4/EA7736.htm">«TMF_Process» Describe Service Specifications Property</a></td>
+					<td width="10%" class="TableRow" valign="top">eTOM Process</td>
+					<td width="10%" class="TableRow" valign="top">Dependency</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA5/EA1/EA4/EA7737.htm">«TMF_Process» Align Service Specifications</a></td>
+					<td width="10%" class="TableRow" valign="top">eTOM Process</td>
+					<td width="10%" class="TableRow" valign="top">Dependency</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

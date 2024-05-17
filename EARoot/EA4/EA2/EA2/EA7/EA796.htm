@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.14 - FinancialCharge accumulates AtomicAppliedCustomerBillingRate</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA797.png" usemap="#EA797" border="0" />
+
+<MAP NAME="EA797">
+<area shape="rect" coords="193,10,314,78" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="300,162,460,214" href="EA800.htm" target="_self">
+<area shape="rect" coords="36,226,157,278" href="../EA6/EA785.htm" target="_self">
+<area shape="rect" coords="173,364,333,423" href="../../EA9/EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="659,61,774,145" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="609,200,824,263" href="../EA6/EA1/EA791.htm" target="_self">
+<area shape="rect" coords="609,530,876,582" href="../EA6/EA784.htm" target="_self">
+<area shape="rect" coords="263,530,465,582" href="../EA6/EA783.htm" target="_self">
+<area shape="rect" coords="443,355,645,454" href="../EA6/EA778.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.14 - FinancialCharge accumulates AtomicAppliedCustomerBillingRate diagram</div>
+	<div class="ObjectDetailsNotes">Let&#8217;s imagine the AtomicAppliedCustomerBillingRate and CompositeAppliedCustomerBillingRate, the latter containing the former. While both applied rates may be included into the bill, only one of both may be summarized into the bill amount. The typical reason to include CompositeAppliedCustomerBillingRate into the bill is to present a partial sum, either for customer information or because some other applied rates refer to it. FinancialCharge, on the other hand, is the entity that accumulates AtomicAppliedCustomerBillingRate into the bill amount, and therefore the entity which influences the customer account&#8217;s balance. The accumulation is based on characteristic values of AppliedCustomerBillingRate as described in the figure below.&lt;br/&gt;&lt;br/&gt;In this figure, we see that the CustomerBill presents both AppliedCustomerBillingRates and FinancialCharges &#8211; this depends on the business requirements, configuration and regulations &#8211; one or both options are possible pending the CSP business.&lt;br/&gt;The important thing (and change from Information Framework versions prior to version 12) is that the CustomerBillingAccount now is based upon the FinancialCharges and not upon the AppliedCustomerBillingRate, for reasons which are explained above. FinancialCharge can accumulate AppliedCustomerBillingRates based on its characteristic values, so that it can accumulate based on ACBR type, line of business, service type or any other ACBR characteristic. &lt;br/&gt;The presented model by no means represents the complete set of bill elements that can be incurred. The model provides a framework into which other types of bill elements can easily fit.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:33:22 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D0B8B9A0-C25A-4547-BEF7-1C1A873CF130}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

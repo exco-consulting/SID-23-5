@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PF.01 - Basic Performance Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4361.png" usemap="#EA4361" border="0" />
+
+<MAP NAME="EA4361">
+<area shape="rect" coords="581,10,702,76" href="EA4400.htm" target="_self">
+<area shape="rect" coords="112,10,292,76" href="./EA3/EA4457.htm" target="_self">
+<area shape="rect" coords="658,186,817,238" href="../../EA5/EA9/EA2438.htm" target="_self">
+<area shape="rect" coords="456,186,615,238" href="../../EA4/EA9/EA1570.htm" target="_self">
+<area shape="rect" coords="232,186,391,238" href="../../EA5/EA9/EA2439.htm" target="_self">
+<area shape="rect" coords="10,186,169,238" href="../../EA4/EA9/EA2/EA1583.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PF.01 - Basic Performance Entities diagram</div>
+	<div class="ObjectDetailsNotes">The Performance ABE is an addition to the SID model&#8217;s Common Business Entities domain.&#160;&#160;It represents a generalization of attributes and relationships that are common to both the SID Service Performance and Resource Performance ABEs&#8217; entities, such as performance indicators, thresholds, and consequences.&#160;&#160;Resource performance entities is collected hop by hop (between two network elements), while service performance is an aggregation of multiple resource performance instances that constitute the path a service takes through a network.&lt;br/&gt;Two key entities that comprise the Performance ABE are PerformanceSpecification and Performance.&#160;&#160;They represent an application of the SID EntitySpecification/Entity pattern.&#160;&#160;A PerformanceSpecification and its related specification entities provide the definition of the performance attributes, such as KPIs, dimensions, and performance thresholds.&#160;&#160;The Performance entity and its related entities provide the values associated with the manner in which a service or resource is performing or has performed, such as the loss of 5K packets between two network elements.&lt;br/&gt;Following Figure depicts the PerformanceSpecification and Performance entities along with the two types, or subclasses, of performance-related entities relevant to the model, ServicePerformanceSpec and ResourcePeformanceSpec, along with their related instance entities, ServicePerformance and ResourcePerformance.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/30/2023 7:06:22 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{AEF7AA83-A2CA-4e47-9608-23CDF01A510B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

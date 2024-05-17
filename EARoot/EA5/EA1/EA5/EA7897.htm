@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Resource Capability Delivery</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Resource Capability Delivery", " : "))</script>   &lt;&lt;TMF_Process&gt;&gt; </span>
+	
+		<div class="ObjectDetailsNotes">Resource Capability Delivery processes use the capability definition or requirements to deploy new and/or enhanced technologies and associated resources.&lt;br/&gt;&lt;br/&gt;The objectives of these processes is to ensure that network, application and computing resources are deployed, according to the plans set by Resource Development. They deliver the physical resource capabilities necessary for the ongoing operations, and long term well-being of the enterprise, and ensure the basis on which all resources and services will be built. Using automation may enhance resource capability delivery.&lt;br/&gt;&lt;br/&gt;Responsibilities of the Resource Capability Delivery processes include, but are not limited to:&lt;br/&gt;&lt;br/&gt;&#8226;&#160;&#160;Planning resource supply logistics (warehousing, transport, etc.)&lt;br/&gt;&#8226;&#160;&#160;Planning the Resource Installation&lt;br/&gt;&#8226;&#160;&#160;Contracting and Directing the Resource Construction where needed&lt;br/&gt;&#8226;&#160;&#160;Verifying the Resource Installation&lt;br/&gt;&#8226;&#160;&#160;Handover the Resource Capability to Operations through interactions with the Manage Resource Class Configuration &lt;br/&gt;&lt;br/&gt;Logical network configurations (such as resource elements integration) are as important to the network resources as the physical aspects. All aspects must be planned and considered in the design and implementation of the network, including infrastructure owned by the enterprise, and by supplier/partners, other physical resources and logical elements. Logical network configuration may be designed digitally in order to make sure all the resources are aligned and planned proactively.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:26:44 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA6074.htm">Business Process Framework Level 1 Overview - START HERE</a>, <a href="EA7871.htm">Resource Domain</a>, <a href="../../EA2/EA9472.htm">Business Process Framework Level 1 - short Name</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">22.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{27C6A811-CD82-4c29-9E33-A4C5BFB74021}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">6/28/2022 6:00:33 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../../EA2/EA176.htm">«TMF_Domain» Resource Domain</a><br />
+						Domain «TMF_DomainAggregatesProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38032" onclick="parent.toggleDiv('detailsDIVLink38032','DetailsImageLink38032')" />Details:
+							<div id="detailsDIVLink38032" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA194.htm">«TMF_Vertical» Capability Management</a><br />
+						Vertical «TMF_VerticalAggregatesProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38033" onclick="parent.toggleDiv('detailsDIVLink38033','DetailsImageLink38033')" />Details:
+							<div id="detailsDIVLink38033" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7962.htm">«TMF_Process» Map & Analyze Resource Requirements</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38034" onclick="parent.toggleDiv('detailsDIVLink38034','DetailsImageLink38034')" />Details:
+							<div id="detailsDIVLink38034" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7965.htm">«TMF_Process» Design Resource Capabilities</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38035" onclick="parent.toggleDiv('detailsDIVLink38035','DetailsImageLink38035')" />Details:
+							<div id="detailsDIVLink38035" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7968.htm">«TMF_Process» Manage Handover to Resource Operations</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38036" onclick="parent.toggleDiv('detailsDIVLink38036','DetailsImageLink38036')" />Details:
+							<div id="detailsDIVLink38036" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7966.htm">«TMF_Process» Enable Resource Support & Operations</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38037" onclick="parent.toggleDiv('detailsDIVLink38037','DetailsImageLink38037')" />Details:
+							<div id="detailsDIVLink38037" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7963.htm">«TMF_Process» Capture Resource Capability Shortfalls</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38038" onclick="parent.toggleDiv('detailsDIVLink38038','DetailsImageLink38038')" />Details:
+							<div id="detailsDIVLink38038" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7964.htm">«TMF_Process» Gain Resource Capability Investment Approval</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38039" onclick="parent.toggleDiv('detailsDIVLink38039','DetailsImageLink38039')" />Details:
+							<div id="detailsDIVLink38039" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA7967.htm">«TMF_Process» Manage Resource Capability Delivery</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink38040" onclick="parent.toggleDiv('detailsDIVLink38040','DetailsImageLink38040')" />Details:
+							<div id="detailsDIVLink38040" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">BriefDescription</td>
+				<td width="50%" class="TableRow" valign="top">Use the capability definition or requirements to deploy new and/or enhanced technologies and associated resources.</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38041" onclick="parent.toggleDiv('detailsDIVScenario38041','DetailsImageScenario38041')" />Specification:
+						<div id="detailsDIVScenario38041" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">HierarchyLevel</td>
+				<td width="50%" class="TableRow" valign="top">2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38042" onclick="parent.toggleDiv('detailsDIVScenario38042','DetailsImageScenario38042')" />Specification:
+						<div id="detailsDIVScenario38042" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the level of this object in the hierarchy (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Issue</td>
+				<td width="50%" class="TableRow" valign="top">Business Process Framework 15.0 Modification<br />Business Process Framework 15.5 Modification<br />Business Process Framework 20.0 Modification<br />Design Digital Services<br />eHealth View</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38043" onclick="parent.toggleDiv('detailsDIVScenario38043','DetailsImageScenario38043')" />Specification:
+						<div id="detailsDIVScenario38043" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Maturity</td>
+				<td width="50%" class="TableRow" valign="top">4</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38044" onclick="parent.toggleDiv('detailsDIVScenario38044','DetailsImageScenario38044')" />Specification:
+						<div id="detailsDIVScenario38044" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the maturity level of this element&nbsp;<WBR> (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Original Process Identifier</td>
+				<td width="50%" class="TableRow" valign="top">1.2.3.2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38045" onclick="parent.toggleDiv('detailsDIVScenario38045','DetailsImageScenario38045')" />Specification:
+						<div id="detailsDIVScenario38045" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Process Identifier</td>
+				<td width="50%" class="TableRow" valign="top">1.5.2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38046" onclick="parent.toggleDiv('detailsDIVScenario38046','DetailsImageScenario38046')" />Specification:
+						<div id="detailsDIVScenario38046" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">TMFStatus</td>
+				<td width="50%" class="TableRow" valign="top">Released</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38047" onclick="parent.toggleDiv('detailsDIVScenario38047','DetailsImageScenario38047')" />Specification:
+						<div id="detailsDIVScenario38047" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: Released,Preliminary,Draft,Not Fully Developed,likelyToChange,likelyToBeDeprecated<br />Description: the TM Forum status<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">UID</td>
+				<td width="50%" class="TableRow" valign="top">00149</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario38048" onclick="parent.toggleDiv('detailsDIVScenario38048','DetailsImageScenario38048')" />Specification:
+						<div id="detailsDIVScenario38048" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: Unique Process ID<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

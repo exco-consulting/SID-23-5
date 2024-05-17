@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure T.04 - Product, Service and Resource Test Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1313.png" usemap="#EA1313" border="0" />
+
+<MAP NAME="EA1313">
+<area shape="rect" coords="9,10,1016,549" href="../../EA9/EA13/EA4922.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure T.04 - Product, Service and Resource Test Entities diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows one way to support tests for Product, Services, and Resources by applying the Entity/EntityRole pattern.&#160;&#160;This allows the same &#8220;Test Specification&#8221; to be used for many &#8220;Product TestSpecifications&#8221;, &#8220;ServiceTestSpecifications&#8221;, and &#8220;Resource TestSpecifications&#8221;. &lt;br/&gt;Product, Service, and Resource Tests are defined to be generalizations of the abstract &#8220;Test&#8221; class. In this way, the &#8220;Test&#8221; model may be used for the specification of all three types of tests. Each test, such as &#8220;ServiceTest&#8221; is associated to its relative entity under test, which in this case is &#8220;Service&#8221;.&#160;&#160;The relationships therefore between products, services, and resources, are maintained to the associated tests. As an example, a service test measure such as &#8220;Frame Loss Ratio&#8221; may translate to resource test measures &#8220;Number of frames sent&#8221; and &#8220;Number of frames received&#8221;. The metric &#8220;Number of Frames Lost&#8221; is derived from the resource test measures, and the &#8220;Frame Loss Ratio&#8221; is further calculated by dividing the number of frames lost by the number of frames sent.&lt;br/&gt;&lt;i&gt;Refer to Common Domain guidebook for more details.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">9/9/2022 12:05:37 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/12/2022 6:23:44 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Cecile ludwichowski</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{AD6554A1-75B6-4597-A926-B534094B5F3A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

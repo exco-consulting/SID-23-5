@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-14- Simple PolicyEvent</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4499.png" usemap="#EA4499" border="0" />
+
+<MAP NAME="EA4499">
+<area shape="rect" coords="426,154,569,237" href="./EA5/EA3/EA4660.htm" target="_self">
+<area shape="rect" coords="226,230,392,274" href="./EA5/EA3/EA4661.htm" target="_self">
+<area shape="rect" coords="223,64,385,123" href="./EA5/EA3/EA4663.htm" target="_self">
+<area shape="rect" coords="550,68,681,128" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="10,353,204,384" href="./EA5/EA3/EA4664.htm" target="_self">
+<area shape="rect" coords="371,353,543,384" href="./EA5/EA3/EA4662.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-14- Simple PolicyEvent diagram</div>
+	<div class="ObjectDetailsNotes">PolicyEvents are significant occurrences that trigger the evaluation of one or more PolicyRules. The composite pattern is used to define atomic and composite PolicyEvents, as shown in Figure below.&lt;br/&gt;A PolicyEvent is a base class that represents the occurrence of an event, which is used to trigger the evaluation of the condition clause of a PolicyRule. It has two attributes, which are used by an external system (such as a Policy Server or policy control logic) to track individual events and to ensure that they have been evaluated.&lt;br/&gt;The composite pattern is used to build atomic and composite PolicyEvents. A PolicyEventAtomic is a base class that represents the occurrence of a single atomic event, which is used to trigger the evaluation of the condition clause of a PolicyRule. In contrast, a PolicyEventComposite is a base class that represents the occurrence of a composite event. A composite event is an event that is made up of a set of PolicyEventAtomic and/or PolicyEventComposite entities. Like a PolicyEventAtomic, a PolicyEventComposite can also be used to trigger the evaluation of the condition clause of a PolicyRule.&lt;br/&gt;In the system view, the HasPolicyEvents aggregation is implemented as a class. This class has an attribute that contains an OCL expression that can be used to filter the set of PolicyEvents that are aggregated by the PolicyEvent. This enables an external application, such as a Policy Server, to dynamically adjust the set of events that are being used to trigger the evaluation of a PolicyRule.&lt;br/&gt;The EventTriggerDetails class is an association class. Though arguably a system entity, it is shown in Figure 1P- 13 to provide the reader with a better understanding of the power and inherent flexibility of this model. This class defines five attributes that implement the semantics needed for the IsTriggeredBy aggregation, and defines the set of Events that can be used to trigger the evaluation of this PolicyRule.&lt;br/&gt;The retryNumber attribute specifies the number of times that this PolicyEvent should be resent to the specified PolicyRule. If the triggerEndTime elapses, then the PolicyEvent will not be resent anymore, even if the retryNumber indicates that additional retries should be attempted. Instead, the hasEventEvaluated attribute of this PolicyEvent must be set to the value of 2 (failed to be evaluated). &lt;br/&gt;The retryPolicy attribute is an enumerated integer that defines the policy for retrying triggers. An enumeration enables the policy application to choose among a set of pre-defined policies for determining how many times to retry sending this PolicyEvent to its associated PolicyRule.&lt;br/&gt;The triggerConstraints attribute contains the specific OCL expression to constrain how a given set of PolicyEvents are used to trigger the evaluation of the condition clause of a particular PolicyRule. Defining this as an attribute enables external applications to populate the constraint that will be applied to this PolicyRule.&lt;br/&gt;Finally, the triggerStartTime and triggerEndTime attributes specify the start and end of the time period in which this PolicyEvent can be sent to the associated PolicyRule.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 8:30:46 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{49F9BA42-352D-473c-BBFA-914C4404562A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.09 - Geographic Geometry [OGIS]</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5861.png" usemap="#EA5861" border="0" />
+
+<MAP NAME="EA5861">
+<area shape="rect" coords="653,106,768,164" href="EA5926.htm" target="_self">
+<area shape="rect" coords="658,21,773,79" href="EA5925.htm" target="_self">
+<area shape="rect" coords="391,262,488,293" href="./EA3/EA6059.htm" target="_self">
+<area shape="rect" coords="26,139,123,170" href="./EA3/EA6062.htm" target="_self">
+<area shape="rect" coords="110,319,207,350" href="./EA3/EA6055.htm" target="_self">
+<area shape="rect" coords="595,415,706,446" href="./EA3/EA6058.htm" target="_self">
+<area shape="rect" coords="265,325,362,356" href="./EA3/EA6063.htm" target="_self">
+<area shape="rect" coords="241,433,338,464" href="./EA3/EA6056.htm" target="_self">
+<area shape="rect" coords="483,384,580,415" href="./EA3/EA6060.htm" target="_self">
+<area shape="rect" coords="602,260,699,291" href="./EA3/EA6057.htm" target="_self">
+<area shape="rect" coords="488,302,585,333" href="./EA3/EA6061.htm" target="_self">
+<area shape="rect" coords="469,158,593,189" href="./EA3/EA6053.htm" target="_self">
+<area shape="rect" coords="461,55,620,86" href="./EA3/EA6064.htm" target="_self">
+<area shape="rect" coords="216,45,313,76" href="./EA3/EA6052.htm" target="_self">
+<area shape="rect" coords="17,433,114,464" href="./EA3/EA6054.htm" target="_self">
+<area shape="rect" coords="132,198,229,229" href="./EA3/EA6051.htm" target="_self">
+<area shape="rect" coords="257,198,354,229" href="./EA3/EA6065.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.09 - Geographic Geometry [OGIS] diagram</div>
+	<div class="ObjectDetailsNotes">This model adopts the Open GIS Consortium Geometry model [OGIS].&lt;br/&gt;Whilst in theory any spatial engine / model could be used, use of a standard interface allows for component interworking.&lt;br/&gt;Refer to document &#8220;OpenGIS&#174; Simple Features Specification for SQL&#8221; at http://www.opengis.org/techno/implementation.htm for an explanation of the model. Note that the Geometry classes are not documented in the &#8220;data dictionary&#8221; section at the back of this document.&lt;br/&gt;For messaging and data interchange of Geographic information, the GML standard is recommended.&lt;br/&gt;&lt;i&gt;&#8220;The Geography Markup Language (GML) is an XML encoding for the transport and storage of geographic information, including both the spatial and non-spatial properties of geographic features.&#8221; [GML]&lt;/i&gt;&lt;br/&gt;The Geometry classes should be considered as a closed set, with Geometry as the root class and no subclassing of any of the classes shown in fig 9. This aligns with the proposed ISO standard [ISO / DIS 19109].&lt;br/&gt;If a spatial engine is not available, but geocodes are required, then a Point entity could be substituted.&lt;br/&gt;&lt;br/&gt;The SID model uses Geometry as an attribute of the Geographic Location entity.&lt;br/&gt;Astute readers will have noticed that the OGIS Geometry class implements the Binary Topological Relationships.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/27/2023 7:34:59 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8A46C8EF-E467-47ed-8244-9F76226AF0B9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

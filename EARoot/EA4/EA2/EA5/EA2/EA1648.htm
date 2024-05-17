@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.03 - Resources and ResourceSpecifications (OLD RS.01)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1649.png" usemap="#EA1649" border="0" />
+
+<MAP NAME="EA1649">
+<area shape="rect" coords="262,165,388,213" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="547,448,711,503" href="../EA3/EA1/EA1957.htm" target="_self">
+<area shape="rect" coords="17,200,228,255" href="EA1701.htm" target="_self">
+<area shape="rect" coords="368,448,532,503" href="./EA2/EA1766.htm" target="_self">
+<area shape="rect" coords="908,301,1056,356" href="../EA3/EA1946.htm" target="_self">
+<area shape="rect" coords="647,165,744,220" href="../../EA9/EA2/EA3775.htm" target="_self">
+<area shape="rect" coords="726,448,890,503" href="../EA3/EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="905,448,1069,503" href="../EA3/EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="637,301,743,356" href="../EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="248,301,397,356" href="EA1699.htm" target="_self">
+<area shape="rect" coords="10,448,174,503" href="./EA4/EA1820.htm" target="_self">
+<area shape="rect" coords="189,448,353,503" href="./EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="912,165,1042,220" href="../../EA9/EA2/EA3812.htm" target="_self">
+<area shape="rect" coords="454,10,551,65" href="../../EA9/EA2/EA3820.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.03 - Resources and ResourceSpecifications (OLD RS.01) diagram</div>
+	<div class="ObjectDetailsNotes">A ResourceSpecification represents a generic means for implementing a particular type of Resource. In essence, a ResourceSpecification defines the common attributes and relationships of a set of related Resources, while Resource defines a specific instance that is based on a particular ResourceSpecification.&lt;br/&gt;The SpecifiesEntity association defines the set of Entities, including both managed and unmanaged Entities, whose shared attributes, methods, relationships, constraints and behavior are specified by this particular EntitySpecification. &lt;br/&gt;ResourceSpecifications are generic in nature, just as Resources are. The SpecifiesEntity relationship uses the generic Entity-EntitySpec pattern described in the Common Domain guide book Root Entities section. This particular relationship defines the ResourceSpecification that is used to provide the shared characteristics and relationships (and methods and constraints in the system view) of a given Resource. This enables multiple Resources that each use a common set of attributes and/or relationships (and methods and constraints in the system view) to be related to a single invariant specification of those characteristics and behavior. &lt;br/&gt;The cardinality of the SpecifiesEntity relationship is 0..1 on the ResourceSpecification side and * on the Resource side.&lt;br/&gt;A Resource presumably adds its own instance-specific attributes and associations.&lt;br/&gt;&lt;i&gt;Note: In the figure the association between EntitySpecification and Entity is implied and not a UML association. This was done so that the association between EntitySpecification and Entity is not inherited by all their subclasses. This would cause a problem, because any instance of an EntitySpecification could be associated to any instance of an Entity. For example, an instance of ProductSpecification could be associated to an instance of Service. The 0..1 association multiplicity on the association means that not every entity has to have an associated EntitySpecification. For example, an instance of a discovered Resource may not have a known instance of ResourceSpecification associated to it.&lt;/i&gt;&lt;br/&gt;&lt;i&gt;The SID team strongly recommends the use of ResourceSpecifications, because their use helps ensure a consistent, repeatable design. If ResourceSpecifications aren&#8217;t used, then it will be impossible to realize the full benefit of the SID. In some of the subclasses of this pattern, the ResourceSpecification contains critical information (e.g., modelNumber and partNumber are two of four critical attributes defined in a PhysicalResourceSpecificationAttribute entity that might be related to a PhysicalResourceSpecification, as documented in the Physical Resource guide book).&lt;/i&gt;&lt;br/&gt;PhysicalResources and LogicalResources both require their own ResourceSpecifications. Rather than build separate hierarchies for PhysicalResources and LogicalResources, this design takes advantages of their similarities. This ensures that both types of specifications inherit the same behavior. &lt;br/&gt;PhysicalResourceSpec and LogicalResourceSpec are subclasses of ResourceSpecification and are both used to define the shared characteristics and behavior (attributes, methods, constraints, and relationships) of a PhysicalResource and a LogicalResource, respectively. &lt;br/&gt;PhysicalResourceSpec and LogicalResourceSpec are defined more in this section.&lt;br/&gt;The ResourceSpecificationRelationship and the two associations with Resource (ResourceSpecificationReferences and ResourceSpecificationReferencedBy) enables defining for example a set of ResourceSpecifications that are involved with, or related to, each other in order to build a particular type of ResourceSpecification. This entity might also be used to specify relationships such as &#8220;requires&#8221; or &#8220;incompatible with&#8221; or even &#8220;composed of&#8221;.&lt;br/&gt;&lt;i&gt;Note: Since SID 16.0 the Composite / Atomic pattern has been removed from the three subclasses of ResourceSpecification as it can be replaced by using the ResourceSpecificationRelationship with a type &#8220;composed of&#8221;.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:19:23 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DAF168ED-C4FB-49d1-9F66-21F41F5DF7E9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

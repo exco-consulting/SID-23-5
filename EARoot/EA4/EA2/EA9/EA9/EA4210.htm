@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Me.16 - Basic Metric Measure Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4211.png" usemap="#EA4211" border="0" />
+
+<MAP NAME="EA4211">
+<area shape="rect" coords="52,99,200,127" href="./EA4/EA4309.htm" target="_self">
+<area shape="rect" coords="60,10,192,38" href="./EA3/EA4291.htm" target="_self">
+<area shape="rect" coords="148,270,275,298" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="740,137,837,196" href="../../EA2/EA1/EA687.htm" target="_self">
+<area shape="rect" coords="462,270,589,298" href="./EA1/EA4253.htm" target="_self">
+<area shape="rect" coords="632,270,759,298" href="./EA1/EA4251.htm" target="_self">
+<area shape="rect" coords="10,204,243,232" href="./EA4/EA4314.htm" target="_self">
+<area shape="rect" coords="565,26,670,54" href="../EA2/EA3820.htm" target="_self">
+<area shape="rect" coords="556,113,678,165" href="./EA5/EA4336.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Me.16 - Basic Metric Measure Entities diagram</div>
+	<div class="ObjectDetailsNotes">Once metrics are defined the values associated with them can be captured.&#160;&#160;Figure Me.21 &#8211; Metric shows the MetricMeasure entity and its directly related entities.&lt;br/&gt;The MetricMeasure might be collected for 0..1 RootEntity because some entities may be explicitly related to a MetricMeasure, such as those entities currently in the Performance, including Service and Resource, and SLA entities, including ProductOffering and ServiceSpecification. These explicit associations represent a more detailed association than the more general association to RootEntity.&lt;br/&gt;This diagram uses RootEntity as an abstract concept showing how any entity can be associated to MetricMeasure.&lt;br/&gt;Since RootEntity is also a real class in the SID model and is the base class of several ABEs (Resource, ResourceSpec, Service, ServiceSpec and Policy) this diagram also includes examples on how to model Metrics that measure entities which are not subclasses of RootEntity in the SID model. &lt;br/&gt;For example, suppose there is a need to collect a metric for the Service instance of RootEntityType. The first step is to select one of the MetricDefinition(s) for it, then the MetricDefMeasure to use, then the MetricDefinitionDeterminationMethod. &lt;br/&gt;The MetricMeasure is associated to the method and to RootEntity (not RootEntityType) that represents for example the instance of Service for which the MetricMeasure is being collected. &lt;br/&gt;There are indirect associations (i.e. derived) from the MetricMeasure to the MetricDefMeasure via the association to MetricDefinitionDeterminationMethod and from MetricMeasure to MetricDefinition via its association to MetricDefMeasure.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/15/2023 3:34:04 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{750EA0DE-4AFF-4ce6-A1CE-C9F7BA3540F7}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

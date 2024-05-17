@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure A 1 - Instances of valid color values</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3680.png" usemap="#EA3680" border="0" />
+
+<MAP NAME="EA3680">
+<area shape="rect" coords="10,10,654,491" href="EA3750.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure A 1 - Instances of valid color values diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;More Details on Characteristics&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;As stated in the introduction, the CharacteristicSpecification/CharacteristicSpecValue pattern is intended to be used to dynamically define attributes for any business entity. This pattern is very powerful but not easy to understand. Section 1.13 presents it to some level of details that may not be sufficient to understand all aspects of its expressive power. In particular, Figure Ch.01 Characteristic Specification is very complex.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The purpose of this section is to try explain this pattern and the related artefacts in Figure Ch.01 in a simple and progressive way.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will illustrate our presentation with the example of Cars and CarSpecifications. While it is deliberately away from the Telecom domain, we expect that it is simple to understand, not controversial and general enough to be easily adaptable to our Telecom domain.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;What does &#8220; dynamically define attributes for any business entity&#8221; mean ?&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The usual way to define specific attributes for a given business entity is to add these attributes in the class of the model that represents this entity. Based on this modification of the model, the implementation of the corresponding class (data base or source code) must be modified, recompiled and the corresponding run time need to be re-executed to take into consideration the modifications introduced. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The approach proposed by the CharacteristicSpecification/CharacteristicSpecValue pattern is, at run time, to create instances of CharacteristicSpecification (or simply called characteristics) and instances of associated CharacteristicSpecValues. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Once this is done, there are two ways these characteristics can be used:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Either associate an instance of a CharacteristicSpecification to an instance of a business entity that need to be extended&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Or use the RootEntityType meta approach. In this case, characteristics can be added to an instance of RootEntityType, meaning that these added characteristics will apply to the SID Entity (SID class) corresponding to the instance of the RootEntityType (remember that The RootEntityType in the SID is populated with a list of all business entities contained in the SID). &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Figure Ch.04 illustrates this approach with the SID Entity &#8220;Service&#8221; that is extended with two characteristics &#8220;LastStatusChange&#8221; and &#8220;StatusUpdatedBy&#8221;. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;It then means that any instance of this extended class will be extended with these two characteristics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;From an implementation view point it can be interpreted as adding two new columns to the data base table representing this SID class.&#160;&#160;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;Below we will further illustrate the first way.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Use Case 1:&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Let&#8217;s assume that the model already contains a static class &#8220;CarSpec&#8221; inheriting from EntitySpec.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This class &#8220;CarSpec&#8221; will be used to create instances of models of cars that will populate a catalog (for example, the catalog of all the models of a given constructor).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This class &#8220;CarSpec&#8221; has its own set of attributes that will characterize each car model instance, such as the possible energy, the possible engine power and the possible colors, among many others.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Now let&#8217;s assume that for a given instance of CarSpec (representing the car model Toyota Yaris as an example) we want to differentiate the color of the roof and the color of the body. The valid values for the roof or the body will be a subset of the valid values for the general Color characteristic that is used in general for all car models of this constructor which we assume to be: Black, Blue, Green, Pink and Yellow.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The general Color characteristic is represented as an instance of CharacteristicSpecification aggregating a set of instances of CharacteristicSpecValue representing the various valid colors.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/11/2022 11:20:37 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/6/2022 9:56:45 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DB990FE4-9B4E-4077-A7B2-C46350DB4DEB}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[PatternD-01] Pattern ABEs Level 1</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3515.png" usemap="#EA3515" border="0" />
+
+<MAP NAME="EA3515">
+<area shape="rect" coords="608,232,738,312" href="./EA15/EA5018.htm" target="_self">
+<area shape="rect" coords="170,327,300,407" href="./EA18/EA5171.htm" target="_self">
+<area shape="rect" coords="462,327,592,407" href="./EA20/EA5273.htm" target="_self">
+<area shape="rect" coords="316,327,446,407" href="./EA19/EA5237.htm" target="_self">
+<area shape="rect" coords="24,327,154,407" href="./EA17/EA5147.htm" target="_self">
+<area shape="rect" coords="316,42,446,122" href="./EA3/EA3904.htm" target="_self">
+<area shape="rect" coords="316,232,446,312" href="./EA13/EA4922.htm" target="_self">
+<area shape="rect" coords="462,42,592,122" href="./EA4/EA3913.htm" target="_self">
+<area shape="rect" coords="462,137,592,217" href="./EA9/EA4150.htm" target="_self">
+<area shape="rect" coords="24,232,154,312" href="./EA11/EA4476.htm" target="_self">
+<area shape="rect" coords="170,232,300,312" href="./EA12/EA4707.htm" target="_self">
+<area shape="rect" coords="462,232,592,312" href="./EA14/EA4938.htm" target="_self">
+<area shape="rect" coords="24,137,154,217" href="./EA6/EA4018.htm" target="_self">
+<area shape="rect" coords="24,42,154,122" href="./EA1/EA3538.htm" target="_self">
+<area shape="rect" coords="316,137,446,217" href="./EA8/EA4080.htm" target="_self">
+<area shape="rect" coords="608,137,738,217" href="./EA10/EA4360.htm" target="_self">
+<area shape="rect" coords="170,137,300,217" href="./EA7/EA4050.htm" target="_self">
+<area shape="rect" coords="170,42,300,122" href="./EA2/EA3579.htm" target="_self">
+<area shape="rect" coords="608,42,738,122" href="./EA5/EA3979.htm" target="_self">
+<area shape="rect" coords="10,10,748,515" href="EA3512.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">[PatternD-01] Pattern ABEs Level 1 diagram</div>
+	<div class="ObjectDetailsNotes">The diagram below lists the Pattern Domain&#39;s ABEs.&#160;&#160;&lt;br/&gt;&lt;b&gt;Base Types ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A small simple object, like money or a date range, whose equality isn&#39;t based on identity.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Root Business Entities ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A set of common business entities that collectively serve as the foundation of the business view. This set of entities enables the entities in different domains of the SID Framework to be associated with each other, providing greater overall coherence to the information framework.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Account ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Account ABE contains all entities needed for specifying basic attributes and relationships that describe an account.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Business Interaction ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Business Interaction ABE represents an arrangement, contract, or communication between an enterprise and one or more other entities such as individuals and organizations (or parts of organizations).&#160;&#160;Interactions take on the form of requests, responses, and notifications.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Agreement ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;An Agreement represents a contract or arrangement, either written or verbal and sometimes enforceable by law, such as a service level agreement or a customer price agreement. An agreement involves a number of other business entities, such as products, services, and resources and/or their specifications.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Capacity ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A generalized ABE and specializations that provide capacity and capacity demand for products, services, and resources. Capacity is the ability to provide some capability.&#160;&#160;For example, one measure of network capacity is the ability of a network to provide a certain amount of bandwidth during the month of May.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Catalog ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A generalized ABE that represents common Catalog Specification and Catalog entities, attributes, and associations shared (inherited) by components of the Entity, Federated, Product, Service, and Resource Catalog ABEs.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Configuration and Profiling ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A Configuration (also referred to as a Profile) defines how a Resource, Service, or Product operates or functions in terms of Characteristic Specifications and related Product/Service/Resource Specifications as well as Characteristics and related Product/Service/Resource entities.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Metric ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Metric ABE defines standards of measurement including units and values and how the values are determined. It also includes thresholds used to evaluate the metric and the consequences of violating the thresholds.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Performance ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Represents a measure of the manner in which a Product and/or Service and/or Resource is functioning.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Policy ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Policy Domain consists of a set of layered ABEs that define specifications (e.g., templates) and definitions of Policy entities that can be used in managing the behavior and definition of entities in other Domains.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Project ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Represents the tools used by project managers to ensure that enterprise objectives of quality, cost and time are achieved by planning and scheduling work. It uses common industry definition of Project, Work Breakdown Structure and Activity to provide support to project managers.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Test ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A test is a procedure intended to establish the quality, performance, or reliability of an entity, especially before it is taken into widespread use. A test may also be executed upon the entity after it is in use to diagnose problems related to the correct functioning of the entity. As such, a test may be executed against a product, a service, or a resource.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Usage ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;An occurrence of employing a Product, Service or Resource for its intended purpose, which is of interest to the business and can have charges applied to it. It is comprised of characteristics, which represent attributes of usage.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Segmentation ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Segmentation ABE contains all entities used for specifying rules to divide a large set of Entities instances into subsets according to criteria. These subsets are called segments.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Intent ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Intent ABE contains the entities needed for specifying basic attributes and relationships that describe an Intent.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Closed Loop ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Closedloop is a &quot;management framework&quot; in which current outcomes are used to improve future outcomes in order to achieve specified goals. The management framework includes the feedforward workflow and a feedback workflow, where the feedforward is a control loop meant to continually optimize and improve&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Goal ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Represents a set of information that captures the definition of a goal or target for a process (task/activity/workflow/etc.) to reach or achieve.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Workflow ABE&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Workflow is a business process model, or a generic process model that is made up of series of business processes or activities that collectively through them a piece of work passes from initiation to completion.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Anomaly ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Aggregate group of business entities representing the Anomaly associated with a SID Entity belonging to a domain&#160;&#160;that is defined using the AnomalySpecification and being managed by the AnomalyClosedLoop&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Topology ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Topology ABE contains entities that are used to represent topological concepts that can be used to model a large variety of topological relations between entities ranging from dependencies to connectivity.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Event ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Event ABE contains entities that are used to represent events, their occurrence and their recording within systems. This ABE is not fully developed.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Trouble Ticket ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Represents a record used for reporting and managing the resolution of Trouble or Problem. This ABE is not fully developed.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Trouble or Problem ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A description of a problem that can be shared between the service provider and the customer. Trouble or Problem is an indication that an entity (such as Resource, Service or Product) is no longer functioning according to the expected SLA.&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">1/30/2023 4:46:45 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/30/2023 6:34:55 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{44F078BC-0313-4514-BF0A-A5936FA5503C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

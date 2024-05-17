@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.03 - Subclassing ServiceSpecification (OLD SO.10)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1359.png" usemap="#EA1359" border="0" />
+
+<MAP NAME="EA1359">
+<area shape="rect" coords="614,123,767,154" href="../EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="10,123,174,154" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="441,123,599,154" href="../EA4/EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="205,123,372,154" href="./EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="549,10,680,41" href="../EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="56,10,191,41" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.03 - Subclassing ServiceSpecification (OLD SO.10) diagram</div>
+	<div class="ObjectDetailsNotes">ServiceSpecification is the base entity for defining the ServiceSpecification hierarchy. &lt;br/&gt;Each instance of a ServiceSpecification is made up of changeable as well as invariant attributes, relationships and constraints. A ServiceSpecification defines the shared characteristics of a Service. It can be conceptually thought of as a template that different Service instances can be instantiated from. Each of these Service instances will have the same shared characteristics. However, the characteristics&#39; values of the instantiated Service will be specific to each instance.&lt;br/&gt;This class can be thought of as a template, which represents a generic specification for implementing a particular type of Service. A ServiceSpecification may consist of other ServiceSpecifications supplied together as a collection.&lt;br/&gt;ServiceSpecification inherits from EntitySpecification, which inherits from RootEntity.&lt;br/&gt;&lt;br/&gt;ServiceSpecification is sub-classed as CustomerFacing and ResourceFacing ServiceSpecifications, types of ServiceSpecifications.&lt;br/&gt;&lt;b&gt;CustomerFacingServiceSpec&lt;/b&gt;&lt;br/&gt;A CustomerFacingServiceSpec defines the properties (characteristics) common to a particular CustomerFacingService used to realize the associated Product(s). This entity serves as a common basis to build any set of CustomerFacingServices that the service provider needs.&lt;br/&gt;The CustomerFacingServiceSpec represents all the Service Provider&#8217;s know-how of intangible goods at a functional level. It would be more appropriate to name it KonwHowSpec or ProductFacingServiceSpec, but the name is not changed as it is well known.&lt;br/&gt;The ProductSpecification corresponds to a sub-set of the Service Provider&#8217;s know-how according to what marketing people want to sell. Therefore, a ProductSpecification is a restriction of CustomerFacingServiceSpecs.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;ResourceFacingServiceSpec&lt;/b&gt;&lt;br/&gt;The ResourceFacingServiceSpec represents the technical solutions that the Service Provider can implement for CustomerFacingServiceSpec.&lt;br/&gt;Each technical solution (ResourceFacingServiceSpec) requires ResourceSpecifications to be realized and might require buying part of the solution to a supplier (for example the Service Provider might have to buy the Local Loop to provide a broadband access).&lt;br/&gt;This is the base entity for defining different types of ResourceFacingServiceSpecs. A ResourceFacingServiceSpec is an abstraction that defines the shared characteristics of a particular ResourceFacingService. The shared portion serves as a single common basis to build a set of variable ResourceFacingServices that all use this common ResourceFacingServiceSpec.&lt;br/&gt;&lt;br/&gt;ServiceSpecification represents a generic means for implementing a particular type of Service. In essence, a ServiceSpecification defines the common portions of a set of Services, while Service defines a specific instance that is based on a particular ServiceSpecification. This relationship is represented by the SpecifiesService dependency.&lt;br/&gt;It is important to remember that the Specification classes are used to define attributes shared by each associated Entity, whether it is a Service, a Resource, a Product, or something else. This is a generic pattern that is used throughout the SID. Similarly, the Entities themselves, whether they are Services, Resources, Products, or something else, represent the instances that are derived from their associated Specification classes. This is why the cardinality on the &#8220;specification&#8221; side (e.g., CustomerFacingServiceSpec) of each association (e.g., SpecifiesCustomerFacingService) is defined to be &#8220;1&#8221; &#8211; the SID spec mandate the use of Specifications.&lt;br/&gt;&lt;br/&gt;A ServiceSpecification can classify a set of Services using the SpecifiesService association. More specifically, a CustomerFacingServiceSpec classifies a set of CustomerFacingServices created from it and a ResourceFacingServiceSpec classifies a set of ResourceFacingServices created from it.&lt;br/&gt;&lt;i&gt;SpecifiesCustomerFacingService and SpecifiesResourceFacingService are derived relationships coming from SpecifiesService relationship.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/29/2023 6:56:43 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CBA411C8-108C-44e8-A2E9-473AE867D3F2}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

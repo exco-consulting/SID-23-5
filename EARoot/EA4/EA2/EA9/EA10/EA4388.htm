@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PF.15 - Measurement Job</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4389.png" usemap="#EA4389" border="0" />
+
+<MAP NAME="EA4389">
+<area shape="rect" coords="885,560,1116,621" href="./EA3/EA4453.htm" target="_self">
+<area shape="rect" coords="909,68,1112,120" href="../../EA10/EA7/EA1/EA5832.htm" target="_self">
+<area shape="rect" coords="606,538,782,613" href="./EA2/EA4431.htm" target="_self">
+<area shape="rect" coords="293,538,518,601" href="./EA2/EA4432.htm" target="_self">
+<area shape="rect" coords="478,366,636,438" href="./EA2/EA4433.htm" target="_self">
+<area shape="rect" coords="977,181,1222,253" href="./EA3/EA4452.htm" target="_self">
+<area shape="rect" coords="940,336,1197,508" href="./EA3/EA4454.htm" target="_self">
+<area shape="rect" coords="516,190,740,270" href="./EA2/EA4430.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PF.15 - Measurement Job diagram</div>
+	<div class="ObjectDetailsNotes">A PM measurement job is the administrative entity defined by a client application to perform a periodic activity related to PM data. The PM activities may be production of measurements, collection of measurements or PM thresholds. The PM Measurement Job is a sub class of the PM Management Job (Management Job ABE under TIP Common ABE). The Management Job defines the attributes that may apply to any kind of a job while the Measurement Job adds the attributes that are specific to the Performance Management context. &lt;br/&gt;The PM measurement job includes the following:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A set of requested performance indicators&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A network/service scope defining a subset of the network or a subset of the service catalog&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Scheduling parameters&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Specific activity parameters, related to collection, production or threshold monitoring&lt;br/&gt;A measurement job must define a scope of monitored objects using the monitored objects criteria. The monitored objects criteria support two kinds of monitored objects specification, represented as two sub-entities:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Monitored Instances criteria - Specifies a list of individual monitored instances (typed as object names).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Monitored Class criteria - Specifies a monitored object class (a string) in conjunction with a filter object. The filter is composed of name value pairs that can be used to focus the PM collection. &lt;br/&gt;The Measurement Job is shown in figure below.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 6:26:55 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A384548A-A6A8-46e9-A20B-B86CE5EC6614}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

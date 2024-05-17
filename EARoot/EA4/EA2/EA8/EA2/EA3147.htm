@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.06 - Skill Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3148.png" usemap="#EA3148" border="0" />
+
+<MAP NAME="EA3148">
+<area shape="rect" coords="497,211,653,239" href="../../EA10/EA1/EA5483.htm" target="_self">
+<area shape="rect" coords="327,10,442,69" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="321,211,463,239" href="../../EA10/EA1/EA10/EA5575.htm" target="_self">
+<area shape="rect" coords="10,10,125,69" href="../../EA10/EA1/EA5469.htm" target="_self">
+<area shape="rect" coords="29,211,126,239" href="../../EA10/EA1/EA10/EA5573.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.06 - Skill Model diagram</div>
+	<div class="ObjectDetailsNotes">To be assignable to work, technicians must have certain skills. In SID, the Skill and SkillSpecification are modeled in Party ABE. They are modeled using the atomic/composite pattern, and categorized using SkillCatalog. Refer to Party ABE for more details.&lt;br/&gt;Its association to Party and PartyRole, which generalizes Workforce roles, is explained in the following Figure.&lt;br/&gt;The association between a PartyRole and Skill(s) implies requirement. For example, to be classified as a fiber repair technician, for planning or training purposes, the role must have the following skills: signal strength test or measurement, equipment diagnostics, equipment reconfiguration, and equipment installation.&lt;br/&gt;The association between Party and Skill(s) means a particular person or group/organization already has a particular skill(s).&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 8:01:21 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CCD1B16C-60E8-43e9-BA5E-36B8542D7E62}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

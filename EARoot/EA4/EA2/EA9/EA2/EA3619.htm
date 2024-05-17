@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.02 – View of the Entity Class Hierarchy</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3620.png" usemap="#EA3620" border="0" />
+
+<MAP NAME="EA3620">
+<area shape="rect" coords="334,128,537,193" href="EA3812.htm" target="_self">
+<area shape="rect" coords="14,146,111,181" href="EA3775.htm" target="_self">
+<area shape="rect" coords="10,10,115,83" href="EA3820.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.02 – View of the Entity Class Hierarchy diagram</div>
+	<div class="ObjectDetailsNotes">This section describes the two main Entity classes (Entity and ManagedEntity).&lt;br/&gt;This is an abstract class that extends the RootEntity class in order to represent classes of objects that play a business function and that may be managed. The top-level Entity class hierarchy is shown in following Figure below.&lt;br/&gt;ManagedEntity further defines Entity by providing the two attributes and the associations ManagedEntity has with other entities. This allows an instance of any entity that inherits from Entity to be defined as a being managed by creating an instance of an association to an instance of ManagedEntity.&lt;br/&gt;ManagedEntity does not itself inherit from RootEntity for the following reasons:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;If it inherits from RootEntity then it further defines Entity by duplicating the three attributes that are already in Entity (that it inherits from RootEntity).&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;The composition association between Entity and ManagedEntity with its 0,1 multiplicity is what is often called an &#8220;IsA&#8221; association, which is much like sub-classing.&#160;&#160;So if ManagedEntity inherits from RootEntity then it is inheriting attributes it already &#8220;inherits&#8221; from Entity via the &#8220;IsA&#8221;.&lt;/li&gt;&lt;/ul&gt;<br />ManagedEntity is further described in the next section.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 5:57:54 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{AE196CDE-D6B3-4630-A674-D43B0CED51D2}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

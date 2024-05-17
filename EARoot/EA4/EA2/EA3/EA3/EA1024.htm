@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.08 - Product Offering Price</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1025.png" usemap="#EA1025" border="0" />
+
+<MAP NAME="EA1025">
+<area shape="rect" coords="10,204,177,236" href="../EA2/EA976.htm" target="_self">
+<area shape="rect" coords="281,66,442,98" href="../EA2/EA979.htm" target="_self">
+<area shape="rect" coords="10,10,203,42" href="../EA2/EA981.htm" target="_self">
+<area shape="rect" coords="547,145,688,177" href="../EA2/EA982.htm" target="_self">
+<area shape="rect" coords="201,319,402,402" href="./EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="619,360,736,392" href="./EA3/EA1151.htm" target="_self">
+<area shape="rect" coords="353,204,529,236" href="EA1108.htm" target="_self">
+<area shape="rect" coords="36,486,226,518" href="./EA3/EA1147.htm" target="_self">
+<area shape="rect" coords="310,486,520,557" href="./EA3/EA1146.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.08 - Product Offering Price diagram</div>
+	<div class="ObjectDetailsNotes">The price of a ProductOffering or a bundle may be simple or quite complex.&#160;&#160;A simple price could be the charge associated with the monthly rental of a cable modem. Or, a price could encompass many different components. A typical introductory wireless offering, for example, will have an activation cost, a monthly cost, a number of free minutes, a cost for extra minutes, and some sort of promotional component. It might also include a corporate discount for business users. Each of these elements must be described in order to paint an accurate picture of the overall price charged for any ProductOffering.&#160;&#160;&lt;br/&gt;This part of the SID model presents a set of components that can be combined to offer a complete and accurate description of the price charged for an offering. A secondary consideration is to define those components in such a way that they can be readily implemented in a typical billing system.&lt;br/&gt;A ProductOffering may have any number of prices, each of which is made up of a single component or a composite of a number of components.&#160;&#160;The Product Offering Price model employs the composite/component modeling pattern used throughout the SID to represent simple and complex prices, as illustrated in the figure below.&lt;br/&gt;ProductOfferingPrices can be dependent upon a ProductSpecCharValueUse as shown in the figure above.&#160;&#160;For example, a provider may offer a photo printing service for mobile phone pictures.&#160;&#160;The price may depend on the size of the photo or the type of finish of the photo; $.20 for a 3 by 5, plain finish, $.25 for a 5 by 7, plain finish, and so forth.&#160;&#160;The values associated with the size (3 by 5, 5 by 7, and so forth) and finish (plain, glossy, matte, and so forth) can be stored as ProductSpecCharacteristicValues.&lt;br/&gt;ProductOfferingPrice, which may have a complex structure (composition) and involve complex billing / rating capabilities, could be defined in a &#8221;pricing catalog&#8221; as a reusable component pre-defined for given ProductSpecs and then selected for use by the ProductOffering to be published in the ProductCatalog.&lt;br/&gt;The ProductSpecification to ProductOfferingPrice association allows the use of the ProductOfferingPrice entity as a &#8220;pricing specification component&#8221; defined for ProductSpecifications.&#160;&#160;For a given ProductSpecification, the &#8220;pricing catalog&#8221; may contain several pricing component candidates for use. When defining the ProductOffering, pre-defined pricing components (ProductOfferingPrices) for ProductSpecs, can be selected to value the ProductOffering.&#160;&#160;Existing pricing components may also be individually altered or new ones defined for a given ProductOffering.&lt;br/&gt;Figure Pr.8 also shows an association between ProductOfferingPrice and PriceEvent.&#160;&#160;The PriceEvent business entity represents an occurrence (happening) or schedule that triggers the creation of a billing charge for a ProductOffering.&#160;&#160;For example, a PriceEvent instance may represent the end of a month when monthly recurring billing charges are created.&#160;&#160;&#160;In some cases, the creation of a charge associated with a ProductOfferingPrice may be triggered by multiple events.&#160;&#160;For example, a penalty (ProductOfferingPrice) may be triggered by over- or under-usage of a service.&#160;&#160;Under- and over-usage are represented as two separate PriceEvent entity instances.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/20/2023 10:29:26 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C24881F1-7E6F-4e47-BBFF-8A4E09FE8017}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

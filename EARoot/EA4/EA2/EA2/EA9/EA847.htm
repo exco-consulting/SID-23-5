@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.23 - Dunning Result</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA848.png" usemap="#EA848" border="0" />
+
+<MAP NAME="EA848">
+<area shape="rect" coords="416,535,613,587" href="./EA2/EA866.htm" target="_self">
+<area shape="rect" coords="416,460,613,512" href="../EA6/EA782.htm" target="_self">
+<area shape="rect" coords="416,243,613,306" href="./EA2/EA869.htm" target="_self">
+<area shape="rect" coords="416,393,613,445" href="../EA2/EA1/EA705.htm" target="_self">
+<area shape="rect" coords="416,327,613,379" href="../EA7/EA800.htm" target="_self">
+<area shape="rect" coords="100,173,214,212" href="./EA2/EA871.htm" target="_self">
+<area shape="rect" coords="273,173,387,212" href="./EA2/EA870.htm" target="_self">
+<area shape="rect" coords="10,243,142,572" href="./EA2/EA865.htm" target="_self">
+<area shape="rect" coords="131,5,355,99" href="./EA2/EA864.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.23 - Dunning Result diagram</div>
+	<div class="ObjectDetailsNotes">The diagram below presents the different type of actions resulting from a dunning process.&lt;br/&gt;When a dunning process is triggered, it will first create a SoftDunning. At this stage the provider/operator starts to get in touch with the payer. And without result, we get in touch with the holder.&lt;br/&gt;Finally, after restriction measures, the entire holder&#8217;s contracts are removed and a closing invoice is produced.&lt;br/&gt;Once the closing invoice is produced, a HardDunning starts.&lt;br/&gt;According to the law, several interactions will be done with the holder and finally a DunningWriteOff is credited.&lt;br/&gt;Each time DunningRule events occur, a DunningCaseRule is triggered to apply it.&lt;br/&gt;If the condition specified by the DunningRule is true, then one or several actions are done.&lt;br/&gt;The different types of dunning actions are the following:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	One type of dunning action may be to interact with the customer to ask for a CustomerPayment or negotiate a PaymentPlan;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Another type of dunning action may be to apply penalty for overdue debt (AppliedCustomerPenaltyCharge that is a type of Charge);&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Another type of dunning action may be to create a CustomerProductOrder that will apply a limitation Product on the customer&#8217;s existing Products (Ex: limit to national calls) and even a CustomerProductOrder that will remove all the Customer&#8217;s Products;&lt;br/&gt;When all the Customer&#8217;s Products are removed a closing CustomerBill is produced, including the rented material goods price;&lt;br/&gt;The last action done by the Dunning process is to produce a DunningWriteOff.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:45:00 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C93C9A09-7298-4041-BD81-B243E735126D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

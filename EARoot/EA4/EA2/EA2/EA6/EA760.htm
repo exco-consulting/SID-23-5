@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.12a - Applied Customer Billing Rate detail</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA761.png" usemap="#EA761" border="0" />
+
+<MAP NAME="EA761">
+<area shape="rect" coords="926,621,1152,692" href="EA780.htm" target="_self">
+<area shape="rect" coords="666,140,877,224" href="EA768.htm" target="_self">
+<area shape="rect" coords="587,599,745,667" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="773,599,905,651" href="../EA7/EA800.htm" target="_self">
+<area shape="rect" coords="374,527,654,579" href="EA775.htm" target="_self">
+<area shape="rect" coords="181,586,465,638" href="EA776.htm" target="_self">
+<area shape="rect" coords="400,399,588,451" href="EA782.htm" target="_self">
+<area shape="rect" coords="877,415,1092,467" href="EA773.htm" target="_self">
+<area shape="rect" coords="313,9,474,114" href="EA778.htm" target="_self">
+<area shape="rect" coords="934,226,1068,278" href="../../EA3/EA4/EA3/EA1217.htm" target="_self">
+<area shape="rect" coords="1045,539,1246,591" href="EA781.htm" target="_self">
+<area shape="rect" coords="154,172,377,224" href="EA784.htm" target="_self">
+<area shape="rect" coords="516,293,677,345" href="EA771.htm" target="_self">
+<area shape="rect" coords="99,254,233,306" href="../../EA3/EA4/EA3/EA1218.htm" target="_self">
+<area shape="rect" coords="123,399,356,451" href="EA774.htm" target="_self">
+<area shape="rect" coords="817,534,1001,586" href="EA772.htm" target="_self">
+<area shape="rect" coords="648,422,829,474" href="EA779.htm" target="_self">
+<area shape="rect" coords="7,355,104,407" href="../../EA3/EA6/EA1253.htm" target="_self">
+<area shape="rect" coords="41,527,278,579" href="EA777.htm" target="_self">
+<area shape="rect" coords="290,287,465,339" href="EA770.htm" target="_self">
+<area shape="rect" coords="400,172,607,224" href="EA783.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.12a - Applied Customer Billing Rate detail diagram</div>
+	<div class="ObjectDetailsNotes">The AtomicAppliedCustomerBillingRate class has four subclasses:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingCharge, that represents any kind of charge (except taxation charges);&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingCredit, that represents any kind of credit;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingTaxRate, that represents a taxation charge;&lt;br/&gt;The AppliedCustomerBillingCharge has two subclasses:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerFeeCharge that represents penalty charges such as late fees, payment rejection fees&#8230;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingProductCharge that represents a charge applied to a Product&lt;br/&gt;The AppliedCustomerBillingProductCharge has three subclasses:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingProductUsageCharge represents the charge for a product usage event typically produced by a rating engine.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	For example, when a customer makes a voice call a ServiceUsage instance representing call details is created. Afterwards the guiding process creates a ProductUsage instance that represents the ServiceUsage associated with the proper Product. Then the rating process applies a usage price to the ProductUsage instance and creates an AppliedCustomerBillingProductUsageRate instance representing the price of the rated Product Usage.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingProductRecurringCharge represents an amount, usually of money, for which an Individual or Organization is financially liable over recurring period (e.g. monthly) for the right to use a Product. For example, $15/month for basic TV channel access, $10/month for renting a home gateway, $3/month for extended warranty for an iPhone.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	AppliedCustomerBillingProductOneTimeCharge represents an amount, usually of money, for which an Individual or Organization is financially liable due to a one-time event relating to a Product. For example, $20 installation fee for a home gateway, $600 purchase price for an iPhone, $10 shipping fee for a router.&lt;br/&gt;The AppliedCustomerBillingCredit has two subclasses:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The AppliedCustomerBillingRebate represents an amount, usually of money, which is paid back to a customer&#8217;s account, for example, because a customer is entitled to a refund. It refers globally to a CustomerBillingAccount or a specific CustomerBill. For example, it can correspond to 5% discount on the total amount of the previous CustomerBill or a good will of 100$ attributed by a seller to the CustomerBillingAccount.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The AppliedCustomerBillingProductAlteration represents a modification of the referred applied product billing charge (either atomic or composite).&lt;br/&gt;The AppliedCustomerBillingTaxRate represents taxes applied to billing charges. The entity may be linked to another applied rate (either atomic or composite rate) to indicate which applied rate it refers to. It is calculated during a billing process.&lt;br/&gt;The presented model by no means represents the complete set of applied billing rates that can be incurred. The model provides a framework into which other types of applied billing rates can easily fit.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/9/2023 12:51:23 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0CF9BF26-BD4B-4fc0-BB73-990E700BD6BD}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

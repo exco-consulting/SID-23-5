@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.04 - Resource and Service Usage</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4945.png" usemap="#EA4945" border="0" />
+
+<MAP NAME="EA4945">
+<area shape="rect" coords="471,10,609,38" href="../../EA4/EA7/EA1543.htm" target="_self">
+<area shape="rect" coords="754,107,899,135" href="../../EA4/EA3/EA1406.htm" target="_self">
+<area shape="rect" coords="766,298,887,326" href="../../EA4/EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="478,296,603,324" href="../../EA4/EA7/EA1542.htm" target="_self">
+<area shape="rect" coords="297,10,433,38" href="../../EA5/EA6/EA2408.htm" target="_self">
+<area shape="rect" coords="10,99,154,127" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="29,296,135,324" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="300,296,430,324" href="../../EA5/EA6/EA2407.htm" target="_self">
+<area shape="rect" coords="402,191,516,219" href="EA4971.htm" target="_self">
+<area shape="rect" coords="384,105,534,133" href="./EA2/EA5017.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.04 - Resource and Service Usage diagram</div>
+	<div class="ObjectDetailsNotes">A resource usage represents any usage of resources in its broadest meaning, for example a purchase or lease of a product realized by a resource. A service usage represents any usage of service in its broadest meaning, for example a purchase of a product realized/implemented by a service or a usage of a service that realizes a product. Classes that are used to model resource and service usages are subclasses of abstract usage classes as shown in the following Figure, the ResourceUsageSpec is a subclass of the UsageSpecification and represents a type of resource usage, while the ServiceUsageSpec represents a type of service usage. A typical source of resource or service usage is a mediation application. Other sources may be application servers and other applications (for example, an online shopping application) that are aware of the usage format and can generate usage directly without mediation.&lt;br/&gt;An example of the ServiceUsage class is a voice call that is characterized by:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;An origination and a destination address (Who), typically complete information is available only for ProductUsage&lt;/li&gt;&lt;li&gt;A time of a day the call was connected and a duration of the call (When),&lt;/li&gt;&lt;li&gt;A call type and its details (What),&lt;/li&gt;&lt;li&gt;Connection locations of the call (Where) and&lt;/li&gt;&lt;li&gt;A cause of event recording (Why).&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 1:18:52 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{35BF2260-2F59-4b81-A509-C3EA51A05507}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

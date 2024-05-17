@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure A-4 Severity Indicating Gauge threshold examples</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4262.png" usemap="#EA4262" border="0" />
+
+<MAP NAME="EA4262">
+<area shape="rect" coords="10,10,1030,467" href="EA4277.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure A-4 Severity Indicating Gauge threshold examples diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Overview of OSI Systems Management Metric Objects &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;ISO/IEC 10164-11: 1994 | ITU-T Rec X.739 INFORMATION TECHNOLOGY &#8211; OPEN SYSTEMS INTERCONNECTION &#8211; SYSTEMS MANAGEMENT: METRIC OBJECTS AND ATTRIBUTES &lt;a href=&quot;file://http://www.itu.int/rec/T-REC-X.739-199311-I/en&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;http://www.itu.int/rec/T-REC-X.739-199311-I/en&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The OSI-Management Metric Objects specification, unlike the OMG SMM, can work without an underlying metamodel, and it specifies run time objects which perform statistical calculations on a single attribute of an observed managed object over time, using a periodically invoked get operation. The concepts and mechanisms of this specification are applicable to any Cloud Computing environment which has capabilities for getting values of attributes of Cloud Computing Resources.&#160;&#160;Any REST based protocol could be used by a Metric Object to scan the values of the observed resources.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The underlying targets for the Metric objects are instance of Managed Objects in a running system. OSI-System management has the CMIP protocol which conveys Create, Replace, Update, and Delete operations on an agent process which reflects these management operations in a real world set of Managed Elements, represented as managed objects.&#160;&#160;&#160;CMIP has a simple get operation to get the current value of any attribute of a managed object instance, identified by a unique distinguished name.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Metric Objects specification was designed to define metrics for statistical calculations over time, employing the concept of a scanner.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The data necessary to compute the observed values are extracted from the observed managed objects. The observed values are monitored by sampling at an interval specified by a granularity period.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A Monitor Metric is a scanner that periodically gets the value of an observed attribute of a single Managed Object instance that it points at, with attributes for a managed object instance pointer, the measured attribute name, and a granularity period.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Metrics objects model assumes that observed attribute being scanned is either a counter (monotonically increasing integer value) or a gauge (value of a varying quantity).&#160;&#160;There are mechanisms in the metric objects to derive a gauge from an attribute that is a counter (counter difference package), as well as well as to derive a derivative of a gauge from an observed attribute that is a gauge. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are also optional scanner mechanisms to specify different scheduling and control capabilities, for the times when scanning of the observed attribute are active.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Metric objects can also have a severity indicating gauge-threshold attribute type which is used to trigger notifications for monitoring resources.&#160;&#160;There can be multiple threshold levels (each with an associated clear threshold) applied to the derived value in a metric object.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Figure A-4 shows an example of a severity indicating gauge model.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 12:59:37 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 1:03:41 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7518AAE6-DA1C-49dc-BF55-CA0D56DB2630}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

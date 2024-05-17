@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.26 - Characteristic Value</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3690.png" usemap="#EA3690" border="0" />
+
+<MAP NAME="EA3690">
+<area shape="rect" coords="348,440,540,468" href="./EA2/EA3852.htm" target="_self">
+<area shape="rect" coords="331,10,534,38" href="./EA2/EA3854.htm" target="_self">
+<area shape="rect" coords="462,115,631,143" href="./EA2/EA3850.htm" target="_self">
+<area shape="rect" coords="476,364,620,392" href="./EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="5,141,127,169" href="EA3822.htm" target="_self">
+<area shape="rect" coords="13,243,118,271" href="EA3820.htm" target="_self">
+<area shape="rect" coords="363,210,501,294" href="./EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="224,87,389,115" href="./EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="228,364,411,392" href="./EA2/EA3846.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.26 - Characteristic Value diagram</div>
+	<div class="ObjectDetailsNotes">Following Figure depicts CharacteristicValues and their associations to Entities, in the figure a RootEntity.&#160;&#160;A CharacteristicValue is one chosen or entered for an Entity for a specific CharacteristicSpecification.&#160;&#160;In the example above the instances would be &#8220;blue&#8221; for the face plate and black for the case. The values would be related to the respective CharacteristicSpecValue.&lt;br/&gt;When values are not specified in CharacteristicSpecValue or the other &#8220;spec value&#8221; entities shown in the figure, but are entered for a CharacteristicSpecification, then CharacteristicValue is related to CharacteristicSpecification or one of the other &#8220;spec&#8221; entities shown in the figure.&#160;&#160;For example, a startTime is a CharacteristicSpecification for a Video on Demand, an entered value of 6 Aug 2007 would be related to startTime.&#160;&#160;This one of the two cases when a CharacteristicValue would be related to a CharacteristicSpecification and when the value attribute of CharacteristicValue would have to be populated.&#160;&#160;The other case is when a value is chosen from a range of values defined by the CharacteristicSpecValue.&#160;&#160;When a CharacteristicSpecValue is chosen from a list of discrete values or it is unchangeable (via the canBeOverridden attribute set to &#8220;false&#8221;), there is no need to populate the value attribute, unless performance considerations required this from an implementation perspective.&#160;&#160;In these cases the instance of CharacteristicValue is related to the instance of CharacteristicSpecValue and not the instance of CharacteristicSpecification.&lt;br/&gt;&lt;i&gt;Note:&#160;&#160;CharacteristicValue can also be directly related to an entity, such as ServicePerformance or Customer if they do not inherit from the RootEntity&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/8/2022 6:23:50 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{9C52BFA5-A33D-46be-9B4E-24EA9A2266D0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

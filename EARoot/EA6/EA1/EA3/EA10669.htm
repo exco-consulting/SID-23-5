@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Product Test Management::Product Test Execution</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Product Test Execution", " : "))</script>   &lt;&lt;TMF_AF&gt;&gt; </span>
+	
+		<div class="ObjectDetailsNotes">Product Test Execution Aggregate Function provides the necessary functionalities to manage the end-to-end execution of a test for an atomic product, either for manual or automatic testing, in order to ensure that this atomic product is working properly.&lt;br/&gt;&lt;br/&gt;The end-to-end Product Test process will also rely on the Service Test Management and Resource Test Management functions depending on the association between the atomic product and the underlying service or resource.&lt;br/&gt;&lt;br/&gt;The Product Test Execution is used by fulfillment and the assurance processes.&lt;br/&gt;In the fulfillment process, the product test management can be triggered to launch acceptance tests to ensure that the product is working properly from the customer/user perspective and thus validate the end of the delivery process. &lt;br/&gt;&lt;br/&gt;On the assurance side the product testing function is used during product problem isolation. &lt;br/&gt;&lt;br/&gt;Product Test Execution functionalities include:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Verifying test authorization and quota management: product test execution checks, depending on the initiator of the test request , if it is authorized and if limitation applies in terms of test quota (linked to underlying services/resources limitation or additional marketing constraints.) This applies especially for self-care test from users.&lt;/li&gt;&lt;li&gt;Carrying out test priority : the priority of a self-care test for a user is higher than a back-office test.&lt;/li&gt;&lt;li&gt;Retrieval of appropriate inventory data and setting up the test context and configuration.&lt;/li&gt;&lt;li&gt;Test execution with access to the various data required to perform product testing.&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;- A product test main actions will be to trigger service or resource tests depending on the product composition&lt;br/&gt;&#160;&#160;- Data collected during product test can be inventory data (for example in IS inventory) or data coming from service or resource tests.&lt;br/&gt;&#160;&#160;- Test execution produces a test result that may contain a raw result and an enrichment of this result depending on the product test definition and associated rules.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;For example: for an access product test the raw result can be the associated bandwidth and an enrichment can be done depending on the user access type (fiber, xdsl) to evaluate if the result is suitable or not.&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Test results restitution: the restitution of the raw test results may depends on the test execution context data.&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;- For the same test, depending on the initiator, the result restitution can be more or less detailed. The user/customer needs less technical details in self-care whereas customer care needs more and more details with higher care level.&lt;br/&gt;&#160;&#160;- However test result restitution levels must always be mutually consistent through all&#160;&#160;the execution context&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Test results long term logging for offline data analyses. These analyses are done outside of Product Test Management.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Possible reporting of test results back to the initiator of the test.&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:52:34 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA10609.htm">Product Domain</a>, <a href="EA10623.htm">Product Test Management</a>, <a href="../../EA3/EA3/EA6/EA11909.htm">Product Test Management</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{4A37578E-0EE5-4b37-9A75-CFABE5CD7BF1}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">12/8/2022 10:38:08 AM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA10634.htm">«TMF_AF» Product Test Management</a><br />
+						Aggregated Function «TMF_AFAggregatesAF» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62729" onclick="parent.toggleDiv('detailsDIVLink62729','DetailsImageLink62729')" />Details:
+							<div id="detailsDIVLink62729" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA6/EA1/EA11914.htm">«TMF_Function» Product Test Authorization Check</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62730" onclick="parent.toggleDiv('detailsDIVLink62730','DetailsImageLink62730')" />Details:
+							<div id="detailsDIVLink62730" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA6/EA1/EA11916.htm">«TMF_Function» Product Test Reporting</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62731" onclick="parent.toggleDiv('detailsDIVLink62731','DetailsImageLink62731')" />Details:
+							<div id="detailsDIVLink62731" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../EA3/EA3/EA6/EA1/EA11915.htm">«TMF_Function» Product Test Execution</a><br />
+						Function «TMF_AFAggregatesFunction» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink62732" onclick="parent.toggleDiv('detailsDIVLink62732','DetailsImageLink62732')" />Details:
+							<div id="detailsDIVLink62732" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">FunctionID</td>
+				<td width="50%" class="TableRow" valign="top">2.4.2.1</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario62733" onclick="parent.toggleDiv('detailsDIVScenario62733','DetailsImageScenario62733')" />Specification:
+						<div id="detailsDIVScenario62733" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">HierarchyLevel</td>
+				<td width="50%" class="TableRow" valign="top">2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario62734" onclick="parent.toggleDiv('detailsDIVScenario62734','DetailsImageScenario62734')" />Specification:
+						<div id="detailsDIVScenario62734" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the level of this object in the hierarchy (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">UID</td>
+				<td width="50%" class="TableRow" valign="top">57</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario62735" onclick="parent.toggleDiv('detailsDIVScenario62735','DetailsImageScenario62735')" />Specification:
+						<div id="detailsDIVScenario62735" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

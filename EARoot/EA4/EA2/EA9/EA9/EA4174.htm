@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Me.07a - Metric Threshold Definition - Derived Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4175.png" usemap="#EA4175" border="0" />
+
+<MAP NAME="EA4175">
+<area shape="rect" coords="603,41,755,106" href="./EA3/EA4291.htm" target="_self">
+<area shape="rect" coords="10,251,260,323" href="./EA4/EA1/EA4323.htm" target="_self">
+<area shape="rect" coords="48,10,247,118" href="./EA4/EA4311.htm" target="_self">
+<area shape="rect" coords="316,304,513,390" href="./EA4/EA1/EA4324.htm" target="_self">
+<area shape="rect" coords="605,267,753,304" href="./EA4/EA4309.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Me.07a - Metric Threshold Definition - Derived Associations diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows an overview of how threshold are specified for a MetricDefMeasure.&lt;br/&gt;A MetricDefMeasure specifies a measure of a specific aspect of an entity, such as lost packets or dealer sales target achievement, defined for a MetricDefinition that may trigger consequence (s) (MetricDefMeasureConsequence) if a threshold (MetricDefMeasureThreshold) is crossed.&lt;br/&gt;A MetricDefMeasureThresholdSet provides a way to group a set of one or more MetricDefMeasureThresholdRules specifying the condition to evaluate for applying consequences.&lt;br/&gt;The thresholdType specifies the type of MetricDefMeasureThresholdRule contained in the MetricDefMeasureThresholdSet.&lt;br/&gt;The value is &#8220;LogicDefinition&#8221; if the MetricDefMeasureThresholdSet contains only MetricThresholdRuleDefinition instances and &#8220;PreDefined&#8221; if it contains only PreDefinedMetricThresholdRule instances.&lt;br/&gt;A MetricDefMeasureThresholdSet is used to evaluate one or more MetricDefMesures.&lt;br/&gt;Threshold rules (MetricDefMeasureThresholdRule) may differ in the condition that they apply, a raise condition or a clear condition, and in the severity of the threshold crossing.&lt;br/&gt;A MetricDefMeasureConsequence defines the action (prescribed action or notification) taken when a MetricDefMeasureThresholdRule is crossed and might depend on MetricDefMeasureThresholdRule applied or not for the previous MetricMeasure..&lt;br/&gt;When a MetricDefMeasureConsequence is applied (track as a MetricMeasureConsequence) this is the result of a single rule (MetricDefMeasureThresholdRule) being crossed.&lt;br/&gt;Different consequences (MetricDefMeasureConsequence) can be defined for different severities. &lt;br/&gt;The repeatAction attribute on MetricDefMeasureConsequence is an indicator used to specify that a consequence &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	should cease being applied if a value is in the same range as the previous value&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	or continue being applied if a value is in the same range as the previous value.&lt;br/&gt;If the repeatApplication is True, the consequence is always applied as soon as the MetricMeasure value is in the range of values and if the repeatApplication is False, the consequence is applied only if the previous MetricMeasure value wasn&#8217;t in the same range.&lt;br/&gt;Nota: &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The two associations pre-fixed by a slash correspond to derived associations.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A derived association represents synthetically several associations. See example with the next figure.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/9/2022 2:25:49 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{82A54DB0-FE9C-41fd-BFBF-271A3D2A4639}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

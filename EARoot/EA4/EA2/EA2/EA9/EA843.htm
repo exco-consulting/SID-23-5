@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.22 - Dunning Scenario and Case</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA844.png" usemap="#EA844" border="0" />
+
+<MAP NAME="EA844">
+<area shape="rect" coords="562,448,694,523" href="./EA2/EA865.htm" target="_self">
+<area shape="rect" coords="6,371,123,439" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="190,459,355,511" href="./EA2/EA867.htm" target="_self">
+<area shape="rect" coords="565,287,692,362" href="./EA2/EA864.htm" target="_self">
+<area shape="rect" coords="201,287,343,374" href="./EA2/EA868.htm" target="_self">
+<area shape="rect" coords="385,138,506,206" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="390,10,487,68" href="../EA1/EA687.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.22 - Dunning Scenario and Case diagram</div>
+	<div class="ObjectDetailsNotes">The Dunning ABE is part of the Customer Bill Collection ABE.&lt;br/&gt;This section is intended to define the scope of information used by the dunning process.&lt;br/&gt;More precisely, this section describes information produced and consumed by the level 3 business processes from eTOM&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	1.1.1.11.3 Manage Customer Debt Collection &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	and 1.1.1.1.14 Support Bill Payments &amp; Receivable Management&lt;br/&gt;The following Figure C.22 &#8211; Dunning Scenario and Case presents the dunning scenario and the corresponding cases.&lt;br/&gt;Each provider/operator has to define its dunning strategy. This strategy is described by DunningScenario. Each DunningScenario contains the dunning rules to apply to a case, the order in which applying them, the events that trigger dunning rules evaluation, the actions that must be done, and so forth.&lt;br/&gt;The DunningCaseRules are specified by DunningRule that is a type of PolicyRule. &lt;br/&gt;This allows specifying for each dunning rule: &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	the events that trigger the evaluation of the rule (Ex: due debt not paid after 8 days&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	conditions that have to be evaluated (Ex: no bill dispute in progress) &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	and actions that must be done (Ex: send a dunning letter).&lt;br/&gt;A DunningScenario is assigned to a CustomerBillingAccount, depending on the Holder quality (Ex: a more tolerant DunningScenario is assigned to VIPs).&lt;br/&gt;If no specific DunningScenario is assigned to a CustomerBillingAccount, a default scenario is applied.&lt;br/&gt;As soon as an event triggering a DunningRule occurs on a CustomerBillingAccount, a DunningCase is created according to the DunningScenario assigned to the CustomerBillingAccount.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/24/2022 10:22:08 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D9FBD301-5D53-4327-8170-15C3A3ABCDD0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

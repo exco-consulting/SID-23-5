@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.09 - Customer Problem Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA748.png" usemap="#EA748" border="0" />
+
+<MAP NAME="EA748">
+<area shape="rect" coords="16,354,149,416" href="EA752.htm" target="_self">
+<area shape="rect" coords="27,23,210,82" href="../../EA9/EA4/EA3953.htm" target="_self">
+<area shape="rect" coords="770,10,961,143" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="295,10,446,128" href="../../EA9/EA4/EA3948.htm" target="_self">
+<area shape="rect" coords="10,183,155,288" href="EA755.htm" target="_self">
+<area shape="rect" coords="737,353,919,432" href="EA756.htm" target="_self">
+<area shape="rect" coords="548,91,731,183" href="EA753.htm" target="_self">
+<area shape="rect" coords="279,362,452,441" href="EA757.htm" target="_self">
+<area shape="rect" coords="301,203,440,255" href="EA754.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.09 - Customer Problem Model diagram</div>
+	<div class="ObjectDetailsNotes">A CustomerProblem may be associated with CustomerProblemTask(s) which represent a trackable task delegated from the CustomerProblem with a specified due date. CustomerProblem may also be an instance of a problem known to the service provider, optionally with a workaround to bypass this problem, in such a case, a KnownProblemDescription may be associated with the CustomerProblem. &lt;br/&gt;A CustomerProblem is also optionally associated with Attachment (through inheritance from BusinessInteraction), typically such as Attachment represents a document (such as screenshot or diagnostics report) that the Customer provides that depicts the problem he encounters.&lt;br/&gt;When a CustomerProblem is closed a CloseCustomerProblemSummary entity which records the closure activity is created. A CustomerProblem may associate to more than one CloseCustomerProblemSummary since a problem can be closed and then reopened (typically by the customer) if the problem is not solved.&lt;br/&gt;The following diagram shows the CustomerProblem model:&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:36:22 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B1E4B7F9-AAD5-4503-B551-B9D0132235F6}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

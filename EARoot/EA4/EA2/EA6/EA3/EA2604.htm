@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure MS.14 - Competitor Intelligence Basic Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2605.png" usemap="#EA2605" border="0" />
+
+<MAP NAME="EA2605">
+<area shape="rect" coords="10,219,197,295" href="./EA1/EA2632.htm" target="_self">
+<area shape="rect" coords="171,98,280,128" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="363,219,508,311" href="./EA1/EA2630.htm" target="_self">
+<area shape="rect" coords="33,155,154,183" href="../EA10/EA2800.htm" target="_self">
+<area shape="rect" coords="398,10,518,44" href="../../EA10/EA1/EA7/EA5550.htm" target="_self">
+<area shape="rect" coords="117,377,264,407" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="398,98,518,129" href="EA2616.htm" target="_self">
+<area shape="rect" coords="557,275,772,363" href="./EA1/EA2631.htm" target="_self">
+<area shape="rect" coords="593,141,711,172" href="../EA2/EA2599.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure MS.14 - Competitor Intelligence Basic Entities diagram</div>
+	<div class="ObjectDetailsNotes">CompetitorIntelligence are facts gathered about a Competitor&#39;s plans and activities that contributes to building a profile for a Competitor.&#160;&#160;This type of information may also be kept about internal organizations by treating them as Competitors.&#160;&#160;Many of the facts overlap with those gathered for the enterprise itself in the form of MarketStatistics.&#160;&#160;There are several sources from which to gather this information, including trade shows, networks, and the public domain (such as press releases).&#160;&#160;&lt;br/&gt;CompetitorIntelligence can encompass, but is not limited to, the following&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Revenue (by geographic area, by product and so forth)&lt;/li&gt;&lt;li&gt;Public financial information&lt;/li&gt;&lt;li&gt;Press releases for information, such as personnel changes, product introductions, exits from MarketSegments, earnings, new agreements&lt;/li&gt;&lt;li&gt;Product brochures&lt;/li&gt;&lt;li&gt;Strategic alliances&lt;/li&gt;&lt;li&gt;Market entry&lt;/li&gt;&lt;li&gt;Person profiles of a Competitor&#8217;s executives&lt;/li&gt;&lt;li&gt;Prospects&lt;/li&gt;&lt;li&gt;Rank within a MarketSegment&lt;/li&gt;&lt;/ul&gt;<br />These facts can be used to perform Competitor SWOT analysis in order to better understand a Competitor.&lt;br/&gt;CompetitorIntelligenceMarketSegment tracks the entry or planned entry of a Competitor into a MarketSegment.&#160;&#160;The association with ProductOffering may pertain to an enterprise&#8217;s ProductOffering or to a Competitor&#8217;s ProductOffering (use of Product domain ABEs and entities to model Competitor Product domain entities will be explained in the next section of this addendum).&#160;&#160;The association means that the intelligence pertains to a particular ProductOffering or group of ProductOfferings.&#160;&#160;CompetitorIntelligencePartyRole captures the Party playing a PartyRole that gathered the intelligence.&#160;&#160;The association between PartyRole and MarketStatistics can be used to track Key Performance Indicators (KPIs) for a Competitor.&#160;&#160;KPIs measure such things as churn and retention, usage patterns, take rates, market penetration, market share changes, and so forth.&#160;&#160;The association with PartyRole also provides via PartyRole a means to create PartyProfiles for a Competitor.&lt;br/&gt;The figure below depicts the basic entities that make up the CompetitorIntelligence ABE.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/18/2023 6:45:27 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{EABF9462-2D92-4ecc-9129-072B69F43022}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure ResCS.08 - Model Association Enhancements - 1</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1976.png" usemap="#EA1976" border="0" />
+
+<MAP NAME="EA1976">
+<area shape="rect" coords="338,283,494,366" href="../EA1946.htm" target="_self">
+<area shape="rect" coords="122,326,244,405" href="../EA1944.htm" target="_self">
+<area shape="rect" coords="16,161,113,213" href="../../../EA7/EA1/EA2827.htm" target="_self">
+<area shape="rect" coords="249,161,359,213" href="../../EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="10,10,155,62" href="../EA1/EA1960.htm" target="_self">
+<area shape="rect" coords="406,10,604,150" href="../EA3/EA2/EA1/EA2057.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure ResCS.08 - Model Association Enhancements - 1 diagram</div>
+	<div class="ObjectDetailsNotes">As mentioned earlier, a number of associations have been enhanced and added to support the requirements of today&#8217;s digital world.&#160;&#160;This section describes them.&lt;br/&gt;The Figure below shows one group of associations that were added/enhanced.&lt;br/&gt;The association between ResourceElement and InstalledSoftware deserves a few comments.&#160;&#160;First, the association may appear to be redundant, because a CompoundResource is composed of Logical, Physical, and Compound Resources.&#160;&#160;However, since ResourceElements can be realized purely by Software, this fact was deemed important enough to justify adding a direct association between the two entities.&#160;&#160;Second, Figure CS.04 &#8211; Software Specification and Resource Specification shows a similar association between CompoundResourceSpecification and SoftwareSpecification.&#160;&#160;The reason for the difference is that there is no ResourceElementSpecification entity.&lt;br/&gt;The InstalledSoftwareRuns (InstalledSoftware) association has been added to support scenarios such as an operating system running desktop software or a virtual machine operating system running a java virtual machine operating system.&lt;br/&gt;The addition of the association between Supplier and ResourceSpecification was mentioned in a previous section of this document.&#160;&#160;It is shown here.&lt;br/&gt;The addition of the ResourceReferences association class was added to parallel the recursive association between ResourceSpecifications.&#160;&#160;It enables one Resource to reference another for a variety of reasons, such as one Resource replacing or being an alternate of another or to model a hierarchy of Resources.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 7:01:43 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D03FDDCE-B4E1-4838-8D71-CAD38917ECB0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RF.01 -ResourceFunction and related Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1927.png" usemap="#EA1927" border="0" />
+
+<MAP NAME="EA1927">
+<area shape="rect" coords="228,155,335,207" href="./EA3/EA2/EA1/EA2055.htm" target="_self">
+<area shape="rect" coords="130,395,262,460" href="./EA4/EA2236.htm" target="_self">
+<area shape="rect" coords="487,403,593,509" href="./EA4/EA2244.htm" target="_self">
+<area shape="rect" coords="780,314,913,366" href="./EA1/EA1962.htm" target="_self">
+<area shape="rect" coords="145,263,251,315" href="./EA3/EA2/EA1/EA2061.htm" target="_self">
+<area shape="rect" coords="64,150,176,202" href="./EA3/EA2026.htm" target="_self">
+<area shape="rect" coords="15,10,349,63" href="./EA3/EA2035.htm" target="_self">
+<area shape="rect" coords="635,18,761,70" href="./EA4/EA2247.htm" target="_self">
+<area shape="rect" coords="468,160,666,300" href="./EA3/EA2/EA1/EA2057.htm" target="_self">
+<area shape="rect" coords="438,18,584,70" href="./EA3/EA2/EA1/EA2056.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RF.01 -ResourceFunction and related Entities diagram</div>
+	<div class="ObjectDetailsNotes">Each time a ResourceFunctionSpecification is provided whatever the way it is done (SoftwareSpecification, SoftBlackBoxSpec or PhysicalBlackBoxSpec), a ResourceFunction is created with its ConnectionPoints.&lt;br/&gt;The ResourceFunction is provided either by &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	an InstalledSoftware,&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	a SoftBlackBox,&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	or a PhysicalBlackBox&lt;br/&gt;These relationships are mutually exclusive.&lt;br/&gt;Each InstalledSoftware and PhysicalBlackBox specifies their input and output respectively with SoftConnectionPoint and ElectronicConnectionPoint entities.&lt;br/&gt;SoftConnectionPoint and ElectronicConnectionPoint realize a ConnectionPoint.&lt;br/&gt;An InstalledSoftware also specifies the HostingPlatformRequirement used, and the SoftwareSupportPackage used for deployment.&lt;br/&gt;A ConfigurationFeature is a type of Entity described by a ConfigurationFeatureSpec.&lt;br/&gt;It is used to expose one or several ResourceFunctions to a consumer in such a way that it is easier to configure these Rfunctions from a consumer view point.&lt;br/&gt;A ConfigurationFeature may have characteristics configured according to the possible configurations specified by the ConfigurationFeatureSpec.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/13/2023 4:35:46 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C66121D4-D2B4-472d-B0A4-38410A96E277}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

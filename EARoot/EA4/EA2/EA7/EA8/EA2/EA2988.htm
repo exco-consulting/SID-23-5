@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PRS.06 - Party Revenue Share Reconciliation</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2989.png" usemap="#EA2989" border="0" />
+
+<MAP NAME="EA2989">
+<area shape="rect" coords="16,455,211,554" href="../../../EA10/EA5/EA5727.htm" target="_self">
+<area shape="rect" coords="559,464,713,504" href="../../EA13/EA3110.htm" target="_self">
+<area shape="rect" coords="286,486,499,538" href="./EA3/EA3049.htm" target="_self">
+<area shape="rect" coords="10,132,208,219" href="./EA2/EA3037.htm" target="_self">
+<area shape="rect" coords="286,305,498,416" href="./EA3/EA3046.htm" target="_self">
+<area shape="rect" coords="647,271,790,311" href="../../../EA10/EA4/EA5666.htm" target="_self">
+<area shape="rect" coords="688,156,768,195" href="../../EA12/EA3080.htm" target="_self">
+<area shape="rect" coords="576,12,719,47" href="./EA2/EA3036.htm" target="_self">
+<area shape="rect" coords="286,132,493,195" href="./EA3/EA3047.htm" target="_self">
+<area shape="rect" coords="280,10,499,45" href="./EA3/EA3048.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PRS.06 - Party Revenue Share Reconciliation diagram</div>
+	<div class="ObjectDetailsNotes">The Party Revenue Sharing Reconciliation ABE ensures that two sets of party revenue sharing records are aligned and agreed upon. For example, an enterprise may receive an invoice from another party that is compared to the revenue share that has been determined to be shared with the party contained in the Party Revenue Share ABE.&lt;br/&gt;Reconciliation includes comparing what is received with what is to be paid, invoiced or credited/debited to a bill/invoice or account balance, identifying and resolving discrepancies, identifying adjustments to revenue to be shared, and tracking discrepancy resolution.&lt;br/&gt;PartyRevenueShareReconciliation and PartyRevShareConciliationItem represent a comparison of two sets of party revenue sharing records to ensure they are aligned and agreed upon. A comparison identifies and resolves discrepancies and identifies revenue share adjustments. This is done by comparing the revenue determined by an enterprise that is to be shared with another party with the information provided by the party. The information used in the reconciliation is provided on a revenue sharing notice, bill/invoice, or payment according to terms specified by a party revenue sharing agreement. For example, a party may provide their own version of a party revenue share for one or more of its product offerings.&lt;br/&gt;PartyRevShareReconDiscrepancy represents the result of comparing information received from another party with the revenue share determined by an enterprise. Differences are classified as a discrepancy that is to be resolved. For example, an enterprise&#39;s calculated revenue share for a product offering may be missing a product that has been acquired that appears on a bill/invoice from another party. A discrepancy is communicated using RevShareReconDiscrepNotification. The communication contains information used in the reconciliation process from another party. The information provided is designated as preliminary until the reconciliation is complete. Because different forms of information can be provided by a party other processes and their associated entities may be involved. For example, if a bill/invoice is provided by a party then the Party Bill Inquiry Handling process may be invoked; if a payment is provided then the Party Payment Handling process may be invoked; if a revenue share notification is provided then the Identify Party Revenue Share Adjustment process may be invoked.&lt;br/&gt;An overview of the entities within the Party Revenue Share Reconciliation ABE is shown in the following Figure.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/26/2023 6:54:24 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{1895A8FC-281B-4772-8C5B-B15654A37C11}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

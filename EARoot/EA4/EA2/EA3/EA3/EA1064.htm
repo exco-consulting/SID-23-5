@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Illustration Pr.25 – I02 - Time and Customer Information Sensitive Algorithm</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1065.png" usemap="#EA1065" border="0" />
+
+<MAP NAME="EA1065">
+<area shape="rect" coords="10,10,546,117" href="EA1098.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Illustration Pr.25 – I02 - Time and Customer Information Sensitive Algorithm diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;This use case describes a more complex algorithm in which there are more parameters which are also more complex. Let&#8217;s assume we have an algorithm which charges differently for peak and off-peak calls (and can also split the charge of a call that starts peak and ends off-peak or vice versa). Let&#8217;s also assume that the rate per minute is different according to customer type (student, normal, VIP)&#160;&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In order to instantiate such an algorithm, we need to set the following parameters.&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define which time is peak and which is off-peak (we can have one instantiation in which peak is 10-15 Mon-Thu and another one which is 8-18 Mon-Thu)&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define the rate per combination of customer type and peak/off-peak. Such a matrix could look like&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;Note &#8211; this matrix is not necessarily two dimensional in some cases it has more dimensions (the rate depends on time (peak/off-peal), customer type and local/long distance rates)&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 11:45:57 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/19/2022 4:08:48 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D28F7775-3061-4fa6-8451-2B68A2F54E05}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.04 - ManagementInformation and Methods for Obtaining Management Data</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3624.png" usemap="#EA3624" border="0" />
+
+<MAP NAME="EA3624">
+<area shape="rect" coords="226,153,415,181" href="../../EA5/EA3/EA3/EA5/EA2/EA2109.htm" target="_self">
+<area shape="rect" coords="582,153,769,181" href="../../EA5/EA3/EA3/EA5/EA2/EA2104.htm" target="_self">
+<area shape="rect" coords="439,207,582,235" href="EA3812.htm" target="_self">
+<area shape="rect" coords="39,207,221,235" href="../../EA5/EA3/EA3/EA5/EA2/EA2105.htm" target="_self">
+<area shape="rect" coords="782,207,914,235" href="EA3814.htm" target="_self">
+<area shape="rect" coords="636,321,780,349" href="../../EA5/EA3/EA3/EA5/EA8/EA2137.htm" target="_self">
+<area shape="rect" coords="549,455,695,483" href="../../EA5/EA3/EA3/EA5/EA7/EA2133.htm" target="_self">
+<area shape="rect" coords="252,361,377,389" href="../../EA5/EA3/EA3/EA5/EA2/EA2106.htm" target="_self">
+<area shape="rect" coords="329,313,426,341" href="../../EA5/EA3/EA3/EA5/EA2/EA2110.htm" target="_self">
+<area shape="rect" coords="135,314,260,342" href="../../EA5/EA3/EA3/EA5/EA2/EA2108.htm" target="_self">
+<area shape="rect" coords="135,410,260,438" href="../../EA5/EA3/EA3/EA5/EA2/EA2107.htm" target="_self">
+<area shape="rect" coords="6,360,131,388" href="../../EA5/EA3/EA3/EA5/EA2/EA2103.htm" target="_self">
+<area shape="rect" coords="517,314,614,342" href="../../EA5/EA3/EA3/EA5/EA6/EA2129.htm" target="_self">
+<area shape="rect" coords="880,333,1015,361" href="../../EA5/EA3/EA3/EA5/EA3/EA2114.htm" target="_self">
+<area shape="rect" coords="733,416,862,444" href="../../EA5/EA3/EA3/EA5/EA1/EA2099.htm" target="_self">
+<area shape="rect" coords="431,409,589,438" href="../../EA5/EA3/EA3/EA5/EA5/EA2122.htm" target="_self">
+<area shape="rect" coords="653,368,804,396" href="../../EA5/EA3/EA3/EA5/EA4/EA2118.htm" target="_self">
+<area shape="rect" coords="452,10,549,60" href="EA3775.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.04 - ManagementInformation and Methods for Obtaining Management Data diagram</div>
+	<div class="ObjectDetailsNotes">ManagedEntity defines two attributes. The set of different management methods (e.g., using CLI or SNMP, or even using REST API) that can be used to manage an Entity is contained in the managementMethodSupported attribute, while the current management method that is being used is contained in the managementMethodCurrent enumerated attribute. This is shown in Figure below.&lt;br/&gt;A fundamental characteristic of a ManagedEntity is that it can perform management functions and/or collect management information. ManagementMethodEntity represents the means in which management information is obtained, and ManagementInfo represents the specific type of management data obtained.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 5:57:44 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E07ED7C3-F57E-49b6-934F-D1EB5C4C3C4F}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

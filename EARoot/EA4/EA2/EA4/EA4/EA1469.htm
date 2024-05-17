@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.20 - The Concept of ServiceRoles</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1470.png" usemap="#EA1470" border="0" />
+
+<MAP NAME="EA1470">
+<area shape="rect" coords="658,181,836,209" href="./EA2/EA2/EA1510.htm" target="_self">
+<area shape="rect" coords="448,181,629,209" href="./EA1/EA2/EA1495.htm" target="_self">
+<area shape="rect" coords="10,181,174,209" href="./EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="254,181,409,209" href="./EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="573,47,670,75" href="EA1482.htm" target="_self">
+<area shape="rect" coords="170,47,300,75" href="EA1478.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.20 - The Concept of ServiceRoles diagram</div>
+	<div class="ObjectDetailsNotes">The ServiceRole class defines a Service in terms of a set of roles. The roles are then associated for both CustomerFacing and ResourceFacing services through the CustomerFacingServiceRole and ResourceFacingServiceRole subclasses. The utility of the ServiceRole class is to present a single point for accumulating common relationships that its subclasses can inherit.&lt;br/&gt;The CFSRoleRequiresRFSRoles aggregation is used to define the set of ResourceFacingServiceRoles that are required by a particular CustomerFacingServiceRole. Conceptually, this enables roles to be used to define the common characteristics of a set of ResourceFacingServices that are required by a particular CustomerFacingService.&lt;br/&gt;Note that the cardinality of the CFSRoleRequiresRFSRoles is * on the CustomerFacingServiceRole (aggregate) side and 1..* on the ResourceFacingServiceRole (component) side. This is because a ResourceFacingServiceRole can exist without being bound into a CustomerFacingServiceRole (e.g., in testing the network), but a CustomerFacingServiceRole requires at least one ResourceFacingServiceRole to function. Note also that this cardinality is symmetric with the cardinality defined in the CFServiceRequiresRFServices association.&lt;br/&gt;The InvolvedServiceRoles association is used to define a set of ServiceRoles that are involved with, or related to, each other in order to build a particular type of Service. This association applies equally to CustomerFacingServices and ResourceFacingServices. For example, consider the definition of a set of &#8220;QoS packages&#8221; that each consist of a set of different Classes of Service. Each Class of Service definition is associated with different types of traffic, and defines how each type of traffic should be conditioned independently of other types of traffic. The higher-level QoS package is clearly a CustomerFacingService, since it is obtained via a Product by a Customer. Equally clearly, the lower-level Class of Service definitions are each ResourceFacingServices, since the Customer has obtained a higher-level package and doesn&#8217;t have explicit knowledge of these sub-services. Now, assume that there is a dependency that exists between a sub-service and either another sub-service or the QoS package itself, such as a limit as to how many instances of one type of Service can be created, or that each sub-service must first be instantiated before a QoS package is completed. These are examples of the InvolvedServiceRoles association.&lt;br/&gt;Continuing the example, the CustomerFacingServiceRole (e.g., &#8220;Gold Service&#8221;) is built, or constructed from, a set of ResourceFacingServiceRoles (e.g., &#8220;Rate Limiting Service&#8221; and &#8220;Remarking Service&#8221;). The former ensures that the Customer sends only the amount of traffic that he or she is contractually allowed to send, and the latter prioritizes different types of traffic. The Gold Service simply won&#8217;t work unless these two Services are built and active, but the Customer doesn&#8217;t need to explicitly know about them. These and other QoS functions are discussed in the QoS Service guide book.&lt;br/&gt;Conceptually, ServiceRoles represent the variable characteristics of a Service from the viewpoint of functions (i.e., roles) that the Service provides to the rest of the environment. One example is that VPNs need to control how routing information is exchanged between the CE and PE routers at the edges of the Service Provider&#8217;s backbone and between the PE routers across the Service Provider&#8217;s backbone. ServiceRoles can be defined that represent how routing is constrained, depending if the router is a CE, PE, or P router.&lt;br/&gt;This enables the Service to be managed abstractly using ServiceRoles. It also helps define the Service in terms of the functions that it has or provides. This is important, as it makes the management independent of the particular type of VPN and, more importantly, type of device and protocol used.&lt;br/&gt;The CustomerFacingServiceRole and ResourceFacingServiceRole subclasses are used to represent the variable characteristics of CustomerFacingServices and ResourceFacingServices, respectively, in terms of roles that these services play. The set of roles define the Service in terms of the functions that it performs. This enables it to be modeled independently of the protocols, devices, and other dependent entities, as well as the environment in general.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:30:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5529A75A-48E1-4cb3-BEFA-78A36670E643}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

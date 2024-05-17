@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.09 - The Basics of Roles – An Example</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3634.png" usemap="#EA3634" border="0" />
+
+<MAP NAME="EA3634">
+<area shape="rect" coords="408,139,575,168" href="../../EA8/EA1/EA3135.htm" target="_self">
+<area shape="rect" coords="716,139,801,168" href="../../EA7/EA1/EA2827.htm" target="_self">
+<area shape="rect" coords="303,139,397,168" href="../../EA2/EA1/EA687.htm" target="_self">
+<area shape="rect" coords="812,139,894,168" href="../../EA7/EA1/EA2825.htm" target="_self">
+<area shape="rect" coords="586,139,705,168" href="../../EA8/EA1/EA3134.htm" target="_self">
+<area shape="rect" coords="153,139,283,168" href="../../EA10/EA1/EA5462.htm" target="_self">
+<area shape="rect" coords="10,139,139,168" href="../../EA10/EA1/EA5467.htm" target="_self">
+<area shape="rect" coords="452,10,567,39" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="105,10,220,39" href="../../EA10/EA1/EA5469.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.09 - The Basics of Roles – An Example diagram</div>
+	<div class="ObjectDetailsNotes">Roles represent a fundamental way to provide extensibility in the model. The Role Object pattern [ROLEOBJ] is used to extend the use and application of an object. For example, by modeling the different functions that a device can play as a set of objects.&lt;br/&gt;A role characterizes the function that a particular object plays. In the SID, the characterization may be to specify attributes and relationships.&lt;br/&gt;Roles provide an extensible means of abstraction that enables the user to model the functions played by an entity as separate objects (instead of embedding that functionality in the entity itself). For example, suppose that you are modeling the business functions that your employees have. Basic organizational boundaries define some behavior (e.g., marketing vs. sales vs. engineering), but often employees play multiple roles (e.g., an engineer that has sales support functions). This phenomenon doesn&#8217;t just occur for people &#8211; other managed objects exhibit it as well. For example, in a VPN, some DeviceInterfaces talk to a customer, while others never touch a customer.&lt;br/&gt;In general, managed objects don&#8217;t all have the same behavior, but different managed objects may have some common behavior. Worse, an object might exhibit more than one set of common behaviors, or may take on and remove different behaviors during its lifetime. Thus, we need a means to capture these and related cases. A set of role patterns provide an extensible and straightforward means of accomplishing this goal.&lt;br/&gt;Before these different role patterns are discussed, it is important to differentiate between an instance or a type. Asking an object if it is an instance of type is something different than asking it if it is an instance of a class, since the types (interfaces) and the classes (implementations) can be different. (Note that there are patterns to accomplish this function.)&lt;br/&gt;The SID is concerned with types, not implementation.&lt;br/&gt;There are five types of role patterns that are extensions of [ROLEOBJ], described as follows:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Single Role Type. This pattern combines all of the features of different roles into a single type, and is most useful for modeling objects having a few variations on the same basic behavior.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Separate Role Type. This pattern models each role as its own separate type, and is most useful for modeling objects that have little if any common behavior.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Role Subtype. This pattern models each role that exhibits different behavior as a subtype. Note that this does NOT mean that sub-classing is used, as this is an analysis pattern and is thus concerned with interfaces, not implementation. This pattern is all about maintaining the illusion that clients are dealing with a single object that has multiple, changeable types.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Role Object. This pattern models each role that exhibits different behavior as a separate object. The separate role objects are then related to a single base object that ties the different behaviors together. This pattern is used when maintaining the illusions of a single object is too difficult, or doesn&#8217;t supply the correct semantics.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Role Relationship. This pattern models each role as a relationship with an appropriate object.&lt;/li&gt;&lt;/ul&gt;<br />Of these five patterns, the SID uses the fourth &#8211; Role Object &#8211; almost exclusively. Single Role Type and Role Type aren&#8217;t used because they best deal with behavior which is not included in the SID.&lt;br/&gt;This leaves Role Subtype and Role Relationship. The problem with the Role Subtype pattern (in the context of the SID) is that this pattern cannot be used if there are multiple and/or changing roles.&lt;br/&gt;The Role Relationship pattern is not used in the SID due to its complexity. This pattern is very well suited when the role itself embodies a relationship between a base object and some other object (usually a group). For example, consider an organization which requires new employees to spend an equal amount of time working for multiple departments. In this case, the role binds the person to the particular organization that he or she is currently working for. Thus, it is best modeled as a relationship between the person and the organization that the person is working for.&lt;br/&gt;Figure below shows a simplified view of the concepts of using the Role Object pattern.&lt;br/&gt;The figure shows that an Individual (or an Organization) can be assigned zero or more roles. Thus, an Employee can take on the roles of ServiceProvider and Partner.&lt;br/&gt;The idea is to define the functionality that a business entity can play as a set of subclasses of EntityRole, and then associate the specific functionality that is desired using the EntityHasRoles aggregation. This enables the functionality and behavior of the business entity to be easily customized. For example, consider two different people working in the same department &#8211; both interact with a customer, but Bob is a manager and Joe isn&#8217;t. Rather than add employee-specific attributes to the definition of a Person, a Person can be kept general, and employee-specific attributes can be added to an appropriate role.&lt;br/&gt;More formally, roles recognize the fact that different entities may have different roles that it can play when it collaborates with other entities in the system. Separating this into different roles enables behavior to be defined that involves just the role, as opposed to all of the attributes of the entity. This enables the communication to become more specific and thus easier to generalize.&lt;br/&gt;&lt;b&gt;Different Types of Roles in SID&lt;/b&gt;&lt;br/&gt;The SID is unique, in that roles are used in the vast majority of its domains, to ensure that the above philosophy is applied wherever it makes sense. Three different examples that show the diversity of roles in the SID are as follows:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Party and PartyRole (Party addendum). Party is a superclass for modeling people and organizations, and PartyRole is a superclass for modeling the different jobs that people can have.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Resource and ResourceRole (Physical Resource addendum and Logical and Compound Resource addendum). Resources are physical, logical, and compound resource entities that represent the definition, development, and operational aspects of the information computing and processing infrastructure of a system. There are PhysicalResourceRoles as well as LogicalResourceRoles, which enable functions associated with the physical and logical aspects, respectively, of a resource to be modelled independent of that resource. There are also CompoundResourceRoles, which enable roles to be assigned to CompoundResources (Resources that contain one or more PhysicalResources and LogicalResources).&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Service and ServiceRole (Service Overview addendum and Quality of Service addendum). Services represent intangible functionality that is provided by the information computing and processing infrastructure of a system. CustomerFacingServiceRoles represent abstracted functionality that represent how a Product is realized, while ResourceFacingServiceRoles represent abstracted functionality that are required in order for the CustomerFacingService to function correctly.&lt;/li&gt;&lt;/ul&gt;<br />All of these are currently defined in various GB922 Addenda as noted above.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 6:19:49 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2931E002-5846-46f7-8C58-09EC7D434C5C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

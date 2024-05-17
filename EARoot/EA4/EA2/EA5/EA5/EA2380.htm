@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RO.06a - Resource Number Portability Relationships (OLD RO.04)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2381.png" usemap="#EA2381" border="0" />
+
+<MAP NAME="EA2381">
+<area shape="rect" coords="375,17,570,69" href="./EA1/EA2398.htm" target="_self">
+<area shape="rect" coords="629,474,839,526" href="../EA3/EA3/EA7/EA2220.htm" target="_self">
+<area shape="rect" coords="621,10,718,62" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="581,117,771,228" href="./EA1/EA2395.htm" target="_self">
+<area shape="rect" coords="826,342,977,394" href="../EA2/EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="826,42,951,138" href="../EA3/EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="651,278,815,330" href="../EA3/EA3/EA7/EA2219.htm" target="_self">
+<area shape="rect" coords="234,304,419,356" href="./EA1/EA2397.htm" target="_self">
+<area shape="rect" coords="346,373,535,425" href="./EA1/EA2394.htm" target="_self">
+<area shape="rect" coords="137,373,309,425" href="./EA1/EA2393.htm" target="_self">
+<area shape="rect" coords="33,304,215,356" href="./EA1/EA2392.htm" target="_self">
+<area shape="rect" coords="247,26,344,78" href="EA2385.htm" target="_self">
+<area shape="rect" coords="10,26,190,117" href="./EA2/EA2403.htm" target="_self">
+<area shape="rect" coords="217,144,379,239" href="./EA1/EA2396.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RO.06a - Resource Number Portability Relationships (OLD RO.04) diagram</div>
+	<div class="ObjectDetailsNotes">The development of the model for the portability uses all the ABEs previously described and how each one of them relates to the other. There is an inheritance for the main entity NumberPortabililityRequest to see the subdivision more clearly. This entity has four types of requests for the number portability, NumberPortInRequest, NumberPortOutRequest, NumberPortOverRequest and NumberRetirementRequest. This main concrete class, NumberPortabilityRequest, has an aggregation for all the portability roles applied during the process. NumberPortabilityRole inherits all the behavior and attributes of LogicalResourceRole and relates to existing and new parties.&lt;br/&gt;NumberPortabilityRequest also forms a relation of many-to-many with the rules, with an association class in the middle called PortabilityRequestPolicyRule for the information in common.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/7/2023 6:56:58 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{40373C9C-D6F3-4bfc-A2C7-EF9A493A9523}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

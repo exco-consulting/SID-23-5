@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>1. Customer Site Format</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3664.png" usemap="#EA3664" border="0" />
+
+<MAP NAME="EA3664">
+<area shape="rect" coords="10,10,659,123" href="EA3762.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">1. Customer Site Format diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;This section contains additional examples that depict the use of the Entity Identification Specification and Entity Identification.&#160;&#160;The examples are taken from the American National Standard T1.253-1999.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This is a standardized code that uniquely identifies a customer&#8217;s presence at a location at which network elements or network systems equipment exist&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Geographical Code&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The designation for a single geographical locality within a state, province, territory, country, or distinct region of the world (e.g., municipality).&#160;&#160;This data element shall consist of four alphabetic characters. New codes assigned shall contain exactly four characters and shall not contain spaces.&#160;&#160;For previously assigned codes of less than four characters, the unused character positions after the code shall be filled with spaces to make up four character positions.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Geopolitical Code&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The designation of a state or territory of the United States, a province or territory of Canada, another country having a national federal government, or a unique designation (e.g., the oceans).&#160;&#160;This data element shall consist of two alphabetic characters.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Customer Site Code&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The designation of a customer that utilizes telecommunications equipment at a specific location where there is a requirement to uniquely identify that customer&#8217;s presence for the purpose of inventory and facility management.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This data element shall consist of five characters having one numeric character in the first position followed by one alphabetic and three alphabetic or numeric characters in that sequence.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Customer Site Format Table&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This format shall consist of a sequence of Geographical Code and Geopolitical Code data elements plus a Customer Site Code data element, resulting in a code that totals eleven characters in the format shown in the table below.&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/11/2022 10:19:35 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/6/2022 9:56:40 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DAF642C5-944B-4556-8E9C-1FB308F88A26}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

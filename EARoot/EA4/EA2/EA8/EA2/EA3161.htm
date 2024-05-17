@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.13 - Workforce Organization Role</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3162.png" usemap="#EA3162" border="0" />
+
+<MAP NAME="EA3162">
+<area shape="rect" coords="224,10,339,69" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="419,252,583,299" href="./EA3/EA3208.htm" target="_self">
+<area shape="rect" coords="46,252,188,299" href="./EA4/EA3225.htm" target="_self">
+<area shape="rect" coords="10,87,129,121" href="../../EA10/EA7/EA5817.htm" target="_self">
+<area shape="rect" coords="224,252,339,311" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="196,121,366,168" href="./EA3/EA3211.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.13 - Workforce Organization Role diagram</div>
+	<div class="ObjectDetailsNotes">There is a need to model an entity that can show the current schedules of an organization. The schedules are to show customer support agents, dispatchers, and managers what work requests with what skills, time, and location have been received, what employees or pools are reserved for the requests, and what employees are assigned to do the work tasks. Besides the Pools of available capacity, the schedules support CSR, Workforce managers, and dispatchers, allowing them to have an overall view of current assignments, to make decisions about further reservations and assignments, or the planning of future capacity.&lt;br/&gt;For this purpose we introduce WorkSchedule, which can hold Reservation (booking) and Assignment. An example of WorkSchedule is when a contractor team responsible for the New York market has been receiving 100 appointment requests for fiber installation during July and currently reserves employees to perform 80 of them in particular timeslots.&lt;br/&gt;The explicit modeling of WorkSchedule and its association with other entities like Pools, Reservation, and Assignment is a subject of a future revision of this Workforce Management addendum. In this version, following the model of ProjectSchedule, we propose that WorkSchedule is also to be a type of SimpleCalendar, defined in Common guide book section Calendar ABE.&lt;br/&gt;The following Figure represents the WorkSchedule entity.&lt;br/&gt;Being an extension of Simple Calendar, WorkSchedule inherently contains CalendarEntry (start&#8211;end time, or time slot). We can use CalendarEntry to associate it with the Appointment, Reservation, and Assignment records.&lt;br/&gt;An organization can have more than one WorkSchedule for various purposes (e.g. for a time period, some work types, or serving areas).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 8:51:03 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5BE6F9EC-D4B4-49fb-AAD5-5C290472C0D2}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

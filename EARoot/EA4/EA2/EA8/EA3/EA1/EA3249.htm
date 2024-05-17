@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RA.11 - RA Trouble Ticket</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3250.png" usemap="#EA3250" border="0" />
+
+<MAP NAME="EA3250">
+<area shape="rect" coords="482,178,701,249" href="./EA5/EA3307.htm" target="_self">
+<area shape="rect" coords="8,197,235,230" href="./EA5/EA3306.htm" target="_self">
+<area shape="rect" coords="490,328,693,361" href="./EA6/EA3312.htm" target="_self">
+<area shape="rect" coords="483,85,700,118" href="./EA4/EA3302.htm" target="_self">
+<area shape="rect" coords="33,328,210,361" href="./EA6/EA3311.htm" target="_self">
+<area shape="rect" coords="28,10,214,43" href="./EA3/EA3297.htm" target="_self">
+<area shape="rect" coords="491,10,692,43" href="./EA3/EA3292.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RA.11 - RA Trouble Ticket diagram</div>
+	<div class="ObjectDetailsNotes">Revenue Assurance Trouble Ticket ABE entities represent trouble tickets opened to resolve one or several causes (for example, Revenue Assurance Violations) that resulted in a Revenue Assurance KPI not meeting a Revenue Assurance Objective.&lt;br/&gt;Just as the model for controls and KPIs were similar, so are the models for RevenueAssuranceViolations and RevenueAssuranceTroubleTickets as shown in figure RA.11.&#160;&#160;There are two primary differences in the two models.&lt;br/&gt;First, a RevenueAssuranceTroubleTicket is a type of TroubleTicket, which in turn is a type of BusinessInteraction.&#160;&#160;Therefore, the TroubleTicket inherits the same characteristics from BusinessInteraction as RevenueAssuranceViolation.&lt;br/&gt;Second, RevenueAssurranceViolations may be used in the derivation of a RevenueAssuranceKPI, which then may trigger a RevenueAssuranceTroubleTicket.&#160;&#160;For example, if more than &#8220;X&#8221; number of customers are not billed in a given billing cycle for services used, a trouble ticket is generated.&#160;&#160;This KPI is a sum of all the &#8220;true&#8221; parameters that were RevenueAssuranceControl parameter values representing a single unbilled customer.&#160;&#160;For this reason, the RevenueAssuranceViolationSpec may influence the creation of a RevenueAssuranceTroubleTicket via the specification&#8217;s association with a RevenueAssuranceTroubleTicketSpec.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 6:37:33 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{EC31D885-1839-410b-8D55-6F5A5CB6840F}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-38 - Policy ABE - PolicyApp ABE Interaction</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4547.png" usemap="#EA4547" border="0" />
+
+<MAP NAME="EA4547">
+<area shape="rect" coords="704,303,831,361" href="EA4558.htm" target="_self">
+<area shape="rect" coords="642,48,769,78" href="./EA1/EA4577.htm" target="_self">
+<area shape="rect" coords="114,48,241,78" href="./EA2/EA4607.htm" target="_self">
+<area shape="rect" coords="345,48,472,78" href="./EA2/EA4609.htm" target="_self">
+<area shape="rect" coords="769,224,896,254" href="./EA1/EA1/EA4592.htm" target="_self">
+<area shape="rect" coords="279,317,380,347" href="./EA2/EA4610.htm" target="_self">
+<area shape="rect" coords="528,323,655,353" href="./EA5/EA3/EA4663.htm" target="_self">
+<area shape="rect" coords="121,316,248,346" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="42,203,169,233" href="./EA5/EA1/EA4643.htm" target="_self">
+<area shape="rect" coords="27,147,154,177" href="./EA5/EA2/EA4652.htm" target="_self">
+<area shape="rect" coords="351,187,461,217" href="./EA5/EA4/EA4670.htm" target="_self">
+<area shape="rect" coords="215,147,342,177" href="./EA2/EA4614.htm" target="_self">
+<area shape="rect" coords="677,157,804,187" href="./EA1/EA1/EA4589.htm" target="_self">
+<area shape="rect" coords="577,224,704,254" href="./EA1/EA1/EA4591.htm" target="_self">
+<area shape="rect" coords="478,157,625,187" href="./EA1/EA1/EA4590.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-38 - Policy ABE - PolicyApp ABE Interaction diagram</div>
+	<div class="ObjectDetailsNotes">At the highest level of abstraction, the Policy model consists of four distinct class hierarchies.&lt;br/&gt;There are many Policy ABE interactions. However, the relationship between entities in the Policy ABE and entities in the Policy Application ABE is arguably the most important of these.&lt;br/&gt;Conceptually, entities in the Policy Application ABE define how policy is used in the managed environment. Entities in the Policy ABE define how policy is represented. This enables Policies to be defined and used by different management applications. This fundamental relationship is shown in Figure below, and centers around the definition of the PolicyContainedIn association.&lt;br/&gt;This association defines the set of Policies that reside in a particular PolicyDomain. This single association links Policy and its subclasses to PolicyDomain. PolicyApplications are related to a PolicyDomain through the ScopesPolicyApplication aggregation. Thus, different subclasses of PolicyApplication, such as PolicyServer, PDP, PEP, and PXP, can be placed in the same PolicyDomain as different Policies. This facilitates their use by different PolicyApplications.&lt;br/&gt;The PolicyAppUsesPolicy association defines the set of Policies that are used by a particular PolicyApplication.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 9:31:57 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A882764F-1E91-4b48-A776-ABC5641CE72C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

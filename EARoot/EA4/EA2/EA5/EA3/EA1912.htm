@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.25 - Relating PhysicalPorts to Cards and Chassis</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1913.png" usemap="#EA1913" border="0" />
+
+<MAP NAME="EA1913">
+<area shape="rect" coords="432,469,551,515" href="./EA4/EA2/EA2259.htm" target="_self">
+<area shape="rect" coords="184,442,315,481" href="./EA4/EA3/EA1/EA2276.htm" target="_self">
+<area shape="rect" coords="190,360,321,399" href="./EA4/EA3/EA1/EA2275.htm" target="_self">
+<area shape="rect" coords="616,134,737,174" href="./EA4/EA4/EA2295.htm" target="_self">
+<area shape="rect" coords="11,525,161,564" href="./EA4/EA3/EA2/EA2281.htm" target="_self">
+<area shape="rect" coords="399,352,498,386" href="./EA4/EA2/EA2258.htm" target="_self">
+<area shape="rect" coords="102,245,254,284" href="./EA4/EA3/EA2268.htm" target="_self">
+<area shape="rect" coords="12,360,177,399" href="./EA4/EA3/EA2/EA2283.htm" target="_self">
+<area shape="rect" coords="398,245,500,284" href="./EA4/EA2/EA2260.htm" target="_self">
+<area shape="rect" coords="10,442,162,481" href="./EA4/EA3/EA2/EA2285.htm" target="_self">
+<area shape="rect" coords="218,134,339,174" href="./EA4/EA4/EA2294.htm" target="_self">
+<area shape="rect" coords="383,10,537,63" href="./EA4/EA4/EA2292.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.25 - Relating PhysicalPorts to Cards and Chassis diagram</div>
+	<div class="ObjectDetailsNotes">PhysicalPorts can be placed on either a Card or a Chassis. Thus, we end up with the following Figure.&lt;br/&gt;Note that the EquipmentInHolder relationship enables a LineCard to be attached to a Slot. We made two distinct relationships to model the containment of Ports (PortsOnCard and PortsOnChassis) because the common superclass of LineCard and Chassis is Hardware. If we had run a relationship between Hardware and PhysicalPort, then PhysicalPorts could contain PhysicalPorts, which is not correct. In addition, this differentiation will help us in the System view, since the semantics of a PhysicalPort on a Chassis are different than those of a PhysicalPort on a Card.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:39:04 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{00843C47-C550-4dfd-996E-24F38707DC0D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

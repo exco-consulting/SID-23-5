@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.21-I02 – WLAN Subscription with Discounts</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1055.png" usemap="#EA1055" border="0" />
+
+<MAP NAME="EA1055">
+<area shape="rect" coords="10,10,752,525" href="EA1092.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.21-I02 – WLAN Subscription with Discounts diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;It is not always necessary to relate an instance of ProductOffering to a price rule.&#160;&#160;In some cases, obtaining a product offering at a specific price may enable the procurement of other product(s) for a particular price. This price may be represented by an instance of an entire ProductOfferingPrice or may be represented by an instance of a ProductOfferingPriceComponent.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For example, suppose that if a customer subscribes to wireless Local Area Network (WLAN) access at the regular price, the customer is entitled to a discount on their DSL internet access or a discount on their cellular phone service.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Handling this rule requires the use of a PolicyGroup.&#160;&#160;The PolicyGroup subclass of PolicySet brings together multiple PolicyRules and applies them as an atomic set of rules. This enables different PolicyRules to be defined to serve stand-alone needs, yet be reused in other applications.&#160;&#160;The first rule checks to see if the price of the ordered WLAN access is equal to or greater than the regular price.&#160;&#160;If this condition is true, then an event is generated that triggers an option that allows the user to select one of the two items offered at a discount.&#160;&#160;The second rule, also triggered by this event, determines which choice of options has been made and sets the price to the discounted price.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;Expressed as a PolicySet, the rules&#8217; conditions and actions are:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;User chooses WLAN access in GUI screen #1. This selection triggers an event, which fires the following rule:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;PolicyRule 1: WLAN_Access_Sale&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;ON EVENT customer_choice DO&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IF (order #gt;= min_price) THEN&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SET Event_WLAN_Access_Options to TRUE&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ENDIF&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;ENDEVENT&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Setting the Event to TRUE initiates the display of GUI screen #2.&#160;&#160;The user chooses an option, which is recorded in a choice variable, which initiates the following nested PolicyRule (remember, a PolicyRule can contain a PolicyRule):&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;PolicyRule 2: Determine_Option_Choice&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;ON EVENT WLAN_Access_Options DO&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IF (choice == DSL) THEN&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SET Business_Interaction_Item_Price = Discounted_DSL_Price&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ENDIF &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;IF (choice == Cell) THEN&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SET Business_Interaction_Item_Price = Discounted_Cell_Price&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;ENDIF&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;ENDEVENT&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The figure below shows the instances of these business entities for the WLAN example within the context of the model.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 11:26:31 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/17/2022 3:42:18 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{05500DA4-9283-4f38-BB1F-37C90C604F42}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.02 - Anomaly Management Entity Relationship With Other SID Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5056.png" usemap="#EA5056" border="0" />
+
+<MAP NAME="EA5056">
+<area shape="rect" coords="850,258,1017,306" href="./EA1/EA5106.htm" target="_self">
+<area shape="rect" coords="850,430,1017,478" href="./EA1/EA5105.htm" target="_self">
+<area shape="rect" coords="33,430,213,478" href="./EA2/EA5145.htm" target="_self">
+<area shape="rect" coords="33,258,213,306" href="./EA2/EA5146.htm" target="_self">
+<area shape="rect" coords="579,339,746,387" href="./EA1/EA5091.htm" target="_self">
+<area shape="rect" coords="239,339,406,387" href="./EA2/EA5143.htm" target="_self">
+<area shape="rect" coords="850,89,1017,137" href="./EA1/EA5104.htm" target="_self">
+<area shape="rect" coords="33,89,213,137" href="./EA2/EA5144.htm" target="_self">
+<area shape="rect" coords="239,507,406,555" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="579,507,746,555" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="579,177,746,225" href="../../EA4/EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="239,177,406,225" href="../../EA4/EA3/EA1406.htm" target="_self">
+<area shape="rect" coords="579,10,746,58" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="239,10,406,58" href="../../EA3/EA2/EA982.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.02 - Anomaly Management Entity Relationship With Other SID Entities diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;This figure shows how the Anomaly Management entities are related to domain entities such as Service, Resource, etc. Note that Anomaly can be associated with any SID Entity and not limited to Service or Resource.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Currently the association between ServiceAnomalySpecification and ServiceSpecification are shown to represent the incorporation of anomaly management details for ServiceSpecification. However, this association can also be used for composing Anomaly management related items and characteristics for a particular Service specified using ServiceSpecification. So in the latter case ServiceSpecification may contain ServiceAnomalySpecification as one of the composed item. Similar views are applicable for Resource and other domain entities specifications.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The diagram shows an example of how Product, Service , Resource domain entities associate with Anomaly Management entities. While&#160;&#160;the above diagram does not differentiate the Anomaly Management entities associations across domains , in practical scenarios operators may prioritize operationalization of Anomaly Management(AM) at particular domain based on the business value that can be derived. For example since the number of AM use cases are relatively more on the Service and Resource domains, there may be an inclination to incorporate AI Closed Loop AM for these domains. But from an IM point of view this does not eliminate the need for AI Closed Loop AM at other domains. Hence, the readers are advised to keep in mind the repeatability pattern possible with AI Closedloop AM. &lt;/font&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">2/8/2023 5:17:03 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/24/2023 5:30:49 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8ECBB31F-515A-45b5-ABBD-F36EA7E435BF}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

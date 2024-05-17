@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RA.08 - RA Consequence Subclasses</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3244.png" usemap="#EA3244" border="0" />
+
+<MAP NAME="EA3244">
+<area shape="rect" coords="313,167,525,202" href="./EA4/EA3302.htm" target="_self">
+<area shape="rect" coords="308,273,530,343" href="./EA5/EA3307.htm" target="_self">
+<area shape="rect" coords="10,167,244,202" href="./EA3/EA3294.htm" target="_self">
+<area shape="rect" coords="29,273,233,343" href="./EA6/EA3312.htm" target="_self">
+<area shape="rect" coords="179,10,374,98" href="./EA3/EA3292.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RA.08 - RA Consequence Subclasses diagram</div>
+	<div class="ObjectDetailsNotes">Some type (modeled as a specification) of RevenueAssuranceViolation or some type (modeled as a specification) of RevenueAssuranceTroubleTicket is created if a RevenueAssuranceObjective is not met.&#160;&#160;This is based on whether the RevenueAssuranceParameter is a RevenueAssuranceControl or a RevenueAssuranceKPI.&#160;&#160;Figure RA.08 depicts RevenueAssuranceConsequence subclasses that trigger the creation of a RevenueAssuranceViolation or a RevenueAssuranceTroubleTIcket.&lt;br/&gt;The actual RevenueAssuranceViolation or RevenueAssuranceTroubleTicket is created based on the specification related to the consequence.&#160;&#160;For example, in previous example, if a customer is not to be billed for services used, then the consequence is related to a RevenueAssuranceViolationSpec instance that classifies and characterizes the RevenueAssuanceViolation as one for unbilled customer services.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/16/2022 6:44:41 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{9F74DDE2-CDD0-4df0-9C53-F820BA289820}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

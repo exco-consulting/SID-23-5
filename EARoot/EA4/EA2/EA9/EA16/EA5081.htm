@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.15 - Sample Anomlay Characteristics</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5082.png" usemap="#EA5082" border="0" />
+
+<MAP NAME="EA5082">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.15 - Sample Anomlay Characteristics diagram</div>
+	<div class="ObjectDetailsNotes">The Following figure shows the set of characteristics associated with the Anomaly business entity that is defined by the CharacteristicsSpecification as part of the AnomalySpecification. The sample RAN Anomaly management scenario defines three characteristics to control the behavior of Anomaly management - GRACEFUL_SHUTDOWN : to initiate a graceful shutdown before initiating the Anomaly mitigation action, POWEROFF_OFFSET: to set an offset value before initiating the mitigate action, LAST_POWER_MGMT_TIME : which indicate the last date and time when the power management associated with anomaly is initiated. In addition to these characteristics , there can be additional anomaly specific characteristics to turn off/on the mitigation, special operational prioritization of the anomaly etc. as characteristics.&lt;br/&gt;While it is not shown explicitly, AnomalyApplicability can also be defined to express the constraints of the Anomaly as well as AnomalyIndicator which will limit the anomaly management for certain days, time periods, threshold values, or custom logic defined by specific codes. For example AnomalyApplicability can be set for weekends, holiday seasons, regions (represented by code) .&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/13/2023 6:23:15 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/14/2023 6:45:03 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{FAB773FF-DD9E-41e4-BB71-B4AECEF9C087}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

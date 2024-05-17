@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.44 - External System Capability</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3744.png" usemap="#EA3744" border="0" />
+
+<MAP NAME="EA3744">
+<area shape="rect" coords="284,8,417,92" href="EA3779.htm" target="_self">
+<area shape="rect" coords="502,328,717,387" href="./EA5/EA3880.htm" target="_self">
+<area shape="rect" coords="412,437,599,508" href="./EA5/EA3881.htm" target="_self">
+<area shape="rect" coords="277,328,465,411" href="./EA5/EA3885.htm" target="_self">
+<area shape="rect" coords="122,437,322,496" href="./EA5/EA3882.htm" target="_self">
+<area shape="rect" coords="5,328,229,400" href="./EA5/EA3884.htm" target="_self">
+<area shape="rect" coords="264,158,436,246" href="./EA5/EA3883.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.44 - External System Capability diagram</div>
+	<div class="ObjectDetailsNotes">External System Capability represents a logical grouping of capabilities that exposed by one system to another system.&#160;&#160;For example, a catalog modeler can build a product or service by composing these capabilities. The following Example demonstrates how these capabilities can be used together to build a location API product. These group of logical capabilities are representing a system capability model as seen by its interfaces for given capability so they can facilitate a catalog-driven integration approach. For example, what charging capabilities offered by an online charging system, or what policy model supported by a PCRF system. &lt;br/&gt;&lt;b&gt;ExternalSystemCapability&lt;/b&gt;&lt;br/&gt;This is an abstract class, and is the root of the External system capabilities. It extends EntitySpecification to define common attributes, relationships and behavior that all external system capability subclasses use and take part in.&lt;br/&gt;The ExternalSystemCapability model has four main purposes:&lt;br/&gt;To represent different types of capability, &lt;br/&gt;To represent which system offers the capability &lt;br/&gt;To represent how different entity specification like PS, CFSS, RFSS can use these capabilities and&lt;br/&gt;To represent (optionally) how these capabilities can be accessed by a system like an ordering system thru one or more APIs&lt;br/&gt;There are many different types of capabilities. A system like a charging system can offer multiple capabilities like pre-paid and post-paid charging and a capability can be offered by multiple external system instances.&lt;br/&gt;The following Figure shows the UML diagram of the objects in this fragment.&#160;&#160;&lt;br/&gt;&lt;b&gt;FulfilmentCapabilitySpecification&lt;/b&gt;&lt;br/&gt;This is the class representing a fulfilment capability specification as supported by a fulfilment/ordering system&lt;br/&gt;&lt;b&gt;ChargingCapabilitySpecification&lt;/b&gt;&lt;br/&gt;This is the class representing a charging capability specification as supported by a charging system like OCS.&lt;br/&gt;&lt;b&gt;BillingCapabilitySpecification&lt;/b&gt;&lt;br/&gt;This is the class representing a billing capability specification as supported by a billing system.&lt;br/&gt;&lt;b&gt;PolicyCapabilitySpecification&lt;/b&gt;&lt;br/&gt;This is the class representing a policy capability specification as supported by a policy management system like PCRF.&lt;br/&gt;&lt;b&gt;AssuranceCapabilitySpecification&lt;/b&gt;&lt;br/&gt;This is the class representing an assurance capability specification as supported by an assurance system.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/12/2023 6:18:54 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F6CB665F-229E-4e74-8550-4FDD894007A8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

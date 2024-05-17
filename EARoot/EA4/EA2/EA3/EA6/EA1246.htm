@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.35 - Product Usage, Part 1</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1247.png" usemap="#EA1247" border="0" />
+
+<MAP NAME="EA1247">
+<area shape="rect" coords="732,128,914,158" href="../EA2/EA967.htm" target="_self">
+<area shape="rect" coords="27,128,204,158" href="./EA1/EA1258.htm" target="_self">
+<area shape="rect" coords="19,415,191,445" href="EA1252.htm" target="_self">
+<area shape="rect" coords="741,415,884,445" href="../EA4/EA1192.htm" target="_self">
+<area shape="rect" coords="569,415,709,445" href="../EA4/EA1190.htm" target="_self">
+<area shape="rect" coords="238,415,390,445" href="EA1251.htm" target="_self">
+<area shape="rect" coords="698,288,813,318" href="../EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="141,288,254,318" href="EA1253.htm" target="_self">
+<area shape="rect" coords="212,128,413,158" href="./EA1/EA1259.htm" target="_self">
+<area shape="rect" coords="141,19,304,49" href="./EA1/EA1260.htm" target="_self">
+<area shape="rect" coords="533,128,722,158" href="../EA2/EA968.htm" target="_self">
+<area shape="rect" coords="698,19,832,49" href="../EA2/EA982.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.35 - Product Usage, Part 1 diagram</div>
+	<div class="ObjectDetailsNotes">A Product is realized as one or more Service(s) and/or Resource(s). A Product is created by instantiating a ProductOffering and adding it to a specific customer account. In order to charge a service (or a resource) usage, the service (or resource) has to be associated to a product.&lt;br/&gt;The following Figure shows relationships among the ProductSpecification, the Product, the ProductUsageSpec and the ProductUsage ABEs. The ProductUsageSpec is defined for the certain ProductSpecification. As the ProductSpecification has 2 subclasses (the AtomicProductSpecification and the CompositeProductSpecification), the ProductUsageSpec needs 2 subclasses as well: the AtomicProductUsageSpec and the CompositeProductUsageSpec (associated with the AtomicProductSpecification and the CompositeProductSpecification entities respectively).&lt;br/&gt;The ProductUsage describes the usage of an instantiated Product. The Product ABE is extended with the ProductComponent and the ProductBundle business entities. Consequently, the ProductUsage is extended with ProductComponentUsage and the ProductBundleUsage business entities (that are associated with the ProductComponent and the ProductBundle respectively).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 9:17:58 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BEA89501-687C-4c5a-9751-3332B18CC2F9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

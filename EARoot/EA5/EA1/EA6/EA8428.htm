@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BP Bill/Invoice Management</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("BP Bill/Invoice Management", " : "))</script>   &lt;&lt;TMF_Process&gt;&gt; </span>
+	
+		<div class="ObjectDetailsNotes">Business Partner Bill/Invoice Management manages the Business Partner&#160;&#160;bill/invoice process, controls bills/invoices, manages the lifecycle of bills/invoices.&lt;br/&gt;&lt;br/&gt;A bill is a notice for payment which is supposed to be preceded by an invoice in most cases. An invoice typically does not summarize to total outstanding payment or payments due.&#160;&#160;A bill typically contains the payment due date and outstanding payment or advanced payment.&lt;br/&gt;&lt;br/&gt;Party Bill/Invoice Process Management makes certain that there is capability so that the Bill Invoice Management processes can operate effectively. It also designs and develops an enterprises invoicing process. &lt;br/&gt;&lt;br/&gt;Party Bill/Invoice&#160;&#160;Control establishes and maintains party bill invoice formats, and any interaction with specific parties to modify the format. It maintains lists of parties who are eligible for receiving bills/invoices.&lt;br/&gt;&lt;br/&gt;Party Bill/Invoice Lifecycle Management&#160;&#160;generates bills/invoices for products that were provided by an enterprise on behalf of another party. It also receives bills/invoices for products that were provided by another party on an enterprise&#39;s behalf. &lt;br/&gt;&lt;br/&gt;Major Differentiation Factors for a separate Invoice Generation: &lt;br/&gt;&#8226; Invoice Timeliness - Generation happen monthly but often also biweekly. In contrast to Retail where it is critical customer&#39;s invoice is being generating on time,&#160;&#160;(Cost of Infrastructure, ability to re-invoice, apply adjustments) and dependency on reconciliation (often manually externally driven), requires&lt;br/&gt;&#8226; Invoice Accuracy &#8211; The tolerance for accepting differences between the balance of two invoices is much higher than for retail. By implication checks and balances&lt;br/&gt;&lt;br/&gt;The Invoice document does not summarize to total outstanding payment or payments due. The Bill contains the payment due date and Balance. &lt;br/&gt;Interconnect charges may be incurred for all call attempts rather than just those that succeed and are charged to the retail customer.&lt;br/&gt;&lt;br/&gt;Further Sub processes impacted &lt;br/&gt;Tax Jurisdiction Applied -The process of applying Taxes according to applicable Jurisdictions for National and Multinational Customers applicable for various services. In certain countries it is standard practice to outsource sub functions of Tax Determinations to specialized external entities. &lt;br/&gt;Interconnect charges may be incurred for all call attempts rather than just those that succeed and are charged to the retail customer.&lt;br/&gt;Reflect the whole route of the call, not just the origination and termination points.&lt;br/&gt;As a consequence, for example the Interconnect Invoice will be generated from &lt;br/&gt;&#8226; Data & Voice CDRs that is only billable for Interconnect providers. E.g.: Outgoing calls (revenue shared), Outgoing Transit calls, Incoming calls, etc. The model simplifies it in terms of a balance in MOU (minutes of use).&#160;&#160;The Outgoing calls are the expense and Incoming calls are the revenue for the Telecom Provider.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:26:44 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA6074.htm">Business Process Framework Level 1 Overview - START HERE</a>, <a href="EA8344.htm">Business Partner Domain</a>, <a href="../../EA2/EA9472.htm">Business Process Framework Level 1 - short Name</a>, Business Partner Domain: eTOM Process Produces ABE (1), Business Partner Domain: eTOM Process Produes ABE (2)</td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">22.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{3C87E1A1-48A5-4eea-A381-FF6FF39A9F9A}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">6/28/2022 5:12:33 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsTo');" id="AssociationsToTitle">Associations To</li>
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('CustomProperties');" id="CustomPropertiesTitle">Advanced</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsToTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../../EA2/EA177.htm">«TMF_Domain» Business Partner Domain</a><br />
+						Domain «TMF_DomainAggregatesProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42879" onclick="parent.toggleDiv('detailsDIVLink42879','DetailsImageLink42879')" />Details:
+							<div id="detailsDIVLink42879" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA199.htm">«TMF_Vertical» Billing</a><br />
+						Vertical «TMF_VerticalAggregatesProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42880" onclick="parent.toggleDiv('detailsDIVLink42880','DetailsImageLink42880')" />Details:
+							<div id="detailsDIVLink42880" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="40%" class="TableHeading">Element</td>
+					<td width="30%" class="TableHeading">Source Role</td>
+					<td width="30%" class="TableHeading">Target Role</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA8510.htm">«TMF_Process» BP Bill/Invoice Process Management</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42881" onclick="parent.toggleDiv('detailsDIVLink42881','DetailsImageLink42881')" />Details:
+							<div id="detailsDIVLink42881" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA8513.htm">«TMF_Process» Specific BP Revenue Handling</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42882" onclick="parent.toggleDiv('detailsDIVLink42882','DetailsImageLink42882')" />Details:
+							<div id="detailsDIVLink42882" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA8512.htm">«TMF_Process» BP Bill/Invoice Lifecycle Management</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42883" onclick="parent.toggleDiv('detailsDIVLink42883','DetailsImageLink42883')" />Details:
+							<div id="detailsDIVLink42883" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA8511.htm">«TMF_Process» BP Bill/Invoice Control</a><br />
+						eTOM Process «TMF_isComposedByProcess» 
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageLink42884" onclick="parent.toggleDiv('detailsDIVLink42884','DetailsImageLink42884')" />Details:
+							<div id="detailsDIVLink42884" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">BriefDescription</td>
+				<td width="50%" class="TableRow" valign="top">Business Partner Bill/Invoice Management manages the Business Partner&nbsp;<WBR> bill/invoice process, controls bills/invoices, manages the lifecycle of bills/invoices. A bill is a notice for payment which is supposed to be preceded by an invoice in most cases.</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42885" onclick="parent.toggleDiv('detailsDIVScenario42885','DetailsImageScenario42885')" />Specification:
+						<div id="detailsDIVScenario42885" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">HierarchyLevel</td>
+				<td width="50%" class="TableRow" valign="top">2</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42886" onclick="parent.toggleDiv('detailsDIVScenario42886','DetailsImageScenario42886')" />Specification:
+						<div id="detailsDIVScenario42886" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the level of this object in the hierarchy (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Issue</td>
+				<td width="50%" class="TableRow" valign="top">Business Process Framework 16.5 Modification<br />Business Process Framework 20.5 Modification</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42887" onclick="parent.toggleDiv('detailsDIVScenario42887','DetailsImageScenario42887')" />Specification:
+						<div id="detailsDIVScenario42887" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Maturity</td>
+				<td width="50%" class="TableRow" valign="top">4</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42888" onclick="parent.toggleDiv('detailsDIVScenario42888','DetailsImageScenario42888')" />Specification:
+						<div id="detailsDIVScenario42888" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: the maturity level of this element&nbsp;<WBR> (1-x integer)<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">Process Identifier</td>
+				<td width="50%" class="TableRow" valign="top">1.6.15</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42889" onclick="parent.toggleDiv('detailsDIVScenario42889','DetailsImageScenario42889')" />Specification:
+						<div id="detailsDIVScenario42889" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">TMFStatus</td>
+				<td width="50%" class="TableRow" valign="top">Released</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42890" onclick="parent.toggleDiv('detailsDIVScenario42890','DetailsImageScenario42890')" />Specification:
+						<div id="detailsDIVScenario42890" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Values: Released,Preliminary,Draft,Not Fully Developed,likelyToChange,likelyToBeDeprecated<br />Description: the TM Forum status<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">UID</td>
+				<td width="50%" class="TableRow" valign="top">02732</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario42891" onclick="parent.toggleDiv('detailsDIVScenario42891','DetailsImageScenario42891')" />Specification:
+						<div id="detailsDIVScenario42891" class="DetailsDiv" >
+						<div class="ObjectDetailsNotes">Description: Unique Process ID<br /></div>
+
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Property</td>
+					<td width="70%" class="TableHeading">Value</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA4/EA1/EA1/EA240.htm">«TMF_ABE» Applied Party Billing Rate ABE</a></td>
+					<td width="10%" class="TableRow" valign="top">ABE</td>
+					<td width="10%" class="TableRow" valign="top">Dependency</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA4/EA1/EA1/EA244.htm">«TMF_ABE» Party Bill ABE</a></td>
+					<td width="10%" class="TableRow" valign="top">ABE</td>
+					<td width="10%" class="TableRow" valign="top">Dependency</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

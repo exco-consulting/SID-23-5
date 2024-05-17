@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.17 - The Concept of ServiceSpecificationRoles (OLD SO.21)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1373.png" usemap="#EA1373" border="0" />
+
+<MAP NAME="EA1373">
+<area shape="rect" coords="203,167,381,199" href="./EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="438,177,626,209" href="./EA2/EA1/EA1446.htm" target="_self">
+<area shape="rect" coords="10,174,182,206" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="658,177,858,209" href="./EA1/EA2/EA1425.htm" target="_self">
+<area shape="rect" coords="565,60,729,92" href="EA1407.htm" target="_self">
+<area shape="rect" coords="203,60,342,92" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.17 - The Concept of ServiceSpecificationRoles (OLD SO.21) diagram</div>
+	<div class="ObjectDetailsNotes">ServiceSpecificationRole is an abstract base class that defines a ServiceSpecification in terms of a set of roles. The roles are then used to characterize the shared functionality of the ServiceSpecification, regardless of whether it is a resource or a customer facing service specification.&lt;br/&gt;ServiceSpecificationRoles represent the shared functionality of a ServiceRole. Representing a Service in terms of ServiceSpecificationRoles enables the functionality of the Service to be defined independently of BusinessActor, PhysicalResource, LogicalResource, or ot her Services.&lt;br/&gt;The ServiceSpecificationRole defines a ServiceSpecification in terms of possible roles.&lt;br/&gt;The roles are then associated for both CustomerFacing and ResourceFacing services through the CustomerFacingServiceSpecificationRole and ResourceFacingServiceSpecificationRole subclasses. The utility of the ServiceSpecificationRole class is to present a single point for accumulating common relationships that its subclasses can inherit.&lt;br/&gt;The RequiresResourceFacingServiceSpecRoles relationship is used to define the set of ResourceFacingServiceSpecRoles that are required by a particular CustomerFacingServiceSpecRole. Conceptually, this enables roles to be used to define the common characteristics of a set of ResourceFacingServiceSpecs that are required by a particular CustomerFacingServiceSpec.&lt;br/&gt;Note that the cardinality of the RequiresResourceFacingServiceSpecRoles is * on the CustomerFacingServiceSpecificationRole side and 1..* on the ResourceFacingServiceSpecRole (component) side. This is because a ResourceFacingServiceSpecRole can exist without being bound into a CustomerFacingServiceSpecRole (e.g., in testing the network), but a CustomerFacingServiceSpecRole requires at least one ResourceFacingServiceSpecRole to function. Note also that this cardinality is symmetric with the cardinality defined in the RequiresResourceFacingServiceSpec association.&lt;br/&gt;The InvolvedServiceSpecRoles association is used to define a set of ServiceSpecificationRoles that are involved with, or related to, each other in order to build a particular type of ServiceSpecification. &lt;br/&gt;This association applies equally to CustomerFacingServicesSpec and ResourceFacingServiceSpec. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:05:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4FE577E2-D6C7-47ed-AA7A-E3F4AE7AF315}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

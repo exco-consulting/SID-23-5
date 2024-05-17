@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.10 - Mapping IPDR base model to SID</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4957.png" usemap="#EA4957" border="0" />
+
+<MAP NAME="EA4957">
+<area shape="rect" coords="778,27,986,85" href="EA4967.htm" target="_self">
+<area shape="rect" coords="421,15,593,85" href="EA4966.htm" target="_self">
+<area shape="rect" coords="117,10,301,80" href="EA4965.htm" target="_self">
+<area shape="rect" coords="428,126,601,160" href="EA4972.htm" target="_self">
+<area shape="rect" coords="798,120,991,154" href="./EA2/EA5015.htm" target="_self">
+<area shape="rect" coords="162,120,276,180" href="EA4971.htm" target="_self">
+<area shape="rect" coords="170,234,267,268" href="./EA1/EA4992.htm" target="_self">
+<area shape="rect" coords="729,355,898,389" href="./EA1/EA4991.htm" target="_self">
+<area shape="rect" coords="560,355,724,389" href="./EA1/EA4994.htm" target="_self">
+<area shape="rect" coords="436,355,553,389" href="./EA1/EA4989.htm" target="_self">
+<area shape="rect" coords="238,355,429,389" href="./EA1/EA4997.htm" target="_self">
+<area shape="rect" coords="117,355,231,389" href="./EA1/EA4993.htm" target="_self">
+<area shape="rect" coords="10,355,107,389" href="./EA1/EA4983.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.10 - Mapping IPDR base model to SID diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure describes the mapping between the IPDR base model and the SID.&lt;br/&gt;The anchor for all record definitions in the IPDR base model is the IPDRType. In other words, all records definitions must be extensions of the IPDRType and instance of IPDRType (or one of its derived classes) is usage record. Usage class has exactly the same role in the SID. So IPDRType in the IPDR maps to the Usage class in the SID.&lt;br/&gt;In the SID there are three predefined Usage records (Resource Usage, Service Usage and Product Usage abstract records) but as information model it does not define any specific resource usage, service usage or product usage. The IPDR model does not define any layer between the IPDRType and each specific IPDR Service Specification.&lt;br/&gt;The IPDR Service Specifications that are defined and standardized up to the time this document is written, can all be considered as Service Usage.&lt;br/&gt;The instance of UsageSpecCharacteristic class in the SID presents a Usage&#39;s attribute. Exactly the same role holds by the elements referred by IPDRType definition or its inherited classes definitions. For example seqNum in the IPDRType or VoIP:callProgressState in the IPDR-VoIP-Type are attributes in the proper IPDR Service Specification.&lt;br/&gt;As a rule: each element referred by IPDRType definition or its inherited classes definitions in the IPDR model is mapped to specific instance UsageSpecCharacteristic in the SID.&lt;br/&gt;The UsageSpecCharacteristicValue in the SID is responsible for specifying constrains and default value for each specific UsageCharacteristicValue.&lt;br/&gt;In the IPDR model there is no clear separation between the attribute definition and its behavior definition (default values and constrains). An attribute in the IPDR model is first defined with its behavior definition values and then can be used by referring to it in specific IPDR Service Specification definition.&lt;br/&gt;As a rule: each data type and Element whenever it includes constrains and default values mapped logically to UsageSpecCharacteristicValue. &lt;br/&gt;Note: SID UsageSpecification and IPDR Service Specification cannot be mapped to each other. Instance of SID UsageSpecification and the IPDR Service Specification itself can be logically mapped to each other. &lt;br/&gt;An instance of SID UsageSpecification defines the usage Meta data. Realization of usage Meta data is the usage record itself.&lt;br/&gt;IPDR Service Specification itself is the usage metadata and instance of it is usage record.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 1:03:16 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5B38A380-0156-438c-83AC-ADB8D7262239}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

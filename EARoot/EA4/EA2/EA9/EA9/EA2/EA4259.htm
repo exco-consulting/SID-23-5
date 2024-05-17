@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure A-3 SMM Measurement Relationships</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4260.png" usemap="#EA4260" border="0" />
+
+<MAP NAME="EA4260">
+<area shape="rect" coords="5,5,898,582" href="EA4276.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure A-3 SMM Measurement Relationships diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;A DimensionalMeasure produces a single numerical value, expressed using a unit of measure.&#160;&#160;SMM specifies three subclasses of Dimensional Measure:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A Direct Measure is one which does not involve a composition of subsidiary measures.&#160;&#160;It applies an operation to the measured entity.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A Binary Measure is one which evaluates a binary expression (i.e., sum, difference, ratio) involving two subsidiary Measures.&#160;&#160;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A Collective Measure represents measures which when applied to a given entity accumulates measurements of entities similarly related to the given entity.&#160;&#160;For example, it can evaluate an accumulator function across a set of subsidiary Measures taken on measurands which are components of a parent measurand.&#160;&#160;The accumulator functions specified are sum, maximum, minimum, average, and standard deviation. &lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The subclasses of MeasureRelationship express the relationships necessary to evaluate Binary and Collective Measures.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The measurandQuery association end of MeasureRelationship specifies a query that is used to determine the measurands that satisfy the relation between two measures.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;SMM also defines a parallel structure of Measurement relationships, as shown in Figure A-3.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 12:58:35 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 1:03:41 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BFE73E5F-C0A2-4ca0-B457-E690EA71FB09}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

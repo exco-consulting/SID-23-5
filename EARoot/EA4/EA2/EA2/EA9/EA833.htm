@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.17 - Customer Payment Scope</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA834.png" usemap="#EA834" border="0" />
+
+<MAP NAME="EA834">
+<area shape="rect" coords="46,405,216,577" href="../../EA10/EA4/EA5668.htm" target="_self">
+<area shape="rect" coords="36,248,186,347" href="../../EA10/EA4/EA2/EA5687.htm" target="_self">
+<area shape="rect" coords="22,21,165,156" href="../../EA10/EA4/EA5666.htm" target="_self">
+<area shape="rect" coords="679,146,866,251" href="../EA6/EA778.htm" target="_self">
+<area shape="rect" coords="411,446,547,498" href="../EA6/EA785.htm" target="_self">
+<area shape="rect" coords="667,353,866,405" href="../EA6/EA783.htm" target="_self">
+<area shape="rect" coords="359,184,522,297" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="404,9,501,68" href="../EA1/EA687.htm" target="_self">
+<area shape="rect" coords="699,9,796,61" href="../EA7/EA800.htm" target="_self">
+<area shape="rect" coords="180,156,316,208" href="./EA1/EA859.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.17 - Customer Payment Scope diagram</div>
+	<div class="ObjectDetailsNotes">This section is intended to define the scope of customer payment from the following perspectives. For more information about Payment refers to Party Payment in the Common Guide book. &lt;br/&gt;&lt;b&gt;Why (the reason for payment)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	From the view of customer, a payment is usually applied to a bill or an invoice, maybe through a customer account, and applied to product and product usage in both prepaid and postpaid scenarios. The payment may represent a prepayment. The payment amount may be a credit or debit amount. The payment is eventually applied to a bill or FinancialCharge/AppliedCustomerBillingRate. &lt;br/&gt;&lt;b&gt;How (the methods and plan for payment)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Payment is implemented through different means, such as cash, check, bank card, third party, account balance and loyalty burn, and so forth. A payment is applied to several bills or FinancialCharge/AppliedCustomerBillingRate according to the priority defined by payment plan.&lt;br/&gt;&lt;b&gt;When&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	In case of auto pay or receipt of customer payment &lt;br/&gt;&lt;b&gt;Who&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Payee and Payer, the third party as an agency&lt;br/&gt;&lt;b&gt;What (customer payment scope)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Involve all the above info, which is described in Figure C.17 &#8211; Customer Payment Scope below.&lt;br/&gt;The payment model presented here is intended to support a converged payment model for both prepaid and postpaid conditions. Other requirements include:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Handling prepaid customers in cases where there is no bill. So, Payment could be related to FinanicalCharge/AppliedCustomerBillingRate and not to a CustomerBill.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Handling a payment that is applied to multiple bills&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Handling underpayments and overpayments.&lt;br/&gt;&lt;br/&gt;When a CustomerBillingAccount uses a PaymentMethod by default, it means that for each CustomerBill produced a CustomerPayment will be triggered using this PaymentMethod.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:40:53 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5F734C59-0F87-43c3-827F-FDADB23A16B6}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

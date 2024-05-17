@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.04 - Anomaly Management Entity Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5060.png" usemap="#EA5060" border="0" />
+
+<MAP NAME="EA5060">
+<area shape="rect" coords="791,10,905,56" href="./EA1/EA5101.htm" target="_self">
+<area shape="rect" coords="911,396,1069,442" href="./EA2/EA5138.htm" target="_self">
+<area shape="rect" coords="911,207,1042,253" href="./EA1/EA5099.htm" target="_self">
+<area shape="rect" coords="772,396,885,442" href="../EA11/EA3/EA4624.htm" target="_self">
+<area shape="rect" coords="772,207,885,253" href="../EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="544,396,695,442" href="./EA2/EA5137.htm" target="_self">
+<area shape="rect" coords="537,207,688,253" href="./EA1/EA5096.htm" target="_self">
+<area shape="rect" coords="373,396,512,442" href="./EA2/EA5132.htm" target="_self">
+<area shape="rect" coords="373,207,512,253" href="./EA1/EA5092.htm" target="_self">
+<area shape="rect" coords="373,10,512,56" href="./EA1/EA5091.htm" target="_self">
+<area shape="rect" coords="110,10,268,56" href="./EA2/EA5143.htm" target="_self">
+<area shape="rect" coords="18,253,119,308" href="./EA2/EA5127.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.04 - Anomaly Management Entity Associations diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;The following diagram provides various relationships related to the management of anomalies. The characteristics associated with the Anomaly are specified using AnomalySpecifiation. Anomaly can be logically categorized with one or more AnomalyCategory for example System Anomaly, Network Anomaly, Service Anomaly etc, similarly Anomaly can be related to a logical group defined using AnomalyGrouping- for example Anomaly can be grouped based on a logical segment of a network , network function or customer segment. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Anomaly is measured through a set of indicators which define the metrics being referred to for detecting the anomalies. These indicators, defined through AnomalyIndicator, are associated with Anomaly. These indicators can have associated AnomalyThresholdSet indicating the boundary conditions for the Indicator for the anomaly management to apply constraints and each of the ThresholdSet is associated with set of AnomalyThresholdRule defining the constraint rules. Incase an AI based mechanism is used for managing the Anomaly, the threshold rule and threshold set act like input for AI model to infer the expected anomaly management outcome. Note that in this case the threshold values are just used as reference and not imposed strictly. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Each of the associated entities of Anomaly are specified using the corresponding Specification , i.e AnomalyCategory-AnomalyCategorySpecification, AnomalyGrouping-AnomalyGroupingSpecification, AnomalyIndicator-AnomalyIndicatorSpecification.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;AnomalySpecification is associated with AnomalyApplicability to describe the conditions and applicability of the Anomaly - for example time of the day, day of the month which may be used by the Anomaly management system to initiate related treatment.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">4/24/2023 11:21:40 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/14/2023 6:35:48 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{1D23C976-F7AC-4500-98F7-9B5444511404}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

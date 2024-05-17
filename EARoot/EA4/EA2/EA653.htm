@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Resource Domain</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Resource Domain", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;i&gt;Resource Domain Executive Summary&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Part of this document describes Computing and Software Resources within the Resource domain of the Information Framework (SID).&#160;&#160;Included is support for digital services, such as Workplace as a Service (WpaaS), multi-tenancy offerings, support for virtualization and network resource abstraction by the introduction of the Resource Function concept.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The move to virtualization, hybrid networks using both traditional Network Appliances and Network Applications software running on virtual machines or container technologies introduces a much more dynamic relationship between the network capabilities and how they are realized at any instance in time by resources.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The introduction of the Concept of Network as a Service promoted in TMF909 NaaS API Component Suite [1] and Open Digital Architecture (ODA) GB999 ODA Production Implementation Guidelines [2] - introduces the notion of abstracting network capabilities by separating the &#8216;What&#8216; is provided, from &#8216;How&#8216; it is provided. This allows uniform network services to be defined independent of specific technologies and their realization which may not be known at design time. Example of where this is useful for 5G/4G based services where the switch from 4G to 5G access needs to be transparent to the consumer of the Network Service. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Evolution of Network implementations from network appliances to network applications as software running on compute infrastructure requires adjustment to the traditional resource management models which reflect static assets that take time to deploy and configure, and which change infrequently to a model that can handle dynamic run time change in these relationships such as encountered with Network Function Virtualization (NFV).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Computing Resources, while not explicitly modelled, are supported by a number of SID Aggregate Business Entities (ABEs) including Physical Resource Specification, Logical Resource Specification, Compound Resource Specification, and their related &#8220;entity&#8221; ABEs, such as Physical Resource.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Software Resources are explicitly modelled within the SID and supported by a number of current ABEs, including Logical Resource Specification, Software, and Operating System.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Compound Resource Specification, Compound Resource, Software ABEs have been enhanced.&#160;&#160;The Operating System ABE is now supported by the Software Specification and Software ABEs and has therefore been removed.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Support for a number of scenarios, which includes, but is not limited to, Software compatibility and WpaaS, and vCPE are also contained within this document.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;Resource Domain Overviews&lt;/font&gt;&lt;br/&gt;The Resource domain represents roles, information and activities carried out by parties (e.g. individuals / organizations) playing roles that are involved in the strategic planning, definition, development and operational aspects of Resources (e.g. functions, applications, computing, networking and storage) that represent the infrastructure of an enterprise that are used to realize Services. Activities include management of: strategies, capabilities, lifecycles, catalogs, inventories, topologies, installations, activations, alarms, problems, performance, mediation, usage statistics and support of Resources that are managed by an enterprise.&lt;br/&gt;&lt;br/&gt;The Resource Domain provides a view of the resource portion of the information model, which includes mined information from other information models. The SID draws from the work of ITU-T, IETF, ONF, MEF and DMTF. This model is built with the express purpose of serving as a foundation for other Resource (sub-) models to fit into.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:04:53 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA645.htm">SID  Map</a>, <a href="./EA5/EA1615.htm">Figure [ReD-01] Resource ABEs Level 1</a>, <a href="./EA5/EA1617.htm">Figure [ReD-02] Resource ABEs Level 2</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{8E179827-2B1A-4ba7-B0FC-32FA0B931820}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">1/10/2022 12:00:48 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+		</ul>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">rsa_guid</td>
+				<td width="50%" class="TableRow" valign="top">_3E3F0EC000E93DDEA08E02BD</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario8650" onclick="parent.toggleDiv('detailsDIVScenario8650','DetailsImageScenario8650')" />Specification:
+						<div id="detailsDIVScenario8650" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

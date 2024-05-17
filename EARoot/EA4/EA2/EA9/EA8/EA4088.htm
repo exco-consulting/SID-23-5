@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure CP.03 - Configuration Spec and Configuration Characteristics</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4089.png" usemap="#EA4089" border="0" />
+
+<MAP NAME="EA4089">
+<area shape="rect" coords="43,299,220,367" href="EA4100.htm" target="_self">
+<area shape="rect" coords="686,10,831,63" href="../EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="394,140,560,186" href="../EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="258,233,456,292" href="../EA2/EA2/EA3850.htm" target="_self">
+<area shape="rect" coords="159,10,340,56" href="../EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="60,115,204,167" href="../EA2/EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="689,284,827,383" href="EA4103.htm" target="_self">
+<area shape="rect" coords="147,444,316,555" href="EA4106.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure CP.03 - Configuration Spec and Configuration Characteristics diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows (in more detail) how a Configuration Specification acts on a Configuration instance.&lt;br/&gt;Let&#8217;s take the example of Bandwidth represented by an instance of CharacteristicSpecification and Upstream / Downstream Bandwidth represented by an instance of EntitySpecCharUse.&lt;br/&gt;In this example, a particular usage of Bandwidth (upstream and downstream) is applied to (constrain) a Characteristic Value of a given Configuration. EntitySpecCharValueUse enables a subset of the CharSpecValues to apply for a particular &#8220;use&#8221; of the CharSpec.&lt;br/&gt;The above may appear complex for usage over an interface. However, the entire set of entities/attributes shown here does not have to be sent across an interface. The interface operations may just carry the information via reference (not value). Further, this information model is intended to be independent of implementation. Various interface tooling can used to transform the information model to an implementation-specific (data) model.&lt;br/&gt;Note that a CharacteristicValue may be related directly to a CharacteristicSpecification for those specifications that do not have associated CharacteristicSpecValues (there is no enumeration of permitted values for the CharacteristicSpecification).&#160;&#160;In these cases the CharacteristicValue must be entered when an instance of it is created.&lt;br/&gt;In some cases a CharacteristicSpecification and its associated EntitySpecCharUse can be used to assign a value to an explicitly modeled attribute for an entity, such as the supportedConnectionRates attribute for a ConnectionTerminationPoint.&#160;&#160;The ConfigSpecCharUse entity shown in the following Figure is modeled to support this requirement.&#160;&#160;In this example the name of the Characteristic would be supportedConnectionRates; it would be matched to the explicit attribute in the entity in order to assign it a value.&#160;&#160;This use of characteristics is particularly useful if the explicit attribute can be assigned a value from a range of possible values.&#160;&#160;If an entity, such as Product, Service, or Resource, is desired to be used an entire series of entity instances would be required to accomplish this.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/15/2023 3:20:04 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{98D84F85-5AF0-40a0-8AEE-66E183307AFD}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

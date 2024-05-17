@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure P.01 - Basic Party Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5375.png" usemap="#EA5375" border="0" />
+
+<MAP NAME="EA5375">
+<area shape="rect" coords="354,347,504,399" href="./EA6/EA5544.htm" target="_self">
+<area shape="rect" coords="261,188,382,280" href="EA5467.htm" target="_self">
+<area shape="rect" coords="10,188,132,332" href="EA5462.htm" target="_self">
+<area shape="rect" coords="550,10,740,89" href="./EA6/EA5546.htm" target="_self">
+<area shape="rect" coords="534,183,755,235" href="./EA6/EA5545.htm" target="_self">
+<area shape="rect" coords="178,347,307,399" href="./EA6/EA5543.htm" target="_self">
+<area shape="rect" coords="142,10,251,89" href="EA5469.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure P.01 - Basic Party Model diagram</div>
+	<div class="ObjectDetailsNotes">The following figure shows our starting point for the model, based on [Fowler-AP], and shows a Party representing an Individual or Organization. &lt;br/&gt;In this model, both organization and organization unit (e.g. consortium, parent company, subsidiary, division, department, branch or team) are represented by the Organization entity.&lt;br/&gt;Organization can also represent government agencies, clubs, societies, charities and educational &amp; religious organizations.&lt;br/&gt;Whilst Party is not a term often used in the business, the concept of &#8220;a person or a company&#8221; is often heard, and the Party abstraction makes the domain model easier to understand. &lt;br/&gt;Stephen Palmer [Coad Letter] uses the definition that &#8220;A party is a legal entity, something or someone that can be sued in a court of law&#8221;. But in SID, an Organization might be &quot;not a legal entity&quot; as long as it is of interest for the company to know it.&lt;br/&gt;An Organization might be composite or atomic.&lt;br/&gt;AtomicOrganization is a type of Organization that does not have any subordinate Organization. That is, an AtomicOrganization is a leaf-level Organization. &lt;br/&gt;CompositeOrganizaiton is a type of Organization that is formed by aggregating other Organizations, which may be atomic or composite Organizations. &lt;br/&gt;The OrganizationDecompositionComponent specifies the valid period for the relationship between CompositeOrganization and Organization and relates to the OrganizationDecompositionType.&lt;br/&gt;OrganizationDecompostionType describes and specifies certain type of organization decomposition such as geographical, hierarchical and financial.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/6/2023 7:25:46 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7050FC44-69B8-4d2c-83E8-AD066F008656}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

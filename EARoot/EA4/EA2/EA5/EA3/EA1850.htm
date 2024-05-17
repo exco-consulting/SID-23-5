@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.16-I01 - Illustration – A Simple 2547bis MPLS VPN</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1851.png" usemap="#EA1851" border="0" />
+
+<MAP NAME="EA1851">
+<area shape="rect" coords="10,10,706,324" href="EA1931.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.16-I01 - Illustration – A Simple 2547bis MPLS VPN diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;Roles in More Detail&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Now that all of the major business entities for Resource and LogicalResource have been explained, we can return to examining the use of Roles to abstract application functionality. For example, consider a 2547bis MPLS VPN.&#160;&#160;No matter how complicated the topology of the VPN, there are basically three roles that a device can play in this scenario:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;CustomerEdge (CE) &#8211; represents a router that connects the Customer&#8217;s traffic to the VPN&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ProviderEdge (PE) &#8211; represents a router at the edge of the VPN to which a CE router can connect to&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Provider (P) &#8211; represents a router in the core of the VPN that does not connect to a CE router&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The basic VPN topology is shown in Figure LR.16 - Illustration &#8211; A Simple 2547bis MPLS VPN&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;The Figure below shows two VPNs. The &#8220;Red&#8221; VPN connects Sites 1 and 3 through the Provider backbone, while the Green VPN connects Sites 2 and 4 through the same Provider backbone. Note that these are two distinct VPNs that share a common network. The concept of Roles can be used with other parts of this model to standardize (for example) how CE routers connect to PE routers, as well as how traffic is forwarded. For example, a set of policies could be defined that determine the specific characteristics and behavior that a particular CE router will have, which could be used to constrain the protocols used controlling how it connects to different types of PE routers. Abstracting this functionality using roles enables policies to be independent of any specific device, facilitating redundancy and reuse. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;First, note that the core of the Provider Backbone is represented by routers that play the same Role (Provider). This enables us to differentiate their configuration from the PE and CE routers shown in Figure LR.49 above. More importantly, it means that these four routers are functionally equivalent, and once a basic template is developed to configure one, it can be applied (with simple modifications to parameterize device-specific attributes, such as name and IPAddress) to the other P routers.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This is also true of the configurations of the PE and CE routers.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Roles imply innate functionality provided by the entity playing that role which is not provided by other entities. For example, a Router playing the CE role is solely responsible for connecting the Customer to the VPN. A router playing the PE role is solely responsible for exercising import routing policies, which are used to determine whether a remote route transmitted by a CE should be installed and propagated in the VPN or not. PE roles do not connect to the Customer, and CE roles do not import routing policies.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This description of Roles is at a device level &#8211; it can involve using roles to describe physical as well as logical aspects of the device. Thus, while we have been describing LogicalResourceRoles, we could just as easily describe PhysicalResourceRoles, or even combine the two to describe CompoundResourceRoles (which would help determine the overall behavior of a CompoundResource, such as a router).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Just as a CompoundResource was defined as a mechanism to aggregate PhysicalResources as well as LogicalResources, a CompoundResourceRole can aggregate PhysicalResourceRoles as well as LogicalResourceRoles. For example, a Service Provider could decide that only certain type of connections using a particular type of media (e.g., Serial) will be supported between the CE and the PE routers. Therefore, any router playing either the CE or the PE roles must support serial connectivity. Furthermore, since the P routers are forwarding traffic in the core of the Service Provider backbone and not concerned with Customer connectivity, there is no reason for them to support serial connectivity (for connecting to Customers). Thus, roles can be used to help determine what types of PhysicalResources (e.g., Protocols) and LogicalResources (e.g., Line Cards) are used on to realize functionality required by a CompoundResource. As a simple example, since a P router just connects to other P routers and PE routers, its configuration must ensure that routes aren&#8217;t leaked across the PE routers to CE routers. Thus, the role of the P router differentiates its function from the CE and PE routers.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/5/2022 5:06:18 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/27/2022 4:30:49 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F8D8466C-7909-4734-8591-511158BB56A4}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

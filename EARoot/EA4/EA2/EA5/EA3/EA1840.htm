@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.07 - Relationship between Product, Service and Resource</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1841.png" usemap="#EA1841" border="0" />
+
+<MAP NAME="EA1841">
+<area shape="rect" coords="717,259,848,309" href="./EA1/EA1957.htm" target="_self">
+<area shape="rect" coords="531,10,681,69" href="EA1946.htm" target="_self">
+<area shape="rect" coords="272,442,419,492" href="../../EA4/EA4/EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="10,442,157,492" href="../../EA4/EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="379,259,510,309" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="548,259,679,309" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="183,151,314,201" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="166,319,297,369" href="../../EA4/EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="547,123,678,173" href="EA1944.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.07 - Relationship between Product, Service and Resource diagram</div>
+	<div class="ObjectDetailsNotes">This leads to an important conclusion: a ProductComponent is directly related to a CustomerFacingService (i.e. Know-how), since the CustomerFacingService is directly visible as a part of the Product. &lt;br/&gt;However, a ResourceFacingService (i.e. Technical Solution) is hidden from the Product, since it represents the logic that implements the CustomerFacingService. &lt;br/&gt;This understanding now enables us to connect ResourceFacingService to PhysicalResource and LogicalResource, as shown in Figure below. &lt;br/&gt;A PhysicalResource might host one or many RFSs. &lt;br/&gt;A LogicalResource might implement one or many RFSs.&lt;br/&gt;The model in the following Figure shows that a CustomerFacingService might be composed of multiple ResourceFacingServices. Each ResourceFacingService might be configured using a set of LogicalResources as well as a set of PhysicalResources.&lt;br/&gt;This follows our original logic, in that a Product requires a set of ResourceFacingServices to support it. &lt;br/&gt;Since a PhysicalResource might host LogicalResources (via the ResourceRelationship with a type &#8220;host&#8221;); we can identify the specific PhysicalResource(s) that are required to support a particular LogicalResource.&lt;br/&gt;Here is an example to illustrate these relationships, based on the following Figure. &lt;br/&gt;Consider a Customer (a type of PartyRole) that wants to buy broadband Internet service from a Service Provider. The Customer needs to buy a new cable modem to connect to the Service Provider. In this example:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Cable Modem is a Product that the Customer buys; the Cable Modem is also a PhysicalResource. This is represented by the ProductHasPhysicalResources relationship.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Broadband Internet is a Product that the Customer buys; Broadband Internet is also a CustomerFacingService. This is represented by the ProductRealizedAsCFService relationship.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Note that the Broadband Internet Service depends on the Cable Modem:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Broadband Internet CustomerFacingService requires a set of ResourceFacingServices to link to the Cable Modem. These could include, for example, one or more functions performed by one or more Protocols. These are represented by the CFServiceRequiresRFServices relationship.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Each ResourceFacingService needs to connect to the Cable Modem. The physical connection will terminate on a physical port of the Cable Modem &#8211; this is represented by the ServicePRDependency relationship.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The PhysicalPort of the Cable Modem hosts logical functions (e.g., a DeviceInterface). This is represented by the ServicePRDependency relationship.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Similarly, the Cable Modem functions are configured to work with the Broadband Internet CustomerFacingService.&#160;&#160;Different LogicalResources (e.g., Protocol, LogicalDevice, DeviceInterface, and Software) are required to communicate with and feed the Broadband Internet CustomerFacingService through the Cable Modem to the Customer. These are modeled by the ServiceLRDependency relationship.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:08:13 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0F294BD7-20A8-449b-B6CF-A69BB398789B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

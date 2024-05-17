@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">The design and visual language of MODA objects adhere to a set of specific guidelines, largely aligning with ArchiMate conventions, for ease of use and comprehension:&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;ArchiMate conventions&lt;/b&gt;: The fundamental look and feel of MODA objects are based on ArchiMate language, providing a familiar visual context for those acquainted with ArchiMate.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Background color&lt;/b&gt;: The background color of MODA objects signifies their association with a particular architectural domain. This use of color aids in the quick identification of the domain to which an object belongs.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Top right decorator&lt;/b&gt;: In the top left corner of each object, a symbol known as a decorator mirrors its ArchiMate equivalent. This consistency helps many practitioners easily recognize the purpose or nature of the shape. If an entirely new concept is introduced, a new symbol is created to represent it.&lt;/li&gt;&lt;li&gt;&lt;b&gt;TM Forum indicator&lt;/b&gt;: A red dot positioned in the bottom left corner, accompanied by the letters &#39;TMF&#39;, signifies that the object has been augmented with additional information specific to the TM Forum. This enhancement provides context and value unique to the TM Forum environment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Additional diagrams indicator&lt;/b&gt;: On occasions, an object &lt;a href=&quot;javascript:top.guidLink(&#39;{495563A6-3C00-4cb8-BDEE-03D02E43D230}&#39;)&quot;&gt;&lt;span style=&quot;color:#0000ff;&quot;&gt;&lt;u&gt;may contain additional diagrams&lt;/u&gt;&lt;/span&gt;&lt;/a&gt;. In such instances, a symbol resembling a horizontal figure-eight is placed in the right corner of the object, signaling the presence of more detailed visual information within the object.&lt;/li&gt;&lt;/ul&gt;<br />&lt;br/&gt;These organized elements collectively enhance the usability and clarity of MODA, making it an efficient tool for representing and understanding complex digital architectures.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">10/9/2023 7:31:57 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA58.htm">TMF Element - Visual components</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{F6D90320-F5B2-4d23-9E9C-1EE87533CC8D}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">6/2/2023 9:32:07 AM</td>
+		</tr>
+	</table>
+
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TMF Element - Visual components</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA59.png" usemap="#EA59" border="0" />
+
+<MAP NAME="EA59">
+<area shape="rect" coords="19,10,552,49" href="EA92.htm" target="_self">
+<area shape="rect" coords="10,88,538,483" href="EA91.htm" target="_self">
+<area shape="rect" coords="559,28,958,334" href="EA109.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">TMF Element - Visual components diagram</div>
+	<div class="ObjectDetailsNotes">&lt;br/&gt;The design and visual language of MODA objects adhere to a set of specific guidelines, largely aligning with ArchiMate conventions, for ease of use and comprehension:&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;ArchiMate Conventions&lt;/b&gt;: The fundamental look and feel of MODA objects are based on ArchiMate language, providing a familiar visual context for those acquainted with ArchiMate.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Background Color&lt;/b&gt;: The background color of MODA objects signifies their association with a particular architectural domain. This use of color aids in the quick identification of the domain to which an object belongs.&lt;/li&gt;&lt;li&gt;Top Left Decorator: In the top left corner of each object, a symbol known as a decorator mirrors its ArchiMate equivalent. This consistency helps many practitioners easily recognize the purpose or nature of the shape. If an entirely new concept is introduced, a new symbol is created to represent it.&lt;/li&gt;&lt;li&gt;TM Forum Indicator: A red dot positioned in the bottom left corner, accompanied by the letters &#39;TMF&#39;, signifies that the object has been augmented with additional information specific to the TM Forum. This enhancement provides context and value unique to the TM Forum environment.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Additional Diagrams Indicator&lt;/b&gt;: On occasions, an object may contain additional diagrams. In such instances, a symbol resembling a horizontal figure-eight is placed in the right corner of the object, signaling the presence of more detailed visual information within the object.&lt;/li&gt;&lt;/ul&gt;<br />&lt;br/&gt;These organized elements collectively enhance the usability and clarity of MODA, making it an efficient tool for representing and understanding complex digital architectures.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">4/26/2023 10:08:59 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/12/2023 11:37:12 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">22.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8E154ED2-5CCD-46ce-A3E1-D684C75954C7}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.07 - Product Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1179.png" usemap="#EA1179" border="0" />
+
+<MAP NAME="EA1179">
+<area shape="rect" coords="10,103,107,150" href="../../EA2/EA1/EA687.htm" target="_self">
+<area shape="rect" coords="192,103,303,135" href="../EA1/EA905.htm" target="_self">
+<area shape="rect" coords="629,91,794,150" href="../../EA7/EA5/EA2927.htm" target="_self">
+<area shape="rect" coords="568,240,735,299" href="EA1193.htm" target="_self">
+<area shape="rect" coords="839,308,1003,367" href="../../EA9/EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="377,484,556,516" href="../EA3/EA1111.htm" target="_self">
+<area shape="rect" coords="374,395,558,427" href="EA1192.htm" target="_self">
+<area shape="rect" coords="136,484,305,516" href="../EA3/EA1103.htm" target="_self">
+<area shape="rect" coords="74,395,208,427" href="EA1190.htm" target="_self">
+<area shape="rect" coords="267,619,423,678" href="../EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="125,232,377,320" href="EA1189.htm" target="_self">
+<area shape="rect" coords="483,170,651,206" href="./EA3/EA1219.htm" target="_self">
+<area shape="rect" coords="875,225,990,255" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="639,367,822,399" href="EA1191.htm" target="_self">
+<area shape="rect" coords="839,165,991,202" href="../EA3/EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="665,569,914,601" href="../EA2/EA980.htm" target="_self">
+<area shape="rect" coords="597,484,796,516" href="../EA2/EA981.htm" target="_self">
+<area shape="rect" coords="451,32,615,75" href="../../EA2/EA8/EA830.htm" target="_self">
+<area shape="rect" coords="107,10,222,40" href="../../EA10/EA1/EA5479.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.07 - Product Entities diagram</div>
+	<div class="ObjectDetailsNotes">When A Customer makes a selection, they may also have a number of options to select from.&#160;&#160;These are associated with the ProductOffering via its association to a ProductSpecification and modeled in ProductCharacteristicValue (see Figure below), which defines the Product delivered to the Customer. The ProductCharacteristicValue comprises the detail of the ProductSpecCharacteristics, such as color, selected by the Customer.&lt;br/&gt;When an enterprise agrees to deliver a Product to a Customer, there is a significant amount of information that needs to be recorded to implement that Product on the provider&#8217;s infrastructure or Resources and to activate the Service via with the Product is realized. This is modeled in Product and associated entities below.&lt;br/&gt;A Product bundle in an instantiation of the BundledProductOffering that was used when the customer purchased a product or products from the provider. The ProductBundle holds the information (usually business information) that relates to the specific product offering (such as special prices or commitment terms) in case the customer changes its products and is no more eligible to the special business terms that are attached to the ProductOffering. &lt;br/&gt;If the customer, purchased, as example a triple play bundle (VoIP, High speed internet and Cable TV) and as a result is eligible for a 10$ monthly discount on the Cable TV charges, then this information should be kept so when the customer cancels the VoIP product the TV discount is removed. In the same way the bundle can also have changes on commitment terms and other business terms. The information which BundledProductOffering was used for the purchase is kept in the ProductBundle entity and when a product is cancelled, possibly the ProductBundle may change (to reflect the fact that now the product business terms are derived form a different ProductOffering&lt;br/&gt;A Product component in an instantiation of the SimpleProductOffering that was used when the customer purchased a product or products from the provider. The ProductComponent holds the information (usually business information) that relates to the specific product offering (such as special prices or commitment terms) in case the customer changes its products and is no more eligible to the special business terms that are attached to the ProductOffering. &lt;br/&gt;If the customer, purchased, as example a VoIP line and as a result is eligible for a low recurring charge because of a special promotion in order to penetrate a new city, then this information should be kept so when the customer changes her address the special rate is replaced with a normal monthly rate. In the same way the product component can also have changes on commitment terms and other business terms. The information which SimpleProductOffering was used for the purchase is kept in the ProductComponent entity and when a product is cancelled, possibly the ProductComponent may change (to reflect the fact that now the product business terms are derived from a different ProductOffering.&lt;br/&gt;&lt;br/&gt;ProductOfferings may be obtained by the Customer in a number of ways. Two different examples are Products are equipment obtained directly by the Customer, compared to Products that are realized by Services provided across the provider&#8217;s Resources and which the Customer accesses and uses, rather than owns.&#160;&#160;In some cases, a provider may give the Customer access to a Product resident on a third party&#8217;s resources.&#160;&#160;Where a third-party Product is involved, it may be branded/labeled as coming from another provider or it may be re-branded/labeled as the first provider&#8217;s Product. Whichever of these is applicable, once the customer is using the Product, we are talking about a realization of the Product Offering that is based on a standard Product Specification. &lt;br/&gt;The price someone pays, the rate charged for usage of a Product, discounts and allowances related to a Product are represented by the ProductPrice entity. ProductPrice is a separate SID ABE that is further detailed in this addendum.&lt;br/&gt;We are also talking about the user/recipient that is entitled to use the Product.&#160;&#160;This is represented by a PartyRole, which is in turn related to the Product using the Product Involvement Role business entity and its involvementRole derived attribute.&lt;br/&gt;The Product that the Customer has obtained is not truly realized until it is in use. The user may be the signatory to an agreement, particularly if the Customer is an Individual, but they may also be an agent or Employee of the Customer where that Customer is a large Organization.&lt;br/&gt;Finally, a CustomerAccount may also be involved with a Product.&#160;&#160;For example, the role could be the CustomerAccount that pays for a Product; the CustomerAccount to which a Product was charged; the CustomerAccount associated with ordering a Product. This is represented by the CustomerAccountProductInvolvement business entity.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 9:02:07 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{6AA51D85-14CB-483f-91F2-3A9DC068BA72}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

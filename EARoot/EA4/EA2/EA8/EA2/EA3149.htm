@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.07 - Workforce Pool</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3150.png" usemap="#EA3150" border="0" />
+
+<MAP NAME="EA3150">
+<area shape="rect" coords="231,299,410,346" href="./EA3/EA3211.htm" target="_self">
+<area shape="rect" coords="457,142,638,189" href="./EA3/EA3213.htm" target="_self">
+<area shape="rect" coords="10,142,183,189" href="./EA3/EA3208.htm" target="_self">
+<area shape="rect" coords="247,142,393,201" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="240,10,400,41" href="../../EA9/EA12/EA4/EA4869.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.07 - Workforce Pool diagram</div>
+	<div class="ObjectDetailsNotes">For workforce planning and scheduling purposes, the capacity of individual human and non-human resources must be organized in Pools. A Pool is a group of people or resources, grouped by some criteria, such as Skills or Location, for a period of time. Pool also facilitates the assignment of a group of people to a work task. Pools may not always be equal to a physical organization, but rather a logical holder of workforce capacity. In fact, a Workforce organization can have more than one Pool, and vice versa, a pool can contain technicians from more than one organization.&lt;br/&gt;For this SID release, the capacity represented by or associated with a Pool is high-level &#8212; just the count of people with certain skills for locations. In a future release, we will consider defining more details on capacity down to a time slot (of a day), the capacity unit (man hours, maximal number of orders of certain Work types that can be processed), time granularity (like 1 hour, 2 hours, etc. &#8212; i.e. the unit time period the workforce organization can give resources for), and others. For example, an EmployeePool&#8217;s Capacity, on a particular working day, from 8 am to 12 pm, with Fiber installation skills can be 40 man hours (available capacity).&lt;br/&gt;The WorkforceEmployeePool has the flag of isWFSupplierEmployeePool, to distinguish whether the pool is managed by an external Supplier (3rd-party contractor). Such a pool may be transparent to the Service Provider in terms of particular employee booking and assignment; as such functions are outsourced to the contractor company. Nevertheless, the Service Provider may want to know the capacity of the pool, for its own planning purposes.&lt;br/&gt;An example of a WorkforceResourcePool is the group of trucks and tools (like network testers) that the field force department for the New York area can use to serve a Fiber installation project.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 8:03:07 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{66EBA28B-FC7A-4a23-A1F2-478DB9ED8CC0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

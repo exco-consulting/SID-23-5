@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.07 - Anomaly Category Characteristics & Entity Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5066.png" usemap="#EA5066" border="0" />
+
+<MAP NAME="EA5066">
+<area shape="rect" coords="29,199,186,237" href="../EA2/EA2/EA3850.htm" target="_self">
+<area shape="rect" coords="384,523,561,572" href="./EA2/EA5132.htm" target="_self">
+<area shape="rect" coords="777,370,916,413" href="../EA2/EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="634,458,812,504" href="./EA2/EA5128.htm" target="_self">
+<area shape="rect" coords="77,464,277,505" href="./EA2/EA5129.htm" target="_self">
+<area shape="rect" coords="583,293,783,338" href="./EA2/EA5130.htm" target="_self">
+<area shape="rect" coords="536,374,692,417" href="../EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="127,379,277,413" href="../EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="84,293,307,349" href="./EA2/EA5131.htm" target="_self">
+<area shape="rect" coords="433,217,649,262" href="./EA1/EA5093.htm" target="_self">
+<area shape="rect" coords="212,154,341,191" href="../EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="465,115,608,160" href="./EA1/EA5092.htm" target="_self">
+<area shape="rect" coords="424,10,640,59" href="./EA1/EA5091.htm" target="_self">
+<area shape="rect" coords="57,10,273,59" href="./EA2/EA5143.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.07 - Anomaly Category Characteristics & Entity Associations diagram</div>
+	<div class="ObjectDetailsNotes">Further detailing the Anomaly entity relationship,the following figure depicts relationship between Anomaly, AnomalyCategory and AnomalyCategorySpecification.&lt;br/&gt;AnomalyCatgorySpecCharacteristic (derived from CharacteristicSpecification in Characteristic ABE) is used for defining characteristic and t&#8217;s potential values using the entity AnomalyCategorySpecCharateristicValue (derived from CharacteristicSpecValue in Characteristic ABE).&lt;br/&gt;The possible values defined using AnomalyCategorySpecCharacteristicValue is associated with AnomalySpecCharacteristic using relationship AnomalySpecCharacteristicEnumeratedBy&lt;br/&gt;The use of AnomalyCategorySpecCharacteristic within the AnomalyCategorySpecification is attributed through AnomalyCategorySpecCharUse&lt;br/&gt;AnomalyCategorySpecCharacteristic and AnomalyCategorySpecCharUse are associated using the relationship AnomalyCategorySpecCharacteristicFurtherDefinedBy&lt;br/&gt;&lt;br/&gt;AnomayCategorySpecCharatectisticValue and AnomalyCategorySpecCharValueUse are associated using the relationship AnomalyCategorySpecCharacteristciUseFurtherdefinedBy&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">4/26/2023 10:45:22 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 1:28:48 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7D149C3F-08AB-40d9-90FA-9B7D4D403334}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

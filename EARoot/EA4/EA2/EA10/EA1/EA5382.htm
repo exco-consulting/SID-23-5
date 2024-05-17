@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure P.04 - Party and the Main eTOM Roles</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5383.png" usemap="#EA5383" border="0" />
+
+<MAP NAME="EA5383">
+<area shape="rect" coords="689,392,786,444" href="../../EA8/EA1/EA3133.htm" target="_self">
+<area shape="rect" coords="459,310,556,362" href="../../EA7/EA1/EA2827.htm" target="_self">
+<area shape="rect" coords="395,393,492,445" href="../../EA7/EA1/EA2825.htm" target="_self">
+<area shape="rect" coords="322,311,419,363" href="../../EA5/EA1/EA1638.htm" target="_self">
+<area shape="rect" coords="238,392,367,444" href="../../EA4/EA2/EA1356.htm" target="_self">
+<area shape="rect" coords="178,310,282,362" href="../../EA3/EA1/EA905.htm" target="_self">
+<area shape="rect" coords="13,310,138,362" href="../../EA6/EA3/EA2616.htm" target="_self">
+<area shape="rect" coords="293,8,446,82" href="EA5480.htm" target="_self">
+<area shape="rect" coords="109,392,206,444" href="../../EA2/EA1/EA687.htm" target="_self">
+<area shape="rect" coords="612,165,750,226" href="EA5483.htm" target="_self">
+<area shape="rect" coords="293,165,446,226" href="EA5479.htm" target="_self">
+<area shape="rect" coords="10,165,119,226" href="EA5469.htm" target="_self">
+<area shape="rect" coords="499,392,660,454" href="../../EA8/EA1/EA3135.htm" target="_self">
+<area shape="rect" coords="596,310,707,362" href="../../EA8/EA1/EA3134.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure P.04 - Party and the Main eTOM Roles diagram</div>
+	<div class="ObjectDetailsNotes">People and Organizations exhibit complex behavior. A lot of the behavior can be grouped, based on a particular context, or participation in a certain interaction. &lt;br/&gt;For instance, a child at school will behave as a student and an adult may behave as a teacher. A person playing cricket may behave as a bowler, a batsman or as a fielder or wicket-keeper.&lt;br/&gt;These behavior groups will change over time and will cause problems if we model them using inheritance / specialization. Also, we need to allow for the fact that a Party may play more than one role at any given point in time (an employee may also be a customer; a graduate student may also be a tutor).&lt;br/&gt;By modeling PartyRole as a separate concept from Party, we allow for proper representation of these complex sets of behaviors.&lt;br/&gt;When looking at the eTOM, we see that Parties play roles in the context of an interaction to provide Customer value. &lt;br/&gt;This interaction may be per service or per event (e.g. a phone call).&lt;br/&gt;&lt;i&gt;&#8220;Note that these are roles and that individual enterprises can adopt different roles in different value networks. Roles represent activities that businesses can engage in and, for example, a service provider may be the customer-facing service provider in one value network and a third party (e.g. wholesale) service provider in another. Relationships are established between the roles, hence the business relationship context model. In today&#8217;s fast-moving marketplace, relationships can be very short-lived compared with the more static relationships of the traditional telecommunications market. By focusing on roles rather than organizations, a more flexible business relationship context model can be achieved. Enterprises can adopt and shed roles dynamically, but the relationships between the roles are established, so the adoption of a particular role will also define the relationship of the enterprise playing that role towards another role player.&#8221; [eTOM]&lt;/i&gt;&lt;br/&gt;The roles defined in the eTOM are shown as subclasses of PartyRole in Figure P.04 &#8211; Party and the Main eTOM Roles.&lt;br/&gt;Note:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;To support these roles, we will use the &#8220;Role Object&#8221; pattern [Fowler-Role] [Larman].&lt;/li&gt;&lt;li&gt;The PartyRole entity represents the common behavior by a Party when acting in the role.&lt;/li&gt;&lt;li&gt;This model explicitly separates the information held about individuals and organizations from the roles that they perform and the relationships between the roles.&lt;/li&gt;&lt;li&gt;PartyRole is shown with an id attribute. Existing data may have different id formats for different role types, e.g. &#8220;customer number&#8221;, &#8220;supplier id&#8221;, &#8220;employee nr&#8221; &#8230;&lt;/li&gt;&lt;li&gt;In a value fabric, roles may not be exclusive, e.g. a customer may also be a supplier&lt;/li&gt;&lt;li&gt;In a number of cases we are interested in parties playing a combination of roles, e.g. staff who use our products get staff discount, suppliers who use our products are &#8220;preferred suppliers&#8221;&lt;/li&gt;&lt;li&gt;If the number of roles becomes very large, then it may be necessary to create &#8220;sub-roles&#8221; so that the inheritance tree does not become unmanageable.&lt;/li&gt;&lt;/ul&gt;<br />Parties &amp; PartyRoles may be recorded, even if there is no interaction with the Service Provider.&lt;br/&gt;e.g. a Service Provider may wish to keep a list of Phone Dealers (including competitors) to help in determining shop placements. The Organizations are stored, with a role of &#8220;Phone Dealer&#8221;, but there may never be any &#8220;Interaction&#8221; between the dealers and the Service Provider.&lt;br/&gt;Other roles are governmental entities, such as regulators, law enforcement, and tax. Shareholders also have a place. Such Business Process Framework process areas, such as Stakeholder and External Relations Management and Enterprise Risk Management (Fraud Management processes often engage Law Enforcement parties) and Shareholder &amp; External Relations Management have various modes of engagement with these. &lt;br/&gt;Examples of roles played by parties include those of interest, such as competitors, sales prospects that provides value directly or indirectly, such as service providers, operators, cloud brokers, infrastructure providers and application developers.&lt;br/&gt;So, there is a need to maintain information about many different roles played by parties and for a common set of business process elements with which many roles are involved.&#160;&#160;&lt;br/&gt;The introduction of a Party ABE in the Common domain with the PartyRole entity in it simplifies interactions among business enablers, enabling other organizations playing new/different roles in the value fabric to be represented in the model in their specific domain as specialization of PartyRole. Companies become more open to sharing information and process visibility. And the community of actors self-select themselves into like-minded communities of parties.&lt;br/&gt;Process flows that show the roles engaged in a scenario or use case can take advantage of the common process elements. It contains information about the entities whose lifecycles are managed by these process elements.&lt;br/&gt;It keeps Frameworx sufficiently agile to not require major structure changes to four of the component frameworks when new roles are introduced.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/6/2023 7:27:40 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{6EE0B51B-04D5-4fcb-877F-7076EA00AD36}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

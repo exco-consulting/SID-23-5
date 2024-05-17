@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.31 - Modeling matrix values</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1077.png" usemap="#EA1077" border="0" />
+
+<MAP NAME="EA1077">
+<area shape="rect" coords="371,395,571,423" href="../EA2/EA981.htm" target="_self">
+<area shape="rect" coords="96,322,251,369" href="./EA1/EA1122.htm" target="_self">
+<area shape="rect" coords="312,190,450,218" href="./EA1/EA1120.htm" target="_self">
+<area shape="rect" coords="96,177,238,205" href="./EA1/EA1121.htm" target="_self">
+<area shape="rect" coords="214,38,357,97" href="../../EA9/EA2/EA2/EA3847.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.31 - Modeling matrix values diagram</div>
+	<div class="ObjectDetailsNotes">We can look at each value (cell) of n dimensional matrix as n+1-tupple of Characteristic Values, one describes the cell value and the other n are the indices of the dimensions (not numeric indices, but the values are themselves indices). Since each index can be either CharacteristicValue or ProductCharacteristicValue we cannot use the self-association for the CharacteristcValue class. Instead we define the class MatrixCharValueIndex which associate either CharacteristcValue or ProductCharacteristicValue. In addition we define a class which is derived from CharacteristicValue which represent a matrix value and includes associations to the matrix dimensions (defined by either CharacteristicValue or ProductCharacteristicValue) and aggregates the matrix cell values which are derived from CharValue (to include the value) and associated with the MatrixCharValueIndex for the indices of this cell value.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/25/2023 7:04:21 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{918BB217-435C-4005-8176-7ECFAE10E2FF}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

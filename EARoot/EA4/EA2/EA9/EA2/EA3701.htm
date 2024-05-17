@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.32 - Content Charging Offer Price</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3702.png" usemap="#EA3702" border="0" />
+
+<MAP NAME="EA3702">
+<area shape="rect" coords="5,7,877,364" href="EA3806.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.32 - Content Charging Offer Price diagram</div>
+	<div class="ObjectDetailsNotes">Shown in the following Figure is an example where the high definition (HD) format for the movie 2012 has one price, while the same movie has a different price for standard (STD) format.&lt;br/&gt;The STD and HD values do not have to be repeated as instances of CharacteristicSpecValues.&#160;&#160;The Format instance of CharacteristicSpecification can be shared among all movie titles.&#160;&#160;The names of the objects in the diagram are illustrative only.&#160;&#160;If the price varied only by HD and STD and not by title then dependencies could be created that were only related to the format values.&lt;br/&gt;If the pay per view price was the same for every movie, then there would be no need for this type of pricing.&#160;&#160;The current Product Offering to Product Offering Price association would be support this.&#160;&#160;Also, the ProductOfferingPrice name is illustrative only; the price can be shared by multiple CharacteristicPriceDependencies.&lt;br/&gt;Note that an attribute may be required in Product Offering and/or Product Specification to indicate that choices can be made when accessing an associated Product.&lt;br/&gt;By relating price dependencies to the &#8220;use&#8221; entities:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A VoD subscription offering with unlimited free viewing with a fixed subscription price can be created by not associating use attributes with price dependencies and associating a ProductOfferingPrice to the VoD subscription offering&lt;/li&gt;&lt;li&gt;A VoD subscription offering with unlimited free viewing except for &#8220;special&#8221; movies can be created by associating only the specials uses with price dependencies and associating a ProductOfferingPrice to the VoD subscription offering&lt;/li&gt;&lt;li&gt;A VoD pay per view offering can be created by associating appropriate use attributes, such as title and format, with price dependencies.&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/8/2022 7:58:23 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A36E513A-A515-466d-B6AF-A5EDBA74263D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

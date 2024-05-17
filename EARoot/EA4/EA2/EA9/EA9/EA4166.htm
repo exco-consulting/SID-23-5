@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Me.04 - I01 – MetricDefinitionHierarchy</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4167.png" usemap="#EA4167" border="0" />
+
+<MAP NAME="EA4167">
+<area shape="rect" coords="10,10,837,446" href="EA4237.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Me.04 - I01 – MetricDefinitionHierarchy diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;The following example illustrates two arbitrary metric organizations.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;One of them is hierarchical, and represents a calculation hierarchy related to some performance model, represented here as an instance of MetricDefinitionHierarchy called SPPM. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Two other metrics are shown one for a MOS estimation of one video session for one end-user (M2), and another one for an overall synthesis of the performance of a Video Service offered by a Service Provider (M3). M3 is computed from M2, and M2 may involve M1-Avg (in its calculation. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;M1-Avg, M2, and M3 are members of that SPPM hierarchy (as indicated by the corresponding instances of MetricDefinitionHierarchyMember), M3 as a parent only, M2 as both a parent and a child, and M1-Avg as a child only.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The other metric organization represents the connection between M1-Avg, M2, and M3 with respect to some service impact model. In this case, the service impact model might be a graph, without an implicit hierarchical tree structure. These relationships are modeled using the MetricDefinitionRelationship construct (associative class). If the service impact model of this example had also been hierarchical, then another instance of MetricDefinitionHierarchy (maybe called SIMM for Service Impact Metric Model) could have been used, with additional instances of MetricDefinitionHierarchyMember for M1-Avg, M2, and M3&lt;/font&gt;.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/6/2022 2:18:05 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/6/2022 2:42:14 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{ABC25ED4-218C-48fe-8BC7-1F819B155CBE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

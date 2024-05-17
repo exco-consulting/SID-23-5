@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.04 - Resource specialization and inheritance</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1835.png" usemap="#EA1835" border="0" />
+
+<MAP NAME="EA1835">
+<area shape="rect" coords="468,363,614,415" href="./EA1/EA1957.htm" target="_self">
+<area shape="rect" coords="224,10,370,55" href="../../EA9/EA2/EA3820.htm" target="_self">
+<area shape="rect" coords="224,116,370,161" href="../../EA9/EA2/EA3775.htm" target="_self">
+<area shape="rect" coords="529,117,675,162" href="../../EA9/EA2/EA3812.htm" target="_self">
+<area shape="rect" coords="225,363,371,455" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="10,363,151,481" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="224,224,370,269" href="EA1944.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.04 - Resource specialization and inheritance diagram</div>
+	<div class="ObjectDetailsNotes">Resources are physical or non-physical components (or some combination of these) within an enterprise&#8217;s infrastructure or inventory. They are typically consumed or used by Services (for example a physical port assigned to a service) or contribute to the realization of a Product (for example, a SIM card). They can be drawn from the Application, Computing and Network domains, and include, for example, network elements, software, IT systems, content and information, and technology components.&lt;br/&gt;One of the principal mechanisms of object-oriented analysis and design is the principle of abstraction. Network entities, like a Router, are very complex. Abstraction lets us focus on one or more aspects of a complex entity and (temporarily) ignore its other aspects. This enables us to divide a single complex entity into multiple simpler entities. In this case, we can clearly divide the Router into its physical and logical aspects. The separation is simple to determine: if you can touch the entity, then it is a physical entity; if not, it is a logical entity. Thus, the chassis, cards, and cables of a Router (among other things) are all physical entities, whereas the services and protocols that a router is running, or the number of processes that it has defined, are logical entities. &lt;br/&gt;This enables the concept of a Resource to be partitioned into its physical and logical aspects. This has a number of benefits:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	There are various different viewpoints taken in the operations process and this split reflects some of those critical viewpoints &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The physical model view deal with such considerations as the shipping of cards and spares holdings. A physical resource may have many functional viewpoints but at many stages of the lifecycle the functions are not be relevant.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The logical model view (functional model) deals with the operations purpose in a consistent fashion regardless of the physical construction. A logical function may have many potential implementations, but the specific implementation may not have yet been chosen (e.g. during the planning phase).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	By concentrating only on logical aspects, we are better able to produce models that can be applied to non-networking domains of interest.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Policy can be applied to govern physical, logical, or both aspects of the resource operation and functionality&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	PartyRoles can be defined to better link business and system goals with the implementation&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Through continued abstraction, we can apply this principle to enable (for example)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Software people to work on the software portion of the logical resource model&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Network people to work on the networking portion of the logical resource model&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Protocol people to work on the protocol portion of the logical resource model&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	And so forth&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The portioning of the model better enables different people to work on different parts in parallel&lt;br/&gt;This basic model will be refined over the course of this section. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:05:20 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{3F07EFA7-0D6E-457d-A195-30F1DD6DE186}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

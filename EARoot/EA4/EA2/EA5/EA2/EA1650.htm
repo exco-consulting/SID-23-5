@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.04 - Concept of ResourceSpecVersions (OLD LR.12)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1651.png" usemap="#EA1651" border="0" />
+
+<MAP NAME="EA1651">
+<area shape="rect" coords="275,16,469,100" href="EA1698.htm" target="_self">
+<area shape="rect" coords="553,10,668,67" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="540,127,681,179" href="EA1699.htm" target="_self">
+<area shape="rect" coords="24,72,193,212" href="EA1697.htm" target="_self">
+<area shape="rect" coords="10,289,201,352" href="./EA3/EA1775.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.04 - Concept of ResourceSpecVersions (OLD LR.12) diagram</div>
+	<div class="ObjectDetailsNotes">Applications often require the ability to distinguish between different versions of objects in general. This Addendum applies this principal to ResourceSpecifications. The ResourceSpecVersion class represents a particular form or variety of a ResourceSpecification that is different from others or from the original.&#160;&#160;The form represents differences in attributes and relationships (as well as methods and/or constraints in the system view) that characterize this particular ResourceSpecification, but which are not enough to warrant creating a new ResourceSpecification.&lt;br/&gt;Notice that a LogicalResourceSpecVersion doesn&#8217;t define any new (business) attributes of its own. This is because the purpose of this class is to be able to track LogicalResourceSpec objects separately from other types of ResourceSpecifications. &lt;br/&gt;Brief definitions of the attributes of this class are as follows:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionName attribute defines the name of this revision for easy storage, retrieval, and querying&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionFormat attribute defines the specific format of this revision (e.g., 2.5.3a)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionNumber attribute contains the actual value of this instance of this revision&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionReason attribute contains the reason for creating this revision&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionSemantics defines the particular semantics of this version, such as a minimum a description of the format of the revisionNumber&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionTimestamp contains the date and time that this revision was created&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The resSpecRevisionValidityPeriod defines the period of time for which this revision is valid&lt;br/&gt;The ResourceSpecVersionDetails defines the semantics of the relationship between ResourceSpecification and ResourceSpecVersion. Specifically, it enables an application to define which set of versions of the ResourceSpecification are appropriate for a given task.&lt;br/&gt;This relationship represents the set of versions of this ResourceSpecification. However, this class is not appropriate for this business view, and hence is not described in this section.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:19:54 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{71CA24B8-51EE-4283-BE16-D4387A09AB31}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

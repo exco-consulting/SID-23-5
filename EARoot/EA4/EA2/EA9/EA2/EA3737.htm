@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure As.04d – Association Meta-Model Physical Database</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3738.png" usemap="#EA3738" border="0" />
+
+<MAP NAME="EA3738">
+<area shape="rect" coords="5,5,798,465" href="EA3760.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure As.04d – Association Meta-Model Physical Database diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;In the section on meta-modeling subclasses and attributes, an important point was made for SID implementer&#8217;s who choose to take this approach. It is no longer necessary to use the repeated applications of the Characteristic pattern in the existing SID model or directly relating existing SID entities to characteristic &#8220;use&#8221; entities. This is demonstrated in Figure As.04d &#8211; Full Meta-Model Including Characteristics. For example, the Base Station Controller instance of CompoundResourceSpecification can be stored as an instance of RootEntityType; instances of CharacteristicSpecifications can be related to it by creating instances of RootEntityTypeCharUse.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Figure As.04d &#8211; Association Meta-Model Physical Database shows the database.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The transformation from the information model to the data model rolled down the two association specification entities. Therefore they are not included in the data model, but their attributes are. An additional database consideration is that an index could be added on the &#8220;name&#8221; attribute. This would provide a way to search for association specifications for an instance of a RootEntityType. If necessary, an index on &#8220;name&#8221; could also be added to the AssociationRole table, if the &#8220;name&#8221; column from the AssocationRoleSpecification table is added to it.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A non-unique index on the &#8220;name&#8221; attribute of RootEntityType could be added. By doing this, instances of RootEntityType can be easily accessed when adding new attributes and/or associations to it.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An attribute most likely also should be added to RootEntityType, and possibly RootEntity, and would indicate if an instance is a &#8220;true&#8221; dynamic entity.&#160;&#160;These entities are not contained in the database generated from SID entities or that contains implied subclasses in the database. The attribute(s) could be added to the information model, rather than the data model. The addition would make finding instances of these dynamically added entities easier, particularly when dealing with (adding/updating/deleting/retrieving) instances of RootEntity.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The keys of the Root entities should be stored in instances of SID entities. This would provide an indication that the entities have been extended. The keys of both RootEntityType and RootEntity should be stored in instances of SID implied subclasses. This is done because both the implied subclass and its superclass may have both been dynamically extended. For example, the ProductSpecification entity itself may have been dynamically extended, from which the implied subclasses of it inherit.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The meta-model database can be deployed by application or domain to avoid any possible performance issues. However, dynamically added cross domain associations need to be considered when doing this.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;One final point about implementing a meta-model is that dynamically added entities and their subtypes, associations, and attributes should be considered for explicit modeling at some point in time. Their stability should be a consideration for determining when this should be done.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/22/2022 1:57:30 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/6/2022 9:57:00 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0B501BCC-84B5-4f62-97D8-21F07E055531}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

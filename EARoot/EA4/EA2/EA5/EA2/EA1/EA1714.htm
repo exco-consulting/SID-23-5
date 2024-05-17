@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 4. Using a vGW VNF to build a virtual Residential Gateway</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1715.png" usemap="#EA1715" border="0" />
+
+<MAP NAME="EA1715">
+<area shape="rect" coords="10,10,922,571" href="EA1748.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 4. Using a vGW VNF to build a virtual Residential Gateway diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;What can be built by the SP using vendors VNFs resource solutions&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Ultimately the SP wants to build vCPE solutions. Let&#8217;s consider two options:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Option 1: the residential gateway and the Set Top Box are &lt;b&gt;both virtualized&lt;/b&gt;;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Option 2: the residential gateway is &lt;b&gt;physical&lt;/b&gt; and the Set Top Box is &lt;b&gt;virtualized&lt;/b&gt;.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;We will concentrate only on the modelling of the residential gateway, without consideration of the Set Top Box.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;When building the virtual residential gateway from the VNF1 of Vendor1, the SP is interested only in Flavour1 (where the Firewall function is realized by a specific VDU separately from the 3 other functions). It will give more flexibility to scale up/down the two functional blocks in an independent manner.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Indeed, the complementary layer 2 functions (modem) need to be added; it is the purpose of the L2Switch+Dongle PNF.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The diagram below illustrates the resulting model, where artefacts related to &lt;b&gt;technical solutions&lt;/b&gt; belong to the RFS layer.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 9:47:20 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/16/2022 5:34:48 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{22322151-E977-479a-ABF6-0F333AFC081B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

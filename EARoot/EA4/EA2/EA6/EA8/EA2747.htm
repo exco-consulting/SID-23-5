@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SLO.03 - SalesQuote Overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2748.png" usemap="#EA2748" border="0" />
+
+<MAP NAME="EA2748">
+<area shape="rect" coords="863,78,1034,110" href="../../EA9/EA2/EA3780.htm" target="_self">
+<area shape="rect" coords="882,191,1015,223" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="632,363,761,395" href="../../EA3/EA5/EA1237.htm" target="_self">
+<area shape="rect" coords="244,363,349,395" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="30,10,171,42" href="../../EA9/EA5/EA4003.htm" target="_self">
+<area shape="rect" coords="39,148,176,180" href="../../EA9/EA5/EA4002.htm" target="_self">
+<area shape="rect" coords="397,22,492,54" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="632,288,792,320" href="../../EA2/EA2/EA1/EA705.htm" target="_self">
+<area shape="rect" coords="30,308,177,340" href="../../EA2/EA2/EA2/EA711.htm" target="_self">
+<area shape="rect" coords="632,78,811,110" href="../../EA2/EA2/EA3/EA729.htm" target="_self">
+<area shape="rect" coords="632,191,792,223" href="../../EA2/EA2/EA3/EA728.htm" target="_self">
+<area shape="rect" coords="270,169,474,268" href="../../EA2/EA2/EA2/EA710.htm" target="_self">
+<area shape="rect" coords="231,22,363,129" href="./EA1/EA2770.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SLO.03 - SalesQuote Overview diagram</div>
+	<div class="ObjectDetailsNotes">A SalesOpportunity may lead to one or many SalesQuotes.&lt;br/&gt;A SalesQuote is a document that allows a Prospect to view the cost involved in purchasing specific Products. It is generally used by suppliers or resellers to begin a business transaction and specifies validity period for acceptance of the quote and possibly an authorisation process depending on the value of the quote.&lt;br/&gt;For specifying Products proposed, their configuration and the related cost, the SalesQuote proposes one or many CustomerProductOrders.&lt;br/&gt;A SalesQuote might be described by a SalesQuoteSpecification. &lt;br/&gt;SalesQuoteSpecification is used to define the common characteristics (attributes, constraints and relationships) of a SalesQuote i.e. CSP would have a pre-defined template (specification) to generate the quote for different customer segments &amp;/or products.&lt;br/&gt;&#160;&#160;- e.g. SalesQuote specification might be different depending on type of products. The quote specs for broadband products will differ from those for mobile.&lt;br/&gt;&#160;&#160;- e.g. the SaleQuote specification might be different depending on the size of enterprise lead. The quote generated for SOHO (Small Office Home Office) may be in a different format to that for an SME (Small and Medium sized Enterprises).&lt;br/&gt;&#160;&#160;- e.g. MPLS multi-protocol label switching. Though it is one overarching complex product it has multiple subtypes of products that should be included in the SalesQuote.&lt;br/&gt;Each SalesQuoteSpecification might be categorized by one or many SalesQuoteSpecificationType. &lt;br/&gt;To be able to propose a SalesQuote to the Prospect, it might need to be validated internaly by the CSP. This is tracked through a SalesQuoteAgreement and its related AgreementApproval.&lt;br/&gt;A SalesQuote might be represented by one or many Attachement such as a document that might be sent to the Prospect through an email. Several Attachements might be associated to the same SalesQuote for example if the validPeriod of the SalesQuote is updated, a new attachement is generated.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/26/2023 6:12:17 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4F5B59D4-0D20-47dd-A37F-7E7EBFBA8AB5}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

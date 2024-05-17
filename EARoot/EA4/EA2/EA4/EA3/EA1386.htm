@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.26 - Grouping Together CustomerFacingServiceSpecifications into a ServicePackage</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1387.png" usemap="#EA1387" border="0" />
+
+<MAP NAME="EA1387">
+<area shape="rect" coords="10,10,732,304" href="EA1398.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.26 - Grouping Together CustomerFacingServiceSpecifications into a ServicePackage diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;For example, GoldPackageSpec is an individual packaging of services, and is therefore an instance of the ServicePackageSpecAtomic class. If there was a service offering that combined the services defined by the GoldPackageSpec with those defined by the PlatinumPackageSpec, then that would be an instance of the ServicePackageSpecComposite class.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Figure SO.25 shows five exemplary subclasses of the ServicePackageSpecAtomic class &#8211; PlatinumPackageSpec, GoldPackageSpec, SilverPackageSpec, BronzePackageSpec, and BestEffortPackageSpec. Ignoring the latter for the moment, each of these classes represents a collection of CustomerFacingServiceSpecs that work together to collectively offer a set of Services. This enables these Services to be compared as a group to (for example) a ServiceLevelAgreement.&#160;&#160;Conceptually, this can be represented as shown in Figure SO.26. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are two important differences between Platinum, Gold, Silver, and Bronze Service. The first is obvious from Figure SO.26 &#8211; the better the Service Level, the more CustomerFacingServices that a user has access to. The second is more subtle, and involves the quality of CustomerFacingService. For example, all four ServicePackages above provide Web and Data access. The difference between these applications is that the quality of Web and Data access for PlatinumService is better from an end-user&#8217;s point-of-view (i.e., faster downloads, less waiting, etc.) than that for GoldService, and so forth.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/4/2022 3:10:57 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/25/2023 11:44:52 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{76EF31FA-D53D-4b68-885A-FA0264DA6777}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

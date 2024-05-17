@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.20 - Specifying Different Types of EquipmentHolders</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1903.png" usemap="#EA1903" border="0" />
+
+<MAP NAME="EA1903">
+<area shape="rect" coords="160,7,423,226" href="./EA4/EA3/EA2268.htm" target="_self">
+<area shape="rect" coords="27,312,191,387" href="./EA4/EA3/EA2/EA2283.htm" target="_self">
+<area shape="rect" coords="405,312,569,387" href="./EA4/EA3/EA1/EA2275.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.20 - Specifying Different Types of EquipmentHolders diagram</div>
+	<div class="ObjectDetailsNotes">EquipmentHolder represents a specific category of physical objects. This means that it has its own hierarchy of objects. Specifically, we&#8217;ve already differentiated between Slots and Chassis (which are both subclasses of EquipmentHolder). The M.3100 definition of this class describes it as representing physical objects that are both manageable as well as able to host, hold, or contain other physical objects. Examples of physical objects that can be represented by instances of this object class are Racks, Chassis, Shelfs, Cards, and Slots. (Note that M.3100 does not define all of these different types of EquipmentHolder.)&lt;br/&gt;Some devices are built in such a way as to enable other devices to be mounted inside them. This can be modelled using the composite pattern, which divides an entity into two subclasses. One subclass is used to model stand-alone objects, and the other subclass is used to model objects that can contain more objects of that type. We can apply this pattern to the EquipmentHolder class to obtain the following Figure.&lt;br/&gt;The acceptableEquipmentList attribute is an array of strings, based on M.3100, which identifies the types of equipment objects that can be supported by this object. This attribute is defined for backwards compatibility with M.3100.&lt;br/&gt;The typeOfHolder attribute is an enumerated integer that identifies the type of the Holder that this object instance is. It is based on M.3100 but includes additional values.&lt;br/&gt;The holderStatus attribute indicates the status of the EquipmentHolder (e.g., is it installed).&lt;br/&gt;The figure below has now formalized what we knew all along &#8211; there are really two different types of EquipmentHolders. One type, designated by the AtomicHolder class, is meant to be used in a stand-alone way. This doesn&#8217;t mean that a Slot exists by itself; rather, the Slot cannot be used to form another type of EquipmentHolder. Contrast this to either a Rack or a Chassis. Both of these are subclasses of the CompositeHolder class, because both of them can be used to form more complex types of EquipmentHolders. For example, a Chassis can contain either another Chassis or a Slot, and a Rack can contain either a set of Chassis or a &#8220;sub-Rack&#8221;.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:33:55 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4414F740-32A2-4a6a-8764-549803BC5616}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

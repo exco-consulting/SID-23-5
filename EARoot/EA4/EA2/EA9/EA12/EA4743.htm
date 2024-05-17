@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>fig 4 – Intrinsic & Contextual ProjectResource Characteristics</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4744.png" usemap="#EA4744" border="0" />
+
+<MAP NAME="EA4744">
+<area shape="rect" coords="10,10,490,370" href="EA4766.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">fig 4 – Intrinsic & Contextual ProjectResource Characteristics diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Resourcing&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In this section we will look at how ProjectResources are allocated to ProjectElements.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;As explained by Martin Fowler [Fowler-AP], there are two types of ProjectResource usage; consumption, and reservation for a period of time. This may also be dependent on the type of ProjectResource, for instance some types of ProjectResource can only be used once.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Also, there are two types of ProjectResource allocation; generic (based on ProjectResourceSpecifications) or specific (based on ProjectResource instances). The allocation may change over time, early on a ProjectResource may be generically allocated and then later on this may be changed to a particular instance.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;ProjectResources may be able to be individually identified (e.g. via a serial number) or may be identified in bulk (e.g. by lot or batch). This will affect the way that we model ProjectResources. Expensive items like an expensive machine or tool will be tracked through its lifetime, while tins of paint and piles of gravel will be tracked at a more aggregate level.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will define Intrinsic and Contextual characteristics of an Asset as:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Intrinsic characteristics are those that are independent of how an asset is used (e.g. weight, color, size)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Contextual characteristics relate to how an Asset is used by an Activity&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;consumption of the asset by the Activity&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;reservation of the asset by the Activity for a period of time&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;production of the asset by the Activity&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;An Activity consumes a ProjectResource if, after use by an Activity, the ProjectResource is destroyed or unable to be recovered and used by another Activity. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An Activity produces a Project Resource if, when the Activity is complete, a ProjectResource is available for sale to a customer or as an input to another Activity.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An Activity permanently reserves a ProjectResource if, when the Activity is complete, the ProjectResource is not free for reuse. Another Activity may be required to recover the ProjectResource.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An Activity temporally reserves a ProjectResource if, on completion of the Activity, the ProjectResource is available to be used (by another Activity).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For temporal usage resources, we will define ProjectResource pools. This will allow us to show available ProjectResources at a Location.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For example: for car sales, a new car dealer may sell a car to a Customer and either allocate a model type (color &amp; accessories ordered from the factory) or a particular car (based on engine nr if chosen by the Customer from the car lot).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A car rental company will have pools of cars at various Locations. These are allocated to Customers. It would be likely that Customers book generic car types e.g. a particular model. Actual cars could then be allocated as Customers arrive. In this way late Customers can be matched to cars available at the time.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/11/2022 9:55:56 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/7/2022 2:36:02 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{EFBBDC43-FB9D-4b63-82ED-0A5F5A80A5AB}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

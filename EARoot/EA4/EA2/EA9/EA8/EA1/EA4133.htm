@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure CI.09 - MTOSI TC Profile Mechanism Constraint</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4134.png" usemap="#EA4134" border="0" />
+
+<MAP NAME="EA4134">
+<area shape="rect" coords="5,5,806,482" href="EA4149.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure CI.09 - MTOSI TC Profile Mechanism Constraint diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;Constraint #1 &#8211; IF ConfigSpecConstraintMembersVLAN ID = 1000 and (Priority #gt;=0 or Priority #lt;=1) and Inner VLAN ID = 10 and (Inner Priority #gt;=0 or Inner Priority #lt;=3) &#8230;the relationship to the constraint is to ConfigurationSpecification 52 and EntitySpecCharValueUse traffic class value of 0&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Shown in Figure CI.09 - MTOSI TC Profile Mechanism Constraint is the beginning of the constraint defined in the figure on the previous page along with the ResourceConfigSpec determined by the constraint and the ConfigurationSpec &#8216;s associated EntitySpecCharValueUse determined by the constraint.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;All requirements below are supported by the model as they are similar to other requirements for which support has been demonstrated in this slide set.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;ConfigurationSpecification Configuration Relationship Examples.&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Imposing a ValueRange with Attribute Value Track&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;An instance of a Service with a given VLAN ID being imposed on all the resources on which the service is running. The VLANID used is constrained within a given range as determined by the VLAN Pools&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Imposing a ValueRange with No Attribute Value Track.&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Allocating a given customer a certain bandwidth within a VRF.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This bandwidth will be constrained to a range depending on the bandwidth available at the core TE Tunnels. Once applied these are long-lived configurations per the business contract and therefore the attribute values do not track.&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Applied Values can be changed only via ConfigurationSpecification&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;ConfigurationSpecification has a generator logic within it and interacts with a number inventory to generate the appropriate RouteConfiguration imports and exports that form a given topology such as hub and spoke.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Only the ConfigurationSpecification accesses the number inventory and therefore this attribute (or set of attributes) can only be changed via the ConfigurationSpecification.&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Applied ConfigurationSpecification that can be changed later by the ConfigurationSpecification.&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;ConfigurationSpecification.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Provisioning Bandwidth on Demand where in the morning the customer subscribes to increased bandwidth and in the night a lesser bandwidth. Both being effected in a scheduled, periodic manner by the ConfigurationSpecification.&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Pointer changed from one ConfigurationSpecification to the Other.&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;In a Discovery Module, certain parameters for a given vendor will be supported by MIBs while for another the same would be supported by a CLI command. To discover and stitch a service depending on the vendor being discovered during the process, the pointer may point to one ConfigurationSpecification or the other. &lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Configuration having more attributes than ConfigurationSpecification and Configuration having more attributes than ConfigurationSpecification. [Slide 14 of Bernd]&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;CTP proxied with OAM Parameters, the OAM parameter do not belong Per-Se within the Configuration and the attributes that belong to the CTP do not appear in the Configuration.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 9:44:20 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/29/2022 5:22:43 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F09E802A-4BCF-452f-9B3E-3F4842A92D76}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

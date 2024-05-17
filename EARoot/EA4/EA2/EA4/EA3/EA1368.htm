@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.13 - Modeling the Versioning of a ServiceSpecification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1369.png" usemap="#EA1369" border="0" />
+
+<MAP NAME="EA1369">
+<area shape="rect" coords="287,411,511,486" href="./EA2/EA1438.htm" target="_self">
+<area shape="rect" coords="489,294,660,369" href="./EA1/EA1413.htm" target="_self">
+<area shape="rect" coords="154,282,374,313" href="./EA1/EA1419.htm" target="_self">
+<area shape="rect" coords="363,158,547,189" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="646,158,827,189" href="./EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="5,221,226,252" href="./EA2/EA1443.htm" target="_self">
+<area shape="rect" coords="74,5,298,119" href="EA1405.htm" target="_self">
+<area shape="rect" coords="455,28,591,59" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.13 - Modeling the Versioning of a ServiceSpecification diagram</div>
+	<div class="ObjectDetailsNotes">Applications often require the ability to distinguish between different versions of objects in general. This Addendum applies this principal to ServiceSpecifications. The ServiceSpecVersion class represents a particular form or variety of a ServiceSpecification that is different from others or from the original.&#160;&#160;The form represents differences in attributes, relationships, and/or constraints that characterize this particular ServiceSpecification, but which are not enough to warrant creating a new ServiceSpecification.&lt;br/&gt;The CustomerFacingServiceSpecVersion and ResourceFacingServiceSpecVersion subclasses are defined to enable an application to track different versions of CustomerFacingServiceSpecs and ResourceFacingServiceSpecs independently.&lt;br/&gt;The ServSpecModifications aggregation represents the set of versions of this ServiceSpecification. The semantics of this aggregation are implemented with the ServiceSpecVersionDetails class.&lt;br/&gt;The two version details association classes are both derived from the ServSpecModifications aggregation. They add additional detail to the generic concept of defining a version of a ServiceSpecification.&lt;br/&gt;The same exact principle applies to tracking different versions of the more generic ServiceSpecAtomic and ServiceSpecComposite objects. This is not shown because the focus of this Addendum is on the definition of CustomerFacingServices and ResourceFacingServices.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 6:40:36 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{58967D59-7A40-4309-9E14-74378082F29A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

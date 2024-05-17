@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Cal.04 - Detailed Structure</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5768.png" usemap="#EA5768" border="0" />
+
+<MAP NAME="EA5768">
+<area shape="rect" coords="633,148,683,180" href="EA5788.htm" target="_self">
+<area shape="rect" coords="374,16,471,68" href="EA5821.htm" target="_self">
+<area shape="rect" coords="746,16,871,68" href="EA5820.htm" target="_self">
+<area shape="rect" coords="327,127,424,179" href="EA5798.htm" target="_self">
+<area shape="rect" coords="222,10,319,62" href="../EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="143,259,280,311" href="EA5812.htm" target="_self">
+<area shape="rect" coords="5,10,102,62" href="../EA1/EA5469.htm" target="_self">
+<area shape="rect" coords="492,68,650,120" href="EA5818.htm" target="_self">
+<area shape="rect" coords="486,199,583,251" href="EA5801.htm" target="_self">
+<area shape="rect" coords="798,134,992,186" href="EA5814.htm" target="_self">
+<area shape="rect" coords="314,259,437,311" href="EA5817.htm" target="_self">
+<area shape="rect" coords="461,365,596,417" href="EA5809.htm" target="_self">
+<area shape="rect" coords="890,293,987,345" href="EA5800.htm" target="_self">
+<area shape="rect" coords="607,293,747,345" href="EA5799.htm" target="_self">
+<area shape="rect" coords="780,406,877,458" href="EA5811.htm" target="_self">
+<area shape="rect" coords="628,406,725,458" href="EA5808.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Cal.04 - Detailed Structure diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows the structure in more detail. Note that the Event and EventType entities should only be considered as placeholders until the SID has modeled this area in detail. &lt;br/&gt;We will allow Calendars to be grouped, allowing for all of the Calendars for a workgroup to be combined into a workgroup overview Calendar. Note, however, that only simple Calendars can have CalendarEntries.&lt;br/&gt;&lt;i&gt;Note that CalendarEntries are specific to each calendar, they aren&#8217;t shared. This gives the CalendarOwner complete control over the entries in their Calendar.&lt;/i&gt;&lt;br/&gt;We have defined three basic types of CalendarEntry; Journal Entries, Events and ToDos. The CalendarEntry entity is an abstract concept that we use to group common attributes and common associations to other entities.&lt;br/&gt;Since both Event and ToDo entries can have Alarms attached, we have introduced an abstract entity &#8220;ActionEntry&#8221; to hold the common concepts.&lt;br/&gt;A CalendarEntry has a related Temporal Expression, which contains the TimePeriod or collection of repeating TimePeriods. Note that when we create a recurring CalendarEntry that the Recurrence Rule will create a set of subsidiary Calendar Entries. We need to keep track of these as we may need to update or remove them if the recurrence rule is modified, or the recurring CalendarEntry is removed. Rather than have a main and subsidiary set of CalendarEntries, all the entries are made equal and there is a both-way reference between the Entries and the associated RecurrenceRule.&lt;br/&gt;The recurrence rule could be specified using a frequency like weekly, monthly, yearly. This means that the duration between repetitions may vary (e.g. for a monthly frequency the duration will vary from 28 to 31 days)&lt;br/&gt;&lt;i&gt;Note that there may be many ways to implement the Recurrence Temporal Expression; these may include Templates, Rules or Policy Engines or hard coded algorithms.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/24/2023 7:51:41 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{25CE11E4-C5FE-46bd-B296-71D242B937FA}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

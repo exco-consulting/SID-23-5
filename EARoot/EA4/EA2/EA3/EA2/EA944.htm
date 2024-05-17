@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.44 - Product Specification - Characteristics and Versions</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA945.png" usemap="#EA945" border="0" />
+
+<MAP NAME="EA945">
+<area shape="rect" coords="270,287,461,358" href="../../EA9/EA2/EA2/EA3844.htm" target="_self">
+<area shape="rect" coords="618,271,812,330" href="../../EA9/EA2/EA2/EA3842.htm" target="_self">
+<area shape="rect" coords="489,364,681,507" href="../../EA9/EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="21,358,204,513" href="../../EA9/EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="34,137,191,165" href="EA979.htm" target="_self">
+<area shape="rect" coords="505,137,666,165" href="EA976.htm" target="_self">
+<area shape="rect" coords="487,226,683,254" href="EA981.htm" target="_self">
+<area shape="rect" coords="10,226,214,254" href="EA980.htm" target="_self">
+<area shape="rect" coords="42,34,182,81" href="EA982.htm" target="_self">
+<area shape="rect" coords="477,10,693,105" href="EA986.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.44 - Product Specification - Characteristics and Versions diagram</div>
+	<div class="ObjectDetailsNotes">ProductSpecifications also have a variety of characteristics, such as a printer&#8217;s dimensions, paper capacity, print speed, color, and so forth, and possible values associated with the characteristics.&#160;&#160;The SID uses ProductSpecification Characteristic and ProductSpecCharacteristicValue to represent the properties for a ProductSpecification [Fowler-Properties] as shown in Figure Pr.4 on the following page.&#160;&#160;Additional information regarding this pattern can be found in Common Domain guide book section Root Business Entities ABE.&lt;br/&gt;Characteristics can be grouped into four different types:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;If a characteristic has a discrete value (e.g. color or business coding), it may be derived from a range of allowable values;&#160;&#160;&lt;/li&gt;&lt;li&gt;If a characteristic describes the product within a parameter range&#160;&#160;(e.g. dimension), it may be defined with a &#8216;high value&#8217; and a &#8216;low value&#8217; [Fowler-Range] ;&#160;&#160;&lt;/li&gt;&lt;li&gt;If a characteristic value is &#8216;derived&#8217;, it will use other parameters in a formula.&#160;&#160;N.B.&#160;&#160;There are business rules implied here that require more work in a future phase of the SID Product definition.&lt;/li&gt;&lt;li&gt;If a characteristic has no predefined values and unconstrained values (no business rules and no ranges/allowed values)&lt;/li&gt;&lt;/ul&gt;<br />Characteristics can also be bundled together into packages by using the ProductSpecCharRelationship.&#160;&#160;For example, a number of electrical characteristics can be grouped together using an &#8220;electrical properties&#8221; characteristic that represents a composite of the detailed properties, such as power requirements, plug requirements, and so forth.&#160;&#160;This entity can also be used for a number of other relationships between characteristics, such as mutually exclusive, inclusive, and so forth.&lt;br/&gt;CharacteristicValues can reference other CharacteristicValues.&lt;br/&gt;As ProductSpecifications are upgraded, and as the market and technology move on, they are subject to version control.&#160;&#160;If there is a significant change of capabilities, a new ProductSpecification is created.&lt;br/&gt;When a product is created based on a ProductSpecification (see Product Offering below), the party may also have the option to choose from a set of properties values, such as color, or may be able to choose one from a number of product properties.&#160;&#160;Where a ProductSpecificationCharacteristic is interchangeable with others in this way, it is modeled as a ConfigurableProductSpecificationCharacteristic. &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Product Characteristic Example &#8211; Email ProductSpecification&lt;/b&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;ProductSpecCharacteristics and their related ProductSpecCharacteristicValues can be used to support capabilities provided by ProductSpecifications.&#160;&#160;For example, an Email may have a number of features, such as Spam protection, storage, message size, virus scanning and cleaning, mail forwarding, archiving, and so forth.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;One way this type of product can be introduced into a model is by sub-classing the Product entity and including each feature as an attribute of an EmailProduct subclass.&#160;&#160;But this means that each time a new type of product is introduced the information architecture and most likely the application that supports the Product ABE would have to be changed.&#160;&#160;This is sometimes viewed as a static extension to information architecture.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A more dynamic approach is to consider these features as instances of a ProductSpecCharacteristic.&#160;&#160;In this example each feature has a value associated with it.&#160;&#160;The value associate with Spam protection is &#8220;SpamBlock&#8221;; the value associated with storage is &#8220;1GB&#8221;; the value associated with message size is &#8220;10BM&#8221;; the value associated with virus scanning and cleaning is &#8220;included&#8221;; the value associated with mail forwarding is &#8220;included&#8221;; the value associated with archiving is &#8220;included. Note that note all characteristics have to have values at specification time. For example, user ID are capabilities, but the value is assigned when an instance of a Product is created.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The example will be continued in the Product section of this addendum&lt;/font&gt;.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 6:09:36 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C07DDF58-86F3-4440-AA7B-A93BC3C7F0C8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

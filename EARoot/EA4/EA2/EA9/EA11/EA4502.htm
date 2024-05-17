@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-16 - Simple PolicyVariable</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4503.png" usemap="#EA4503" border="0" />
+
+<MAP NAME="EA4503">
+<area shape="rect" coords="728,143,877,232" href="EA4549.htm" target="_self">
+<area shape="rect" coords="531,250,695,338" href="./EA5/EA6/EA4700.htm" target="_self">
+<area shape="rect" coords="269,250,446,367" href="./EA5/EA6/EA4699.htm" target="_self">
+<area shape="rect" coords="431,121,564,176" href="./EA5/EA6/EA4706.htm" target="_self">
+<area shape="rect" coords="229,10,346,44" href="./EA5/EA6/EA4701.htm" target="_self">
+<area shape="rect" coords="10,125,158,191" href="./EA5/EA6/EA4705.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-16 - Simple PolicyVariable diagram</div>
+	<div class="ObjectDetailsNotes">A PolicyVariable is an abstract class for modeling different types of variables that can be used to form a PolicyStatement. The variable specifies an attribute or concept that should either be matched or in some way compared to a value when the condition is evaluated.&lt;br/&gt;There are three important factors that must be taken into account in the design of variables. The first is that not every combination of a variable and a value creates a meaningful condition. For example, port numbers cannot be negative. Rather, the type of variable in the condition defines the set of matchable value types.&lt;br/&gt;Second, just because a value has the correct data type does not mean that it can be meaningfully compared to a variable. To continue the above example, a port of 1,000,000 is meaningless. This is handled in this model by specifying constraints (using OCL) that apply to a particular variable that must be obeyed by any value that it is being compared to. The ValueConstraintInVariable association binds a PolicyVariable to a PolicyValue; any constraints that are required in this binding are added to an instance of this association using OCL.&lt;br/&gt;Third, while the model defines a set of useful PolicyVariables, there is a high likelihood that specific applications will need extensions to these variables. This is accommodated through the notion of standard and custom PolicyVariable classes.&lt;br/&gt;There are two subclasses of PolicyVariable, called VariableCustom and VariableStandard. The VariableCustom class defines a set of standardized policy variables for use in an application-specific manner. The term &#8220;custom&#8221; means that such variables are explicitly designed to work with attributes that are not in any of the VariableStandard subclasses. This means that the particular semantics (including any applicable constraints) are not known to SID model.&lt;br/&gt;The VariableCustom class is an abstract base class that provides two basic attributes to define custom variables that can be used in an application-specific fashion. The variableModelAttribute attribute is a string that defines the name of the attribute within the class specified in the variableModelClass attribute that is to be evaluated or set as a PolicyVariable. Similarly, the variableModelClass attribute is a string that defines the class name whose attribute is to be evaluated or set as a PolicyVariable. This enables the VariableCustom class to point to other attributes of other classes that can be defined as extensions of the standard SID model.&lt;br/&gt;A simplified overview of PolicyVariables is shown in Figure below.&lt;br/&gt;Thus, the combination of variableModelClass and variableModelAttribute enable an application to define a new class that contains an attribute to be used as a PolicyVariable. This provides important extensibility, and enables an application to define its own set of classes and attributes to extend the framework.&lt;br/&gt;The VariableStandard class is an abstract base class for defining a standard set of PolicyVariable objects that are common to most applications. This is the superclass for a standard set of PolicyVariable subclasses that are part of the model.&lt;br/&gt;Currently, the model defines fifteen different subclasses of the VariableStandard class. Two of the more important ones are shown in Figure below &#8211; these are the PolicyConditionTimePeriod and the PolicyConditionVendor classes.&lt;br/&gt;PolicyConditionTimePeriod is based on [RFC 2445], and is used to enable or disable a PolicyCondition according to a pre-determined time schedule. The various attributes enable a simple or complex recurring time period to be defined.&lt;br/&gt;PolicyConditionVendor is a concrete base class that provides a general extension mechanism for representing PolicyConditions that have not been modeled with the attributes specified in this model. This class uses two of its properties (constraintData and constraintEncoding) for defining the content and format of a vendor-specific condition. Thus, an application can define a set of encodings which determine how to interpret complex data. Each of these encodings can be given its own OID, enabling them to be registered with some external agency, such as IANA. Its other two attributes are used to describe the type of condition that this represents, and to provide a standard definition of a TRUE or FALSE response. This latter enables this object to interoperate with other PolicyVariableStandard objects as part of a PolicyConditon clause. Standardized extensions are not expected to use this class.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 8:30:08 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{13A2391D-A1A4-4b2c-95B7-16CE075C3B80}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

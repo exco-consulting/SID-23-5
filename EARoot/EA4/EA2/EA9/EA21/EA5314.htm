@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Tpgy.05  - Topology Example  Connectivity Patterns</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5315.png" usemap="#EA5315" border="0" />
+
+<MAP NAME="EA5315">
+<area shape="rect" coords="955,338,1195,374" href="EA5349.htm" target="_self">
+<area shape="rect" coords="867,23,1227,246" href="EA5356.htm" target="_self">
+<area shape="rect" coords="463,269,703,305" href="EA5348.htm" target="_self">
+<area shape="rect" coords="451,10,829,237" href="EA5355.htm" target="_self">
+<area shape="rect" coords="41,276,350,299" href="EA5347.htm" target="_self">
+<area shape="rect" coords="10,15,382,216" href="EA5354.htm" target="_self">
+<area shape="rect" coords="867,256,1327,331" href="EA5346.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Tpgy.05  - Topology Example  Connectivity Patterns diagram</div>
+	<div class="ObjectDetailsNotes">TR255A Connectivity Patterns for Virtualization Management v4.0.1&#160;&#160;was created to model virtualized network elements that support Connectivity Functions. The modelling approach was to refine a set of Resource Functions that each model part of a network at a given layer and to model the connectivity relationship as edges in a Connectivity Graph. Virtual networks require two connectivity models the logical external view as shown below for a VPN/Vcdn example, and the internal view shown after it: &lt;br/&gt;&lt;b&gt;Image 1: External View of VPN/vCDN Resource Function (TR255A Fig1&lt;/b&gt;)&lt;br/&gt;Where the VPN is represented as a set of Service access points with potential connectivity between them - a type of graph which can also be represented as a Connectivity matrix.&lt;br/&gt;&lt;b&gt;Image2:&#160;&#160;Internal View of vCDN Resource Function &#8211; with vRouters (TR255A Fig 4)&lt;/b&gt;&lt;br/&gt;vity. For a vCDN such an internal view might look like.&lt;br/&gt;Graphs modelled in the Information framework are shown as collection of Vertices and edges that hold the relationship between them. In this model both Vertices and Edges are Rooted on the rootEntry. In mathematical graphs each relationship edge is between two vertices and is directed. In the Information Framework typical examples considered in the TMF920A Topology Discovery Service (which uses this model ) are Routers with Port Cards interconnected by communication links . An interconnected router exemplar is described in TR288 Study of Topology Discovery Service use with Property Graph Databases v1.0.0 | TM Forum,&#160;&#160;and studies the use of graph based languages - Open Cipher and Gremlin - for queries that traverse such a graph.&lt;br/&gt;These show two levels of logical abstraction but as these are virtual network functions (modeled as Information Framework Resource Functions RF) This can be further decomposed into the actual compute and storage elements realizing them. See next example for more detail&lt;br/&gt;&lt;b&gt;Image 3: Notation for Detailed vCDN Examples (TR255A Fig 10)&lt;/b&gt;&lt;br/&gt;A notation was developed in TR255A for modelling Resource Functions of different types that can also be layered.&lt;br/&gt;What is evident is each layer is a graph, and the layered graphs can be linked together to create a complete graph view of the multiple levels.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">11/1/2023 2:23:51 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/6/2023 9:44:01 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Dave Milham</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F27F4126-05C5-45c6-B789-B4FFE30CF170}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

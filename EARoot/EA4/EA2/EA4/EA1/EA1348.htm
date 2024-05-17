@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure [SeD-01] Service ABEs Level 1</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1349.png" usemap="#EA1349" border="0" />
+
+<MAP NAME="EA1349">
+<area shape="rect" coords="548,197,709,249" href="../EA13/EA1598.htm" target="_self">
+<area shape="rect" coords="196,63,357,115" href="../EA10/EA1584.htm" target="_self">
+<area shape="rect" coords="548,63,709,115" href="../EA6/EA1523.htm" target="_self">
+<area shape="rect" coords="20,130,181,182" href="../EA2/EA1353.htm" target="_self">
+<area shape="rect" coords="196,197,357,249" href="../EA8/EA1544.htm" target="_self">
+<area shape="rect" coords="372,130,533,182" href="../EA11/EA1595.htm" target="_self">
+<area shape="rect" coords="372,197,533,249" href="../EA7/EA1532.htm" target="_self">
+<area shape="rect" coords="196,130,357,182" href="../EA9/EA1549.htm" target="_self">
+<area shape="rect" coords="372,63,533,115" href="../EA5/EA1511.htm" target="_self">
+<area shape="rect" coords="20,197,181,249" href="../EA12/EA1597.htm" target="_self">
+<area shape="rect" coords="548,130,709,182" href="../EA3/EA1358.htm" target="_self">
+<area shape="rect" coords="20,63,181,115" href="../EA4/EA1463.htm" target="_self">
+<area shape="rect" coords="10,10,722,265" href="../EA1333.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure [SeD-01] Service ABEs Level 1 diagram</div>
+	<div class="ObjectDetailsNotes">The diagram below lists the Service Domain&#39;s ABEs.&lt;br/&gt;&lt;b&gt;Service Party Roles ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt; Service Party Roles ABE contains all PartyRoles related to the Service Domain such as ServiceManager. &lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Specification ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service Specification ABE contains entities that define the shared characteristics of both types of Service entities. This enables multiple instances to be derived from a single specification entity. In this derivation, each instance will use the characteristics defined in its associated specification.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Order ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service Order ABE contains entities that represent a type of Request that decomposes a Customer Order&#39;s products into the services associated with a ServiceOrder through which the products are realized.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service ABE contains entities that are used to represent both customer-facing and resource-facing types of services. Entities in this ABE provide different views to examine, analyze, configure, monitor and repair Services of all types. Entities in this ABE are derived from Service Specification entities.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Configuration ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt; The definition of how a Service operates or functions in terms of CharacteristicSpecification(s) and related ResourceSpec(s) and ServiceSpec(s) as well as a representation of how a Product operates or functions in terms of characteristics and related Resource(s) and Service(s).&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Test ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt; A Service Test is a function performed on a service that results in measures being produced that reflect the functioning of the entity under test.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Usage ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service Usage ABE collects Service consumption data, and generates Service usage records, for use by other business entities. The entities in this ABE provide physical, logical, and network usage information.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Performance ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service Performance ABE collects, correlates, consolidates, and validates various performance statistics and other operational characteristics of customer and resource facing service entities. &lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Problem ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service Problem ABE manages faults, alarms, and outages from a Service point-of-view. This is then correlated to trouble tickets, regardless of whether the cause is physical or logical.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Capacity ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Specific ability of Service domain entities measured in quantity and units of quantity over an extended period. &lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Service Strategy and Plan ABE (not fully developed)&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Service Strategy and Plan ABE contains entities that are used to address the need for enhanced or new Services, as well as the retirement of existing Services, by the enterprise. These entities have a strong dependency to both entities in the Resource and Product domains. &lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/25/2023 10:48:56 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C8DF4C4E-CCAE-4204-96AE-DDDF77716799}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

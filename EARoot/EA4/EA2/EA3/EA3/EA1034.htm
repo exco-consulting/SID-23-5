@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.13 - Complete Product Offer Price Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1035.png" usemap="#EA1035" border="0" />
+
+<MAP NAME="EA1035">
+<area shape="rect" coords="544,427,727,503" href="EA1099.htm" target="_self">
+<area shape="rect" coords="769,619,975,650" href="./EA5/EA1175.htm" target="_self">
+<area shape="rect" coords="220,543,401,574" href="./EA3/EA1159.htm" target="_self">
+<area shape="rect" coords="31,715,184,746" href="../EA8/EA1/EA1309.htm" target="_self">
+<area shape="rect" coords="29,619,186,650" href="./EA3/EA1149.htm" target="_self">
+<area shape="rect" coords="29,222,186,269" href="./EA2/EA1140.htm" target="_self">
+<area shape="rect" coords="47,427,167,458" href="./EA2/EA1141.htm" target="_self">
+<area shape="rect" coords="888,552,1122,583" href="./EA3/EA1156.htm" target="_self">
+<area shape="rect" coords="826,427,992,489" href="./EA3/EA1152.htm" target="_self">
+<area shape="rect" coords="281,427,455,458" href="./EA3/EA1153.htm" target="_self">
+<area shape="rect" coords="358,109,578,197" href="./EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="747,17,923,79" href="EA1108.htm" target="_self">
+<area shape="rect" coords="177,48,313,123" href="../../EA10/EA8/EA1/EA5972.htm" target="_self">
+<area shape="rect" coords="849,123,946,154" href="./EA3/EA1151.htm" target="_self">
+<area shape="rect" coords="246,302,437,333" href="./EA3/EA1147.htm" target="_self">
+<area shape="rect" coords="436,650,650,697" href="./EA3/EA1158.htm" target="_self">
+<area shape="rect" coords="200,650,426,697" href="./EA3/EA1157.htm" target="_self">
+<area shape="rect" coords="407,543,619,602" href="./EA3/EA1155.htm" target="_self">
+<area shape="rect" coords="10,543,204,574" href="./EA3/EA1150.htm" target="_self">
+<area shape="rect" coords="648,552,855,583" href="./EA3/EA1148.htm" target="_self">
+<area shape="rect" coords="538,276,732,351" href="./EA3/EA1146.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.13 - Complete Product Offer Price Model diagram</div>
+	<div class="ObjectDetailsNotes">Putting charges and alteration in a single example provides a complete view of a ProductOfferingPrice.&#160;&#160;A simple wireless plan includes a 75 dollar phone, a 50 dollar activation fee, a 20 dollar monthly charge replaced by 10 dollar during 6 months, 10 cents a minute for additional minutes, and 25 cents a minute long distance. The components are&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A 75 dollar One Time Charge (OneTimeProdOfferPriceCharge)&lt;/li&gt;&lt;li&gt;A 50 dollar Fee (FeeProdOfferingPrice)&lt;/li&gt;&lt;li&gt;A 20 dollar Recurring Charge per month (RecurringProdOfferPriceCharge)&lt;/li&gt;&lt;li&gt;A 10 dollar replacement of the recurring charge during 6 months (ReplacementProdOfferPriceAlteration)&lt;/li&gt;&lt;li&gt;A Tariff Usage comprising a 10 cent per minute Simple Usage and a 25 cent per minute Simple Usage for long distance (SimpleUsageProdOfferPriceCharge)&lt;/li&gt;&lt;/ul&gt;<br />Adding on to the example, suppose Sue is an employee of a company, that has a volume discount agreement with the service provider. The agreement is to waive the installation fee and provide a 20 percent discount on local minutes. This would manifest itself as:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A composite price that associated the 50 dollar Discount (DiscountProdOfferPriceAlteration) with the 50 dollar Fee&lt;/li&gt;&lt;li&gt;A composite price that associated the 20 percent Discount (DiscountProdOfferPriceAlteration) with the 10 cent per minute Simple Usage&lt;/li&gt;&lt;/ul&gt;<br />In addition a Tax (TaxProdOfferPriceAlteration) might be applied on each component or composite ProductOfferingPrice.&lt;br/&gt;The complete ProductOfferingPrice model is shown in the figure below.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/20/2023 10:37:06 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DEA5F6EC-2A97-42d3-8A85-2B424C657299}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

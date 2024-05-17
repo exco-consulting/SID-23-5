@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure CI.02 - CommunicationInteractionItem overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5693.png" usemap="#EA5693" border="0" />
+
+<MAP NAME="EA5693">
+<area shape="rect" coords="653,101,703,140" href="EA5713.htm" target="_self">
+<area shape="rect" coords="831,140,928,192" href="../../EA5/EA3/EA1947.htm" target="_self">
+<area shape="rect" coords="727,5,865,89" href="../EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="682,366,848,497" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="10,140,167,239" href="../EA1/EA1/EA5494.htm" target="_self">
+<area shape="rect" coords="78,38,228,115" href="../EA1/EA1/EA5490.htm" target="_self">
+<area shape="rect" coords="47,285,250,337" href="EA5729.htm" target="_self">
+<area shape="rect" coords="284,406,453,458" href="EA5731.htm" target="_self">
+<area shape="rect" coords="454,140,643,215" href="EA5730.htm" target="_self">
+<area shape="rect" coords="467,285,678,365" href="EA5727.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure CI.02 - CommunicationInteractionItem overview diagram</div>
+	<div class="ObjectDetailsNotes">A CommunicationInteractionItem is the smallest entity in a CommunicationInteraction tree.&lt;br/&gt;It concerns a unique CommunicationInteractionUseCase and involves the same CommunicationInteractionRoles from the beginning to the end of it.&lt;br/&gt;A CommunicationInteractionItem might have one or many CommunicationResult such as &#8220;create a CustomerOrder&#8221; and &#8220;notify the CustomerOrder&#8221;.&lt;br/&gt;A CommunicationInteractionItem might have related Attachment such as the recorded conversation or embedded document in an email.&lt;br/&gt;A CommunicationInteractionItem cannot be contained in more than one CommunicationInteraction.&lt;br/&gt;A CommunicationInteractionRole is either a PartyRole or a ResourceRole involved in a CommunicationInteractionItem.&lt;br/&gt;There might be one to many CommunicationInteractionRoles involved in a CommunicationInteractionItem.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	1 CommunicationInteractionRole if the interaction corresponds to a communication through Media&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	2 CommunicationInteractionRoles for simple interactions between Parties and / or Resources&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	more than 2 CommunicationInteractionRoles when all the parties interact in the same Place (ex: face-to-face training, face-to-face marketing presentation) or through the same ContactMedium (ex: conference call)&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/19/2023 6:17:49 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{67AC1949-616A-4591-93C6-DD29EC805452}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

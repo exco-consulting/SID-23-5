@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.06 - AnomalyGrouping Characteristics & Entity Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5064.png" usemap="#EA5064" border="0" />
+
+<MAP NAME="EA5064">
+<area shape="rect" coords="304,405,452,443" href="../EA2/EA2/EA3850.htm" target="_self">
+<area shape="rect" coords="714,347,839,386" href="../EA2/EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="683,537,822,586" href="../EA11/EA3/EA4624.htm" target="_self">
+<area shape="rect" coords="299,10,380,61" href="./EA1/EA5091.htm" target="_self">
+<area shape="rect" coords="10,14,174,69" href="./EA2/EA5143.htm" target="_self">
+<area shape="rect" coords="646,437,830,479" href="./EA2/EA5133.htm" target="_self">
+<area shape="rect" coords="589,258,800,304" href="./EA2/EA5135.htm" target="_self">
+<area shape="rect" coords="307,494,491,539" href="./EA2/EA5137.htm" target="_self">
+<area shape="rect" coords="61,435,265,481" href="./EA2/EA5134.htm" target="_self">
+<area shape="rect" coords="483,341,639,384" href="../EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="119,350,269,384" href="../EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="61,258,295,304" href="./EA2/EA5136.htm" target="_self">
+<area shape="rect" coords="145,91,274,129" href="../EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="302,176,512,235" href="./EA1/EA5097.htm" target="_self">
+<area shape="rect" coords="683,21,818,76" href="../EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="442,61,582,119" href="./EA1/EA5096.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.06 - AnomalyGrouping Characteristics & Entity Associations diagram</div>
+	<div class="ObjectDetailsNotes">This diagram shows relationship between AnomalyGrouping , AnomalyGroupingSpecification and associated Characteristics.&lt;br/&gt;AnomalyGroupingSpecCharacteristic (derived from CharacteristicSpecification in Characteristic ABE) is used for defining a particular characteristic and the potential values of this characteristic are defined using the entity AnomalyGroupingSpecCharacteristicValue (derived from CharacteristicSpecValue in Characteristic ABE) . The possible values defined using AnomalyGroupingSpecCharacteristicValue is associated with AnomalyGroupingSpecCharacteristic using relationship AnomalyGroupingSpecCharacteristicEnumeratedBy.&lt;br/&gt;The use of AnomalyGroupingSpecCharacteristic within the AnomalyGroupingSpec is attributed through AnomalyGroupingSpecCharUse.&lt;br/&gt;AnomalyGroupingSpecification and AnomalyGroupingSpec are associated using the relationship AnomalyGroupingSpecFurtherDefinedBy&lt;br/&gt;Similarly AnomalyGroupingSpecCharUse is associated with a particular AnomalyGroupingSpecCharacteristic using relationship AnomalyGroupingSpecCharacteristicFurtherDefinedBy&lt;br/&gt;AnomalyGroupingSpecCharValueUse is used to define the particular variation of the AnomalyGroupingCharUse with the specific value defined using the AnomalyGroupingSpecCharacteristicValue&lt;br/&gt;The relationship between the AnomalyGroupingSpecCharacteristicValue and AnomalyGroupingSpecCharValueUse is defined using the association AnomalyGrupingSpecCharValueFurtherDefinedBy&lt;br/&gt;AnomalyGroupingSpecCharValueUse is associated with AnomalyGroupingSpecCharUse using relationship AnomalyGroupingSpecUseEnumeratedBy relationship&lt;br/&gt;AnomalyGroupingSpecification uses the PolicyRuleSpecification to evaluate constraints that is applicable while defining the grouping logic&lt;br/&gt;AnomalyGrouping associated with Anomaly is described by AnomalyGroupingCharacteristicValue (derived from CharacteristicValue) using the AnomalyGroupingDescribedBy relationship, and this entity is further related to AnomalyGroupingSpecCharacterisitc and AnomalyGroupingSpecCharacteristicValue through associations AnomalyGroupingSpecCharacteristicDescribes and AnomalyGroupingSpecCharacteristicValueInstantiatedAs&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">4/26/2023 9:59:18 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/14/2023 6:36:59 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C8B3201A-C675-4aba-8F05-FCF475418FDA}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

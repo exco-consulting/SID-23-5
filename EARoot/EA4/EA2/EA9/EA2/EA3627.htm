@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.06 - The EntitySpecification – Entity Pattern</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3628.png" usemap="#EA3628" border="0" />
+
+<MAP NAME="EA3628">
+<area shape="rect" coords="306,10,530,65" href="EA3781.htm" target="_self">
+<area shape="rect" coords="10,65,202,140" href="EA3780.htm" target="_self">
+<area shape="rect" coords="418,251,515,286" href="EA3775.htm" target="_self">
+<area shape="rect" coords="36,251,176,286" href="EA3779.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.06 - The EntitySpecification – Entity Pattern diagram</div>
+	<div class="ObjectDetailsNotes">The EntitySpecification &#8211; Entity pattern, shown in Figure below, enables all Entities to be abstracted such that their shared attributes are captured in the EntitySpecification via inheritance from RootEntity and their shared associations inherited from those that Entity has with other entities, such as EntityIdentification. This enables each Entity to define its own distinguishing attributes in addition to the common attributes and associations defined by EntitySpecification.&lt;br/&gt;&lt;i&gt;Note that in the figure the association between EntitySpecification and Entity is implied and not a UML association. This was done so that the association between EntitySpecification and Entity is not inherited by all their subclasses. This would cause a problem, because any instance of an EntitySpecification could be associated to any instance of an Entity. For example, an instance of ProductSpecification could be associated to an instance of Service. The 0,1 association multiplicity on the association means that not every entity has to have an associated EntitySpecification. For example, an instance of a discovered Resource may not have a known instance of ResourceSpecification associated to it.&lt;/i&gt;&lt;br/&gt;Also shown in the figure are an EntitySpecificationType and an EntitySpecificationTypeRelationship.&#160;&#160;This provides a consistence way to define relationships among entities that inherit from EntitySpecification. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 6:00:40 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7FC0814E-C49D-4d3e-B52E-69B592EE2999}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

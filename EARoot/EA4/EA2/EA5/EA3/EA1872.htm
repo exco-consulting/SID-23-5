@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.03 - Relating the Physical and Logical Aspects of a Device to Each Other</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1873.png" usemap="#EA1873" border="0" />
+
+<MAP NAME="EA1873">
+<area shape="rect" coords="538,10,644,69" href="./EA3/EA2/EA1/EA2057.htm" target="_self">
+<area shape="rect" coords="287,261,428,313" href="./EA4/EA4/EA2291.htm" target="_self">
+<area shape="rect" coords="10,262,151,314" href="./EA4/EA7/EA2315.htm" target="_self">
+<area shape="rect" coords="288,10,394,69" href="EA1944.htm" target="_self">
+<area shape="rect" coords="546,139,671,226" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="153,139,294,191" href="./EA4/EA2246.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.03 - Relating the Physical and Logical Aspects of a Device to Each Other diagram</div>
+	<div class="ObjectDetailsNotes">If we remember that a &#8220;Device&#8221; is really just a type of Resource that can be managed, we can make it more extensible. This is done by defining two classes &#8211; PhysicalResource and LogicalResource &#8211; that show the inherent correlation between the physical and logical aspects of a given Resource. Then, we can represent particular physical and logical aspects of a resource as subclasses of either PhysicalResource or LogicalResource. This also enables us to define a more accurate and rigorous class structure for the various types of managed objects that are aggregated by a &#8220;Device&#8221;. This is illustrated in Figure below.&lt;br/&gt;&lt;i&gt;Note that this enables the physical and logical description of managed entities to be decoupled from each other. This enables different subject matter experts to work on the areas that they are interested in.&lt;/i&gt;&lt;br/&gt;Please see GB922 Service Domain guide book for an overview of Service entities, and how they interact with Resource entities.&lt;br/&gt;Note that PhysicalDevice is a subclass of PhysicalResource. PhysicalResource will be used to gather the common management characteristics of &#8220;Devices&#8221; (which are represented by the PhysicalDevice class) and components of a &#8220;Device&#8221; (which are represented by subclasses of the Hardware class). Similarly, the logical features seen in the Figure below are grouped under a common base class, called LogicalResource. Note that LogicalResource is explained further in Addendum for Logical Resource, which is a separate Addendum. This Addendum also describes managed entities that are associated with a LogicalResource, such as Software and Protocol. Similarly, Service is in a separate Addendum.&lt;br/&gt;Management information is not shown in the following Figure in order to keep the model as simple as possible for right now.&lt;br/&gt;This structure enables us to focus on specific relationships between PhysicalResource and other entities and LogicalResource and other entities. It is imprecise to say that a Device hosts a Service&#8211; there are in reality several relationships that describe this. A PhysicalResource supports LogicalResources, as indicated by the LogicalPhysicalResource aggregation in the following Figure. But the actual running of the Service is a logical concept, and hence is associated with a LogicalResource. The value of this Addendum is that it describes all physical entities that are used to host or support logical entities, and corresponds to viewing a Resource as consisting of physical and logical aspects that each needs to be managed.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:22:51 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{16B5E49C-C282-4793-8A28-04789F04055A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

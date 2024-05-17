@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Image 1. Home Vitualisation Functionality</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1719.png" usemap="#EA1719" border="0" />
+
+<MAP NAME="EA1719">
+<area shape="rect" coords="10,10,870,501" href="EA1750.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Image 1. Home Vitualisation Functionality diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;NS/VNF/PNF Composition and how it affects the deployment process. ETSI-NFV view point&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The purpose of this section is to illustrate, based on a simple example, some aspects related to the composition relationships between NS and VNF/PNF and how it affects the deployment process. It represents the ETSI-NFV view.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;vCPE Use Case (ETSI-NFV Use Case #7, ref &lt;/b&gt;&lt;/font&gt;&lt;a href=&quot;file://https://www.google.fr/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0ahUKEwi9x4aRorDUAhWHZVAKHfnMAdsQFggnMAA&amp;url=http%3A%2F%2Fwww.etsi.org%2Fdeliver%2Fetsi_gs%2FNFV%2F001_099%2F001%2F01.01.01_60%2Fgs_NFV001v010101p.pdf&amp;usg=AFQjCNFxYW&quot;&gt;&lt;font color=&quot;#133595&quot;&gt;&lt;u&gt;ETSI NFV Use Cases&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;)&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;&lt;br/&gt;&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;According to ETSI-NFV, a VNF cannot be composite but can only contain one single level of components. The VNF components are dictated by the deployment, as 1 VNFC is deployed on 1 VM, whatever are the functions running on it. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In ETSI-NFV Phase 2, as opposed to Phase 1, a &lt;i&gt;composite&lt;/i&gt; Network Service (NS) may be composed of &lt;i&gt;nested&lt;/i&gt; NS. Both are standard NSs. Composite/ Nested as just roles. This recursive composition mechanism allows for creating multi-levels composition hierarchies. At the lowest level, the innermost &lt;i&gt;nested&lt;/i&gt; NS is &#171; a composition of Network Functions &#187;.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 9:56:26 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 10:16:31 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{621FB503-2B27-4f89-AE94-9AF91FEF4A93}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

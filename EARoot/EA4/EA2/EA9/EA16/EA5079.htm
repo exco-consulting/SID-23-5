@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.14 - Sample Anomaly Business Entities for a RAN Anomaly Management Scenario</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5080.png" usemap="#EA5080" border="0" />
+
+<MAP NAME="EA5080">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.14 - Sample Anomaly Business Entities for a RAN Anomaly Management Scenario diagram</div>
+	<div class="ObjectDetailsNotes">The following figure shows the AnomalyIndicator definition for the RAN Anomaly Management scenario. In the case of RAN Anomaly Management, the anomaly is identified by monitoring a set of KPIs associated with RAN. The selection of KPI is use case dependent and may varies across scenarios. For the RAN Anomaly Management , the potential objective assumed is to use it for the energy optimization. With this objective three KPIs are identified - Downlink PRB Utilization per cell, Uplink PRB Utilization per cell and Average RRC Connected users. The DL/UL PRB utilization indicate the amount of radio resources being utilized per cell and the Average RRC Connected users indicate how many active users are utilizing the resources. These KPIs help to determine the load on each cell and how much load can be handed off or balanced across neighboring cells. The KPIs can be collected on a tracking area basis or based on a wider set of cells. Similarly the anomaly can be determined on a per cell basis or a group of cells. It is assumed that the derivationMethod and derivationAlgorithm defined as part of the AnomalyIndicatorSpecification is used to determine the particular calculation logic of the KPIs.&lt;br/&gt;The RAN Anomaly Management uses a nested set of indicators - i.e., RAN Resource Utilization per Cell as a high level indicator and DL/UL PRB Utilization, Average RRC connected users as low level indicators. The nesting helps to also helps in the aggregation scenarios where multiple aggregation logics (such as grouping of cells, KPI family grouping etc.) need to be applied. In the example scenario the low level indicators are consolidated based on a predefined weighted &amp; normalized aggregation logic that gives guidance value for Resource utilization per cell as a percentile value.&lt;br/&gt;A threshold value is assigned at the high level indicator (Resource utilization per cell) which is a guidance value stating the boundary under which the indicator value is deemed to be normal. Each threshold also has a corresponding threshold rule which indicate the logic of calculating the threshold boundaries. In addition to the threshold each of the indicator also has normal days data source and normal days represented as attributes. The objective of normal days data source is to indicate the data repository (such as a file) where the measurements corresponding to indicator are captured in the order of date and time , and normal days are the days within the normal days data which corresponds to the normal value of the indicator. These two parameters are primarily used for training the AI algorithms that monitor the data. These are optional parameters and can be managed as well through the AIModelSpecifications as indicated in TMF915.&lt;br/&gt;The high level indicator also has a set of Consequences which are mitigation actions that might be taken in case the indicator values go beyond the normal values represented through threshold. In the case of RAN Anomaly management it is assumed that an AI ML algorithm is used to determine the right consequence. For example the consequence can be to switch off or switch on a cell or it can be for initiating traffic steering of users to neighbor cells or it can be a sequence of these consequences. In case there is no AI/ML algorithm to decide on the consequences, the selection of the consequences can be based on the threshold rules . For example , there can be set of threshold rules and corresponding consequences - say 0-20%, 20-30%, 30-60% and greater than 60%. So the Anomaly management system can determine the static rules for initiating mitigation action. Additionally, each indicator can also have associated policy (Policy ABE) defined through a policy rule that indicates the criteria for selecting a consequence.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/12/2023 5:42:47 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/14/2023 6:44:42 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F722C125-E761-4870-A53F-A56EEC0C3A55}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

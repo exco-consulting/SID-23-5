@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Metric ABE</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Metric ABE", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">The Metric ABE defines standards of measurement including units and values and how the values are determined. It also includes thresholds used to evaluate the metric and the consequences of violating the thresholds.&lt;br/&gt;It&#8217;s in vision that other projects use and specialize the Metric ABE in some way (creating sub-classes and adding new entities) such as PM (Performance Management), RA (Revenue Assurance), SLA (Service Level Agreement), etc.&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;One business dictionary defines metrics in terms of standards of measurement.&lt;sup&gt;1&lt;/sup&gt;&#160;&#160;They go on to define measurement in terms of values and units.&#160;&#160;Since there is a fundamental need to measure all aspects of enterprises based on Frameworx, the need for a Common Business Entity standardizing what a Metric is in Frameworx has been deemed as essential.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This addendum is organized in two parts&#8212;1) the standardized definition of the SID Metric ABE itself, including elaboration on the critical details of the definition, and 2) Best Practices for design and application of specific metrics, both generically and in specific application uses (e.g., Business Metrics, Performance Metrics, Revenue Assurance Metrics, Customer Metrics, Fraud Management Metrics, etc.).&#160;&#160;The Metric ABE is made up of a number of lower-level ABEs.&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The next section describes the SID Metric ABE and its related components.&#160;&#160;This ABE was developed to support the SID principle of inherent extensibility by employing SID modeling patterns.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;It&#8217;s in vision that other projects use and specialize the Metric ABE in some way (creating sub-classes and adding new entities) such as PM (Performance Management), RA (Revenue Assurance), SLA (Service Level Agreement), etc.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This guide book describes the Metric ABE in Common Business Entities Domain.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;To find the Information framework figure, refer to &#8220;GB991 Core Frameworks Concepts and Principles&#8221; guide book.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Metric example introduction&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;All along this guide book, an example is used for illustrating the diagrams.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;You will find illustrations after some diagrams using the well-known example of Layer 3 packet round-trip delay (also known as IP packet 2-way delay).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This metric is typically measured using the ping tool, which is based on ICMP echo (request and reply). It is a network-layer metric which impacts application-layer real-time and interactive services, such as voice, video, gaming, web surfing, etc. In turn, this low-level metric may be used in higher-level metrics, characterizing services (RFS and CFS), up to Customer Experience metrics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Entity measured by this metric is a pair of IP hosts (any two hosts: servers, end-user devices, routers, switches, fixed/mobile access nodes, gateways, etc.), or more precisely the IP path between them at the time of measurement.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are many variants regarding the measurement process of this metric: active measurement relying on a ping-like tool which sends timestamped probe packets, or passive measurement, maybe by timestamping real traffic packets. Then there are different options concerning sampling (with or without a measurement session, packet size, packet payload, random or constant spacing of samples when applicable, etc.) and actual implementation of packet timestamping. Clock synchronization is not critical for two-way delay metrics, but it is for one-way delay metrics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Further details about measurement methodology can be found for instance in TWAMP (Two-Way Active Measurement Protocol) RFCs from the IETF IPPM (IP Performance Metrics) Working Group (&lt;/font&gt;&lt;a href=&quot;file://http://datatracker.ietf.org/wg/ippm/charter/&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;http://datatracker.ietf.org/wg/ippm/charter/&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#29313b&quot;&gt;).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are similar tools in layer 2 (Ethernet OAM CFM LB (Loop Back: from IEEE 802.1ag or ITU-T Y.1730/1731), LSP ping, PW VCCV) and in layers 4-7 (various proprietary methods including service pings).&lt;/font&gt;&lt;br/&gt;-------------------------&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/font&gt; &lt;a href=&quot;file://http://www.businessdictionary.com&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;http://www.businessdictionary.com&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;, Copyright&#169;2007-2011 Vijay Luthra and BusinessDictionary.com. ALL RIGHTS RESERVED.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:04:54 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../../EA645.htm">SID  Map</a>, [ComD-01] Common ABEs Level 1, <a href="../EA3514.htm">[PatternD-01] Pattern ABEs Level 1</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{16CD5B98-4C51-40f7-8793-BFAFBE02AD2D}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">1/10/2022 12:02:53 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+		</ul>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">RefGUID</td>
+				<td width="50%" class="TableRow" valign="top">{E5590015-0AC8-4ff8-B7AC-A35C24781B84}</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario16832" onclick="parent.toggleDiv('detailsDIVScenario16832','DetailsImageScenario16832')" />Specification:
+						<div id="detailsDIVScenario16832" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">rsa_guid</td>
+				<td width="50%" class="TableRow" valign="top">_xNaj0Nz3EeKxq4T-pMgheQ</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario16833" onclick="parent.toggleDiv('detailsDIVScenario16833','DetailsImageScenario16833')" />Specification:
+						<div id="detailsDIVScenario16833" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

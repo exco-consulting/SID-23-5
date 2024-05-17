@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Proj.08 - Project Calendar</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4740.png" usemap="#EA4740" border="0" />
+
+<MAP NAME="EA4740">
+<area shape="rect" coords="10,10,125,120" href="EA4757.htm" target="_self">
+<area shape="rect" coords="356,345,509,375" href="./EA2/EA4848.htm" target="_self">
+<area shape="rect" coords="366,439,499,501" href="../../EA10/EA8/EA1/EA5973.htm" target="_self">
+<area shape="rect" coords="767,61,900,110" href="../../EA10/EA7/EA5820.htm" target="_self">
+<area shape="rect" coords="776,231,916,397" href="../../EA10/EA7/EA5801.htm" target="_self">
+<area shape="rect" coords="567,161,700,191" href="../../EA10/EA7/EA5817.htm" target="_self">
+<area shape="rect" coords="457,13,590,88" href="../../EA10/EA7/EA5798.htm" target="_self">
+<area shape="rect" coords="264,161,397,191" href="../../EA10/EA7/EA5812.htm" target="_self">
+<area shape="rect" coords="451,299,614,329" href="./EA2/EA4846.htm" target="_self">
+<area shape="rect" coords="582,260,715,290" href="./EA2/EA4845.htm" target="_self">
+<area shape="rect" coords="51,571,184,737" href="./EA1/EA4815.htm" target="_self">
+<area shape="rect" coords="336,616,469,646" href="./EA1/EA4816.htm" target="_self">
+<area shape="rect" coords="51,407,184,469" href="./EA8/EA4910.htm" target="_self">
+<area shape="rect" coords="51,197,184,337" href="EA4781.htm" target="_self">
+<area shape="rect" coords="264,250,397,299" href="./EA2/EA4844.htm" target="_self">
+<area shape="rect" coords="588,491,721,540" href="../../EA10/EA7/EA5808.htm" target="_self">
+<area shape="rect" coords="588,364,721,439" href="../../EA10/EA7/EA5799.htm" target="_self">
+<area shape="rect" coords="751,616,884,678" href="./EA2/EA4849.htm" target="_self">
+<area shape="rect" coords="546,616,679,678" href="./EA2/EA4847.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Proj.08 - Project Calendar diagram</div>
+	<div class="ObjectDetailsNotes">A Project has two different Calendar related requirements. &lt;br/&gt;The first is to have a Calendar that shows the working time periods, used to convert between working hours and elapsed days. For example, if we have a 10-hour Activity, that is due to start at noon on a Friday, and if working hours are 9:00am &#8211;12:00am and 1:00pm &#8216;till 5:00pm Monday to Friday, then the Activity will not be completed until 4:00pm on Monday.&lt;br/&gt;A Project also needs to keep track of working days and holidays. Each Project may wish to have its own working time Calendar (e.g. for projects in different countries with different hours of work), but it will be most effective for a Project to utilize or modify a standard calendar.&lt;br/&gt;The second requirement is to be able to show Activities on a Gantt chart. To do this, we can store the Activity start and end dates in a Calendar Entry&lt;br/&gt;For more details of the Calendar core model, refer to the SID Time Addendum.&lt;br/&gt;Following Figure shows Project linking to Calendar. A Project links to a single ProjectCalendar, which is a type of CompoundCalendar.&#160;&#160;The CompoundCalendar would normally be made up of a Standard Work Calendar storing all the public holidays for a Country or a State (refer SID Location model). In addition, changes to the standard calendar can be made in a ProjectSpecificWorkCalendar. The intention is to reduce work calendar maintenance by allowing for the sharing of standard work times.&lt;br/&gt;For Projects that span multiple Countries, then a Project may need to use more than one StandardWorkCalendar. In that case then the project will need to associate Activities with Countries and use the correct StandardWorkCalendar for scheduling.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 12:25:27 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{851EF8AD-014C-46ff-8366-7B3B8697F3A1}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

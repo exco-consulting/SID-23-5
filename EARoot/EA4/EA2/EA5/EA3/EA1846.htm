@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.15 - Using Roles to Represent Device Functionality</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1847.png" usemap="#EA1847" border="0" />
+
+<MAP NAME="EA1847">
+<area shape="rect" coords="10,11,107,63" href="./EA3/EA4/EA2079.htm" target="_self">
+<area shape="rect" coords="235,10,332,62" href="./EA3/EA4/EA2080.htm" target="_self">
+<area shape="rect" coords="399,131,496,183" href="./EA3/EA4/EA2081.htm" target="_self">
+<area shape="rect" coords="292,131,389,183" href="./EA3/EA4/EA2082.htm" target="_self">
+<area shape="rect" coords="185,131,282,183" href="./EA3/EA4/EA2083.htm" target="_self">
+<area shape="rect" coords="78,131,175,183" href="./EA3/EA4/EA2085.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.15 - Using Roles to Represent Device Functionality diagram</div>
+	<div class="ObjectDetailsNotes">But what about the so-called &#8220;Layer 3&#8221; switches, which are switches that have routing capability? The method shown above encourages subclassing. For example, this could be done by creating a subclass of Switch, called Layer3Switch, which adds routing capabilities to the Switch. This is a poor solution, because now every time routing changes, we have to update the Router class as well as the Layer3Switch class. Besides, this implies that a Layer3Switch can do everything that a full-blown Router can do, which is almost never the case. There are other problems with this approach too, but this is enough for now.&lt;br/&gt;One may also be tempted to use multiple inheritances. If we ignore the fact that multiple inheritance is not always supported when the system is implemented, the problem then becomes one of extensibility. What if there is a &#8220;Layer4Switch&#8221; (unfortunately, some vendors do label their products like this!)? What if we want to differentiate between the type of routing done in a Router vs. the type of routing done in the Layer3Switch vs. the type of routing done in the Layer4Switch? What if there is a Router that has firewalling capabilities, how is that modeled? There are simply too many permutations to account for using this approach.&lt;br/&gt;Instead, a much more elegant and extensible solution is available &#8211; we can use the notion of roles. This simplifies our approach tremendously. Instead of trying to either define many subclasses or introduce multiple inheritances, we can instead define a set of roles that the device is meant to play. (Note that if LogicalDevice had not been split out, there would have been nothing to attach the roles to; since LogicalDevice has the conceptualization of being the &#8220;brains&#8221; of the Resource, attaching roles to LogicalDevice has the connotation of abstracting certain functions that the LogicalDevice controls using one or more roles). &lt;br/&gt;Thus, by modeling DeviceRole as a separate concept from Device, we can build subclasses of DeviceRole to model different functions. Then, it&#8217;s a simple matter of aggregating the appropriate DeviceRoles to represent the different functions and roles that a particular device can play. We specifically avoid having to subclass Device to do this!&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:10:21 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B6752AA8-3F2A-4092-A018-96B4F0C73425}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

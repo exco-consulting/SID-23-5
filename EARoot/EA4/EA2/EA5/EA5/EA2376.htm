@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RO.05 - Resource Number - Number Portability Policy</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2377.png" usemap="#EA2377" border="0" />
+
+<MAP NAME="EA2377">
+<area shape="rect" coords="605,271,803,382" href="./EA1/EA2395.htm" target="_self">
+<area shape="rect" coords="353,271,450,323" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="319,426,486,554" href="../../EA9/EA11/EA3/EA4624.htm" target="_self">
+<area shape="rect" coords="345,153,459,225" href="../../EA9/EA11/EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="628,164,725,216" href="../../EA9/EA11/EA5/EA1/EA4643.htm" target="_self">
+<area shape="rect" coords="10,166,107,218" href="../../EA9/EA11/EA5/EA2/EA4652.htm" target="_self">
+<area shape="rect" coords="326,15,478,74" href="../../EA9/EA11/EA5/EA3/EA4663.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RO.05 - Resource Number - Number Portability Policy diagram</div>
+	<div class="ObjectDetailsNotes">The NumberPortabilityPolicyRule entity describes business rules and regulatory policies; therefore, they exist before any request for number portability. Because of their need for conditions, events and particular actions to make, it inherits directly from PolicyRule and so, is an entity of great importance.&lt;br/&gt;The policies&#8217; approach is to only be applied and be considered for the number portability itself, depending of the type of the request based on the BusinessInteractionType. They are a very important key when one is referring to number portability, since they are way too different for each country. In some are complex, in others simpler, and each one of them implement these policies in a different manner.&lt;br/&gt;As it seems in the figure, the new entity related to number portability is called NumberPortabilityPolicyRule and inherits from PolicyRule (from Policy ABE). These entities, like PolicyRule, PolicyRuleSpec, PolicyRuleBase, PolicyCondition, PolicyAction and PolicyEventBase are existing entities with all the behavior and elements shared with the new entity.&lt;br/&gt;In summary, NumberPortabilityPolicyRule is a key entity and a sub-class of PolicyRule in order to obtain the conditions, events and actions, which help especially for the penalty fees when certain conditions don&#39;t apply. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/8/2023 6:08:59 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2427596E-D7B6-40b6-847C-9B3347E29A96}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SalesQuote Lifecycle</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA698.png" usemap="#EA698" border="0" />
+
+<MAP NAME="EA698">
+<area shape="rect" coords="45,356,141,415" href="./EA2/EA726.htm" target="_self">
+<area shape="rect" coords="516,82,580,132" href="./EA2/EA715.htm" target="_self">
+<area shape="rect" coords="259,81,329,144" href="./EA2/EA725.htm" target="_self">
+<area shape="rect" coords="70,17,90,37" href="./EA2/EA721.htm" target="_self">
+<area shape="rect" coords="284,512,304,532" href="./EA2/EA719.htm" target="_self">
+<area shape="rect" coords="246,427,343,458" href="./EA2/EA716.htm" target="_self">
+<area shape="rect" coords="48,454,145,486" href="./EA2/EA717.htm" target="_self">
+<area shape="rect" coords="39,274,136,326" href="./EA2/EA718.htm" target="_self">
+<area shape="rect" coords="246,355,343,390" href="./EA2/EA714.htm" target="_self">
+<area shape="rect" coords="276,284,300,308" href="./EA2/EA713.htm" target="_self">
+<area shape="rect" coords="246,196,343,248" href="./EA2/EA720.htm" target="_self">
+<area shape="rect" coords="515,348,612,381" href="./EA2/EA724.htm" target="_self">
+<area shape="rect" coords="389,83,484,136" href="./EA2/EA722.htm" target="_self">
+<area shape="rect" coords="246,10,343,36" href="./EA2/EA723.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">SalesQuote Lifecycle diagram</div>
+	<div class="ObjectDetailsNotes">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Start : The initial state of a newly created SalesQuote, at this point the quote is not considered valid to be placed in front of the Prospect. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Internal Approval : If the Sales Quote does require an internal CSP approval process before to be placed in front of the Prospect. then it may be transitioned from New into Internal Approval to recognise the fact that the quote requires and is waiting for the approval process to complete. The business object for quote may contain a reference to the Approval business object that represents the management of this process. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	In Progress : The quote is in progress state when the user saves a quote after it is created. This is the state after the Internal Approval state if required. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Approved : If the Sales Quote has been approved internally if required and also by the prospect/customer then it may be transitioned into the Approved state, which makes it valid with regard to placing in front of the Prospect for the final Quote journey. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Rejected : If the newly created Sales Quote is not required or if it is not deemed appropriate, may be as part of the approval process then it may be transitioned into the terminating state of Rejected. In this state it may not be recovered, instead a new quote would have to be created. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Expired : The quote expires if the quote expiry period is reached. The quote can be revived at this stage and moved to be in progress again. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Closed - Expired : The quote expires if the quote expiry period is reached and can not be revived after this stage. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Closed : The Prospect/Customer has been shown the quote and has decided to purchase the Products. The Sales Quote has therefore generated one or more CustomerProductOrders. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">6/2/2022 10:53:33 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/4/2022 7:08:16 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{501BFEEF-EE29-4be0-BC24-8D9C330843C7}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

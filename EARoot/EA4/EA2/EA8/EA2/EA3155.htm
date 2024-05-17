@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.10 - Workforce Appointment</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3156.png" usemap="#EA3156" border="0" />
+
+<MAP NAME="EA3156">
+<area shape="rect" coords="24,265,179,312" href="../../EA10/EA7/EA5796.htm" target="_self">
+<area shape="rect" coords="48,97,187,180" href="../../EA9/EA5/EA4002.htm" target="_self">
+<area shape="rect" coords="10,374,124,402" href="../../EA10/EA7/EA5801.htm" target="_self">
+<area shape="rect" coords="460,475,637,558" href="./EA2/EA3199.htm" target="_self">
+<area shape="rect" coords="196,374,306,421" href="./EA3/EA1/EA3220.htm" target="_self">
+<area shape="rect" coords="477,362,619,390" href="../../EA9/EA12/EA9/EA4921.htm" target="_self">
+<area shape="rect" coords="648,240,818,299" href="../../EA9/EA12/EA9/EA4919.htm" target="_self">
+<area shape="rect" coords="673,140,770,168" href="../../EA9/EA4/EA3966.htm" target="_self">
+<area shape="rect" coords="473,220,623,279" href="../../EA9/EA4/EA3949.htm" target="_self">
+<area shape="rect" coords="464,10,632,105" href="../../EA9/EA4/EA3948.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.10 - Workforce Appointment diagram</div>
+	<div class="ObjectDetailsNotes">The scheduling process involves planning available workforce capacity, handling the appointment request (booking), and reservation and assignment (dispatch) of the workforce. These processes are supported by the workforce business calendar, appointment, workforce pool, reservation, and assignment entities.&lt;br/&gt;Correspondingly, we introduce the Appointment, Reservation (Booking), and Assignment (Dispatch) entities along with WorkSchedule. Though Appointment is defined in Project ABE, we present its association with WF entities here too.&lt;br/&gt;&lt;br/&gt;To deliver a service, a specific Work Order, with its WorkItems and the associated Work tasks, is generated. Some work is to be performed onsite and needs an agreement about time and other terms (e.g. in the form of a letter of authorization). Appointment is an agreement between service representatives and the customer about the time and terms to do the work.&lt;br/&gt;In SID, the Appointment entity is modeled in the Time ABE of the Common Business Entity domain. It results from an Agreement, a business interaction between the service provider and the customer, about terms of the services to be ordered. The Appointment is associated with a Calendar Entry of a WorkSchedule (described below), to model the start&#8211;end time of the visit.&lt;br/&gt;The following Figure represents Appointment and its association to Work and Calendar Entry (refer to Common guide book section Calendar ABE).&lt;br/&gt;The appointment of a Work task to be done in a certain time period is defined by considering the available capacity of a WorkforceEmployeePool, which shows the availability of the work force. Various other criteria can be also considered for making an appointment, like the WorkSpecFulfillmentRate of an organization, priority of the work order, etc.&lt;br/&gt;In real life, the appointment times, when agreed on with the customer by a call, can be flexible (at a date, in the morning, afternoon, evening, etc.). The exact time of the visit will be defined during a particular technician reservation and then dispatched, considering many optimization factors or preferences of the technician (for example, driving distance to the site).&lt;br/&gt;&lt;i&gt;Note: In some cases, a particular technician is assigned to an Appointment. That is done either on request from a customer, or because of a CSP&#8217;s approach to simplify the reservation and assignment rules. In this case, the Reservation and Assignment records can be created at the same time as the creation of the Appointment.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 8:43:55 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4E2DCAEB-BFFF-4cde-82C8-333F5E2E97BE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

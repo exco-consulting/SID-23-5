@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.07 - Site & Site Role</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5857.png" usemap="#EA5857" border="0" />
+
+<MAP NAME="EA5857">
+<area shape="rect" coords="511,72,689,154" href="EA5959.htm" target="_self">
+<area shape="rect" coords="341,157,482,257" href="../../EA5/EA3/EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="764,112,861,164" href="./EA2/EA6039.htm" target="_self">
+<area shape="rect" coords="351,10,460,72" href="EA5958.htm" target="_self">
+<area shape="rect" coords="87,229,225,303" href="./EA1/EA5979.htm" target="_self">
+<area shape="rect" coords="10,359,144,408" href="./EA1/EA5980.htm" target="_self">
+<area shape="rect" coords="87,112,225,164" href="./EA1/EA5977.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.07 - Site & Site Role diagram</div>
+	<div class="ObjectDetailsNotes">This model defines a Site as:&lt;br/&gt;&lt;i&gt;&#8220;A place that has (existing, planned or former) physical things or characteristics of interest to the Service Provider.&lt;/i&gt;&lt;br/&gt;Things of interest include Product Instance(s, Service Instance(s)) and Physical Resource Instance(s).&lt;br/&gt;Characteristics of interest include associated Parties (property owner, property lessee)&#8221;&lt;br/&gt;Site provides a convenient linking point to other parts of the SID model.&lt;br/&gt;A Site may be assigned many roles (or functions).&lt;br/&gt;Site Role types should be restricted to functions that cannot be easily derived from entities linked to the site. &lt;br/&gt;Some examples of Site Roles are:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Asset Location&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Transmission Access Point&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Competitor Access Point&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Customer Access Point&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Equipment Delivery Point&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Cultural Site&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Protected Area&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Exchange Site&lt;br/&gt;&lt;br/&gt;Site Roles should NOT be used for:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Network Equipment Types (e.g. ADSL site)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Network Equipment Roles (e.g. CCS7 Node &#8211; this is a role of the Resource)&lt;br/&gt;&lt;br/&gt;Later in the document we will also define Geographic Location and Geographic Address roles. These other roles are modeled differently, which is why there isn&#8217;t a generic &#8220;Place Role&#8221; entity defined. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/27/2023 9:38:58 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{37918741-277E-41fa-9AAC-0406F3D39016}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.37 - Loyalty Program main view</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1262.png" usemap="#EA1262" border="0" />
+
+<MAP NAME="EA1262">
+<area shape="rect" coords="435,10,593,57" href="../EA2/EA982.htm" target="_self">
+<area shape="rect" coords="420,114,608,146" href="../EA2/EA967.htm" target="_self">
+<area shape="rect" coords="28,10,167,69" href="../EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="25,114,170,146" href="../EA4/EA1192.htm" target="_self">
+<area shape="rect" coords="631,312,728,344" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="458,312,571,344" href="./EA2/EA1298.htm" target="_self">
+<area shape="rect" coords="425,196,604,243" href="./EA2/EA1297.htm" target="_self">
+<area shape="rect" coords="10,196,184,228" href="./EA1/EA1290.htm" target="_self">
+<area shape="rect" coords="27,312,167,344" href="./EA1/EA1284.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.37 - Loyalty Program main view diagram</div>
+	<div class="ObjectDetailsNotes">A loyalty program is one of the tools used by the loyalty process to retain customers. For example, another tool is the ProductOffering Commitment.&lt;br/&gt;&lt;br/&gt;An example of loyalty program could be &#171; Change Your Mobile Offer &#187;:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;available only for prepaid contracts, therefore incompatible with postpaid contracts,&lt;/li&gt;&lt;li&gt;month after month the customer earns points and depending on the number of points he has, he can buy a new handset at a lower price using his points.&lt;/li&gt;&lt;/ul&gt;<br />Another example could be a &#8220;more time for calls&#8221; program that gives you more time for calls according to your seniority (i.e.: 5% after six months of seniority, 10% after two years of seniority, etc.).&lt;br/&gt;And these two loyalty programs could have a cost and be incompatible.&lt;br/&gt;The aim of marketing is to find levers in the form of rewards to enhance customer loyalty to its operator.&lt;br/&gt;Most of the time, the conditions to reward a customer are based on &lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;seniority in customer relationship, &lt;/li&gt;&lt;li&gt;the importance of revenue from the customer,&lt;/li&gt;&lt;li&gt;or the risk of churn.&lt;/li&gt;&lt;/ul&gt;<br />The more the customer remains with the operator or consumes, the more he will be rewarded.&lt;br/&gt;&lt;br/&gt;Different types of rewards can be considered:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;physical rewards: accessories, terminals, points usable to buy accessories / terminals ...&lt;/li&gt;&lt;li&gt;virtual rewards: free usage, vouchers ...&lt;/li&gt;&lt;/ul&gt;<br />The rewards that can be bought thanks to loyalty earns correspond to ProductSpecification &amp; ProductOffering with a price allowing a specific currency (loyalty points).&lt;br/&gt;A loyalty program is a part of a contract and may be either mandatory or not (packaging rule, pre-requisite).&lt;br/&gt;As a loyalty program represents a cost for the operator, the latter avoids that the customer may have several loyalty programs.&lt;br/&gt;To do so, Loyalty Programs might be incompatible with each other and in this case the customer has to choose only one LoyaltyProgram.&lt;br/&gt;Therefore, a loyalty program is a type of AtomicProductSpecification, is packaged through ProductOffering and is instantiated in the same manner in the installed base (LoyaltyProgramProduct that is a type of ProductComponent).&lt;br/&gt;A LoyaltyProgramProdSpec defines the LoyaltyRules that have to be checked in order to identify the actions to apply. A LoyaltyRule is a type of PolicyRule.&lt;br/&gt;Depending on the type of LoyaltyRules a LoyaltyAccount might be needed to collect gains or not. This is defined by the needsLoyaltyAccount attribute on the LoyaltyProgramProdSpec entity.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 9:29:46 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A1F05B23-CE7F-4f63-BC5D-3AABC0EDA766}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

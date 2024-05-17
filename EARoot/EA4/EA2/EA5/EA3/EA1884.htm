@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.11 - The Relationship Between PhysicalResource and PhysicalResourceSpecification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1885.png" usemap="#EA1885" border="0" />
+
+<MAP NAME="EA1885">
+<area shape="rect" coords="244,189,393,300" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="499,368,700,467" href="../EA2/EA4/EA1821.htm" target="_self">
+<area shape="rect" coords="19,369,154,407" href="./EA4/EA4/EA2291.htm" target="_self">
+<area shape="rect" coords="341,369,473,412" href="./EA4/EA7/EA2315.htm" target="_self">
+<area shape="rect" coords="499,209,640,261" href="../EA2/EA4/EA1820.htm" target="_self">
+<area shape="rect" coords="646,209,779,261" href="../EA2/EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="14,192,158,235" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="148,49,254,108" href="EA1944.htm" target="_self">
+<area shape="rect" coords="582,66,688,118" href="../EA2/EA1699.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.11 - The Relationship Between PhysicalResource and PhysicalResourceSpecification diagram</div>
+	<div class="ObjectDetailsNotes">Now, if we look at these attributes, we see that some of them lend themselves to being templatized, while some don&#8217;t. &lt;br/&gt;That is, we can use the concept of a PhysicalResourceSpecification to supply the ModelNumber, PartNumber, SKUNumber, and VendorName attributes, because these correspond to a generic specification describing a particular type of PhysicalResource. The other two attributes (ManufactureDate and SerialNumber) are specific to a particular instance of a PhysicalResource object, and therefore are not contained in the PhysicalResourceSpecification. &lt;br/&gt;We separate PhysicalResourceSpecs from LogicalResourceSpecs because they are fundamentally different in nature. In addition, they have different attributes, methods, constraints, and relationships in the System view.&lt;br/&gt;Both PhysicalResourceSpecs and LogicalResourceSpecs use the composite pattern for extensibility. Only the PhysicalResourceSpec classes are shown in The following Figure above for simplicity.&lt;br/&gt;A PhysicalResourceSpecAtomic class is a concrete class for describing specific attributes, behavior, relationships, constraints, and semantics for building PhysicalResource objects. The purpose of this class is to be able to track PhysicalResourceSpecifications separately from other types of ResourceSpecifications. Note that this class inherits the SpecifiesResource aggregation, and therefore can be used with the corresponding PhysicalResource class.&lt;br/&gt;The difference between this class and the PhysicalResourceSpecComposite class is that this class represents stand-alone PhysicalResourceSpecifications. The PhysicalResourceSpecComposite class represents a specification that is in reality made up of a set (usually a hierarchy) of PhysicalResourceSpecifications.&lt;br/&gt;The composite pattern is completed by defining the HasPhysicalResourceSpecs aggregation. This aggregation defines the set of PhysicalResourceSpecs that are contained by this particular PhysicalResourceSpecComposite entity.&lt;br/&gt;The SpecifiesResource aggregation defines the particular ResourceSpecification that is used to provide the invariant characteristics (i.e., attributes and relationships, as well as methods and constraints in the System View) of a given Resource. This enables multiple Resources that each use a common set of attributes, methods, constraints, and/or relationships to be related to a single invariant specification of those characteristics and behavior. This facilitates their updating.&lt;br/&gt;The cardinality of the SpecifiesResource aggregation is 1 on the ResourceSpecification side and 0..n on the Resource side. This means that a ResourceSpecification can be written that isn&#39;t related to any specific Resources, but if a Resource is built, it must be derived from a ResourceSpecification. Furthermore, this is an aggregation because this is a whole-part relationship: the ResourceSpecification defines the invariant attributes and behavior of zero or more Resources, and each Resource derived from the ResourceSpecification uses all of these invariant attributes and behavior (and presumably adds its own instance-specific attributes and behavior).&lt;br/&gt;Since this aggregation is defined at the Resource and ResourceSpecification level, each of the subclasses of Resource and ResourceSpecification inherit its use. This is why (for example) there isn&#8217;t a relationship connecting a PhysicalResourceSpec to a PhysicalResource.&lt;br/&gt;The SpecifiesResource association is used to add the attributes and relationships of a ResourceSpecification to a Resource. The various subclasses of PhysicalResouce inherits the ability to have its own PhysicalResourceSpecification (or subclass of PhysicalResourceSpecification). This enables any specific needs of one of the various subclasses of PhysicalResource to be met by subclassing the PhysicalResourceSpecification corresponding to that object.&lt;br/&gt;We&#8217;ll look at the definitions of each of these major entities in the following sections.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:27:26 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{22D6D873-3375-4265-9C9F-9F5EB9B7F7D5}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure [PrD-01] Product ABEs Level 1</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA884.png" usemap="#EA884" border="0" />
+
+<MAP NAME="EA884">
+<area shape="rect" coords="21,180,205,224" href="./EA10/EA1318.htm" target="_self">
+<area shape="rect" coords="21,125,205,169" href="./EA5/EA1232.htm" target="_self">
+<area shape="rect" coords="21,70,205,114" href="./EA1/EA901.htm" target="_self">
+<area shape="rect" coords="384,180,608,224" href="./EA7/EA1261.htm" target="_self">
+<area shape="rect" coords="384,125,608,169" href="./EA9/EA1312.htm" target="_self">
+<area shape="rect" coords="207,180,379,224" href="./EA8/EA1299.htm" target="_self">
+<area shape="rect" coords="207,235,379,279" href="./EA6/EA1242.htm" target="_self">
+<area shape="rect" coords="21,235,205,279" href="./EA11/EA1330.htm" target="_self">
+<area shape="rect" coords="384,235,608,279" href="./EA12/EA1331.htm" target="_self">
+<area shape="rect" coords="384,70,608,114" href="./EA3/EA1014.htm" target="_self">
+<area shape="rect" coords="207,70,379,114" href="./EA2/EA906.htm" target="_self">
+<area shape="rect" coords="207,125,379,169" href="./EA4/EA1178.htm" target="_self">
+<area shape="rect" coords="10,10,615,304" href="EA883.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure [PrD-01] Product ABEs Level 1 diagram</div>
+	<div class="ObjectDetailsNotes">The diagram below lists the Product Domain&#39;s ABEs.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Product Party Roles ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Product Party Roles ABE contains all PartyRoles related to the Product Domain such as ProductManager.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Specification ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Product Specification ABE contains all entities that represent a product specification as perceived by the business user and specifies what the marketing operator wants to sell at a functional level (i.e. what are the capacities, which usages are available&#8230;).&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Offering ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Product Offering ABE describes tangible and intangible goods made available for a certain price to the market in the form of product catalogs.&#160;&#160;This ABE is also responsible for targeting market segments based on the appropriate market strategy.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Represents an instance in the product inventory of a product offering or specification subscribed to by a party role, such as a customer, the place where the product is in use, as well as configuration characteristics, such as assigned telephone numbers and internet addresses.&#160;&#160;The Product ABE also tracks the services and/or resources through which the product is realized. &lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Usage ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Represents usage of products associated with Customers used for charging that may appear on a Customer Bill.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Loyalty ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A loyalty program is one of the tools used by the loyalty process to retain customers. The Loyalty ABE contains all entities useful to specify and instantiate loyalty programs. A LoyaltyProgramProdSpec defines the LoyaltyRules that have to be checked in order to identify the actions to apply. Depending on the type of LoyaltyRules a LoyaltyAccount might be needed to collect gains or not. A LoyaltyProgramProduct is a type of ProductComponent and described by a LoyaltyProgramProdSpec. &lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Configuration ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The definition of how a Product operates or functions in terms of CharacteristicSpecification(s) and related ResourceSpec(s), ProductSpec(s), ServiceSpec(s) as well as a representation of how a Product operates or functions in terms of characteristics and related Resource(s), Product(s), Service(s).&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Test ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A product test is a function performed on a product that results in measures being produced that reflect the functioning of the product under test. &lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Order ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Product Order ABE contains all entities required to specify a communication used to procure or update one or many Products in the context of a ProductOffering.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;This pattern is used to define CustomerProductOrder corresponding to Products ordered by a Customer to the Service Provider and BusinessPartnerProductOrder corresponding to Products ordered by the Service Provider to a Business Partner&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Performance ABE (not fully developed)&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The Product Performance ABE handles product performance goals, the results of end-to-end product performance assessments, and the comparison of assessments against goals.&#160;&#160;The results may include the identification of potential capacity issues.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Product Capacity ABE&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Specific ability of Product domain entities measured in quantity and units of quantity over an extended period.&lt;/li&gt;&lt;/ul&gt;<br />&lt;b&gt;Strategic Product Portfolio Plan ABE (not fully developed)&lt;/b&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;A strategy employed to promote a ProductOffering. Strategic Product Portfolio Plan ABE is concerned with the plans of the product portfolio, which product offerings to make available to each market segment and the plans to development and deploy product offerings, as well as retirement of products.&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/8/2022 11:28:24 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{9328A8E7-BDB7-4727-ACDF-1878987FB1C3}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

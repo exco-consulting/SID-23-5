@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.24 - Multiple Command Syntaxes and Programming Models</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1383.png" usemap="#EA1383" border="0" />
+
+<MAP NAME="EA1383">
+<area shape="rect" coords="5,5,794,525" href="EA1397.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.24 - Multiple Command Syntaxes and Programming Models diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Linking to QoS &#8211; ServicePackage and ServiceBundle&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Service QoS guide book defines of the QoS model. The purpose of this model is to satisfy one of the use cases of the Service Domain in general, by describing how QoS mechanisms on a device are configured. Here, &#8220;mechanisms&#8221; refers to modeling the end-user features of the device.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Conceptually, what makes this a daunting task is that Services involve multiple devices which can have heterogeneous commands and programming models, as is shown in Figure SO.24 below.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Current network devices have different programming models using different commands. This makes it very difficult for common tasks to be performed, because in effect the network operator must know different languages. If we also take into account the fact that commands change per OS version, the analogy grows to a single person having to know multiple dialects of multiple languages. This cannot scale.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Figure above illustrates the use of different commands and programming models to perform the same high level task. The device on the left has configuration modes, each mode defining a set of appropriate commands. The device on the right has no such modes. Furthermore, the syntax used to perform the same task is drastically different.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Note that each network device supports a Service through configuring a DeviceInterface and/or its LogicalDevice. This is worse for two reasons. First, the thought of doing this manually, for thousands of networks, is no longer viable, due to both the complexity of networks, the complexity of services that networks support, and the interaction between services supported on a network. Second, since each Device in general has a different programming model, there is no way to tell in advance which way (or ways) a Device can be programmed. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Clearly, manually configuring each Service that can run on a given device is not a viable process. This Addendum introduces two innovative classes &#8211; ServicePackageSpec and ServiceBundleSpec &#8211; that serve to link the business requirements of QoS to its implementation. Note that this is done at the specification level, to enable this to be templatized. Of course, this is yet another instance of the Entity-EntitySpecification pattern, which is used throughout the SID. (This in and of itself is important, because it shows how the existing Service model can be easily extended to bridge new concepts using the same set of standardized mechanisms. This is an indicator of the robustness and inherent extensibility of the SID.)&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 1:56:50 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/17/2022 2:15:54 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E503ED6F-8ED6-4113-9726-C6692C31DED8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

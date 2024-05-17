@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.24 - Customer Billing Account Balance overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA819.png" usemap="#EA819" border="0" />
+
+<MAP NAME="EA819">
+<area shape="rect" coords="643,123,846,175" href="EA832.htm" target="_self">
+<area shape="rect" coords="419,82,560,174" href="EA827.htm" target="_self">
+<area shape="rect" coords="90,488,273,540" href="../EA6/EA783.htm" target="_self">
+<area shape="rect" coords="237,128,381,183" href="EA829.htm" target="_self">
+<area shape="rect" coords="336,399,510,464" href="EA828.htm" target="_self">
+<area shape="rect" coords="923,646,1020,698" href="../EA9/EA1/EA859.htm" target="_self">
+<area shape="rect" coords="943,158,1089,210" href="../EA9/EA1/EA860.htm" target="_self">
+<area shape="rect" coords="49,128,170,183" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="489,682,575,741" href="../EA1/EA687.htm" target="_self">
+<area shape="rect" coords="43,583,170,681" href="EA830.htm" target="_self">
+<area shape="rect" coords="569,501,691,553" href="../EA6/EA785.htm" target="_self">
+<area shape="rect" coords="41,245,265,372" href="../EA6/EA787.htm" target="_self">
+<area shape="rect" coords="459,263,659,384" href="../EA6/EA786.htm" target="_self">
+<area shape="rect" coords="706,8,803,60" href="../../EA10/EA4/EA2/EA5679.htm" target="_self">
+<area shape="rect" coords="683,288,837,406" href="../../EA9/EA3/EA3909.htm" target="_self">
+<area shape="rect" coords="795,488,934,580" href="../../EA9/EA3/EA3908.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.24 - Customer Billing Account Balance overview diagram</div>
+	<div class="ObjectDetailsNotes">Balance (or balances) represents an amount, usually with some monetary value, usually an aggregation, that indicates an aspect of liability (often financial) between the service provider and the account holder (usually a customer). This amount can be monetary amount, or non-monetary (such as free minutes, or amount of loyalty points), can represent credit that the CSP holds for the customer (for example pre-paid balance) or debt that the customer owes the CSP (as is the normal case for post-paid A/R balance). Balance can be limited by regulation (for example, in most countries pre-paid balance cannot be negative by regulation) or by business rules (credit limit on post-paid balance based on customer credit profile) and so on.&lt;br/&gt;Balance, by nature, is a temporal field and in many cases it is important to capture not only the value of the balance at a specific point in time but also the change of the value with time. In many cases systems will need to be able to answer a query such as &#8220;what was the post-paid customer account balance for account XXX on date YYY&#8221;.&lt;br/&gt;Billing account balance can be used as the source of payment and/or as the target of payment. In some cases payments are designated to a specific balance (for example in case of top-up of pre-paid balance) and in some cases the designation is automatic (for example when the customer pays a post-paid bill). All these cases are captured by one concept (customer account balance) with some differentiation.&lt;br/&gt;From the above it is clear that each CustomerBillingAccount may contain more than one balance and therefore, according to SID guidelines CustomerBillingAccountBalance is modeled as an entity with 1-* association to CustomerBillingAccount.&lt;br/&gt;Below is some explanation how monetary balances are associated with payments. While monetary balances are very important, we should remember that the generic case includes non-monetary balances as well which are more loosely related to payments. &lt;br/&gt;Acting as customer account balance management, Billing Account Balance ABE is related tightly to customer payment and other ABEs especially in charging domain. It is intended to support a converged model applicable for both prepaid and postpaid cases. &lt;br/&gt;The prepaid customer needs CustomerBillingAccountBalance in recharging for storage. The payment model also need to handle prepaid customers in cases where there is no bill and payment goes directly into CustomerBillingAccountBalance. Then CustomerBillingAccountBalance amount could be applied to AppliedCustomerBillingRate which might be related to certain product usage event. From above, the prepaid customer needs CustomerBillingAccountBalance both in recharging and payment. &lt;br/&gt;Actually in case of overpayment or refund for prize, CustomerBillingAccountBalance is the temporary method for storage to postpaid customer. From the view of postpaid customer, a payment is typically applied to a bill or an invoice, and indirectly applied to product and product usage. CustomerBillingAccountBalance could also be involved in payment as a payment method/source to a bill or an invoice. So the postpaid customer also needs CustomerBillingAccountBalance both in refunding and payment.&lt;br/&gt;As shown in the Figure C.19, CustomerBillingAccountBalance (working as AccountBalancePM) could be taken as a payment method/source for certain payment amount.&lt;br/&gt;Customer can have multiple product charges, and CustomerBillingAccountBalance can be shared between them, and used to pay product charges for other customers. &lt;br/&gt;A payment may be applied to several bills or AppliedCustomerBillingRates according to the priority defined by payment plan. Before the bill or AppliedCustomerBillingRate is calculated, we need to associate product charges to certain CustomerBillingAccount(s), by which product usage are paid because bill or AppliedCustomerBillingRate is in aggregation relationship with certain CustomerBillingAccount(s). One CustomerBillingAccount may contain many CustomerBillingAccountBalances which could be associated to and pay for different product charges. Besides designating product charges to certain CustomerBillingAccount(s), we need also designate product charges to certain CustomerBillingAccountBalance(s) directly or indirectly. These designation relationships help to aggregate AtomicAppliedCustomerBillingRate(s) for product usage as certain financial charge and this financial charge is further associated with certain CustomerBillingAccountBalance(s).&lt;br/&gt;CustomerBillingCreditBalance is a subclass of BillingAccountBalance.&lt;br/&gt;Broad scope for CustomerBillingAccountBalance is shown as Figure below.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:35:07 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{343A76C5-F640-4424-BE6C-DA9DA4199430}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.04 - The Makeup of a Device - Illustrative</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1875.png" usemap="#EA1875" border="0" />
+
+<MAP NAME="EA1875">
+<area shape="rect" coords="339,318,454,415" href="EA1937.htm" target="_self">
+<area shape="rect" coords="529,395,685,446" href="./EA4/EA1/EA2251.htm" target="_self">
+<area shape="rect" coords="521,254,677,305" href="./EA4/EA2/EA2260.htm" target="_self">
+<area shape="rect" coords="521,319,677,370" href="./EA4/EA3/EA2268.htm" target="_self">
+<area shape="rect" coords="319,152,475,203" href="./EA4/EA4/EA2291.htm" target="_self">
+<area shape="rect" coords="10,148,166,199" href="./EA4/EA7/EA2315.htm" target="_self">
+<area shape="rect" coords="169,10,319,61" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="506,240,810,476" href="EA1933.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.04 - The Makeup of a Device - Illustrative diagram</div>
+	<div class="ObjectDetailsNotes">At this point, we need to be cognizant of existing standards. M.3100 has defined the Equipment and EquipmentHolder classes, as previously mentioned. Unfortunately, it defined those classes mostly from a logical point-of-view, and failed to take into account important physical characteristics that we need. Therefore, we&#8217;re going to use the concept of &#8220;Hardware&#8221; to represent Equipment, EquipmentHolders and AuxiliaryComponents.&lt;br/&gt;This will pay dividends in the future, and enable us to assign common physical attributes, such as weight, length, and others, to the Hardware class so that its subclasses can inherit them. Note that such aspects are missing from M.3100.&lt;br/&gt;A Device, such as a Router, is in reality represented by a PhysicalDevice, which is made up of different Hardware entities. This enables different users having different use cases to represent the router as either a single physical entity, or as a rich collection of interconnected entities.&lt;br/&gt;PhysicalDevice enables the router to be thought of as a single atomic object. This is necessary for a variety of different use cases. For example, many types of resource planning processes require a single object to represent one or more complex sets of objects. Even though each object in a group of objects can be individually manageable, the group of objects as a whole has meaning. This enables us to refer to the router as, for example, the &#8220;Internet Gateway Router&#8221;.&lt;br/&gt;The individual line cards that are contained within the Router are represented (as we will see) by subclasses of Equipment. Equipment are particular types of Hardware objects, and are related to a particular PhysicalDevice using the consistsOf aggregation. The following will expand on these concepts.&lt;br/&gt;It is important to be able to manage the individual components of a higher-level object. This is the purpose of the Hardware base class. Hardware consists of Equipment (e.g., a LineCard that performs routing), EquipmentHolders (e.g., a Chassis or some other managed entity whose purpose is to &#8220;hold&#8221; Equipment), and AuxiliaryComponents (physical components that are required by the &#8220;Device&#8221; to operate correctly, but whose individual purposes are orthogonal to the main purpose of the device). This is shown in the Figure below.&lt;br/&gt;The difference between Equipment and AuxiliaryComponents are whether or not the physical object performs a function intrinsic to the main function of the Device. This is best understood by way of example. The main function of a Router is to route and forward packets. A PowerSupply is an AuxiliaryComponent, because while it is needed for the proper operation of the Router, it does not directly help in routing and forwarding packets. A LineCard (that provides routing functionality) is an Equipment component, because its purpose is to route and forward packets. Similar examples exist for different types of equipment, where their criteria may be different. For example, instead of whether it routes or forwards packets, the criterion &#8220;does it carry signal&#8221; may be useful to appropriately classify components.&lt;br/&gt;The following Figure shows that what people conceptually think of a Router or a Switch is in reality a set of managed entities. (Again, it is important to remember that while this Addendum uses network device examples for consistency, the principles and models described in this Addendum apply to other types of physical entities as well.) The physical entity that one can pick up and refer to as a Router or a Switch is represented in the following Figure by an instance of the PhysicalDevice class, which is a specific type of PhysicalResource. The PhysicalDevice may consist of zero or more Hardware components, depending on the needs of the user. That is, it is perfectly reasonable for users of this model to use all or parts of it to suit their needs.&lt;br/&gt;Note that the cardinality of the ConsistsOf aggregation is a &#8220;may&#8221;, not a &#8220;must&#8221;, as indicated by the 0..1 cardinality of the composite end and the 0..n on the parts end of the aggregation).&lt;br/&gt;Hardware is an abstract base class for defining managed components that are part of a PhysicalDevice. At this level of abstraction, it consists of three principal classes - EquipmentHolder, Equipment, and AuxiliaryComponent. This enables us to satisfy one of our main requirements, in that we can refer to the Network Device as a whole (using the PhysicalDevice object), or specifically to the components of a Network Device (using entities that are subclasses of Equipment, EquipmentHolder, and AuxiliaryComponent). This latter ability is the basis for constructing Bill of Materials, Spare Inventory, and other applications that require a robust physical component model.&lt;br/&gt;Note that AuxiliaryComponent, Equipment, and EquipmentHolder are all subclasses (i.e., children) of the Hardware entity. This enables these objects to inherit the attributes and relationships of their superclasses (i.e., parents). Thus, instead of having to define three relationships (one each between PhysicalDevice and Equipment, EquipmentHolder and AuxiliaryComponent), all we need to do is to define a single relationship between PhysicalDevice and Hardware. This relationship, ConsistsOf, is inherited by the three subclasses of Hardware, and enables each of these subclasses to be &#8220;contained in&#8221; (or, more precisely, be a part of) a device.&lt;br/&gt;The above model also lays the groundwork for modelling the physical properties of different types of devices. Think again about a Router. A Router is what we refer to as a particular type of &#8220;Device&#8221;. A Switch is another type of Device. Thus, we have the notion that a &#8220;Device&#8221; can be a Router or a Switch. This is fortunate, because we don&#8217;t want to have to go through this entire procedure again for each new type of Device!&lt;br/&gt;Almost all such Devices are Chassis-based Devices, meaning that the Router functionality is based around a chassis that holds Hardware. The AuxiliaryComponents (e.g., a PowerSupply) are necessary for the Router to operate properly, while the Hardware components supply functionality that directly contributes to the basic functions of the Router (i.e., routing and forwarding packets).&lt;br/&gt;Note that there are many different types of Cards &#8211; LineCards, SystemCards, MemoryCards, and so forth. Not all of these Card types are Equipment from the Router&#8217;s point-of-view, because not all of them do routing and forwarding functions. A MemoryCard is a good example of this. We&#8217;ll deal with this added bit of complexity later in the model by more fully developing the difference between Equipment, EquipmentHolder, and AuxiliaryComponent.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:23:12 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0C6EFE1D-B3FF-40c4-9B62-84BFCE9ECC8D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

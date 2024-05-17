@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PPSO.02 - Party Role Product Offering</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2851.png" usemap="#EA2851" border="0" />
+
+<MAP NAME="EA2851">
+<area shape="rect" coords="562,220,677,317" href="EA2897.htm" target="_self">
+<area shape="rect" coords="383,10,562,74" href="./EA1/EA2904.htm" target="_self">
+<area shape="rect" coords="429,467,538,519" href="../../EA9/EA5/EA4005.htm" target="_self">
+<area shape="rect" coords="199,467,361,511" href="../../EA3/EA3/EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="10,344,168,396" href="../../EA4/EA9/EA1/EA1580.htm" target="_self">
+<area shape="rect" coords="44,39,174,85" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="307,134,495,289" href="./EA1/EA2905.htm" target="_self">
+<area shape="rect" coords="636,39,735,87" href="../../EA10/EA1/EA5479.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PPSO.02 - Party Role Product Offering diagram</div>
+	<div class="ObjectDetailsNotes">The Party Role Product Offering ABE has been added as a level 2 ABE within the level 1 Product Offering ABE. Figure PrPo.01 Party Role Product Offering shows the PartyRoleProductOffering entity and its related entities.&lt;br/&gt;Below is a description of each Boolean attribute:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	marketedBy is an indicator that specifies if the PartyRoleProductOffering is marketed by the related PartyRole. For example a Competitor PartyRole may only have this attribute set to true and the other boolean attributes set to false.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	orderTakenBy is an indicator that specifies that the associated PartyRole takes an order for the ProductOffering.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	paymentAcceptedBy is an indicator that specifies that the associated PartyRole accepts payment for the ProductOffering.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	paymentMadeTo is an indicator that specifies that payment is made to the associated PartyRole for the ProductOffering.&#160;&#160;For example, an entrprise may accept payment on behalf of PartyRole and then send the payment to the PartyRole.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	billedBy is an indicator that specifies that the associated PartyRole submits a bill for the ProductOffering.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	postOrderFulfilledBy is used to indicate which PartyRole fulfills the order after it is taken by a PartyRole. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	afterSalesServiceProvidedBy is an indicator that specifies which PartyRole provides the after-sales service.&lt;br/&gt;Originally the orderTakenBy attribute was contained in the PartyRoleProductSpecification entity.&#160;&#160;However it has been moved to PartyRoleProductOffering. This was done because BundleProductOfferings do not have to have a related ProductSpecification so there would be no way to indicate who takes an order for a BundledProductOffering.&lt;br/&gt;Additional attributes could be added to specify other processes responsibilities such as warehousedBy, manufacturedBy, etc.&lt;br/&gt;&lt;br/&gt;Another way of specifying the processes responsibilities, instead of using Boolean attributes, would be to use a relationship with Process.&lt;br/&gt;Some examples:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Amazon takes an order on behalf of Quidsi and also fulfills the order. In this case the attribute postOrderFulfilledBy is set to true for Amazon and false for Quidsi&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Amazon takes on order on behalf of Global Pets, sends the order to Global Pets who finishes the fulfillment of the order. In this case the attribute postOrderFulfilledBy is set to false for Amazon and true for Global Pets.&lt;br/&gt;The PartyRoleProdOffRelationship entity defines relationships between/among PartyRoleProductOffering entities, such as purchase for resell, broker as-is for resale, or ordered from (For example, an enterprise orders resources for its infrastructure from an equipment manufacturer).&lt;br/&gt;There can be many PartyRoleProductOfferings for one ProductOffering, therefore the relationship between PartyRoleProductOffering and AgreementItem is needed to specify which party&#8217;s ProductOffering applies to the AgreementItem such as SLAItem.&lt;br/&gt;An example of how an SLA can be either with the re-seller or with the &quot;underlying&quot; whole seller/manufacturer in a multi-party sell:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	When a tourist from Europe walks into an electronics shop in Hongkong, and buys a Sony camera, she/he is typically given the choice of either taking the standard &quot;warranty agreement&quot; (a kind of SLA), which is an agreement with the shop (the reseller) or exchange it for an &quot;international warranty&quot; that is offered by the original manufacturer, Sony, through its international representatives.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The two agreements have different Terms &amp; Conditions for the end customer of course, and are with two different parties... Tourists will typically choose the international one, as the local one would require them to bring/send the camera back to the shop for inspection.&lt;br/&gt;There is also the need to specify a ProductOfferingPrice with each party&#8217;s ProductOffering.&lt;br/&gt;There are two options to support this need, which can be chosen by an implementer of this part of the SID model:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;1. Using the association between PartyRoleProductOffering and ProductOfferingPrice&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;2. Creating an instance of a ProductOffering for each PartyRole.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/2/2023 6:11:05 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{91156CA3-1178-4a2d-875F-FA7F4D9D14E0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

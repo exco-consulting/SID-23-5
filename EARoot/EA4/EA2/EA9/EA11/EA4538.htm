@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-34 - PolicyRuleSpec</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4539.png" usemap="#EA4539" border="0" />
+
+<MAP NAME="EA4539">
+<area shape="rect" coords="378,265,475,295" href="./EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="369,147,483,209" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="10,236,177,337" href="./EA3/EA4624.htm" target="_self">
+<area shape="rect" coords="536,147,633,177" href="./EA2/EA4610.htm" target="_self">
+<area shape="rect" coords="19,22,160,71" href="./EA3/EA4625.htm" target="_self">
+<area shape="rect" coords="403,10,585,72" href="./EA2/EA4614.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-34 - PolicyRuleSpec diagram</div>
+	<div class="ObjectDetailsNotes">A PolicyRuleSpec is a concrete base class that is used to define the invariant characteristics (attributes, methods, constraints and relationships) of a PolicyRule entity.&lt;br/&gt;The executionStrategy attribute defines the approach used to execute the actions contained in a given PolicyRule. The sequencedActions attribute defines how the ordering of the contained PolicyActions is to be interpreted (e.g., must execute the PolicyActions in the indicated order or not at all). The last three attributes are generic containers that external applications can use to prescribe any limitations on the types of PolicyActions, PolicyConditions, and PolicyEvents. The external application does this by defining the limitations using an OCL expression, and populating these attributes with that OCL expression. This in turn ensures that a given set of PolicyRules carry standard functionality.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 9:25:00 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5BBED585-4B1D-480c-8A1A-DE4A2902E0F6}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

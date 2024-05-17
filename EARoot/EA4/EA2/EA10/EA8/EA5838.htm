@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.01 – Possible Service Provider Spatial Data</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5839.png" usemap="#EA5839" border="0" />
+
+<MAP NAME="EA5839">
+<area shape="rect" coords="5,5,926,548" href="EA5950.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.01 – Possible Service Provider Spatial Data diagram</div>
+	<div class="ObjectDetailsNotes">&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This section of the SID answers the question &#8220;where ?&#8221; and deals with locations in the context of the eTOM, which looks at processes from a Service Provider&#8217;s point of view.&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;&#8220;The eTOM is a business process model or framework that provides the enterprise processes required for a service provider.&#8221; [eTOM]&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;A Service Provider will not be interested in planetary and galactic positioning, our interest in location will be earth centered.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We may not only be interested in places on or near the earth&#8217;s surface however. For example, we may also be interested in undersea locations of submarine cables and in the positions of communications satellites, and airplanes with mobile phone interfaces.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A Service Provider will be interested in the location of many things, and may ask:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where is the customer (more on this later)?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where is our equipment?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where is the fault and where is the nearest person who could repair the equipment?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where did the cyclone pass (and what equipment may have been affected)?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where is growth for this product?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where can we expand our business operations?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where are our service vans and the work sites (to optimize work dispatch)?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where (which shops) do we require products to be shipped?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where do I send the bill for Customer X&#8217;s use of product Y?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where do I need additional employees?&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Who owns this property (to advise of digging)? {note property may be rented, i.e. customer living at property may not be owner}&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Note that the business requirements will not just be Network related but will also be required by marketing, corporate strategic, etc processes.&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;In some cases these locations will be well defined points. In others they may be fuzzily defined regions of interest.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Location model enables us to answer questions like &#8220;What is the nearest network access point to the Customer&#8217;s location that can provide this product?&#8221; Network, Customer and Product Capability should not just be seen as separate location views, but as an integrated view.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;eTOM Requirements&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;While the eTOM has many indirect references that may imply location functionality (e.g. &#8220;product delivery&#8221;) the only explicit location reference in the eTOM processes is in Workforce Strategy (HR &#8211; EM) &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;&#8220;These processes create the strategies needed to ensure that the correct type, quantity and quality of staff will be available in right locations for future business.&#8221; [eTOM]&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The only other eTOM references to location are in the figure &#8220;Services in the ICS Industry are Multiplying&#8221; which has an arrow marked &#8220;Location based services&#8221; and at the start of chapter 1 &#8220;Everything, Everywhere, Everytime&#8221;.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This model will provide a level of Location functionality that could be reasonably be expected to be required by the eTOM use cases.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Customer Location / Location Based Services&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In most cases, we will not know the actual location of a Customer (person). For example, even if we tracked the location of their mobile phone, they may have left it at home or lent it to a friend. Legal reasons may also restrict us from determining a Customer&#8217;s actual location (except in special circumstances &#8211; e.g. emergency calls).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;From a Service Provider view we are probably asking &#8220;Where does the Customer require service?&#8221;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are a set of services called &#8220;Location based services&#8221; [OLS]. These utilize the Customer Premises Equipment (CPE) location to provide additional Customer value. An example may be a service allowing a Customer to call using their mobile phone and find the closest &#8220;Pizza Barn&#8221;. The service could return the three closest Addresses as a SMS message or as WML or send a simple map on a 3G phone, showing the CPE location and the closest fast food locations. Note that this service would use the actual CPE location, not just the cell that the mobile phone is working off (see example 5).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Graphical or Textual?&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This section introduces the concept of spatial representation and algorithms. It is felt that explaining these concepts ahead of the model definitions will make the model easier to understand.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This facet of the SID model will provide for spatial (i.e. map display) manipulation of locations as this is widely used in operations centers, customer service and network planning areas of a Service Provider&#8217;s business.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;From a service Provider&#8217;s point of view, GeoSpatial data can be categorized similar to the layers on a map, as shown in Figure L.01 &#8211; Possible Service Provider Spatial Data below.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 2:40:46 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/3/2022 6:10:38 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{10B28039-1F64-40a7-9733-F68DE1286E5B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

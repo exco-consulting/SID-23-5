@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Ppr.02 - Party Privacy Profile Type overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5609.png" usemap="#EA5609" border="0" />
+
+<MAP NAME="EA5609">
+<area shape="rect" coords="580,394,753,547" href="../../EA9/EA2/EA2/EA3852.htm" target="_self">
+<area shape="rect" coords="832,203,1026,366" href="./EA2/EA5649.htm" target="_self">
+<area shape="rect" coords="18,316,129,366" href="./EA2/EA5651.htm" target="_self">
+<area shape="rect" coords="5,239,142,291" href="./EA2/EA5652.htm" target="_self">
+<area shape="rect" coords="37,49,189,101" href="../EA1/EA5483.htm" target="_self">
+<area shape="rect" coords="332,183,537,386" href="./EA2/EA5650.htm" target="_self">
+<area shape="rect" coords="563,60,717,165" href="./EA2/EA5648.htm" target="_self">
+<area shape="rect" coords="833,438,1008,603" href="../../EA9/EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="142,445,269,550" href="../../EA9/EA2/EA3822.htm" target="_self">
+<area shape="rect" coords="879,40,1026,111" href="../../EA3/EA3/EA1108.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Ppr.02 - Party Privacy Profile Type overview diagram</div>
+	<div class="ObjectDetailsNotes">Thanks to the capacity of RootEntityType / RootEntity that enables the description of any information of the model, we can specify the available options of Privacy for each information concerned by Privacy.&lt;br/&gt;The following Figure gives an overview on how to specify the information concerned by Privacy rules and the Privacy rules themselves.&lt;br/&gt;A PartyPrivacyProfileType specifies for a Party playing a type of PartyRole (PartyRoleSpecification) such as Customer or User and possibly restricted to a context such as a set of ProductOfferings, all the available options that the Party may choose for each information concerned by the Privacy.&lt;br/&gt;A PartyPrivacyProfileType may specify Privacy for several information using PartyPrivacyProfileTypeCharacteristic.&lt;br/&gt;Each PartyPrivacyProfileTypeCharacteristic may specifyies:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	the one or many information concerned by the Privacy (CharacteristicSpecification via RootEntityTypeCharUse),&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	the PartyRoleSpecifications that must apply the Privacy rule (For example, specific rules might be specified about the postal address for Party playing a role of shipping company),&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	and the corresponding Privacy rule (i.e. available choices for the party) using PartyPrivacyProfileTypeCharValue.&lt;br/&gt;A PartyPrivacyProfileTypeCharacteristic has a privacyType such as &#8220;Internal Purpose&#8221;, &#8220;External Purpose&#8221;, &#8220;Internal Retention&#8221; or &#8220;External Retention&#8221;.&lt;br/&gt;If the privacyType is &#8220;Internal Purpose&#8221; or &#8220;External Purpose&#8221;, then the PartyPrivacyProfileTypeCharacteristic specifies the usage purpose of the information concerned by the privacy such as Administration, Marketing, Research&#8230;&lt;br/&gt;The criticityLevel specifies a level of criticity for the set of Personal Identifiable Information (PII) defined by RootEntityTypeCharUse. &lt;br/&gt;Each PartyPrivacyProfileTypeCharacteristic is categorized by a PrivacyCategory for helping Graphical User Interface (GUI) to have a nice presentation for Privacy viewing and configuration.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/24/2023 7:04:56 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5EB12629-2086-4368-A737-1418FF7FAA62}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

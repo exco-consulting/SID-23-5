@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure [ReD-01] Resource ABEs Level 1</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1616.png" usemap="#EA1616" border="0" />
+
+<MAP NAME="EA1616">
+<area shape="rect" coords="18,320,148,400" href="./EA10/EA2440.htm" target="_self">
+<area shape="rect" coords="158,50,288,130" href="./EA11/EA2546.htm" target="_self">
+<area shape="rect" coords="438,50,568,130" href="./EA5/EA2370.htm" target="_self">
+<area shape="rect" coords="18,140,148,220" href="./EA1/EA1634.htm" target="_self">
+<area shape="rect" coords="18,230,148,310" href="./EA7/EA2409.htm" target="_self">
+<area shape="rect" coords="298,230,428,310" href="./EA8/EA2414.htm" target="_self">
+<area shape="rect" coords="438,230,568,310" href="./EA6/EA2404.htm" target="_self">
+<area shape="rect" coords="298,50,428,130" href="./EA4/EA2365.htm" target="_self">
+<area shape="rect" coords="298,140,428,220" href="./EA2/EA1640.htm" target="_self">
+<area shape="rect" coords="438,140,568,220" href="./EA13/EA2557.htm" target="_self">
+<area shape="rect" coords="158,140,288,220" href="./EA9/EA2435.htm" target="_self">
+<area shape="rect" coords="158,230,288,310" href="./EA12/EA2556.htm" target="_self">
+<area shape="rect" coords="18,50,148,130" href="./EA3/EA1834.htm" target="_self">
+<area shape="rect" coords="10,10,576,406" href="EA1615.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure [ReD-01] Resource ABEs Level 1 diagram</div>
+	<div class="ObjectDetailsNotes">The Resource Domain consists of a structured set of ABEs that are used to manage the definition, development, and operational aspects of the information computing and processing infrastructure of a system. It supports the eTOM processes that deal with the definition, development and management of the infrastructure of an enterprise. This includes the components of the infrastructure as well as Products and Services that use this infrastructure.&lt;br/&gt;The Resource Domain has three important objectives. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	To associate Resources to Products and Services and provide a detailed enough set of Resource entities (organized as ABEs) to facilitate this association. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	To ensure that Resources can support and deliver Services offered by the enterprise. Management of resources involves planning, configuration, and monitoring to capture performance, usage, and security information. This also includes the ability to reconfigure Resources in order to fine tune performance, respond to faults, and correct operational deficiencies in the infrastructure. Resources also provide usage information which is subsequently aggregated to the customer level for billing purposes. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	To enable strategy and planning processes to be defined. Entities in the Resource domain may be associated with processes that involve planning new and/or enhanced Services, or even the retirement of Services, offered by the Enterprise.&lt;br/&gt;The following are brief descriptions of each of these ABEs.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Resource Party Roles ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Resource Party Roles ABE contains all PartyRoles related to the Resource Domain such as Technician, ResourceManager.&lt;br/&gt;&lt;b&gt;Resource Specification ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Specification ABE contains entities that define the shared characteristics and behavior of each type of Resource entities. This enables multiple instances to be derived from a single specification entity. In this derivation, each instance will use the shared characteristics and behavior defined in its associated template Resource Strategy &amp; Plan.&lt;br/&gt;&lt;b&gt;Resource ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource ABE contains entities that are used to represent the various aspects of a Resource. This includes four sets of entities that represent: the physical and logical aspects of a Resource; show how to aggregate such resources into aggregate entities that have physical and logical characteristics and behavior; and show how to represent networks, sub-networks, network components, and other related aspects of a network. &lt;br/&gt;&lt;b&gt;Resource Order ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Order ABE contains entities related to a request to provide / update / remove Resources.&lt;br/&gt;&lt;b&gt;Resource Configuration ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The definition of how a Resource operates or functions in terms of CharacteristicSpecification(s) and related ResourceSpec(s), as well as a representation of how a Resource operates or functions in terms of characteristics and related Resource(s). &lt;br/&gt;&lt;b&gt;Resource Usage ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Usage ABE collects Resource consumption data, and generates Resource usage records, for use by other business entities. The entities in this ABE provide physical, logical, and network usage information.&lt;br/&gt;&lt;b&gt;Resource Performance ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Performance ABE collects, correlates, consolidates, and validates various performance statistics and other operational characteristics of Resource entities. It provides a set of entities that can monitor and report on performance. The entities in this ABE provide physical, logical, and performance information. Each of these entities also conducts network performance assessment against planned goals, performs various aspects of trend analysis, including error rate and cause analysis and Resource degradation. Entities in this ABE also manage traffic in a Resource. This includes statistics defining Resource loading, and traffic trend analysis.&lt;br/&gt;&lt;b&gt;Resource Test ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Test ABE contains entities that are used to test PhysicalResources, LogicalResources and CompoundResources. These entities are usually invoked during installation, as a part of trouble diagnosis or after trouble repair has been completed.&lt;br/&gt;&lt;b&gt;Resource Capacity ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Specific ability of Resource domain entities measured in quantity and units of quantity over an extended period.&lt;br/&gt;&lt;b&gt;Stock Item ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Stock Item ABE covers all information needed by the supply chain. It includes: The Stock Item catalogue, The Stock Items stored in a warehouse and The Stock Item Shipments specifying Stock Items movements (receiving or shipping).&lt;br/&gt;&lt;b&gt;Resource Trouble ABE (not fully developed)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Trouble ABE manages problems found in allocated resource instances, regardless of whether the problem is physical or logical. Entities in this ABE detect these problems, act to determine their root cause, resolve these problems and maintain a history of the activities involved in diagnosing and solving the problem. Detecting problems can be done via software (e.g. responding to an alarm) and/or by hardware (e.g. a measurement or probe) and/or manually (e.g. visual inspection). This includes tracking, reporting, assigning people to fix the problem, testing and verification, and overall administration of repair activities.&lt;br/&gt;&lt;b&gt;Resource Strategy and Plan ABE (not fully developed)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Strategy and Plan ABE is used to plan networks and resource elements both initially and for growth. It will coordinate both logical and physical resource growth. Inputs are budgets from business sources, service forecasts, current and projected network utilization, new technologies, and retiring technologies. It handles the lifecycle (installation, modification, removal, and retirement) for both logical and physical resources.&lt;br/&gt;&lt;b&gt;Resource Topology ABE (not fully developed)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Resource Topology ABE contains entities that define physical, logical, and network topological information. This information is critical for assessing the current state of the network, as well as providing information on how to fix problems, tune performance, and in general work with the network (both as a whole and with its components). Each of these topological views provides its own physical, logical, or network related information that can be used to manage one or more layers in a layered network.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">2/28/2023 6:58:29 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{AD2E247A-883B-421e-A0EB-2CA0A2481FBD}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

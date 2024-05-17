@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PRS.02 - Party Revenue Sharing Model</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2981.png" usemap="#EA2981" border="0" />
+
+<MAP NAME="EA2981">
+<area shape="rect" coords="137,475,265,527" href="../../../EA3/EA2/EA985.htm" target="_self">
+<area shape="rect" coords="506,10,728,93" href="./EA5/EA3063.htm" target="_self">
+<area shape="rect" coords="10,22,254,74" href="./EA5/EA3061.htm" target="_self">
+<area shape="rect" coords="786,251,929,335" href="../../../EA9/EA11/EA2/EA4614.htm" target="_self">
+<area shape="rect" coords="540,378,687,425" href="../../../EA3/EA3/EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="545,227,733,274" href="../../EA4/EA1/EA2905.htm" target="_self">
+<area shape="rect" coords="78,301,314,376" href="./EA5/EA3060.htm" target="_self">
+<area shape="rect" coords="258,105,452,228" href="./EA5/EA3059.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PRS.02 - Party Revenue Sharing Model diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows the model part of the ABE.&lt;br/&gt;RevenueSharingModelRelationship provides way to relate models, such as supplier/partner or other party equivalent, alternate, replaces, and so forth. For example, a partner may provide their equivalent of a model to an enterprise to ensure both parties involved are in agreement as to the revenue that will be shared.&lt;br/&gt;PartyRevenueSharingModelInvolvement specifies a party, including an enterprise, who participates in revenue sharing, their type of involvement, and their associated offering(s). The involvement may also apply to one or more ProductSpecificationTypes, and its subclasses ProductLine and ProductCategory, instead of PartyRoleProductOfferings. If the involvement applies to all of a parties&#8217; offerings, then neither association is used. The type of involvement specifies whether revenue is retained by an enterprise and whether a party participates in revenue sharing. For example, an enterprise may charge a listing fee for a party&#39;s offering or offerings as part of an agreement between a party and an enterprise, and an enterprise passes all revenue on to the party for sales of the party&#39;s offering. The party is invoiced separately for the listing fee. For a template revenue sharing model, only an enterprise&#39;s involvement is specified. When a party enters into a revenue sharing agreement and a template is used their involvement is specified. Multiple parties may be specified if the enterprise offers a bundle that is composed of offerings by two or more parties or if multiple party&#39;s offerings are used to create a single offering for an enterprise.&lt;br/&gt;Product Offering Price ABE entities are used to represent amounts of revenue shared. For example, an enterprise may charge 10 euros for an offering and share a flat 4 euros with another party, such as an application developer. For configurable offerings the revenue shared may be dependent on those features chosen by the party who acquires the offering. In this case the revenue shared is also governed by the configuration of the party&#39;s product. It includes ranges expressed in percentages or some other quantitative measure that an enterprise will use to negotiate the aspects of a party revenue sharing model.&#160;&#160;For example, for a flat rate revenue sharing model an enterprise may be willing to share 70% of the product offering price with another party. The range can be based on the processes that an enterprise and a party provide. For example, if an enterprise only accepts an order for an offering while a party performs all other processes, such as fulfilling the order, accepting payment for it, and billing for it, it may be willing to share up to 90 percent of the revenue it receives for the offering.&lt;br/&gt;The association between ProductOfferingPrice and PolicySet specifies what policy or policies govern how revenue is shared. PolicySet contains the revenue sharing rules for different models. For example, there may be rules that specify the revenue shared for various tiers in a tiered type of revenue sharing model.&lt;br/&gt;The various types of revenue sharing models are contained in the technical report TR211 &#8211; Online B2B2X Partnering Step by Step Guide. One point to note is that the flat rate model does not appear to be a model where revenue is shared, because an enterprise purchases a product or products from another party. This is handled via an order placed with the party and the enterprise receiving and paying an invoice.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">3/22/2023 10:08:50 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{6F8D0D65-768A-4677-8566-5D4C746EAD39}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

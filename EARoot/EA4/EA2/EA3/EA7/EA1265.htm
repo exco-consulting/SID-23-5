@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.38 - Loyalty Rule</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1266.png" usemap="#EA1266" border="0" />
+
+<MAP NAME="EA1266">
+<area shape="rect" coords="248,338,436,391" href="../EA4/EA4/EA1230.htm" target="_self">
+<area shape="rect" coords="147,35,302,88" href="../../EA9/EA11/EA1/EA1/EA4591.htm" target="_self">
+<area shape="rect" coords="122,279,270,319" href="../../EA2/EA2/EA1/EA705.htm" target="_self">
+<area shape="rect" coords="10,176,146,229" href="../../EA9/EA4/EA3948.htm" target="_self">
+<area shape="rect" coords="330,11,436,70" href="./EA1/EA1287.htm" target="_self">
+<area shape="rect" coords="243,142,418,195" href="./EA1/EA1288.htm" target="_self">
+<area shape="rect" coords="536,235,672,279" href="./EA2/EA1294.htm" target="_self">
+<area shape="rect" coords="801,358,963,398" href="./EA2/EA1296.htm" target="_self">
+<area shape="rect" coords="734,300,874,338" href="./EA2/EA1295.htm" target="_self">
+<area shape="rect" coords="734,10,896,69" href="./EA2/EA1297.htm" target="_self">
+<area shape="rect" coords="686,142,964,173" href="./EA2/EA1298.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.38 - Loyalty Rule diagram</div>
+	<div class="ObjectDetailsNotes">A LoyaltyRule specifies:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Events triggering the evaluation of the rule (LoyaltyEvent)&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: Every first of a month, a CustomerOrder of Top-Up&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Conditions that have to be checked (LoyaltyCondition)&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: If the invoice amount is above 100 &#8364;, If more than 2 hours of international call&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Actions that should be performed if the condition clause is evaluated to TRUE (LoyaltyAction)&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: Give 50 SMS free, Credit 10 points on the LoyaltyAccount&lt;br/&gt;&lt;br/&gt;Loyalty Rules may result in&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;either rewards directly used / usable by the customer&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: 5% more time on the communications package after 6 months of age, and 10% after one year ...&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;or loyalty earn that are gathered on an account to be used to pay later a ProductOffering&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: 400 points to welcome a subscription then 10 points for every Euro charged. The points collected can be used to buy rewards like a USB stick, 100 SMS&#8230;&lt;br/&gt;The different types of LoyaltyEvent may be event that occurs on BillingAccount (Ex: amount of Invoice, recurring charge), on PartyRole (Ex: CustomerOrder amount), on Products (Ex: monthly international usage volume).&lt;br/&gt;A LoyaltyAction may correspond either to a CustomerOrder (Ex: 100 SMS free), or to an Interaction (Ex: a SMS notifying the 100 SMS free) or to a LoyaltyEarn (Ex: 100 points on the LoyaltyAccount)&lt;br/&gt;Each time a LoyaltyEvent happens, LoyaltyConditions from LoyaltyRules triggered by this type of event are evaluated. &lt;br/&gt;If the result is true, a LoyaltyExecutionPoint is noted tracking the application of the rule and triggering BusinessInteraction, CustomerOrder or LoyaltyEarn. A LoyaltyExecutionPoint is a type of PolicyExecutionPoint.&lt;br/&gt;&lt;br/&gt;Depending on event&#8217;s type used in LoyaltyRule, the LoyaltyProgramProduct will specify entities from which it computes events (BillingAccount, Product&#8230;). The way to specify these boundaries from which loyalty events are collected to calculate the gains is not yet represented in this diagram and needs to be further studied.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 9:32:02 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{63AAF034-8EF6-47b0-B8A4-3B648096256B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

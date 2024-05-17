@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Proj.11 - Work Orders</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4746.png" usemap="#EA4746" border="0" />
+
+<MAP NAME="EA4746">
+<area shape="rect" coords="404,86,535,170" href="EA4758.htm" target="_self">
+<area shape="rect" coords="583,500,794,536" href="./EA9/EA4916.htm" target="_self">
+<area shape="rect" coords="338,500,535,536" href="./EA9/EA4918.htm" target="_self">
+<area shape="rect" coords="501,389,649,425" href="./EA9/EA4917.htm" target="_self">
+<area shape="rect" coords="484,313,649,349" href="./EA9/EA4920.htm" target="_self">
+<area shape="rect" coords="742,19,873,55" href="../EA4/EA3966.htm" target="_self">
+<area shape="rect" coords="518,198,649,234" href="./EA9/EA4921.htm" target="_self">
+<area shape="rect" coords="135,38,299,217" href="./EA3/EA4856.htm" target="_self">
+<area shape="rect" coords="491,10,661,69" href="./EA9/EA4919.htm" target="_self">
+<area shape="rect" coords="743,342,874,401" href="../EA4/EA3949.htm" target="_self">
+<area shape="rect" coords="741,99,872,194" href="../EA4/EA3948.htm" target="_self">
+<area shape="rect" coords="164,335,295,394" href="./EA8/EA4910.htm" target="_self">
+<area shape="rect" coords="312,335,443,490" href="./EA1/EA4815.htm" target="_self">
+<area shape="rect" coords="10,335,141,466" href="EA4781.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Proj.11 - Work Orders diagram</div>
+	<div class="ObjectDetailsNotes">To actually use resources, most organizations will require a formal signed document to authorize the usage. We will call this document a Work Order.&lt;br/&gt;This model uses the Order Pattern by Riehle [Order Pattern]. Figure 3 shows that a WorkOrder may have many WorkOrderItems associated with it. These items would relate to lines on the order.&lt;br/&gt;Each WorkOrderItem may then have zero or more Fulfillments associated with it.&lt;br/&gt;Note that the WorkOrderItem may not equal the WorkOrderFulfillment as there may have been a substitution.&lt;br/&gt;e.g. 3 buckets of red sand on the Order, but 3 buckets of orange sand (an allowable alternative) actually sent&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 10:26:02 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{286F18F9-E29A-4702-8D67-BEC1CE21A54A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

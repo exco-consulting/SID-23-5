@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.22 - HolderComposite in More Detail</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1907.png" usemap="#EA1907" border="0" />
+
+<MAP NAME="EA1907">
+<area shape="rect" coords="137,422,267,467" href="./EA4/EA3/EA2/EA2282.htm" target="_self">
+<area shape="rect" coords="290,422,440,467" href="./EA4/EA3/EA2/EA2281.htm" target="_self">
+<area shape="rect" coords="10,422,114,467" href="./EA4/EA3/EA2/EA2284.htm" target="_self">
+<area shape="rect" coords="351,292,427,339" href="./EA4/EA3/EA2/EA2286.htm" target="_self">
+<area shape="rect" coords="260,292,336,339" href="./EA4/EA3/EA2/EA2280.htm" target="_self">
+<area shape="rect" coords="100,292,252,339" href="./EA4/EA3/EA2/EA2285.htm" target="_self">
+<area shape="rect" coords="195,10,417,66" href="./EA4/EA3/EA2268.htm" target="_self">
+<area shape="rect" coords="134,154,299,229" href="./EA4/EA3/EA2/EA2283.htm" target="_self">
+<area shape="rect" coords="314,154,448,216" href="./EA4/EA3/EA1/EA2275.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.22 - HolderComposite in More Detail diagram</div>
+	<div class="ObjectDetailsNotes">The HolderComposite class represents EquipmentHolders that are made up of other EquipmentHolders (i.e., instances of this class as well as the HolderAtomic base class). This provides the semantics of collecting a set of components, each of which is individually manageable, and being able to manage the set of objects as a whole.&#160;&#160;This containment is modelled using the HasHolders aggregation.&lt;br/&gt;Each HolderComposite element can be a FRU.&lt;br/&gt;A characteristic of this class is that its subclasses are physical objects that have complex cabling and mounting options. This class is meant to differentiate complex holders, like a Chassis, from simple holders, like a Slot. Thus, the cableManagementStrategy attribute is a free-form string that contains information on how the various cables contained in the Chassis, Rack, or other type of HolderComposite object are connected and bundled.&lt;br/&gt;The mountingOptions attribute defines how Equipment in this entity is mounted (e.g., rack-mounted, free-standing, or enclosed in another Chassis). Similarly serviceApproach defines how the entity is serviced (e.g., from the top or front), whether it has sliding trays or removable sides, and/or whether the Frame is moveable (e.g., it has rollers).&lt;br/&gt;The Figure below shows the prominent subclasses of a HolderComposite entity.&lt;br/&gt;The SecureHolder is a type of HolderComposite that serves as the parent for the Rack and Chassis classes. This class generalizes common properties that apply to Racks and Chassis. This class defines various types of locks and alarms, and adds the semantics of being able to indicate if a breach of this entity has been made.&lt;br/&gt;&lt;br/&gt;A Bay is a type of EquipmentHolder that is usually found in optical devices. It has a logical identifier, usually a component of port AIDs in TL1 based switches. A Bay is usually built as a pre-wired hardware assembly that contains a set of shelves and accompanying ancillary equipment. &lt;br/&gt;A Shelf is a type of EquipmentHolder that is usually found in optical devices. It has a logical identifier that is often relative to the Bay that contains the Shelf (i.e., the unique identifier for a Shelf is often a concatenation of the network element identifier, the Bay identifier, and the Shelf identifier). Often, a Shelf is used to contain not just pluggable components (e.g., Cards, Power Supplies, etc.) but also cabling (e.g., both fiber and wire), with optional connections to external fuse, alarm, and other types of panels.&lt;br/&gt;A Rack is a type of SecureHolder that represents an enclosure in which EquipmentHolders, such as Chassis, are placed. Typically a Rack is nothing more than the enclosure, and all the functioning componentry is packaged in the Chassis. The Rack typically serves as the &quot;master enclosure&quot; for Chassis, Shelves and Bays. In addition, Racks can have multiple instances of multiple Devices mounted in them.&lt;br/&gt;A Chassis is a type of SecureHolder that encloses other ManagedPhysicalEntities and provides a definable functionality in its own right, such as a desktop or a network device (e.g., a router or a switch).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:35:42 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CE269801-A51D-4c36-8FBC-1C4EA242CDDD}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

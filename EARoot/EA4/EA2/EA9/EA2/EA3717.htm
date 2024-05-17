@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure As.02a – Properties of an Association</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3718.png" usemap="#EA3718" border="0" />
+
+<MAP NAME="EA3718">
+<area shape="rect" coords="10,10,737,217" href="EA3756.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure As.02a – Properties of an Association diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Meta-Modeling &#8211; Existing Support for Subclasses and Attributes&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The dynamic addition of attributes and subclasses is already supported in the SID via two patterns, EntitySpecification/Entity and the CharacteristicSpecification/CharacteristicValue, sometimes referred to as the Dynamic Object pattern. They will be briefly revisited in the section Error: Reference source not found in this part of the guide book, where inheriting attributes (and associations) will be described.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The use of these two SID patterns is also often referred to as dynamic sub-classing.&#160;&#160;But what does this mean? It means that a subclass of the applicable EntitySpecification and/or a subclass of the applicable Entity are implied, rather than explicitly modeled. The and/or is based on the instances of CharacteristicSpecifications related to the instance of the EntitySpecification.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;If all the CharacteristicSpecValue instances are fixed (cannot be configured), then there is only an implied subclass of the EntitySpecification. If all the CharacteristicSpecValue instances are configurable, then there is only an implied subclass of the Entity. If the CharacteristicSpecValue instances are fixed and configurable, then there are implied subclasses of the EntitySpecification and the Entity.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An application could provide the capability (user interface and logic) to add instances of CharacteristicValue when adding an instance of a RootEntity. This capability would determine if the RootEntityType that describes the RootEntity has any related instances of CharacteristicSpecification. The dynamicAttrAssoc attribute of RootEntityType would be used to determine this.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Implementing the meta-model to support the dynamic addition of classes and subclasses, both implicit and explicit, means that inheriting attributes must be supported. Existing SID entities should be handled by transformation of the information model to the data model by rolling down the super-classes. A representative set of application logic that supports inheritance for dynamically added classes and subclasses is described next.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Application logic can be employed to support inheriting attributes by copying instances of CharacteristicSpecifications and CharacteristicSpecValues to subclasses for dynamically added classes and subclasses, both implicit and explicit. The application would create instances of RootEntityTypeCharUse and RootEntityTypeCharValueUse. If copying, rather than true inheritance, is done, then the ability to change the properties (attributes) of the Characteristic entities of the subclasses should be prevented by the application to avoid inconsistencies. The application could also ask if selected instances of RootEntityTypeCharValueUse should also be created.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For those SID implementer&#8217;s who decide to use a meta-model like the one described here, there is an important point to keep in mind. Existing associations between entities that represent specifications and applications of the characteristics or directly to characteristics are no longer necessary. The section Error: Reference source not found in part of the guide book will further explain this.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Meta-Modeling Associations&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Requirements for meta-modeling associations, like those for entities and attributes, can be gathered by looking at the properties of an association and its roles in a UML tool. Figure As.02a &#8211; Properties of an Association shows properties of an association.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/22/2022 1:43:00 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/6/2022 9:56:54 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{07D85689-0E6D-487a-A271-DB5CCC31C590}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

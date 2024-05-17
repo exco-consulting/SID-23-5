@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.11 - Mapping between the IPDR - SP model and the SID</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4959.png" usemap="#EA4959" border="0" />
+
+<MAP NAME="EA4959">
+<area shape="rect" coords="308,122,437,174" href="./EA2/EA5012.htm" target="_self">
+<area shape="rect" coords="295,508,467,536" href="EA4972.htm" target="_self">
+<area shape="rect" coords="23,508,137,567" href="EA4971.htm" target="_self">
+<area shape="rect" coords="20,353,141,467" href="./EA1/EA4990.htm" target="_self">
+<area shape="rect" coords="22,219,139,294" href="./EA1/EA4999.htm" target="_self">
+<area shape="rect" coords="10,134,151,162" href="./EA2/EA5017.htm" target="_self">
+<area shape="rect" coords="418,219,537,307" href="./EA1/EA4984.htm" target="_self">
+<area shape="rect" coords="361,10,537,38" href="./EA2/EA5014.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.11 - Mapping between the IPDR - SP model and the SID diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure describes the mapping between the IPDR/SP model and the SID.&lt;br/&gt;The Template Block class in the IPDR/SP defines the usage Meta data, it has identification (templateId) and it associates with IPDR Service Specification (schemaName, typeName). The Meta data itself is defined by list of field descriptors (FieldDescriptor) that defines the name and the type of the field.&lt;br/&gt;An instance of Template Block is the usage meta-data and the SID UsageSpecification has exactly the same role.&#160;&#160;It also appears that the FieldDescriptor has exactly the same role as the UsageSpecCharacteristic.&#160;&#160;The Template Block in the IPDR/SP is mapped to the SID UsageSpecification and The FieldDescriptor in the IPDR/SP is mapped to the UsageSpecCharacteristic in the SID.&#160;&#160;The Data entity in the IPDR/SP model is mainly consists of identification (seqNum), association with its template (templateId - instance of TemplateBlock has an id) and the Data entity.&#160;&#160;The data itself is just an opaque array. It can be decoded using the instance of TemplateBlock it associates with (its meta-data).&#160;&#160;The objective of the Data class is to hold the usage data. The Usage entity has the same role and Data attributes n the IPDR/SP which is shown mapped to the SID Usage entity.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 1:03:49 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C23898E5-F903-45b8-B30F-9D5F4AE6E4F3}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

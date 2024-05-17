@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1. The main components of a VNF from a vendor perspective</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1709.png" usemap="#EA1709" border="0" />
+
+<MAP NAME="EA1709">
+<area shape="rect" coords="5,5,847,599" href="EA1745.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1. The main components of a VNF from a vendor perspective diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;TR255B Specification Requirements for Resource Functions, in its section 7 gives an example of an atomic ResourceFunction, a Firewall, which exposes several Features (modelled as ConfigurationFeatures) that are to be used in an intent-based deployment approach.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The reader is invited to refer to this document for a detailed analysis. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The following paragraph is extracted from this document:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Features&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- &lt;font color=&quot;#29313b&quot;&gt;F1: Layer 2 and 3&lt;/font&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- &lt;font color=&quot;#29313b&quot;&gt;Can Target: IP destination address(es), IP source address(es), TCP/UDP destination port(s), TCP/UDP source port(s), Ethernet MAC destination address, Ethernet MAC source address, Inbound firewall, Outbound firewall (egress)&lt;/font&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- &lt;font color=&quot;#29313b&quot;&gt;F2: Work at OSI Layer 4 (stateful firewall)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- F3: Work at OSI Layer 7 (application inspection)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- F4: Tarpit&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- Definition of &#8220;Tarpit&#8221; from Wikipedia: &#8220;A tarpit is a service on a computer system (usually a server) that purposely delays incoming connections. The technique was developed as a defense against a computer worm, and the idea is that network abuses such as spamming or broad scanning are less effective, and therefore less attractive, if they take too long. The concept is analogous with a tarpit, in which animals can get bogged down and slowly sink under the surface, like in a swamp.&#8221;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- F5: Log&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;- F5.C1: Log size in Gbytes&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;/li&gt;&lt;br/&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Further, the following dependencies apply:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;F3 requires F2&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;F2 requires F1&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />In the process of deploying a Firewall RF, the consumer selects the features of his choice.&lt;br/&gt;Once selected, the features are mapped to software deployment units (represented as InstalledSoftware in the model) and associated connectivity among the software deployment units. Further, there needs to be a mapping between the software deployment units and the required compute and storage (HostingPlatformRequirement).&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Mapping to Specialized Business Areas&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;As said above, this proposed model has been generalized and it is expected to be flexible enough to be used for specialized business areas. It can be done in several ways:&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Direct usage of the proposed artefacts, without creating any further derived classes; in that case, it will be &lt;i&gt;instances&lt;/i&gt; of the proposed classes of the general model that will directly be created as needed.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Create more specialized classes inheriting from the proposed classes of the general model, and then using them to create &lt;i&gt;instances&lt;/i&gt; as appropriate.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Make reference to an external model (ex: defined by another SDO) and documenting mapping touch points between the requested classes of the external model and the proposed classes of the general model.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;The &lt;i&gt;instances&lt;/i&gt; created will be the ones of the external model, but the mapping touch points rules will be used as guidelines to elaborate appropriate data models (as input to APIs specification).&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Below, we illustrate how the example of the ETSI-NFV vCPE scenario document can be supported by using the first style above (direct creation of instances of the proposed classes of the general model).&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Example: ETSI-NFV vCPE scenario&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;What can be purchased by a SP from a VNF Vendor&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The diagram below illustrates the composition of the virtual Gateway used in scenario 1 (VNF1 from Vendor1) of the vCPE Use Case. It represents the Vendor perspective.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Vendor1 sells a package instance called vGW Secure. This package ultimately contains software used to implement 4 &lt;i&gt;functions&lt;/i&gt;: Firewall, IP Routing, NAT and DHCP. The SoftwareInformationUnit in the package contains all the appropriate information and data necessary for the deployment on a virtual infrastructure. The deployment process is driven by the deployment structure using Flavors and VDUs.&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are two flavors:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Flavour1 is made of 2 VDUs: &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;VDU1 contains at minimum one software image implementing the 3 functions IP Routing, NAT and DHCP&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;(there may be additional software images covering complementary purposes &#8211; e.g. tracing or logging features, different versions, etc.&#8230;).&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;VDU2 contains at minimum one software image implementing the single function Firewall.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Flavour2 is made of only 1 VDU: &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;VDU3 that contains at minimum one software image implementing the 4 functions IP Routing, NAT, DHCP and Firewall together.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Additional information will indeed be present, for example: &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;to specify the capabilities required by the hosting VM in terms compute/storage/network for each VDU,&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;or to specify the affinity rules between VNFCs (associated to the VDUs).&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Instances of the &#8220;HostingPlatformRequirement&#8221; class would be used for that purpose. We did not show it in the figure below, in order to keep things readable.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In terms of SID domains, only Product and Resource are used: the vendor sells a Product which is associated to a Resource.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;(What the vendor will expose in his catalog)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Note that this exact representation may also be present in the SP system, in the &lt;/i&gt;&lt;b&gt;&lt;i&gt;inventory of&lt;/i&gt;&lt;/b&gt;&lt;i&gt; &lt;/i&gt;&lt;b&gt;&lt;i&gt;vendor&#8217;s solutions&lt;/i&gt;&lt;/b&gt;&lt;i&gt; as acquired, in order to keep track of all the relevant details of the VNF product acquired.&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 9:37:52 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2023 2:24:13 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{164DF0DA-56F5-40c2-8BF4-FBC57227A00D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.15 - ManagedHardware in More Detail</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1893.png" usemap="#EA1893" border="0" />
+
+<MAP NAME="EA1893">
+<area shape="rect" coords="593,351,716,413" href="./EA4/EA4/EA2294.htm" target="_self">
+<area shape="rect" coords="136,169,265,221" href="./EA4/EA4/EA2293.htm" target="_self">
+<area shape="rect" coords="237,11,374,74" href="./EA4/EA4/EA2291.htm" target="_self">
+<area shape="rect" coords="149,356,272,418" href="./EA4/EA4/EA2295.htm" target="_self">
+<area shape="rect" coords="335,156,550,287" href="./EA4/EA4/EA2292.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.15 - ManagedHardware in More Detail diagram</div>
+	<div class="ObjectDetailsNotes">ManagedHardware is a subclass of Hardware, and is an abstract base class that adds additional semantics to the Hardware base class. These semantics are used to provide management information on the hardware. For example, attributes defined by this class can provide the administrative and operational state of the entity, and tell whether it has any alarms. Such attributes are physical in nature, and indicate physical things (e.g., a fiber cut). For most physical administrative and operational states, there is one or more corresponding logical administrative and operational states. ManagedHardware is shown in the Figure below.&lt;br/&gt;The main difference between ManagedHardware and Hardware is that ManagedHardware entities have more than just a physical presence &#8211; they also have physical semantics that describe how the entity is managed. This is why PhysicalConnector is not a type of ManagedHardware &#8211; a PhysicalConnector is managed by physically inserting and removing it.&lt;br/&gt;So, what is meant by physically managing a hardware entity? This is best explained by briefly examining the three attributes of the ManagedHardware class.&lt;br/&gt;The administrativeState attribute is an enumerated integer that describes the current physical state of the ManagedHardware. Examples of this include starting up, shutting down, and in test.&lt;br/&gt;The physicalAlarmReportingEnabled attribute is a Boolean, and defines whether physical alarm reporting for this object instance is enabled or not. Note that some physical entities are not capable of reporting physical alarms, while some are. In most cases, there are corresponding logical alarms. The ManagementEntity class hierarchy defines logical alarms, and correlates them to physical alarms.&lt;br/&gt;The physicalAlarmStatus attribute is an enumerated integer that indicates the occurrence of an abnormal physical condition relating to an object. This attribute may also function as a summary indicator of alarm conditions associated with a specific resource. This attribute expands on the standard ITU semantics and updates them to include eTOM concepts.&lt;br/&gt;The ManagedHardware class has two important subclasses, called PhysicalPort and PhysicalContainer. These are described in the next two sections, respectively.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:29:54 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2F494AC6-5C49-489c-9517-63B6DFA9A282}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

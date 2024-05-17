@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure BPPO.01 - Business Partner Product Order Business Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2931.png" usemap="#EA2931" border="0" />
+
+<MAP NAME="EA2931">
+<area shape="rect" coords="443,409,594,447" href="../EA7/EA1/EA2944.htm" target="_self">
+<area shape="rect" coords="473,252,639,300" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="14,10,186,51" href="../../EA10/EA5/EA5725.htm" target="_self">
+<area shape="rect" coords="73,356,269,393" href="EA2936.htm" target="_self">
+<area shape="rect" coords="707,339,911,376" href="EA2937.htm" target="_self">
+<area shape="rect" coords="440,541,573,585" href="../EA5/EA2927.htm" target="_self">
+<area shape="rect" coords="410,55,525,115" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="672,147,805,196" href="../../EA3/EA5/EA1238.htm" target="_self">
+<area shape="rect" coords="73,152,263,318" href="../../EA3/EA5/EA1237.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure BPPO.01 - Business Partner Product Order Business Entities diagram</div>
+	<div class="ObjectDetailsNotes">A Service Provider might place orders with Suppliers, Partners, etc. This is represented by the BusinessPartnerProductOrder.&lt;br/&gt;BusinessPartnerProductOrder / BusinessPartnerProductOrderItem are sub-classes from the pattern ProductOrder / ProductOrderItem. For further details about ProductOrder / ProductOrderItem refer to the Common Domain guide book section Product Order ABE.&lt;br/&gt;A ProductOrder represents a request used to procure, update or remove one or many Products in the context of a ProductOffering through all its ProductOrderItems.&lt;br/&gt;The particularity of the BusinessPartnerProductOrder is to procure, update or remove Products for the Service Provider even if, for example, the BusinessPartnerProductOrder might be placed by the Business Partner when applying precautionary measures in case of bad debt.&lt;br/&gt;At least one CommunicationInteraction is the source of a BusinessPartnerProductOrder. Then, additional interactions might happen such as the Service Provider asking why his order isn&#8217;t yet delivered or the Business Partner informing the the Service Provider his order is completed.&lt;br/&gt;&lt;i&gt;CommunicationInteractions related to BusinessPartnerProductOrder might not be tracked by the Service Provider.&lt;/i&gt;&lt;br/&gt;A BusinessPartnerProductOrder might refer to an Agreement specifying all what has been approved by the PartyRoles involved in the BusinessPartnerProductOrder.&lt;br/&gt;One or many PartyRoles might be involved in a BusinessPartnerProductOrder / BusinessPartnerProductOrderItem such as Distributor, Holder, Buyer or Product User.&lt;br/&gt;The BusinessPartnerProductOrder and BusinessPartnerProductOrderItems may specify the BusinessPartnerAccount to which the Products&#8217; are charged to.&lt;br/&gt;When BusinessPartnerProductOrder / BusinessPartnerProductOrderItems are not charged to a BusinessPartnerAccount and carry one-time charges, they might be directly paid through one or many BusinessPartnerPayments.&lt;br/&gt;A BusinessPartnerProductOrderItem may need other BusinessPartnerProductOrderItems to be completed; this dependency is represented through the &quot;/BPProductOrderItemRefrencesReferencedBy&quot; relationship.&lt;br/&gt;A BusinessPartnerProductOrder and BusinessPartnerProductOrderItems might be further described by Attachments.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/26/2023 6:47:51 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F152B3FA-497B-4777-A3DF-F558EC845BB5}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

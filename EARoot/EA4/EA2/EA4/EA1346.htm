@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>TIP Service Management ABE</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("TIP Service Management ABE", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">The TMF Interface Program introduced in the Multi-Technology Operations System Interface (MTOSI) 2.0, Service Management interfaces based upon extensions to the SID service model in this ABE. The resulting solution set introduced two new service management activation interfaces, and a service inventory interface.&lt;br/&gt;	&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Introduction&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Note: TMF Interface Program (aka TIP) is legacy stuff to define interfaces and interfaces are now defined by the Open API Program.&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;The TMF Interface Program (aka TIP) introduced in the Multi-Technology Operations System Interface (MTOSI) 2.0, Service Management interfaces based upon extensions to the SID service model. The resulting solution set introduced two new service management activation interfaces, and a service inventory interface:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;The Service Activation interface (SAI) between the Customer Relationship Management (CRM) and Service Management and Operations (SM&amp;O) layers allows for the activation of Customer Facings Services (CFS)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Interactive Service Activation &lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Best-effort Transaction interface	 &lt;/i&gt;Service requests entailing multi-task transaction execution. In this type of interface, the entire transaction execution is completed despite single task failures. &lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Atomic Transaction interface	&lt;/i&gt;This interface has the same operations as the previous one; however, the failure of any single task will incur the termination of the transaction execution and will invoke a roll-back of the preceding task.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Service Order Management interface&#160;&#160;&#160;&lt;/i&gt;Add-on interface to both the Best-effort Transaction or Atomic Transaction interfaces. Provides full exposure and control of the service order associated with the service request over the interface. It depends on the functions provided by the previous interfaces.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;The Service Component Activation interface (SCAI) is an internal SM&amp;O layer interface. It allows for the activation of Service Components, also known as Resource Facing Services (RFSs), given specific service related information defined in a Service Template. The SCAI, contrary to the SAI, has no knowledge of the product domain.&#160;&#160;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;The Service Inventory interface supports the retrieval of service related entities from a Service Inventory repository. &lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The TIP Service Management ABE provides the extensions made to the SID model in support of the new Service Management interfaces introduced. The basic &lt;i&gt;service &lt;/i&gt;and &lt;i&gt;service specification&lt;/i&gt; concepts as defined in this addendum remain unchanged, and are merely enhanced to support the TIP Service Management interfaces.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:04:53 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA645.htm">SID  Map</a>, <a href="./EA1/EA1348.htm">Figure [SeD-01] Service ABEs Level 1</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{5BCA9AC7-ADB4-44c8-81D3-FDB70427E7D9}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">1/10/2022 12:00:46 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+		</ul>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">RefGUID</td>
+				<td width="50%" class="TableRow" valign="top">{C720CCEA-B859-47ef-90EA-4989DB110A91}</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario10321" onclick="parent.toggleDiv('detailsDIVScenario10321','DetailsImageScenario10321')" />Specification:
+						<div id="detailsDIVScenario10321" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">rsa_guid</td>
+				<td width="50%" class="TableRow" valign="top">_4CdsgN4PEd-RSotRaDm1gw</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario10322" onclick="parent.toggleDiv('detailsDIVScenario10322','DetailsImageScenario10322')" />Specification:
+						<div id="detailsDIVScenario10322" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

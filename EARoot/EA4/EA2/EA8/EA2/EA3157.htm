@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.11 - Workforce Employee Reservation&Assignment</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3158.png" usemap="#EA3158" border="0" />
+
+<MAP NAME="EA3158">
+<area shape="rect" coords="346,117,452,164" href="./EA3/EA1/EA3220.htm" target="_self">
+<area shape="rect" coords="512,244,751,291" href="./EA3/EA3208.htm" target="_self">
+<area shape="rect" coords="616,117,804,164" href="./EA4/EA3227.htm" target="_self">
+<area shape="rect" coords="25,244,195,291" href="./EA3/EA3210.htm" target="_self">
+<area shape="rect" coords="5,117,202,164" href="./EA4/EA3226.htm" target="_self">
+<area shape="rect" coords="302,10,428,41" href="../../EA10/EA7/EA5801.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.11 - Workforce Employee Reservation&Assignment diagram</div>
+	<div class="ObjectDetailsNotes">During the investigation of resource availability and agreement with the customer about the appointment (time of visit), the WFM solution needs to reserve the technician and other resources for the Work. &lt;br/&gt;The WorkforceEmployeeReservation records associate a whole Pool or an individual Employee with a Work. Reservation for the time to perform the work is reflected in the association with a Calendar Entry of a WorkSchedule (described below), which can be synchronized with the Appointment&#8217;s Calendar Entry.&lt;br/&gt;With or without an appointment, the employee or pool can generally be reserved for future work tasks for an approximate time period. This is modeled by the validFor attribute.&lt;br/&gt;When it comes to the moment of dispatch, the dispatcher will decide the order of the work tasks assigned to the technician, like optimization of the driving time to enhance the fulfillment rate or the dependency between the work tasks. Then the particular time of the visit will be decided. This is represented by the WorkforceEmployeeAssignment entity, which realizes the WorkforceEmployeeReservation, associating the WorkforceEmployeeRole with Work and Calendar Entry for the exact time of the visit.&lt;br/&gt;Once the Work and its related WorkOrderItem are completed, the available capacity of the pool is updated.&lt;br/&gt;The cardinality of the associations here means an Employee (or Pool) can be reserved or assigned to multiple Works and Calendar Entries. The association from WorkforceEmployeeReservation to WorkforceEmployeePool has a cardinality of 0..1 because one or none of Workforce Employees or Pools can be reserved. In case none is reserved, the record just states that Work can have reservation with a Calendar Entry, meaning a general capacity is reserved for a time slot, without a specific employee or pool yet.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 8:46:29 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A74C8A51-B922-4f01-BF32-A77513D9B381}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

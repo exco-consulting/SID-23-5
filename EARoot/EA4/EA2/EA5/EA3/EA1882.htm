@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.10 - Attributes of a PhysicalResource</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1883.png" usemap="#EA1883" border="0" />
+
+<MAP NAME="EA1883">
+<area shape="rect" coords="10,10,151,138" href="./EA4/EA2246.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.10 - Attributes of a PhysicalResource diagram</div>
+	<div class="ObjectDetailsNotes">&lt;b&gt;Filling in the Details&lt;/b&gt;&lt;br/&gt;We&#8217;re now at the stage where we can add some detail. Given that we are building a Business Model, we will simply strive to identify certain essential attributes and relationships for PhysicalDevice as well as Hardware. We will not define methods, low-level attributes, association classes, and in general all of the detail that fully describe these entities. This detail will be provided in an accompanying System model. This model has already been built and is currently being refined. It will be formalized as part of a future phase of the SID work.&lt;br/&gt;The following rules were used to define the set of attributes and relationships for this model:&lt;br/&gt;Keep to high-level, business-oriented concepts (e.g., while some applications might need to know specific details about a physical object, the purpose of this model is to simply identify the key concepts necessary for the purposes specified in our use cases)&lt;br/&gt;This is intended as a &#8220;minimalist&#8221; model. Subtypes and attributes should be added as required to suit the needs of a particular application. The attributes shown should be considered as suggested, not required, unless they are specified as mandatory.&lt;br/&gt;&lt;b&gt;PhysicalResource attributes&lt;/b&gt;&lt;br/&gt;We&#8217;re now at the stage where we can add some detail. Given that we are building a Business Model, we will simply strive to identify certain essential attributes and relationships for PhysicalDevice as well as Hardware. We will not define methods, low-level attributes, association classes, and in general all of the detail that fully describe these entities. This detail will be provided in an accompanying System model. This model has already been built and is currently being refined. It will be formalized as part of a future phase of the SID work.&lt;br/&gt;The following rules were used to define the set of attributes and relationships for this model:&lt;br/&gt;Keep to high-level, business-oriented concepts (e.g., while some applications might need to know specific details about a physical object, the purpose of this model is to simply identify the key concepts necessary for the purposes specified in our use cases)&lt;br/&gt;Note that these entities represent business concepts in a Service Provider that conforms to the eTOM process model [eTOM] (specifically, the Resource Development and Operations processes).&lt;br/&gt;This is intended as a &#8220;minimalist&#8221; model. Subtypes and attributes should be added as required to suit the needs of a particular application. The attributes shown should be considered as suggested, not required, unless they are specified as mandatory.&lt;br/&gt;Parent attributes are not repeated in their subclasses&lt;br/&gt;Only significant entities are shown in the &#8220;related business entities&#8221; cells&lt;br/&gt;We already introduced the notion of this entity as a superclass of our two main categories of physical objects: Device and Hardware. Hardware defined three types of objects &#8211; Equipment, EquipmentHolder, and AuxiliaryComponent. We abstracted this set of entities into a single entity, called PhysicalResource. This is defined as an abstract base class for describing different types of hardware that constitute a Product. It has two main purposes: (1) to collect common attributes and relationships for all hardware, and (2) to provide a convenient, single point where relationships with other managed objects can be defined.&lt;br/&gt;Now, it&#8217;s time to see if we can discover common attributes that these three types of entities have in common. We&#8217;ll tie this into the concept of a PhysicalResourceSpecification in a minute.&lt;br/&gt;The most obvious types of attributes that physical objects have in common are the set of attributes that define specific characteristics about a given physical object. These include who manufactured it and when, and what the model number of the object is. To this, inventory encourages us to add part number, SKU number, and serial number. &lt;br/&gt;These six attributes are inherited by all subclasses of PhysicalResource.&lt;br/&gt;The key in making the above model extensible and reusable is to use the concept of a Specification. A Specification is a way of defining the invariant characteristics and behavior (attributes and relationships in the Business View, along with methods and constraints in the System View) of a managed entity.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/16/2022 2:20:14 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A3C51A81-CD50-4e40-BE73-BE030580723D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

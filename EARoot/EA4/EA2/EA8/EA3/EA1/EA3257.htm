@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RA.15 - RA Action and Response</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3258.png" usemap="#EA3258" border="0" />
+
+<MAP NAME="EA3258">
+<area shape="rect" coords="392,319,553,347" href="./EA1/EA3276.htm" target="_self">
+<area shape="rect" coords="377,212,567,240" href="./EA1/EA3278.htm" target="_self">
+<area shape="rect" coords="20,319,199,347" href="./EA1/EA3277.htm" target="_self">
+<area shape="rect" coords="10,212,209,240" href="./EA1/EA3279.htm" target="_self">
+<area shape="rect" coords="404,10,540,111" href="../../../EA9/EA4/EA3948.htm" target="_self">
+<area shape="rect" coords="32,10,187,38" href="../../../EA9/EA4/EA3955.htm" target="_self">
+<area shape="rect" coords="424,153,521,181" href="../../../EA9/EA4/EA3968.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RA.15 - RA Action and Response diagram</div>
+	<div class="ObjectDetailsNotes">Once the RevenueAssuranceTroubleTicket is resolved, or during the course of taking one or more actions, a RevenueAssuranceResponse may be created.&#160;&#160;Figure RA.15 depicts the model for RevenueAssuranceResponseSpec and RevenueAssuranceResponse.&lt;br/&gt;The RevenueAssuranceRepsonseSpec represents the different types of responses that can be created as part of a RevenueAssuranceAction.&#160;&#160;The type of responses is governed by the association between RevenueAssuranceActionSpec and RevenueAssuranceResponseSpec.&#160;&#160;The RevenueAssuranceResponseSpec describes the invariant characteristics of a RevenueAssuranceResponse.&#160;&#160;The response is a subclass of BusinessInteraction, and as such, inherits the characteristics of BusinessInteraction, including the ability to relate one response to another.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/3/2022 6:20:25 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B73E8190-1701-4b0d-A70E-1B90B2B7C573}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

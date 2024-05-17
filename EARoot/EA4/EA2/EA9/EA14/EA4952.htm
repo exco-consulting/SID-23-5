@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.08 - Resource Service Product Usage - as different states of the same Usage class</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4953.png" usemap="#EA4953" border="0" />
+
+<MAP NAME="EA4953">
+<area shape="rect" coords="10,141,124,193" href="EA4970.htm" target="_self">
+<area shape="rect" coords="10,10,124,72" href="EA4971.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.08 - Resource Service Product Usage - as different states of the same Usage class diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure describes the model that resource, service and product usage as state of the same ContextUsage class.&lt;br/&gt;The usageState attribute can take on one of the values &quot;resource usage&quot;, &quot;service usage&quot; or &quot;product usage&quot;.&lt;br/&gt;Usage could be still modeled in one of the two approaches described in the Modeling Alternatives subchapter that located inside the &quot;The Usage Information Model&quot; subchapter.&lt;br/&gt;&lt;b&gt;Implementation option&lt;/b&gt;&lt;br/&gt;In practice there is one usage entity that changes its state according to its progress in the rating process (resource usage guided to service usage that eventually guided to product usage). Actually, in most cases it starts its life as service usage (such as voice call CDR which already has the phone number in the record so there it is created in the state of service (phone line) usage) and moves to become in product usage state after guiding to customer and subscriber.&lt;br/&gt;The Resource, Service and Product usage can be implemented in many ways. It could be implemented as-is (each of the entities inherit directly from Usage class and with no real association to the other entity) but this means quite a bit of extra data. But it also can be implemented in many other ways.&lt;br/&gt;Most rating systems implement this usage state transition by simply adding new set of characteristics along the guiding process. For example, a VoIP service usage (usage record in &quot;service state&quot;) might contains the call initiator, the call target and the fact that the service is VoIP (as well as other service characteristics) The guiding process will change the usage record state to be &quot;product state&quot; and simply will add the user information characteristics to this usage record.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 1:18:39 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{9B1490D5-40A8-4aaa-8D1E-07BEAD1FC0E4}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

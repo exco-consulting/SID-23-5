@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-20 - PolicyApp Interactions</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4511.png" usemap="#EA4511" border="0" />
+
+<MAP NAME="EA4511">
+<area shape="rect" coords="197,287,404,326" href="./EA1/EA4580.htm" target="_self">
+<area shape="rect" coords="375,214,492,267" href="./EA1/EA4577.htm" target="_self">
+<area shape="rect" coords="442,10,630,101" href="../EA2/EA3812.htm" target="_self">
+<area shape="rect" coords="75,202,172,254" href="./EA2/EA4609.htm" target="_self">
+<area shape="rect" coords="50,22,197,74" href="../EA2/EA3813.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-20 - PolicyApp Interactions diagram</div>
+	<div class="ObjectDetailsNotes">The purpose of this section is to describe how policy can be used to build a policy based management system. &lt;br/&gt;A PolicyApplication is a special type of entity for use in policy-based management applications.&lt;br/&gt;The ScopedManagedEntities aggregation defines the set of ManagedEntities that are contained in a particular ManagementDomain. &lt;br/&gt;The ScopedPolicyApplication aggregation defines which PolicyApplications are scoped by a particular PolicyDomain. This is an important concept, as this controls what PolicyApplications can work on what ManagedEntities. Note that containment in a ManagementDomain implies the ability for said ManagedEntities to be managed by a particular PolicyApplication. The HasPolicySubDomains recursive aggregation enables hierarchies of PolicyDomains to be constructed. This is particularly useful for associating organizational hierarchies to PolicyApplications.&lt;br/&gt;The logic behind scoping in general, and the ScopedPolicyApplication and ScopedManagedEntities aggregations, is complicated and not suitable to a business discussion.&lt;br/&gt;The PolicyAppInvolvedWith association defines the set of PolicyApplications that are involved with processing policy decisions and performing policy actions on a set of ManagedEntities. Note that this association does NOT imply an action being taken on a ManagedEntity. Rather, it shows that a PolicyApplication is involved with applying policy to a particular ManagedEntity. For example, a policy-based management system may be measuring the performance of a particular ManagedEntity, so that policy can be used to change its configuration if the performance violates an associated SLA. The monitoring PolicyApplication is not applying actions to the ManagedEntity &#8211; rather, it is performing monitoring on the ManagedEntity so that another PolicyApplication can correct the operation of the ManagedEntity if needed.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 8:57:57 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4D5C9732-D86A-4c70-92EE-82582B8B4947}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

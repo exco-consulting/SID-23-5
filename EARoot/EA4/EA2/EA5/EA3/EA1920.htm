@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.29 - Overview of Party and PartyRole</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1921.png" usemap="#EA1921" border="0" />
+
+<MAP NAME="EA1921">
+<area shape="rect" coords="609,356,771,408" href="../../EA8/EA1/EA3132.htm" target="_self">
+<area shape="rect" coords="381,356,566,408" href="../../EA8/EA1/EA3136.htm" target="_self">
+<area shape="rect" coords="456,173,553,225" href="../EA1/EA1638.htm" target="_self">
+<area shape="rect" coords="669,228,851,280" href="../../EA10/EA1/EA8/EA5559.htm" target="_self">
+<area shape="rect" coords="528,232,642,284" href="../../EA8/EA1/EA3134.htm" target="_self">
+<area shape="rect" coords="345,173,442,225" href="../../EA10/EA1/EA8/EA5560.htm" target="_self">
+<area shape="rect" coords="395,232,510,284" href="../../EA10/EA1/EA8/EA5557.htm" target="_self">
+<area shape="rect" coords="615,173,785,225" href="../../EA10/EA1/EA8/EA5556.htm" target="_self">
+<area shape="rect" coords="158,173,280,225" href="../../EA10/EA1/EA5462.htm" target="_self">
+<area shape="rect" coords="5,173,126,225" href="../../EA10/EA1/EA5467.htm" target="_self">
+<area shape="rect" coords="529,10,638,62" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="92,16,201,68" href="../../EA10/EA1/EA5469.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.29 - Overview of Party and PartyRole diagram</div>
+	<div class="ObjectDetailsNotes">This section will outline some of the business entities that interact with business entities defined in the PhysicalResource model. &lt;br/&gt;This has already been referenced briefly above. To recap, Party and PartyRole are needed for a number of important reasons, including:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of an owner of the Device or Hardware&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of the manufacturer of the Device and possibly the manufacturer of some or all of its components&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of who is responsible to administer the Device or Hardware&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of who installed the device&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of what management domain the Device or Hardware is in&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of who in a particular management domain can administer the Resource&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Identification of who last changed the device&lt;br/&gt;The above are exemplary, and identify some of the links between these classes and the physical resource model. The above is not meant to imply that these are the only links between these models.&lt;br/&gt;It is important to realize that the owner of a Device or Hardware is not the same as the person or group that is responsible for administering the Device or Hardware.&lt;br/&gt;While the eTOM talks about the need to administer different types of managed objects, it doesn&#8217;t identify the concepts of owner and administrator. These are needed to support the inventory and other use cases we introduced at the start of this document. Every effort will be made to take this data and feed it back to the eTOM team.&lt;br/&gt;Referring to the SID Party model (in Common guide book), there is an 0..n to 0..n association (implemented as an association class) with a PartyInvolvement attribute that define what responsibility the PartyRole (e.g., customer, provider, employee, management domain) plays. Example responsibilities are owner, lessee, lessor, and administrator. Note that this involvement does not have to be established via an Interaction; there can be a direct relationship that defines this involvement. It is important that the SID not dictate this, so that applications are free to implement the precise semantics of this relationship according to their own needs.&lt;br/&gt;Given this background, we can define additional relationships needed to represent administration and ownership of PhysicalResources.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:55:54 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7F364C5B-E93F-45f0-A453-61EC99FC01A9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

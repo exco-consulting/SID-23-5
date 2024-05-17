@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-12 - Detailed PolicySet</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4495.png" usemap="#EA4495" border="0" />
+
+<MAP NAME="EA4495">
+<area shape="rect" coords="595,10,769,77" href="./EA2/EA4606.htm" target="_self">
+<area shape="rect" coords="301,97,483,159" href="./EA2/EA4614.htm" target="_self">
+<area shape="rect" coords="10,110,151,159" href="./EA3/EA4625.htm" target="_self">
+<area shape="rect" coords="427,234,541,296" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="237,234,334,286" href="./EA2/EA4610.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-12 - Detailed PolicySet diagram</div>
+	<div class="ObjectDetailsNotes">A PolicySet has two attributes. The isMandatoryEvaluation attribute is a Boolean attribute that, if TRUE, signifies that evaluation (and possibly action execution) of this entity is mandatory and must be attempted. If the Mandatory property value of this entity is FALSE, then the evaluation of this entity is considered to be &#8220;best effort&#8221; and may be ignored.&lt;br/&gt;The usage attribute is a free-form string attribute that recommends how this policy object should be used.&lt;br/&gt;The ContainedPolicySets aggregation is used to gather together discrete PolicySet objects to form a group of PolicySet objects. Such a group must share the same DecisionStrategy. Its semantics are implemented by the ContainedPolicySetsDetail association class.&lt;br/&gt;The ContainedPolicySetsDetail association class represents the semantics of the ContainedPolicySets aggregation. It provides additional semantics that enable this grouping of PolicySets to be prioritized and enabled, so that they can interwork with other PolicyRules and PolicyGroups. Note that each object in this aggregation must have the exact same decision strategy. It defines two attributes. The first, enabled, is an enumerated integer. If its value is 1 (which means enabled), then this signifies that this object is enabled for evaluation. If its value is 3 (which means that it is enabled for debugging), then this rule can be used in test or debug scenarios. If its value is 2, then this object is disabled and cannot be used or evaluated.&lt;br/&gt;Note that this object still might end up being disabled, even if this attribute is TRUE. For example, an associated PolicyTimePeriodCondition might evaluate to FALSE, effectively disabling this object. &lt;br/&gt;The second attribute, priority, is a non-negative integer that is used to prioritize PolicyRules among each other, and/or PolicyGroups that are contained within a PolicyRule. Larger integer values indicate higher priority&lt;br/&gt;Priorities apply to PolicySets (e.g., PolicyGroups and PolicyRules) and are to be used at the same level of scoping. That is, if a PolicyGroup contains n PolicyGroups or PolicyRules, the priority of the outermost (or parent) PolicyGroup can be compared with either stand-alone PolicyRules or PolicyGroups (at that same level of nesting).&lt;br/&gt;The default setting of this attribute is zero.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 8:31:10 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{187C9240-05E1-4a17-9DC8-F08D289C1413}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

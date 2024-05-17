@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.12 - Types of Address</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5875.png" usemap="#EA5875" border="0" />
+
+<MAP NAME="EA5875">
+<area shape="rect" coords="88,10,203,94" href="EA5920.htm" target="_self">
+<area shape="rect" coords="941,52,1056,149" href="EA5919.htm" target="_self">
+<area shape="rect" coords="885,521,1078,594" href="./EA1/EA1/EA6006.htm" target="_self">
+<area shape="rect" coords="444,10,621,41" href="./EA1/EA1/EA5996.htm" target="_self">
+<area shape="rect" coords="147,220,312,294" href="./EA2/EA6047.htm" target="_self">
+<area shape="rect" coords="10,404,156,435" href="./EA2/EA6028.htm" target="_self">
+<area shape="rect" coords="38,128,157,159" href="../../EA8/EA1/EA3134.htm" target="_self">
+<area shape="rect" coords="330,315,451,346" href="./EA1/EA1/EA6003.htm" target="_self">
+<area shape="rect" coords="484,218,603,280" href="./EA1/EA1/EA6000.htm" target="_self">
+<area shape="rect" coords="580,120,718,151" href="./EA1/EA1/EA6001.htm" target="_self">
+<area shape="rect" coords="892,244,1016,316" href="./EA1/EA5973.htm" target="_self">
+<area shape="rect" coords="959,380,1056,485" href="./EA1/EA5968.htm" target="_self">
+<area shape="rect" coords="504,354,651,507" href="./EA1/EA1/EA6008.htm" target="_self">
+<area shape="rect" coords="843,380,940,481" href="./EA1/EA5986.htm" target="_self">
+<area shape="rect" coords="174,404,300,435" href="./EA2/EA6044.htm" target="_self">
+<area shape="rect" coords="370,583,533,671" href="./EA1/EA1/EA5997.htm" target="_self">
+<area shape="rect" coords="698,201,872,315" href="./EA1/EA1/EA6009.htm" target="_self">
+<area shape="rect" coords="315,401,465,432" href="./EA1/EA1/EA6005.htm" target="_self">
+<area shape="rect" coords="335,473,446,531" href="./EA1/EA1/EA6004.htm" target="_self">
+<area shape="rect" coords="714,583,869,635" href="./EA1/EA1/EA6002.htm" target="_self">
+<area shape="rect" coords="541,583,709,635" href="./EA1/EA1/EA5998.htm" target="_self">
+<area shape="rect" coords="677,354,823,385" href="./EA1/EA1/EA5999.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.12 - Types of Address diagram</div>
+	<div class="ObjectDetailsNotes">Addresses may have aliases, such as corner properties having more than one street frontage, or properties with rear entrances. We will require, however, that one of the addresses is chosen to be the Principal Address and the others are marked as aliases. Also roads and localities may have name aliases that will lead to address aliases.&lt;br/&gt;We also have &#8220;vanity address aliases&#8221;, where people use a different address to appear to live in a classier suburb. These will be modeled as Address aliases.&lt;br/&gt;A location may have many addresses. An address may also be used as a location name if no distinctive location name (e.g. Buckingham Palace, The Pentagon) exists.&lt;br/&gt;As well as simple &#8220;household&#8221; addresses, we need to be able to handle complex Addresses, which exist where a Property has multiple owners, tenants, access points or facility points. These are handled using Geographic SubAddress.&lt;br/&gt;Examples of places that have complex addresses are:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	private streets&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	caravan parks&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	universities and other large educational institutions&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	hospitals&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	military bases&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	retirement villages and other community developments&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	entertainment / recreational parks&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	marinas&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	(marine) harbors / ports&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	airports&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	resorts&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	shopping centers &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	sporting venues&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	townhouse developments&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	industrial complexes, business/ commercial parks&lt;br/&gt;&lt;br/&gt;It is likely that we will require different Geographic address rules for each country. This is represented by the entity Address Policy and the subclassing of Geographic Address in fig 12. Note that the address rules could be implemented using templates, or policy or rules engines.&lt;br/&gt;&lt;br/&gt;A SubAddress is used for addressing within a property. It may refer to a building, a building cluster, or a floor of a multistory building.&lt;br/&gt;e.g. a property with address 53 Malvern road may have 3 units, with subaddresses unit 1, unit 2 &amp; unit 3.&lt;br/&gt;&lt;i&gt;Note that in figure 12 that a full set of Addresses has not been shown. The example entities have been shown for example only, on how the core model can be extended in particular situations. &lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/27/2023 9:38:45 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B6D98C4F-CEC1-433c-8DBA-B7D16595C36C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

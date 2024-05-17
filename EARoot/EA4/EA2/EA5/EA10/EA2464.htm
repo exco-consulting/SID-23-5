@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SI.02 - Stock Level and Stock Location</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2465.png" usemap="#EA2465" border="0" />
+
+<MAP NAME="EA2465">
+<area shape="rect" coords="619,363,734,438" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="339,9,448,84" href="../../EA6/EA11/EA2802.htm" target="_self">
+<area shape="rect" coords="10,377,171,429" href="../EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="321,369,431,438" href="../EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="11,19,169,102" href="EA2541.htm" target="_self">
+<area shape="rect" coords="613,211,756,270" href="EA2545.htm" target="_self">
+<area shape="rect" coords="286,180,461,299" href="EA2544.htm" target="_self">
+<area shape="rect" coords="14,196,167,267" href="EA2536.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SI.02 - Stock Level and Stock Location diagram</div>
+	<div class="ObjectDetailsNotes">StockLocation represents places where StockItems might be stored.&lt;br/&gt;A StockItemStockLevel represents the Stock Level of a StockItem stored in a StockLocation and available for SalesChannels.&lt;br/&gt;A StockItemStockLevel might be:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Available for sale to customers limited to SalesChannels&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Available for use to build the Network or to provide furniture to employees&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Returned: StockItems received back from the Customer that must be checked before being available such as rented material returned&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Damaged: StockItems identified as damaged during a reception from a supplier or returned as damaged by a Customer or Employee&lt;br/&gt;&lt;i&gt;Note: attributes starting with a slash (&#8220;/&#8221;) correspond to the result of a calculation. For example, /bookedQuantity is calculated adding all quantity booked and /quantity is calculated adding 1 for each Resource related to the StockItemStockLevel.&lt;/i&gt;&lt;br/&gt;A StockItemStockLevel if the quantity is non-zero is always composed of Resources.&lt;br/&gt;A Resource might have a serialNumber. Today in SID, only PhysicalResource, Equipment (sub-class of PhysicalResource) and InstalledSoftware (sub-class of LogicalResource) may have a serialNumber.&lt;br/&gt;Proposal: move serialNumber attribute at Resource Business Entity as a CompoundResource may also need a serialNumber.&lt;br/&gt;Booking or Replenishment requests might be formulated concerning a StockItemStockLevel:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Booking request: a booking request might come from a CustomerProductOrder in progress or simply from a salesperson that plan to place a huge quantity to a Customer. It carries a valid period to avoid freezing the stock.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Replenishment: a replenishment request is triggered when the quantity is under the reorderLevel. The status is &#8220;In progress&#8221; and the end date (from validPeriod) is specified when a corresponding purchase or movement from one StockLocation to another has been triggered.&lt;br/&gt;These requests might be cancelled (for example if the Customer abort his order).&lt;br/&gt;A StockItemRequest might be &#8220;Received&#8221; if the corresponding StockItemShipment is completed and the content has not yet been checked.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">3/8/2023 2:47:08 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CECB35A7-EE52-4c69-8D42-B5427B5B76BA}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

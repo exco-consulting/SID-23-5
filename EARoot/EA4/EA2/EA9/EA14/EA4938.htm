@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.01 - Sub-class of Usage class</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4939.png" usemap="#EA4939" border="0" />
+
+<MAP NAME="EA4939">
+<area shape="rect" coords="10,138,146,239" href="EA4974.htm" target="_self">
+<area shape="rect" coords="18,10,132,70" href="EA4971.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.01 - Sub-class of Usage class diagram</div>
+	<div class="ObjectDetailsNotes">Put simply, usage is how much product is used, by whom is it used, where and when is it used and circumstances under which it is used. Normally, when a usage event occurs, it is stored in a network element, for instance in a switch, router, gateway or in an application system. Resources (applications, network and computing capabilities) usually store usage data in proprietary formats that are not understood by external systems, such as billing systems. Depending on the polling strategy, a mediation engine connects to resources, collects usage data and formats them into a format that is understood by the billing system. Outputs of a mediation engine are Usage Detail Records (UDRs). Examples of UDRs are Call Detail Records (CDRs &#8211; used to describe usage details of voice call services) and Internet Protocol Detail Records (IPDRs &#8211; used to describe usage details of Internet Protocol based services). In this document we will use the Usage abstract business entity to describe any resource-, service- or product-based usage that the external system can read, update and process.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Alternative 1&lt;/b&gt;&lt;br/&gt;Specific types of Usage can be either modeled as set of attributes in specific sub-class of Usage or as specific instance of UsageSpecification (including its specific set of UsageSpecCharacteristics)&lt;br/&gt;For example: service usage such as voice call that is characterized by:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;originationAddress - An origination address (Who),&lt;/li&gt;&lt;li&gt;destinationAddress - A destination address (Who),&lt;/li&gt;&lt;li&gt;time - A time of a day the call was connected (When),&lt;/li&gt;&lt;li&gt;duration - a duration of the call (When),&lt;/li&gt;&lt;li&gt;callType - A call type (What), &lt;/li&gt;&lt;li&gt;locations - Connection locations of the call (Where) and &lt;/li&gt;&lt;li&gt;cause - A cause of event recording (Why).&lt;/li&gt;&lt;/ul&gt;<br />This alternative can be modeled as sub-class of Usage class as shown in the following Figure.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 12:52:19 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{67C3AF41-D838-4072-8276-B87392D1642E}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

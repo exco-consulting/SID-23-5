@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-18 - Simple PolicyCondition</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4507.png" usemap="#EA4507" border="0" />
+
+<MAP NAME="EA4507">
+<area shape="rect" coords="324,61,499,121" href="./EA5/EA2/EA4655.htm" target="_self">
+<area shape="rect" coords="99,10,308,69" href="./EA5/EA2/EA4651.htm" target="_self">
+<area shape="rect" coords="538,241,635,293" href="./EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="125,144,239,196" href="./EA5/EA2/EA4652.htm" target="_self">
+<area shape="rect" coords="529,121,643,193" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="525,362,656,414" href="./EA5/EA4/EA4670.htm" target="_self">
+<area shape="rect" coords="213,272,381,331" href="./EA5/EA2/EA4653.htm" target="_self">
+<area shape="rect" coords="10,272,179,326" href="./EA5/EA2/EA4654.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-18 - Simple PolicyCondition diagram</div>
+	<div class="ObjectDetailsNotes">A PolicyCondition is an abstract base class that represents how to form the condition clause of a PolicyRule. This class can be used to represent rule-specific or reusable policy conditions, which are discussed in the sub-section titled Reusable vs. Ad-Hoc Policy Entities later in this section.&lt;br/&gt;Policy conditions are of the form:&lt;br/&gt;&#160;&#160;&#160;&#160;{variable, operator, value}&lt;br/&gt;where the operator is usually the MATCH operator, but could be another type (e.g., compare) of operator. This gives the semantics of &#8220;IF the condition is TRUE (or FALSE)&#8221;.&lt;br/&gt;The subclasses of PolicyCondition, along with its recursive aggregation, enable simple and compound (e.g., nested) PolicyConditions to be supported by the same structure.&lt;br/&gt;The ContainedPolicyConditions aggregation is used for two distinct purposes. First, it is used to gather together discrete PolicyConditions to form a PolicyCondition clause. In this usage, a set of individual PolicyConditionAtomic objects are aggregated by one or more PolicyConditionComposite objects.&lt;br/&gt;The second use is to form compound PolicyConditions. In this case, the PolicyConditionAtomic object aggregates PolicyConditionAtomic and/or PolicyConditionComposite objects. The former provides a simple nested PolicyCondition, while the latter provides structure for grouping the sub-conditions. The reason that these two types of entities exist is to provide different evaluation semantics for different types of conditions. This is beyond the scope of this Addendum, but is covered in the system view of the policy model.&lt;br/&gt;&lt;i&gt;Note that the composite pattern was explicitly not used, so as to enable these rich semantics.&lt;/i&gt;&lt;br/&gt;&lt;b&gt;PolicyConditionAtomic&lt;/b&gt;&lt;br/&gt;A PolicyConditionAtomic object is the base class for all simple policy conditions. A simple policy condition consists of a single Boolean clause, which is used to test a single condition. This consists of a single occurrence of a PolicyStatement.&lt;br/&gt;This design relies on the PolicyStatement to supply the actual terms to make up the condition clause. Thus, since everything is normalized to a condition clause, no subclasses of PolicyConditionAtomic are needed. Instead, subclasses of the appropriate PolicyStatement classes are provided.&lt;br/&gt;This class has three attributes. The first, conditionSequenceNumber, is a non-negative integer and represents the particular sequence in which this element is parsed as part of the overall policy structure. This will allow a policy engine to reference externally supplied arguments to this object as it is evaluated.&lt;br/&gt;The hasEvaluated attribute is an enumerated integer that is set by a policy application to define the state of evaluation of this policyCondition. This is crucial for realizing the semantics of the finite state machine.&lt;br/&gt;Finally, the hasSubConditions is a Boolean attribute that, if TRUE, signifies that this PolicyCondition has one or more sub-conditions. Sub-conditions are used to enforce a hierarchical nesting of conditions, so that parent conditions may control the evaluation and other semantics of the sub-conditions that they contain.&lt;br/&gt;&lt;b&gt;PolicyConditionComposite&lt;/b&gt;&lt;br/&gt;A PolicyConditionComposite entity consists of one or more PolicyConditions contained inside a higher-level PolicyConditionComposite entity. This is also called a compound PolicyCondition.&lt;br/&gt;Conceptually, this is a stand-alone object that consists of one PolicyCondition that provides an overall context for either a nested or a group of subordinate PolicyConditions to be evaluated.&lt;br/&gt;The PolicyConditionComposite class is designed to be an intelligent container. The PolicyConditionComposite class is the base class for all complex policy conditions. A complex policy condition consists of an aggregation of PolicyConditionAtomic and/or PolicyConditionComposite objects, which in turn form a complex Boolean statement. It is important to note that such an object still evaluates to a single Boolean TRUE or FALSE value.&lt;br/&gt;The conditionIsCNF attribute is used to define the overall structure of the PolicyCondition. If this attribute is TRUE, then the structure is defined to be conjunctive normal form (i.e., an AND of Ors). Otherwise, it is disjunctive normal form (an OR of ANDs).&lt;br/&gt;The PolicyConditionRuleDetails class is used to implement the semantics needed for the PolicyConditionInPolicyRule aggregation. This aggregation defines the set of PolicyConditions that are contained in this PolicyRule. In other words, this class describes how the overall condition clause appears to the PolicyRule.&lt;br/&gt;In contrast, the ContainedPolicyConditionDetails class is used to implement the semantics needed for the ContainedPolicyConditions aggregation. This aggregation defines the set of PolicyConditions that are contained in this PolicyCondition.&lt;br/&gt;Note that the ContainedPolicyConditionDetails class and the PolicyConditionRuleDetails class have conceptually the same attributes. This is because they both provide semantics to form a condition expression. The difference lies in their placement relative to the PolicyRule class. That is, the ContainedPolicyConditionDetails class is used to combine individual expressions within a condition clause, whereas the PolicyConditionRuleDetails class is used to describe how the completed condition clause appears to the PolicyRule. These attributes are described in the Data Dictionary section of this Addendum.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 9:00:02 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E534C1D2-2659-46f7-8B04-56E2F6B0F816}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

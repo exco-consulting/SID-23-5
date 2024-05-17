@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.12 - Applied Customer Billing Rate overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA759.png" usemap="#EA759" border="0" />
+
+<MAP NAME="EA759">
+<area shape="rect" coords="762,240,912,347" href="../../EA7/EA12/EA3084.htm" target="_self">
+<area shape="rect" coords="827,20,954,72" href="../EA7/EA800.htm" target="_self">
+<area shape="rect" coords="624,142,807,219" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="271,12,418,71" href="../../EA9/EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="86,5,201,89" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="10,142,276,205" href="./EA1/EA791.htm" target="_self">
+<area shape="rect" coords="401,166,595,271" href="EA778.htm" target="_self">
+<area shape="rect" coords="226,338,480,390" href="EA784.htm" target="_self">
+<area shape="rect" coords="488,338,681,390" href="EA783.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.12 - Applied Customer Billing Rate overview diagram</div>
+	<div class="ObjectDetailsNotes">The AppliedCustomerBillingRate business entity represents an applied billing rate assigned to the CustomerBillingAccount. &lt;br/&gt;AppliedCustomerBillingRates are created before or during the billing cycle by the rating or billing process. Its creation can be governed by ProductPriceRules.&lt;br/&gt;Each applied billing rate is either atomic or composed of other applied rates. This is very useful for displaying AppliedCustomerBillingRates in the CustomerBill. &lt;br/&gt;For Financial purposes, however, the composite/atomic pattern is inappropriate since the AppliedCustomerBillingRate may be aggregated more than once (see example in Figure CE.01) and therefore FinancialCharge is presented which aggregates each AtomicAppliedCustomerBillingRate exactly once for reporting to the financial systems.&lt;br/&gt;The CompositeAppliedCustomerBillingRate represents the result of a sum or subtractions of one or more other applied rates. It is formed by aggregating other AppliedCustomerBillingRates (through sum or subtraction operation) that may be either Composite or Atomic AppliedCustomerBillingRates. &lt;br/&gt;The main purpose of the CompositeAppliedCustomerBillingRate is to represent an aggregated view of comprising AppliedCustomerBillingRates that can be referenced by other AppliedCustomerBillingRates, for example, by AppliedCustomerBillingTaxRate.&lt;br/&gt;AppliedCustomerBillingRate is described by AppliedCustomerBillingRateSpec, and it is associated with dynamic Characteristics. This is due to the fact that each type of AppliedCustomerBillingRate may carry different Characteristics based on service type, line of business or other parameters. &lt;br/&gt;Each AppliedCustomerBillingRate is attributable to a unique CustomerBillingAccount. Before being billed it can be already assigned to a future billing cycle (PartyBillingCycle).&lt;br/&gt;When it is billed, it is presented on a unique CustomerBill.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 7:01:56 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{89B85B27-B35D-453a-9BCE-0AD99FE8A4B4}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

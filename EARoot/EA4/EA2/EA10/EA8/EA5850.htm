@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.05 - Address</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5851.png" usemap="#EA5851" border="0" />
+
+<MAP NAME="EA5851">
+<area shape="rect" coords="309,47,475,126" href="EA5959.htm" target="_self">
+<area shape="rect" coords="106,281,265,309" href="./EA1/EA1/EA5996.htm" target="_self">
+<area shape="rect" coords="662,281,829,358" href="./EA2/EA6047.htm" target="_self">
+<area shape="rect" coords="397,149,538,252" href="../../EA5/EA3/EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="704,193,801,245" href="./EA2/EA6039.htm" target="_self">
+<area shape="rect" coords="17,10,181,72" href="EA5958.htm" target="_self">
+<area shape="rect" coords="87,200,220,239" href="./EA1/EA5977.htm" target="_self">
+<area shape="rect" coords="10,382,129,445" href="./EA1/EA1/EA6000.htm" target="_self">
+<area shape="rect" coords="10,518,129,546" href="./EA1/EA1/EA6003.htm" target="_self">
+<area shape="rect" coords="397,382,543,434" href="./EA1/EA1/EA6001.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.05 - Address diagram</div>
+	<div class="ObjectDetailsNotes">This model defines Address as:&lt;br/&gt;&lt;i&gt;&#8220;An address is a structured textual way of describing how to find a Location. It is usually composed of an ordered list of Location names based on context specific rules.&#8221;&lt;/i&gt;&lt;br/&gt;Address is split up into Geographic Address and Local Address. Geographic Addresses describe Geographic Locations and Local Addresses describe Local Locations.&lt;br/&gt;Geographic Address caters for Property and (physical) postal Addresses. &lt;br/&gt;Geographic Sub Address caters for Property Sub Addresses.&lt;br/&gt;Local Address caters for a level of granularity smaller than Geographic Address&lt;br/&gt;While it may be possible to derive a Geographic Address from a map point using Geographic Location names [Hay], there are advantages in storing Geographic Address as a separate entity. &lt;br/&gt;Geographic Addresses may be required:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	if the Address cannot always be calculated reliably from a map (e.g. to Post Office standards)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	if a spatial engine is not available&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	if suitable spatial street, suburb, post code data is not available&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	for logical addresses (e.g. PO Box)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	to achieve required response times. It takes a lot of computation &amp; spatial facilities to derive the address from a map position, so storing it redundantly as text makes sense (easy for selection etc.)&lt;br/&gt;&lt;br/&gt;Country specific standards should be implemented using Policies, Templates &amp; Rules.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/27/2023 9:39:03 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{01ED9C24-0EC5-469c-9CE3-6E6D9466C6FC}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

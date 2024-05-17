@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure BPPO.02 - Business Partner Product Order Item Business Entities overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2933.png" usemap="#EA2933" border="0" />
+
+<MAP NAME="EA2933">
+<area shape="rect" coords="449,122,501,153" href="EA2935.htm" target="_self">
+<area shape="rect" coords="10,282,130,334" href="../EA7/EA1/EA2944.htm" target="_self">
+<area shape="rect" coords="33,191,148,229" href="../../EA3/EA4/EA3/EA1219.htm" target="_self">
+<area shape="rect" coords="307,266,472,483" href="EA2937.htm" target="_self">
+<area shape="rect" coords="576,527,737,579" href="../../EA9/EA5/EA1/EA4017.htm" target="_self">
+<area shape="rect" coords="16,436,131,476" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="631,277,783,329" href="../../EA3/EA8/EA1/EA1309.htm" target="_self">
+<area shape="rect" coords="18,353,129,405" href="../../EA10/EA7/EA5796.htm" target="_self">
+<area shape="rect" coords="666,458,800,506" href="../EA5/EA2927.htm" target="_self">
+<area shape="rect" coords="677,355,771,403" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="620,56,726,108" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="315,60,429,107" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="100,60,192,111" href="../../EA3/EA4/EA1189.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure BPPO.02 - Business Partner Product Order Item Business Entities overview diagram</div>
+	<div class="ObjectDetailsNotes">One or many PartyRoles might be involved in a BusinessPartnerProductOrder / BusinessPartnerProductOrderItem such as Distributor, Holder, Buyer or Product User.&lt;br/&gt;Each BusinessPartnerProductOrderItem requires an action (AllowedProductAction) on a ProductSpecification or a ProductOffering.&lt;br/&gt;The configuration required is described by the related Product even if it isn&#8217;t delivered yet. The prices applicable are related to the Product (ProductPrice).&lt;br/&gt;To deliver the corresponding Product, the Place to deliver and Appointment(s) might be needed. An Appointment is an arrangement to do something or meet someone at a particular time and location.&lt;br/&gt;A BusinessPartnerProductOrderItem may also specify the commitment chosen by the Service Provider (i.e. CommitmentTermOrCondition).&lt;br/&gt;The BusinessPartnerProductOrderItems may specify the BusinessPartnerAccount to which the Products&#8217; are charged to.&lt;br/&gt;When BusinessPartnerProductOrderItems are not charged to a BusinessPartnerAccount and carry one-time charges, they might be directly paid through one or many BusinessPartnerPayments.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">3/17/2023 4:01:00 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{04D0A582-0382-4faf-B08B-5DFB911160C4}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.12 - Use of Resource Function in Information Framework Models (OLD RS.02)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1679.png" usemap="#EA1679" border="0" />
+
+<MAP NAME="EA1679">
+<area shape="rect" coords="469,282,624,334" href="./EA3/EA3/EA2/EA1808.htm" target="_self">
+<area shape="rect" coords="197,425,384,477" href="./EA4/EA1816.htm" target="_self">
+<area shape="rect" coords="678,213,856,281" href="./EA3/EA3/EA2/EA1812.htm" target="_self">
+<area shape="rect" coords="23,523,197,575" href="./EA4/EA1818.htm" target="_self">
+<area shape="rect" coords="806,5,1030,145" href="../EA3/EA3/EA2/EA1/EA2057.htm" target="_self">
+<area shape="rect" coords="859,161,1075,213" href="../EA3/EA4/EA2247.htm" target="_self">
+<area shape="rect" coords="847,334,1086,386" href="./EA3/EA3/EA2/EA1809.htm" target="_self">
+<area shape="rect" coords="405,41,606,93" href="./EA2/EA1767.htm" target="_self">
+<area shape="rect" coords="480,377,660,429" href="./EA3/EA3/EA2/EA1811.htm" target="_self">
+<area shape="rect" coords="191,297,358,349" href="./EA3/EA1771.htm" target="_self">
+<area shape="rect" coords="12,150,412,202" href="./EA3/EA1776.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.12 - Use of Resource Function in Information Framework Models (OLD RS.02) diagram</div>
+	<div class="ObjectDetailsNotes">A ResourceFunctionSpec specifies a function as a behavior to transform inputs of any nature into outputs of any nature independently from the way it is provided. It is typically created by a function designer who may not have specific knowledge on deployment architecture (for example using English text explanations with diagrams, like RFC standards, or preferably a machine interpretable language).&lt;br/&gt;The realization/deployment of a ResourceFunctionSpec may be achieved by different ways; either SoftwareSpecification, PhysicalBlackBoxSpec or SoftBlackBoxSpecification.&lt;br/&gt;Examples: manually or automated by software or hardware implementing algorithms etc.&#8230; without any impact on the definition of the functions itself.&lt;br/&gt;A SoftwareSpecification specifies properties or associated information that characterizes a software, such as:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	the release number, the status of the release, license conditions&#8230;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	hosting platform requirements such as OS, disk and memory space&#8230;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	input and output configuration and requirements&lt;br/&gt;and includes all files required for deployment and installation such as installation manager.&lt;br/&gt;&lt;br/&gt;SoftBlackBoxSpec is a box with embedded software in it and PhysicalBlackBoxSpec is a box with any other internal mechanism realizing the function.&lt;br/&gt;A SoftConnectionPointSpec, resp. an ElectronicConnectionPointSpec are realization of Connection Points either as software Programming Interfaces (API) or as Electronic interface (signal processing).&lt;br/&gt;HostingPlatformRequirementSpec is used to represent the requirements that must be fulfilled by the platform that will run the software described in the SoftwareSpecification. These dependencies might include software libraries and packages as well as computing and network resources like CPU and memory.&lt;br/&gt;The derived association /SoftwareSpecificatonRequires is used to document the set of requirements of a platform which can host the concerned software.&lt;br/&gt;A SofwareSupportPackage represents the package acquired by a consumer from a software vendor. It can be materialized as one or several files (data) downloaded online or copied on a physical support. It contains all files required for deployment and installation such as installation manager and at minimum, one of the files constitutes the set of machine readable instructions that will be executed automatically after it is installed.&lt;br/&gt;An InstalledSoftware (renaming the Software concept from previous releases) consists of encoded information or computer instructions deployed on a machine such that it can be executed. An InstalledSoftware is a SoftwareSpecification deployed using the SoftwareSupportPackage and HostingPlatformRequirements.&lt;br/&gt;Each InstalledSoftware specifies their input and output respectively with SoftConnectionPoints.&#160;&#160;&lt;br/&gt;The attributes shown for InstalledSoftware should be contained in a SoftwareSpecification entity, because their values don&#8217;t change from one instance of the same &#8220;type&#8221; of Software to another.&#160;&#160;Also, the association to Language should be moved to a SoftwareSpecification entity.&#160;&#160;The Language(s) supported by instances of the same &#8220;type&#8221; of Software don&#8217;t change from one instance to another.&#160;&#160;Additionally, the 1.* association should be changed to a * since an instance of Language does not have to be associated with an instance of Software or a SoftwareSpecification.&lt;br/&gt;&lt;i&gt;Note: the Software entity has been renamed InstalledSoftware in SID 17.0.&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;A ConfigurationFeatureSpec is a type of EntitySpecification.&lt;br/&gt;It is used to expose one or several ResourceFunctionSpecs to a consumer in such a way that it is easier to configure these RFSpecs from a consumer view point, at the deployment stage (intend based deployment as opposed to detailed based deployment).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Some ConfigurationFeatureSpec may be mandatory while others can be selected or not by the consumer (for a given instantiation).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	ConfigurationFeatureSpec may have characteristics which are settable by the consumer (at instantiation time and/or during the lifetime of the ResourceFunction).&lt;br/&gt;The following diagram represents the main Business Entities related to ResourceFunctionSpec and their relationships:&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">1/21/2023 6:23:11 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CF4E06ED-A09D-4c64-B562-DD7FFD3E647B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

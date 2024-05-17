@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-13 - Common Evaluation Semantics for PolicyGroups and PolicyRules</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4497.png" usemap="#EA4497" border="0" />
+
+<MAP NAME="EA4497">
+<area shape="rect" coords="10,10,512,433" href="EA4559.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-13 - Common Evaluation Semantics for PolicyGroups and PolicyRules diagram</div>
+	<div class="ObjectDetailsNotes">Prioritization among policy rules provides a basic mechanism for resolving policy conflicts.&lt;br/&gt;Common behavior for PolicyGroups and PolicyRules (in this view, this is shown as common attributes; in the system view, it includes other common artifacts) is defined using a PolicySet. One of the most important common behaviors that is defined for a PolicySet is its ability to treat PolicyRules and PolicyGroups in a common way when evaluating a decision tree.&lt;br/&gt;For example, Figure below shows an example where nodes are made up of both PolicyGroups as well as PolicyRules&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The figure shows three hierarchies of PolicySets. The first hierarchy consists of PolicyRuleA, PolicyGroup1, PolicyGroup2, and PolicyRuleB. The second hierarchy consists of PolicyRule1-1, PolicyRule1-2, PolicyGroup1A, and PolicyRule2-1. The third hierarchy consists of PolicyRule1A-1.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;PolicySets are evaluated in hierarchies, with the highest priority (e.g., the PolicySet that is most important to the business, or the PolicySet that should be executed in the event of a conflict) being executed first. In other words, the absolute priority of a given Policyset isn&#8217;t important initially &#8211; we instead look at the priorities of the PolicySets at the same level in the hierarchy. Therefore, in our first hierarchy, the execution order is PolicyRuleA, PolicyGroup1, PolicyRuleB, and PolicyGroup2, because they are all at the same hierarchy, and their priorities are 10, 7, 5, and 3, respectively.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;PolicyRuleA will execute first. Next in priority is PolicyGroup1. Since it is a PolicyGroup, we must stop and look into its contents to figure out what should be executed in what order, since a PolicyGroup can&#8217;t be executed by itself. Note that the contents of PolicyGroup1 will all execute before the contents of PolicyGroup2 or PolicyRuleB, even though PolicyGroup2 and PolicyRuleB are both on the first level of the policy hierarchy.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Looking at the contents of PolicyGroup1, we see that the execution order is PolicyRule1-2, PolicyGroup1A, and PolicyRule1-1. Note that PolicyRule2-1 wasn&#8217;t considered. This is because although it is at the second level of the hierarchy, it is contained within a PolicyGroup whose priority was lower than that of the PolicyGroup that we are currently evaluating. Since PolicyGroup1A is a group, its contents will be executed before PolicyRule1-2 is executed. This effectively moves the execution of PolicyRule1A-1 between PolicyRule1-2 and PolicyRule1-1.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Finally, PolicyRuleB will execute, followed by PolicyGroup2, which means that PolicyRule2-1 will be the last to execute.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This example shows the following key points:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Grouping compares the priority of PolicySets at the same level&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Whenever a new hierarchy is entered through a PolicyGroup, its PolicySets are compared with each other at that level of the hierarchy, before further evaluation of the previous hierarchy is continued&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;The absolute priority of a PolicySet has nothing to do with its final execution order &#8211; it only serves to determine when it will be executed with respect to other PolicySets of its same hierarchy level. PolicySets do not have associated specifications, since they are abstract containers, and serve only to facilitate the grouping of PolicyRules and PolicyGroups.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;It is important to note that the semantics of a PolicyRule in a PolicyGroup are different than those of a PolicyRule in a PolicyRule. However, this is beyond the scope of a business view. The business reader should realize, however, that this model is very generic, and can support any type of execution strategy desired.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/6/2022 4:24:55 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/2/2022 10:09:31 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2B6CF9C7-9FDB-4f53-BEE7-06B602E323A9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

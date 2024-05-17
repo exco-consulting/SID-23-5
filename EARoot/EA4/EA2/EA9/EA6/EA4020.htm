@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure CM.02 - Basic Capacity Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4021.png" usemap="#EA4021" border="0" />
+
+<MAP NAME="EA4021">
+<area shape="rect" coords="180,280,314,342" href="EA4049.htm" target="_self">
+<area shape="rect" coords="779,106,962,168" href="EA4048.htm" target="_self">
+<area shape="rect" coords="265,10,410,98" href="EA4043.htm" target="_self">
+<area shape="rect" coords="527,40,751,154" href="EA4047.htm" target="_self">
+<area shape="rect" coords="481,239,674,294" href="EA4044.htm" target="_self">
+<area shape="rect" coords="532,373,685,461" href="EA4046.htm" target="_self">
+<area shape="rect" coords="253,137,409,192" href="EA4045.htm" target="_self">
+<area shape="rect" coords="10,167,130,195" href="../../EA10/EA8/EA1/EA5977.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure CM.02 - Basic Capacity Entities diagram</div>
+	<div class="ObjectDetailsNotes">A generalized capacity and capacity demand model is shown in the following Figure.&lt;br/&gt;The need to satisfy the capacity requirement during the first week in June is expressed using the fromToDateTime attribute, which is a composite of from and to dates/times, and the rangeInterval attribute of ApplicableTimePeriod.&#160;&#160;&#160;&#160;Refinements to the schedule can include days of the week as shown by the daysOfWeek attribute in the ApplicableTimePeriod entity.&#160;&#160;The rangeInterval attribute is used to handle some combination of #gt;, #lt;, #gt;=, #lt;=.&#160;&#160;It is assumed this is a planned Capacity, which would be indicated using the plannedOrActutalCapacity attribute.&#160;&#160;The CapacityRelationship entity enables a planned Capacity to be associated with an actual Capacity or for Capacities to be aggregated.&lt;br/&gt;The requirement for this capacity to be available in the Northeast geographic area is expressed using the relationship to GeographicPlace.&#160;&#160;Other entities that further define/refine capacity requirements could be added as needed by extending the SID.&lt;br/&gt;The ability to deliver 10000 units of Product described in the previous example is expressed via the CapacityAmount, whose datatype is Quantity.&#160;&#160;Quantity is a composite of an amount attribute and a units (unit of measure) attribute. For this instance of Capacity, the capacityAmount attribute contains the amount &#8220;10000&#8221;, and the unit of measure &#8220;units&#8221;.&#160;&#160;Other examples of units of measure could be transaction volumes, storage requirements, traffic volumes, port availabilities, and so forth.&#160;&#160;The capacityAmountFrom, capacityAmountTo, and rangeInterval enable ranges of capacity to be specified.&lt;br/&gt;Demands are placed on the capacity as defined by the CapacityDemand entity.&#160;&#160;The related ApplicableTimePeriod is used to here to express the timeframe over which the demand exists.&#160;&#160;It may or may not be the same instance of the ApplicableTimePeriod associated with the Capacity.&#160;&#160;Therefore, it may be a demand placed on more than one CapacityAmount.&#160;&#160;Similarly, the CapacityAmount may have many demands placed against it.&lt;br/&gt;The attributes are similar to those in CapacityAmount with the addition of a priority attribute that defines the relative importance of this demand.&lt;br/&gt;The AppliedCapacityDemand entity represents the amount of the CapacityDemand that has been applied against a CapacityAmount.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/25/2023 1:06:38 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B4C4FF6B-42E1-418f-9FC0-DB4BC51DA5FC}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

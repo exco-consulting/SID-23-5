@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.02 - Fulfillment Rate</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3140.png" usemap="#EA3140" border="0" />
+
+<MAP NAME="EA3140">
+<area shape="rect" coords="10,295,140,354" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="556,295,740,354" href="./EA3/EA3211.htm" target="_self">
+<area shape="rect" coords="255,10,445,93" href="./EA2/EA3199.htm" target="_self">
+<area shape="rect" coords="244,173,457,244" href="./EA2/EA3197.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.02 - Fulfillment Rate diagram</div>
+	<div class="ObjectDetailsNotes">WorkFufillmentRate is used in planning and WorkSpecification configuration. It represents a particular effort (&#8220;consumptionCapacity&#8221; attribute) to do a given amount of particular work (&#8220;quantity&#8221; attribute) in a given location which can be done by a given organization. For example, a fiber installation team for the New York serving area (having a capacity, say, of 100 man days per week) can fulfill 200 fiber layouts.&lt;br/&gt;Note: the rate of work that can be performed may not be linear with the quantity of work. It is calculated based on many inputs. For example:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;The skill qualification of the Pools that the Organization has (senior engineers, interns, testers, etc.) &lt;/li&gt;&lt;li&gt; The specification of the Work (such as its standard duration) &lt;/li&gt;&lt;li&gt; The Specification of the Place or Serving Area (e.g. installation in Rural areas consumes 50% more effort than in Urban areas) and the standardDriving time&lt;/li&gt;&lt;li&gt;&#160;&#160;The same location grouping effect (e.g. it takes 2 hours to install the first 10 fibers, but for the next 20, it would take only one hour. Or, it costs the same effort to install two phone lines instead of one.)&lt;/li&gt;&lt;/ul&gt;<br />&lt;i&gt;Note: Via WorkSpecFulfillmentRate, the relationship between WorkSpecification, WorkforceOrganizationRole, and Place is M&#8211;M, given that there are many variants in fulfillment rates.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/2/2022 2:32:54 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{3626544B-1749-4315-9A82-D6F43A34E3B0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

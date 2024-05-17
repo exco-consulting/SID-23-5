@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.11 - ResourceFunctionSpec ProvidedBy relationships (OLD RS.04)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1677.png" usemap="#EA1677" border="0" />
+
+<MAP NAME="EA1677">
+<area shape="rect" coords="371,178,517,230" href="./EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="759,505,892,557" href="../../EA4/EA3/EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="705,245,851,297" href="../../EA4/EA3/EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="717,125,844,177" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="389,58,499,110" href="EA1699.htm" target="_self">
+<area shape="rect" coords="10,496,225,548" href="./EA4/EA1818.htm" target="_self">
+<area shape="rect" coords="320,496,452,548" href="./EA2/EA1767.htm" target="_self">
+<area shape="rect" coords="142,117,320,185" href="./EA3/EA3/EA2/EA1812.htm" target="_self">
+<area shape="rect" coords="310,280,578,398" href="./EA3/EA1776.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.11 - ResourceFunctionSpec ProvidedBy relationships (OLD RS.04) diagram</div>
+	<div class="ObjectDetailsNotes">A ResourceFunctionSpec specifies a function as a behavior to transform inputs of any nature into outputs of any nature, independently from the way it is provided. It is typically created by a function designer who may not have specific knowledge on realization architecture (for example using English text explanations with diagrams, like RFC standards, or preferably a machine interpretable language).&lt;br/&gt;&lt;br/&gt;The realization of a ResourceFunctionSpec may be achieved by different ways; either SoftwareSpecification, PhysicalBlackBoxSpec or SoftBlackBoxSpecification.&lt;br/&gt;&lt;br/&gt;Typically, when creating ProductSpec, CFSSpec and RFSSpec level definitions the choice of realization has not been made. ResourceFunctionSpecs are useful for precisely defining the required behavior before knowing the technical solution to use.&lt;br/&gt;Before finalising a ProductSpecification a designer &#8211; usually in a Communication Service Provider - must be sure that all the ResourceFunctionSpec required by the ProductSpecification are covered including those needed by its technical solution (CFSSpec, RFSSpec).&lt;br/&gt;&lt;br/&gt;&lt;i&gt;Note: SoftwareSpecification, PhysicalBlackBoxSpec and SoftBlackBoxSpecification are sub-classes from ResourceSpecification.&lt;/i&gt;&lt;br/&gt;ResourceFunctionSpecs shown below have the merit that they can be supported by any or all of Product Spec, CFSSpec and RFSSPec. They act as the bridge between service and product model specification to ResourceSpecifications. This is particularly useful when functions at Product level are augmented with more detail as they are realized as a set of services and supporting services and resource. Typically, this is achieved by using profiles or templates that add the additional Service and Resource Specification details. &lt;br/&gt;See Service Configuration ABE and the GSMA generic Slice template (GST) 5G examples in IG1194 Focus on Services not Slices. [4]&lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Use of ConfigurationFeature to support ResourceFunction&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;To support a fully intent-based deployment approach, the concept of ConfigurationFeatureSpec are introduced in the model.&#160;&#160;This is the formal representation of the concepts of a Feature and a Feature Group used in TR 255 [5] and TMF664 [6]to describe the capabilities of a function including ResourceFunctions. E.g. a router or a simple example such as a washing machine described in &#8216;Appendix 2: Illustrating the concepts of ConfigurationFeatures and ResourceFunctions&#8217;. It is particularly useful for intent based management as described below.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The use of Feature and Feature Groups to support ResourceFunctions is comprehensively described for network scenarios in TR255 Resource Function &#8211; Activation and Configuration, in its &#8216;Section 3.2 General Concepts and TR255B Specification Requirements for Resource Functions&#8217;, and&#160;&#160;in its &#8216;Section 3.4 Approaches present different instantiation approaches for Resource Functions&#8217;.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The following paragraphs are extracted from these TR255 documents:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;In particular, in the fully intent-based approach, the consumer of a given Resource Function (RF) declares what they require but not how to accomplish the task (in terms of components)&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;In this approach, the consumer for the RF selects one or more functional features or feature groups from a list of possibilities in the associated specification.&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;A &lt;/i&gt;&lt;b&gt;&lt;i&gt;Feature&lt;/i&gt;&lt;/b&gt;&lt;i&gt; is how an RF exposes its capabilities to consumers.&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Unlike an RF, a Feature cannot be independently deployed.&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;SomeFeatures may be mandatory while others can be selected or not by the consumer (for a given instantiation).&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Features may have characteristics which are settable by the consumer (at instantiation time and/or during the lifetime of the RF).&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Composite RFs do not necessarily (directly) expose the features of the constituent RFs. In such cases, the composite RF can abstract, rearrange, and reformulate and augment the features of the constituent RFs.&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;A &lt;/i&gt;&lt;b&gt;&lt;i&gt;Feature Group&lt;/i&gt;&lt;/b&gt;&lt;i&gt; is an aggregation of Features.&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;A feature group may have characteristics in addition to the characteristics of the constituent features.&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;As described earlier these concepts of Functions and Function Group are supported in the Information Framework formally by use of ConfigurationFeature and ConfigurationFeatureSpec. both of which can be composed and bth are rooted on Entity. In the Open APIs ConfigurationFeatures are represented by Feature and are composed by using the &#8216;is bundled attribute of a Feature and can have FeatureRelationship. &lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:44:45 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E1CEA9A9-A8CE-4bde-A3C5-5155691753C3}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

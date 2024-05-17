@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.03b - Shopping Cart and Shopping Cart Item Business Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA694.png" usemap="#EA694" border="0" />
+
+<MAP NAME="EA694">
+<area shape="rect" coords="571,324,723,376" href="./EA1/EA708.htm" target="_self">
+<area shape="rect" coords="298,370,449,422" href="./EA1/EA707.htm" target="_self">
+<area shape="rect" coords="10,10,125,82" href="../../EA10/EA1/EA1/EA5490.htm" target="_self">
+<area shape="rect" coords="10,168,149,218" href="../../EA9/EA5/EA4002.htm" target="_self">
+<area shape="rect" coords="10,292,201,340" href="../../EA10/EA5/EA5725.htm" target="_self">
+<area shape="rect" coords="564,62,730,119" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="40,499,155,545" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="577,223,717,275" href="../../EA3/EA5/EA1238.htm" target="_self">
+<area shape="rect" coords="259,10,449,174" href="../../EA3/EA5/EA1237.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.03b - Shopping Cart and Shopping Cart Item Business Entities diagram</div>
+	<div class="ObjectDetailsNotes">ShoppingCart looks like CustomerProductOrder except relationships with BillingAccount, Payment and SalesChannel that do not exit for ShoppingCart.&lt;br/&gt;In the same way ShoppingCartItem looks like CustomerProductOrderItem except elationships with BillingAccount and Payment that do not exit for ShoppingCartItem.&lt;br/&gt;It isn&#39;t mandatory to use ShoppingCart, CustomerProductOrder is enough to cover all the Customer Order Handling process. But some CSP might prefer to keep the view of what the customer decided to buy seperated from the final order. In this case, we can instanciate an instance of ShoppingCart and when the customer is identified, instanciate a CustomerOrder refering to the ShoppingCart.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:59:37 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{28C545D6-8D8D-46d0-A45C-F051B436B484}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

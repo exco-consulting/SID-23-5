@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Workforce ABE</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Workforce ABE", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">Represents dispatched Field Force Management - human and other field resource with their roles, skills, calendars and other characteristics. Also models work orders, catalog of work descriptions, various schedules, as well as reservation and assignment of a technician to a task.&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This Workforce Management Model can support the Common&#8217;s Project ABE and Common&#8217;s Party ABE. These ABEs were developed based on the SID principle of inherent extensibility by employing SID modeling patterns.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The scope of this phase focuses only on dispatchable Field Force Management, not call center workforce (customer facing) or NOC (network facing). The gap analysis and revision of this Field Force model for these areas should be a candidate for improvement in a future release.&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;&lt;i&gt;Note:&lt;/i&gt;&lt;/b&gt;&lt;i&gt; This model is the first result of a multi-phase work that follows the Chapter, &#8220;Business Agreement, Comment to TAM, and eTOM CR&#8221;. Naturally, it will progress to the remaining Integration Framework. However, many detailed aspects of the model need revision and additions in order to cover a broader scope of requirements in CSP business.&lt;/i&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The ABEs concerned by this guide book are:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;in Enterprise Domain&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;	- Workforce&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;in Common Business Entities Domain&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;	- Root Business Entities&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	- Location&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	- Business Interaction&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	- Project&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	- Time&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	- Party&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	- Agreement&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Workforce ABE models the human and other field resources with their roles, skills, calendar, and other characteristics. It also models the work description and reservation and assignment of a technician to a task. Workforce ABEs reuse, via association, other ABEs in other domains such as Party, Project, and Calendar.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The following Figure represents the structure of the Workforce ABE. It contains four L2 ABEs: Work, Work Specification, WorkforceResource, and WorkforceSchedule. Other related ABEs belong to Project, Party, Business Interaction, Location, Agreement, and Calendar.&lt;/font&gt;&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:04:54 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../../EA645.htm">SID  Map</a>, <a href="../EA3118.htm">[EntD-01] Enterprise ABEs Level 1</a>, <a href="../EA3120.htm">[EntD-02] Enterprise ABEs Level 2 & 3</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{259169EB-89EE-401a-9C19-7E4EA2DCDA53}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">1/10/2022 12:02:08 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+		</ul>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">RefGUID</td>
+				<td width="50%" class="TableRow" valign="top">{4FCCCE7D-5F5B-403f-8439-9D3BD994C21D}</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario14509" onclick="parent.toggleDiv('detailsDIVScenario14509','DetailsImageScenario14509')" />Specification:
+						<div id="detailsDIVScenario14509" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">rsa_guid</td>
+				<td width="50%" class="TableRow" valign="top">_5I1dsNmREeCz9aoeRfughA</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario14510" onclick="parent.toggleDiv('detailsDIVScenario14510','DetailsImageScenario14510')" />Specification:
+						<div id="detailsDIVScenario14510" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

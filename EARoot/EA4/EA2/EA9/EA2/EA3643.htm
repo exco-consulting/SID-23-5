@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.14 - PartyIdentification Excerpt (taken from Party Diagrams)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3644.png" usemap="#EA3644" border="0" />
+
+<MAP NAME="EA3644">
+<area shape="rect" coords="502,23,659,97" href="../../EA10/EA1/EA3/EA5516.htm" target="_self">
+<area shape="rect" coords="131,170,260,242" href="../../EA10/EA1/EA5467.htm" target="_self">
+<area shape="rect" coords="155,10,276,72" href="../../EA10/EA1/EA5464.htm" target="_self">
+<area shape="rect" coords="428,170,591,200" href="../../EA10/EA1/EA3/EA5515.htm" target="_self">
+<area shape="rect" coords="557,492,720,538" href="../../EA10/EA1/EA3/EA5510.htm" target="_self">
+<area shape="rect" coords="323,492,480,550" href="../../EA10/EA1/EA3/EA5512.htm" target="_self">
+<area shape="rect" coords="689,414,866,461" href="../../EA10/EA1/EA3/EA5508.htm" target="_self">
+<area shape="rect" coords="435,235,598,265" href="../../EA10/EA1/EA3/EA5509.htm" target="_self">
+<area shape="rect" coords="789,492,946,570" href="../../EA10/EA1/EA3/EA5517.htm" target="_self">
+<area shape="rect" coords="479,414,659,461" href="../../EA10/EA1/EA3/EA5511.htm" target="_self">
+<area shape="rect" coords="906,414,1082,462" href="../../EA10/EA1/EA3/EA5518.htm" target="_self">
+<area shape="rect" coords="239,414,441,459" href="../../EA10/EA1/EA3/EA5514.htm" target="_self">
+<area shape="rect" coords="8,265,138,386" href="../../EA10/EA1/EA5462.htm" target="_self">
+<area shape="rect" coords="651,309,815,339" href="../../EA10/EA1/EA3/EA5513.htm" target="_self">
+<area shape="rect" coords="8,23,123,86" href="../../EA10/EA1/EA5469.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.14 - PartyIdentification Excerpt (taken from Party Diagrams) diagram</div>
+	<div class="ObjectDetailsNotes">&lt;b&gt;Identification&lt;/b&gt;&lt;br/&gt;Business entities consist of two types &#8211; those that are simple values, such as a quantity of money or a period of time, and those that have identity. For these latter entities, the concept of an identity is used to distinguish different instances of the same object.&lt;br/&gt;Identity is flexibly and extensibly defined using the group of objects defined in this chapter.&lt;br/&gt;Individual people, places, and things, such as customer orders, equipment, network elements and so forth, can be recognized (identified) by different attributes.&#160;&#160;The business will define (usually through a policy) what particular set of attributes or concepts is appropriate for a given entity. For example, an individual person may be identified using a passport number, a driver&#8217;s license number, or a national identification number. Similarly, a network location may be identified by a network node ID or a Location Entity Identification Code (as defined in American National Standard T1.253). &lt;br/&gt;It should be noted that policy does not have to be used. However, the use of policy provides an elegant and extensible means to define the semantics of using an identity. This is done by modeling associations between PolicyRules and the identification entities that it relates to.&lt;br/&gt;Figure EI.01 &#8211; PartyIdentification Excerpt (taken from Party addendum) below shows an excerpt for identifying different types of Parties (e.g., Individuals and Organizations).&lt;br/&gt;The manner in which each key business entity in the SID model is identified could be modeled in a way similar to Party. However, each business entity can be identified in a number of ways, as shown in the example above for individuals.&#160;&#160;Modeling the identity in this way means that each key entity would have a set of classes similar to those used to model the identities of Party.&#160;&#160;This introduces redundancy into the SID model for every entity that requires identification.&#160;&#160;In addition, using explicit subclasses to model the different types of identification attributes for an entity results in a model that cannot be easily extended. This is because as new ways to identify an entity are defined or discovered, a new subclass must be introduced into the SID model.&#160;&#160;Having to introduce new subclasses implies that the parts of the SID model that represent entity identifications are not very stable. It also makes it difficult for other teams and I to adopt the SID, since its baseline is always changing.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 6:26:15 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{736AAE55-B569-4375-A3D1-948DCBC8E34C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

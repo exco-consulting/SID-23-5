@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Me.02 - Metric Definition Measure</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4159.png" usemap="#EA4159" border="0" />
+
+<MAP NAME="EA4159">
+<area shape="rect" coords="423,10,647,110" href="./EA4/EA4315.htm" target="_self">
+<area shape="rect" coords="388,187,647,308" href="./EA4/EA4314.htm" target="_self">
+<area shape="rect" coords="33,274,181,394" href="./EA4/EA4309.htm" target="_self">
+<area shape="rect" coords="10,10,234,165" href="./EA3/EA4291.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Me.02 - Metric Definition Measure diagram</div>
+	<div class="ObjectDetailsNotes">Metrics may be calculated in a number of different ways from a simple ratio to a complex expression.&#160;&#160;Figure Me.02 &#8211; Metric Definition Measure shows the entities used to calculate a metric value.&lt;br/&gt;A MetricDefMeasure specifies a measure of a specific aspect of an entity, such as lost packets or dealer sales target achievement.&lt;br/&gt;A MetricDefinition may have many MetricDefMeasures. One example of many is that one measure may be in Fahrenheit and another may be in Centigrade.&lt;br/&gt;Two entities, MetricDefinitionDeterminationMethod and MetricDefinitionMethodArgument support the requirement of different ways to calculate Metrics.&#160;&#160;&lt;br/&gt;Basic facts about the method, such a type (ratio, sum, and so forth) are contained in the MetricDefinitionDeterminationMethod.&lt;br/&gt;The arguments that represent the expression are contained in one or more MetricDefinitionMethodArgument. An argument may be the same or another MetricDefinition. &lt;br/&gt;For example, a simple ratio of metric definition A divided by metric definition B would be represented by two instances of the arguments. The numerator would be related to metric definition A with a sequence of 1 and an operator of &#8220;/&#8221;. The denominator would be related to metric definition B with a sequence of 2.&lt;br/&gt;The delimiter attribute, such as &#8220;(&#8220;and&#8220;)&#8221;, enables more complex expressions.&#160;&#160;For example (metric definition A + metric definition C).&lt;br/&gt;When an expression is too complex to represent using the arguments, such as one that includes logic and using other entities) the derivationFormula attribute can contain a reference to logic (code) that performs the calculation.&lt;br/&gt;Remark: An implementation of the model may choose to share same determination method for many metric definition measures. If this is the case then the association would be changed to *-*.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/9/2022 1:58:09 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7C89DDC5-5449-4882-9043-926FE47F7FBE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

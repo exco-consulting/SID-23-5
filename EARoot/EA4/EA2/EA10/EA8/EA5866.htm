@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.11a – Local Coordinate System</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5867.png" usemap="#EA5867" border="0" />
+
+<MAP NAME="EA5867">
+<area shape="rect" coords="5,5,485,365" href="EA5946.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.11a – Local Coordinate System diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Contrasting Geographic &amp; Local Places&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will now look at the contrasts between Geographic &amp; Local Places.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In map representations, many of the features that we display are unique. For example&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;country boundaries&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;municipal boundaries&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;railway lines&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;property boundaries&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;are influenced by natural features (coastlines, hills, rivers etc.).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In the Local (artificial) world, many of the features that we wish to represent are made to specification. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;On a map we are usually interested in where something is (e.g. where is the hospital?) and want to limit the detail so that the result is not too cluttered.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For Local places we are usually interested in both the position (placement) and orientation of features (where is the modem cabinet and which way does the front face?) as shown in fig. 11c.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;On a map we use a two dimensional planar representation as we wish to view large numbers of features at a low level of detail.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For Local places, three dimensional modeling is required to accurately represent:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;multistory buildings&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;rack layouts&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;card positions&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;things mounted on walls&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;obstructions like low ceilings, windows, air conditioning vents&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;So we can see that we have different needs between Geographic and Local Places and that our model representation needs to reflect this.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Local Places&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;[Oracle Spatial Concepts] defines Local Coordinate Systems (Non Earth) as:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#8220;Local coordinates are Cartesian coordinates in a non-Earth (non-georeferenced) coordinate system. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&#8230;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Local coordinate systems are often used in CAD systems, and they can also be used in local surveys where the relationship between the surveyed site and the rest of the world is not important.&#8221;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Local Places are provided by a type of Physical Resource that we shall call an EquipmentHolder. An EquipmentHolder could be an Enclosure, that encloses the places inside it or a Structure that provides support for things to be attached. EquipmentHolders can be inside other EquipmentHolders, forming a hierarchy. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Structures can be attached to other structures, also forming a hierarchy (where the structure providing the support is the parent).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Structures can be contained in EquipmentHolders and EquipmentHolders can be attached to Structures, forming a mixed hierarchy (e.g. a single channel radio transceiver subrack is installed in a weatherproof box which is attached to a tower).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Local Places are defined relative to their EquipmentHolder.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A rack/ card position can have a status of empty or filled and this can change over time.&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;e.g. an EquipmentHolder is installed with a card position empty. A card is later installed, and the card position is filled. The card fails and is removed and sent off for repairs and a replacement card is installed in the same position.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The SID Physical Resource model keeps track of the card; the SID Location model keeps track of the position.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will define a Housing as an Enclosure that is not contained in anything (i.e. the outermost level of containment).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will define a primary structure as a free standing structure (i.e. the outermost level of attachment).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Housings and Primary Structures may be related to a geographic location (i.e. be located on a map).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Some common Housing types are building, equipment cabinet, street cabinet, pit (underground utility box), housing, rack, sub-rack.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Some common Structure types are tower, pole, power pole, radio mast. A radio tower may have a number of rails with positions that can be used to attach antennas and dishes. Each of these rails could also be modeled as a structure.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Local Places are dependent on the SID Physical Resource model definitions. The Physical Resource model will only model to the &#8220;field replaceable unit (FRU)&#8221; level (i.e. it will not model individual resistors and ICs).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Local Places can be categorized in various ways. Some things to consider are:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Above ground (mast), on ground (building, street cabinet) or underground (pit)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Containment (inside) versus attachment (on)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;EquipmentHolders, which are contained in something (rack), versus those that aren&#8217;t (street cabinet). A street cabinet could be thought of as a weatherproof rack that also secures the equipment (from theft).&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Logical versus physical Holders (e.g. suite versus rack)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Ownership. A housing may or may not be owned by the Service Provider (e.g. Leased building, shared site with leased space)&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;An EquipmentHolder may provide:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&#8220;General space/ free form space&#8221; (e.g. floor space in a building &#8211; can be used for almost anything)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&#8220;Managed / restricted / pre-defined space&#8221; (e.g. card position &#8211; restrictions on what can be plugged in)&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;A managed space EquipmentHolder entity, on instantiation, should create its Local places e.g. CMUX universal card (SPEC 227L - width &amp; height, pin-out)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will use a Cartesian local coordinate system for Local Locations. The Local coordinate system need not be north-south or earth surface aligned. This means that the local coordinate system definition will need to document a position &amp; orientation of up to six degrees of freedom. In most cases the Holder or Structure will be aligned to the earth&#8217;s surface (i.e. not tilting like the tower of Pisa) and we will only require a position &amp; orientation 4 degrees of freedom as shown in fig 11a.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 2:07:39 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/3/2022 11:54:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{04DA5FB9-8A08-4877-8300-43F971098AD9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

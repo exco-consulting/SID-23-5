@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Proj.04 - element relationships</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4726.png" usemap="#EA4726" border="0" />
+
+<MAP NAME="EA4726">
+<area shape="rect" coords="334,29,500,74" href="EA4756.htm" target="_self">
+<area shape="rect" coords="396,151,562,265" href="./EA3/EA4857.htm" target="_self">
+<area shape="rect" coords="82,7,248,95" href="./EA3/EA4858.htm" target="_self">
+<area shape="rect" coords="82,145,248,337" href="./EA3/EA4856.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Proj.04 - element relationships diagram</div>
+	<div class="ObjectDetailsNotes">Following Figure shows how these relationship types are incorporated into the Project model.&lt;br/&gt;The ProjectElementRelationship allows relating ProjectElements. A ProjectElement might be linked to several ProjectElements.&lt;br/&gt;Ex: a ProjectElement not being able to start until another ProjectElement has been completed.&lt;br/&gt;The ProjectElements can be related by two types of relationships: Dependency or Replacement.&lt;br/&gt;A Dependency is where the two Project Elements have some starting or finishing dependency. E.g. Activity 2 cannot start until Activity 1 is complete.&lt;br/&gt;A Replacement is where one or more ProjectElements are replaced by one or more other ProjectElements.&lt;br/&gt;Each type of relationship might be subdivided into several kinds: &lt;br/&gt;The subtypes of Dependency are:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;before-start-delay: Activity2 starts at least &#8220;lag&#8221; timepoints after Activity1 starts&lt;/li&gt;&lt;li&gt;before-finish-delay: Activity2 starts at least &#8220;lag&#8221; timepoints after Activity1 finishes&lt;/li&gt;&lt;li&gt;after-start-delay: Activity2 finishes at least &#8220;lag&#8221; timepoints after Activity1 starts&lt;/li&gt;&lt;li&gt;after-finish-delay: Activity2 finishes at least &#8220;lag&#8221; timepoints after Activity1 finishes&lt;/li&gt;&lt;li&gt;start-equal-start: Activity2 starts exactly &#8220;lag&#8221; timepoints after Activity1 starts&lt;/li&gt;&lt;li&gt;start-equal-finish: Activity2 starts exactly &#8220;lag&#8221; timepoints after Activity1 finishes&lt;/li&gt;&lt;li&gt;finish-equal-start: Activity2 finishes exactly &#8220;lag&#8221; timepoints after Activity1 starts&lt;/li&gt;&lt;li&gt;finish-equal-finish	: Activity2 finishes exactly &#8220;lag&#8221; timepoints after Activity1 finishes&lt;/li&gt;&lt;/ul&gt;<br />The subtypes of Replacement are:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Substitution: This is a one for one replacement. E.g. Activity 1 is no longer valid and has been replaced by Activity 1A&lt;/li&gt;&lt;li&gt;Division: This is a one for many replacement. E.g. Activity 1 is no longer valid and has been replaced by Activities 1A, 1B and 1C&lt;/li&gt;&lt;/ul&gt;<br />Fusion: This is a many for one replacement. E.g. Activities 1A, 1B and 1C are no longer valid and have been replaced by Activity 1Z&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/4/2023 11:50:00 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7495F5F2-F939-45b2-A88E-26BC08D373F5}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

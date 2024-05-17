@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure DI.01 & DI.02-I01 - Digital Identity overview & Credential Hierarchy</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5744.png" usemap="#EA5744" border="0" />
+
+<MAP NAME="EA5744">
+<area shape="rect" coords="5,5,896,475" href="EA5748.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure DI.01 & DI.02-I01 - Digital Identity overview & Credential Hierarchy diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;Context: &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;John Smith plays the role of Customer for My Broadband Contract and therefore he has rights on it. &lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;John Smith declared three ContactMedium to THE csp to allow to interact with him&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;To allow John Smith to exercise his rights (without direct interactions with people from the CSP, through Web for example), a DigitalIdentity has been created for John Smith. JS&#8217;s DigitalIdentity is owned by John Smith and identifies his Customer PartyRole&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;John Smith declared on his DigitalIdentity two ContactMedium. These ContactMedium can be different from the one he declared to the CSP and cannot be used by the operator&#8217;s marketing. One of them can be used to send password in case of forgetting.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;John Smith has automatically 2 Credentials to identify / authenticate:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;a LoginPasswordCredential: that must be explicitly typed by John Smith on the Web for example&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A NetworkCredential using his mobile&#8217;s IMSI that can be automatically identified when he interacts with the CSP.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Later John Smith has declared a TokenCredential from google that allows JS not to have to identify / authenticate again when he already has been identified / authenticated by google.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;John Smith chooses to be seen as &#8220;Indiana Jones&#8221; when he connects on the web.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/6/2022 4:21:56 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/6/2022 4:28:32 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8DF7C726-E8F9-45f7-8D8B-95599D9DE746}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

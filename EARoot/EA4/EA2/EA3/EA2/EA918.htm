@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.03 - Product Specification - Basic Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA919.png" usemap="#EA919" border="0" />
+
+<MAP NAME="EA919">
+<area shape="rect" coords="833,242,953,301" href="../../EA6/EA11/EA2802.htm" target="_self">
+<area shape="rect" coords="912,318,1063,347" href="../EA8/EA1303.htm" target="_self">
+<area shape="rect" coords="912,87,1087,116" href="../EA8/EA1/EA1311.htm" target="_self">
+<area shape="rect" coords="743,5,894,52" href="../EA8/EA1/EA1310.htm" target="_self">
+<area shape="rect" coords="665,159,816,188" href="../EA8/EA1/EA1309.htm" target="_self">
+<area shape="rect" coords="402,19,609,78" href="EA984.htm" target="_self">
+<area shape="rect" coords="125,135,255,164" href="EA977.htm" target="_self">
+<area shape="rect" coords="10,135,115,164" href="EA978.htm" target="_self">
+<area shape="rect" coords="268,153,412,279" href="EA982.htm" target="_self">
+<area shape="rect" coords="144,346,340,375" href="EA968.htm" target="_self">
+<area shape="rect" coords="23,261,187,323" href="EA983.htm" target="_self">
+<area shape="rect" coords="34,19,204,48" href="EA985.htm" target="_self">
+<area shape="rect" coords="364,346,537,375" href="EA967.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.03 - Product Specification - Basic Entities diagram</div>
+	<div class="ObjectDetailsNotes">Products are things (tangible or intangible) which enterprises, such as service providers, market, sell or lease to customers to create profit.&#160;&#160;In a changing world, monopoly telcos with a custom-built portfolio have been replaced by a value network of Suppliers and Service Providers offering complex communications-based Products. The way in which those Products have to be specified is not as simple as it used to be.&#160;&#160;&lt;br/&gt;A product serves as a window for customers and users into the world of the services and resources used to realize the product. &lt;br/&gt;Customer/user always deals with products, unless the individual/organization they represent is playing the role of a service technician or some similar role. A user uses a Product to obtain its value promise, e.g. to make a phone call&lt;br/&gt;Neither the Product User nor the Customer can see the CustomerFacingService. They only can see the Product.&lt;br/&gt;A ProductSpecification may be simple (atomic) or a composition of other ProductSpecifications [Fowler-Specification]. A ProductSpecification may represent a tangible object or something intangible provided to customers, realized as a &#8216;service&#8217; but not to be confused with a network service here. The SID modeling of a CompositeProductSpecification covers both the physical build of more than one ProductSpecification and one or more ProductSpecifications supplied together in a collection. ProductSpecifications may also exist within groupings, such as product categories or product lines or product types.&lt;br/&gt;Enterprises may assemble products themselves or they may buy them in from other suppliers (through contractual agreements where the enterprise takes the role of customer - see SID Common Domain guide book); or they may do a combination of these things.&lt;br/&gt;&lt;b&gt;Product Specification Example - The &quot;3G Mobile super saver pack&quot;&lt;/b&gt;&lt;br/&gt;This is sold via intermediaries (&quot;Dog-n-Bones-R-Us&quot; phone shops) as a &quot;BigTelephone&quot; branded product.&#160;&#160;Nokia supply the phones and provides a 2-year guarantee. The &quot;BigTelephone&quot; network is used for voice and they supply a phone number and a SIM card.&#160;&#160;The SMS function is provided by &quot;Best Messaging&#8221;, as &quot;BigTelephone&quot; doesn&#39;t have an SMS function.&#160;&#160;The customer signs the contract with &quot;Dog-n-Bones-R-Us&quot; for 2 years with minimum monthly calls and Dog-n-Bones-R-Us bills the customer directly.&#160;&#160;Dog-n-Bones-R-Us has a separate contract with &#8220;Best Messaging&#8221; to cover the use of their SMS function. In looking at the detail of ProductSpecification, the following concepts are modeled by the figure below:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Relationships between different ProductSpecifications for bundling or composite specifications;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Different attributes for different types of ProductSpecification; for example, some Products the customer can take home with them, others they experience as a Service; for example, one delivered across a network;&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Atomic ProductSpecifications which cannot be broken down further. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	CompositeProductSpecifications which comprise a number of other ProductSpecifications, any of which may provide more than one instance per CompositeProductSpecification.&lt;br/&gt;&lt;i&gt;Note:&#160;&#160;A ProductSpecification cannot contain itself, but it can reference other ProductSpecifications.&lt;/i&gt;&lt;br/&gt;At least one action is allowed for a ProductSpecification (AllowedProductAction) such as create, update&#8230;that might be limited to one or many SalesChannels. An AllowedProductAction has a type represented by a ProductTypeAction.&lt;br/&gt;For ProductOffering a Customer could upgrade their offering on the web, but to downgrade they need to come into a store or contact a service representative.&lt;br/&gt;An AllowedProductAction might imply changes from one ProductConfigSpec to one or many ProductConfigSpec.&lt;br/&gt;Thus, it is possible to define actions such as upgrade or downgrade and specify which SalesChannel enables these actions.&lt;br/&gt;&lt;br/&gt;In all combinations of products, there must be clearly defined relationships between the products in order to ensure consistency of service to the customer.&#160;&#160;Some examples of such ProductSpecificationRelationships would be migration, exclusivity, dependency and substitution, as indicated in the Figure below.&lt;br/&gt;&lt;br/&gt;Often it becomes essential to group product specifications. SID supports following two ways in which product specifications can be grouped&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Based on how the product specs are organized in a product portfolio&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;Based on common characteristics&lt;/li&gt;&lt;/ul&gt;<br />These groupings are supported by ProductSpecificationType entity and its two subclasses Product Line (Based on how the product specs are organized in a product portfolio) and Product Category (Based on common characteristics). Product Line represents the coarsest form of grouping of product specifications.&lt;br/&gt;&lt;br/&gt;&#8220;ProductSpecificationType&#8221; is a specialization of &#8220;EntitySpecificationType&#8221; and as such it inherits the recursive association &#8220;EntitySpecificationTypeRelationship&#8221;. This can be used to represent how a Product Line is associated to multiple Product Categories. For example, ProductLine &#8220;Home Security&#8221; is composed of different Product Categories &#8220;Door Alarms&#8221;, &#8220;Security Lights&#8221;, &#8220;GPS &amp; Tracking&#8221; etc.&lt;br/&gt;&lt;br/&gt;Same Product Category can also be used across different Product Lines. For example, same set of &#8220;Mobile phones&#8221; Product Category reused across Product Lines &#8220;Mobile Residential&#8221; and &#8220;Mobile Enterprise&#8221;.&lt;br/&gt;The decision regarding when to model a ProductLine or ProductCategory is often left to the discretion of the Product/Marketing managers.&lt;br/&gt;&lt;br/&gt;There are also costs associated with creating, developing and maintaining a ProductSpecification; the enterprise records these against the ProductSpecification.&#160;&#160;There is an implied link between the ProductSpecificationCost entity and business information, but this has not been explored in this area of the SID model.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/20/2023 9:52:49 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2E1D47DB-E6EF-41ac-9B09-574954DBAED1}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

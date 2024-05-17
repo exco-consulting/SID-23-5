@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure A-7 Refinement of NIST Cloud Metrics model reflecting on-going work</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4268.png" usemap="#EA4268" border="0" />
+
+<MAP NAME="EA4268">
+<area shape="rect" coords="5,6,908,537" href="EA4281.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure A-7 Refinement of NIST Cloud Metrics model reflecting on-going work diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;In the definitions below the term &#8220;element&#8221; refers to a UML Class of the model and the term &#8220;attribute&#8221; refers to a UML Attribute of a UML Class.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;ContextCondition&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;A &lt;b&gt;&lt;i&gt;ContextCondition&lt;/i&gt;&lt;/b&gt; element is expressing the conditions under which this metric is applicable, in a real environment or context.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;description&lt;/i&gt;&lt;/b&gt; attribute is a summary of a particular condition of applicability.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;targetCharacterization&lt;/i&gt;&lt;/b&gt; attribute characterizes the type of Cloud resource(s) to which this metric applies, i.e. the type of resource of which some property can be measured. For example, an availability metric might be exclusively defined for &#8220;storage services&#8221;, and therefore would not be appropriate to measure the availability of a compute server or of a network.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;applicabilityRestriction&lt;/i&gt;&lt;/b&gt; attribute is expressing particular constraints to be observed when using the metric. For example, measurement rules in the metric definition may depend on some regulatory environment (e.g. a particular definition of &#8220;business time&#8221;), which in turn might reduce the scope of applicability to certain countries.&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Measure&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;A &lt;b&gt;&lt;i&gt;Measure&lt;/i&gt;&lt;/b&gt; element holds the necessary information to understand a value resulting from a measurement of the attribute being observed.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;value&lt;/i&gt;&lt;/b&gt; attribute represents the result of the observation.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;unit&lt;/i&gt;&lt;/b&gt; attribute represents the unit of the value at the time of measurement.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;uncertainty&lt;/i&gt;&lt;/b&gt; attribute represents the uncertainty at the time of measurement.&lt;br/&gt;A &lt;b&gt;&lt;i&gt;Measure&lt;/i&gt;&lt;/b&gt; element is associated to one &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; element. It determines the nature of the &lt;b&gt;&lt;i&gt;Measure&lt;/i&gt;&lt;/b&gt; element.&lt;br/&gt;Both uncertainty and unit attributes carry run-time values that should be related respectively to the uncertainty budget derived from the measurement rules and the measure definition unit metadata.&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;MeasureDefinition&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;A &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; element holds the basic information necessary to understand the property to be observed. &lt;br/&gt;The &lt;b&gt;&lt;i&gt;name&lt;/i&gt;&lt;/b&gt; attribute represents the measure definition. &lt;br/&gt;The&lt;b&gt;&lt;i&gt; referenceId&lt;/i&gt;&lt;/b&gt; attribute identifies uniquely the measure definition. &lt;br/&gt;The &lt;b&gt;&lt;i&gt;scale&lt;/i&gt;&lt;/b&gt; attribute gives information on how the measurement value can be interpreted and what sort of operations can be performed on it.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;type&lt;/i&gt;&lt;/b&gt; attribute represents the kind of the measure. &lt;br/&gt;The &lt;b&gt;&lt;i&gt;unit&lt;/i&gt;&lt;/b&gt; attribute represents the base unit that will be associated to &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; element.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;expression&lt;/i&gt;&lt;/b&gt; attribute represents the function used to assemble the &lt;b&gt;&lt;i&gt;underlyingMeasureDefinitions&lt;/i&gt;&lt;/b&gt; that compose the MeasureDefinition. &lt;br/&gt;The &lt;b&gt;&lt;i&gt;underlyingMeasureDefinitions&lt;/i&gt;&lt;/b&gt; association represents the possibility that a &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; element can be composed of other &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; elements. This means the &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; element expression is using the outcome of other &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; elements.&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;MeasurementRule&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;A &lt;b&gt;&lt;i&gt;MeasurementRule&lt;/i&gt;&lt;/b&gt; element is used to further constrain some parts of a Measure element and indicate possible method(s) for measurement. For instance, an &#8220;AvailabilityDuringBusinessHour&#8221; Metric element could be defined with a scope that constrains some piece of a generic &#8220;Availability&#8221; Measure element to limit the observation period to defined business hours. Measurement rules are necessary for the measurement&lt;br/&gt;The &lt;b&gt;&lt;i&gt;description&lt;/i&gt;&lt;/b&gt; attribute is a summary of a particular measurement rule.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;method&lt;/i&gt;&lt;/b&gt; attribute represents the method of measurement of the &lt;b&gt;&lt;i&gt;targetMeasure&lt;/i&gt;&lt;/b&gt;.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;uncertainty&lt;/i&gt;&lt;/b&gt; attribute represents the estimate associated with the &lt;b&gt;&lt;i&gt;targetMeasure&lt;/i&gt;&lt;/b&gt;. It can be used to help determine the &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; accuracy or precision.&lt;br/&gt;A &lt;b&gt;&lt;i&gt;measurementRule&lt;/i&gt;&lt;/b&gt; element can influence more than one &lt;b&gt;&lt;i&gt;targetMeasure&lt;/i&gt;&lt;/b&gt; element (&lt;b&gt;&lt;i&gt;targetMeasureDefinitions&lt;/i&gt;&lt;/b&gt; association). For instance, a measurement rule could define that all targeted time measures be of unit second.&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Metric&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;A &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; element helps define a cloud service property to be measured, its related measures, parameters, formulas and measurement rules so it can be used in a given context.&lt;br/&gt;The &lt;b&gt;&lt;i&gt;name&lt;/i&gt;&lt;/b&gt; attribute represents the metric. &lt;br/&gt;The &lt;b&gt;&lt;i&gt;referenceId&lt;/i&gt;&lt;/b&gt; attribute represents a unique way to identify the metric in a repository. &lt;br/&gt;The &lt;b&gt;&lt;i&gt;category&lt;/i&gt;&lt;/b&gt; attribute represents the type of the metric (i.e. business, technical, security). &lt;br/&gt;The &lt;b&gt;&lt;i&gt;parameterList&lt;/i&gt;&lt;/b&gt; attribute lists a set of variable names that can appear at various places under the &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; element &#8211; e.g. in some measurement rule or measure definition. The &lt;b&gt;&lt;i&gt;parameterList&lt;/i&gt;&lt;/b&gt; attribute can be what is needed by an implementer of the &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; element &#8211; to use the variables or attribute names inside the list either as parts of a run-time Metric interface, or in a Metric configuration file.&lt;br/&gt;A &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; element is associated to one or more &lt;b&gt;&lt;i&gt;ContextCondition&lt;/i&gt;&lt;/b&gt; elements (&lt;b&gt;&lt;i&gt;contextConditions&lt;/i&gt;&lt;/b&gt; association).&lt;br/&gt;A &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; element is associated to one or more &lt;b&gt;&lt;i&gt;MeasurementRule&lt;/i&gt;&lt;/b&gt; elements (&lt;b&gt;&lt;i&gt;measurementRules&lt;/i&gt;&lt;/b&gt; association).&lt;br/&gt;A &lt;b&gt;&lt;i&gt;Metric&lt;/i&gt;&lt;/b&gt; element is associated to one primary &lt;b&gt;&lt;i&gt;MeasureDefinition&lt;/i&gt;&lt;/b&gt; element (&lt;b&gt;&lt;i&gt;primaryMeasureDefinition&lt;/i&gt;&lt;/b&gt; association).&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Based on feedback from reviewers regarding alignment with other models for Metrics, the NIST Metrics WG is considering changing the name of the Measure class to MeasurementResult, and is removing the Measurement class from the model.&#160;&#160;The MeasureDefinition class along with the Metrics class adequately captures the semantics of the specification of the calculations used to derive a measurement result.&#160;&#160;Figure A.7 is a class diagram reflecting current work in the NIST Metrics WG.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Model in Figure A.7 is a refinement of the current working draft of the NIST Metrics definition specification. This refined metrics model removes the Measurement class and changes the name of the Measure class in Figure A-6 to MeasurementResult. It represents the relationship that a Metric can have with underlying metrics, and also has classes representing of Measure parameters, Measure parameter instances and measure rule instances.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 1:15:47 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/22/2022 6:54:19 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{82A6B4C9-F754-4ffb-AB7C-661A48CB71B0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

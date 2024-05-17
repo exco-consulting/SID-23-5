@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.16 - Customer Billing Statistic, Part 2</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA875.png" usemap="#EA875" border="0" />
+
+<MAP NAME="EA875">
+<area shape="rect" coords="80,261,217,313" href="../../EA9/EA14/EA4972.htm" target="_self">
+<area shape="rect" coords="541,170,746,222" href="../EA7/EA1/EA805.htm" target="_self">
+<area shape="rect" coords="556,307,705,353" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="351,307,474,353" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="324,164,529,216" href="../EA7/EA1/EA808.htm" target="_self">
+<area shape="rect" coords="63,164,316,216" href="../EA7/EA1/EA804.htm" target="_self">
+<area shape="rect" coords="298,10,552,88" href="../EA7/EA1/EA811.htm" target="_self">
+<area shape="rect" coords="146,342,323,420" href="../EA7/EA1/EA812.htm" target="_self">
+<area shape="rect" coords="570,501,814,588" href="../EA7/EA1/EA806.htm" target="_self">
+<area shape="rect" coords="312,499,549,588" href="../EA7/EA1/EA809.htm" target="_self">
+<area shape="rect" coords="27,499,277,586" href="../EA7/EA1/EA814.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.16 - Customer Billing Statistic, Part 2 diagram</div>
+	<div class="ObjectDetailsNotes">The CustomerBillingStatisticSpec is used to describe the statistic that needs to be collected. The UsageCharacteristicSumSpec describes the collection of usage characteristic statistic (for example, the total sum of the duration of voice calls in a month). Policy rules can be used to define, which statistic data are of the billing process interest, when they should be created and expired, how they should be calculated, and what actions should be triggered when statistic data meet certain conditions.&lt;br/&gt;CustomerBillingStatistic entity instances are typically created and updated during rating and billing process. Since a quantity represented by CustomerBillingStatistic changes over time corresponding Balance entities are used to track its history as shown in the figure below.&lt;br/&gt;For example, for a certain product a billing system may track total number of kilobytes transferred over GPRS connection per quarter. The total sum is recorded by a billing system and stored in an instance of UsageCharacteristicSum entity. When a certain volume is exceeded a DiscountProductPriceAlteration instance may be generated entitling customer to a certain discount.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:51:11 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7E8CCDC0-E79B-469d-A839-25A12684ACBA}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

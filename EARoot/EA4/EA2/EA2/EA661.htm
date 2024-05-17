@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[CuD-01] Customer ABEs Level 1</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA662.png" usemap="#EA662" border="0" />
+
+<MAP NAME="EA662">
+<area shape="rect" coords="265,190,501,242" href="./EA8/EA816.htm" target="_self">
+<area shape="rect" coords="265,285,501,329" href="./EA11/EA879.htm" target="_self">
+<area shape="rect" coords="22,238,258,282" href="./EA9/EA833.htm" target="_self">
+<area shape="rect" coords="22,190,258,234" href="./EA7/EA792.htm" target="_self">
+<area shape="rect" coords="265,143,501,187" href="./EA6/EA758.htm" target="_self">
+<area shape="rect" coords="22,95,258,139" href="./EA3/EA730.htm" target="_self">
+<area shape="rect" coords="22,143,258,187" href="./EA5/EA745.htm" target="_self">
+<area shape="rect" coords="22,285,258,329" href="./EA10/EA872.htm" target="_self">
+<area shape="rect" coords="265,52,501,96" href="./EA2/EA689.htm" target="_self">
+<area shape="rect" coords="265,95,501,139" href="./EA4/EA734.htm" target="_self">
+<area shape="rect" coords="22,52,258,96" href="./EA1/EA679.htm" target="_self">
+<area shape="rect" coords="10,10,521,338" href="EA661.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">[CuD-01] Customer ABEs Level 1 diagram</div>
+	<div class="ObjectDetailsNotes">The diagram below lists the Customer Domain&#39;s ABEs.&lt;br/&gt;&lt;b&gt;Customer Party Roles ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Party Roles ABE is the focus on all the party roles related to Customer. &lt;br/&gt;&lt;b&gt;Customer Product Order ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Product Order ABE handles single customer product orders and the various types thereof, such as regulated and non-regulated orders.&lt;br/&gt;&lt;b&gt;Customer Service Level Agreement ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer SLA ABE is a special case of the Service Level Agreement ABE where an involved party in the agreement is a Customer. See the Agreement ABE in the Engaged Party Domain for details.&lt;br/&gt;&lt;b&gt;Customer Interaction ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Interaction ABE represents communications with customers, and the translation of customer requests and inquiries into appropriate &#8220;events&#8221; such as the creation of a customer product order, the creation of a customer bill inquiry, or the creation of a customer problem.&lt;br/&gt;&lt;b&gt;Customer Problem ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Problem ABE focuses on technical assistance and problem handling for customers.&lt;br/&gt;&lt;b&gt;Applied Customer Billing Rate ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Applied Customer Billing Rate ABE deals with the correlation of related usage for subsequent rating, rates applied to the usage (both regulated and non-regulated), discounts to usage, and any taxes due on the rated usage.&lt;br/&gt;&lt;b&gt;Customer Bill ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Billing ABE handles real-time and non-real-time Call Detail Records (CDRs) and other sources of data that result in invoice items.&#160;&#160;The Customer Bill ABE also represents the format of a bill, schedule the production of bills, customer invoicing profiles, all the financial calculations necessary to determine the total of the bill (except for rating and rating discounts), and credits and adjustments to bills.&lt;br/&gt;&lt;b&gt;Customer Bill Collection ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Bill Collection ABE handles credit violations, actions for overdue debts, and facility billing audits.&lt;br/&gt;&lt;b&gt;Customer Billing Account ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Used to manage account and its balance information. Balance (or balances) represents an amount, usually with some monetary value, usually an aggregation, that indicates an aspect of liability (often financial) between the service provider and the account holder (usually a customer). This amount can be monetary amount, or non-monetary (such as free minutes, or amount of loyalty points), can represent credit that the CSP holds for the customer (for example pre-paid balance) or debt that the customer owes the CSP (as is the normal case for post-paid A/R balance). &lt;br/&gt;&lt;b&gt;Customer Bill Inquiry ABE (not fully developped)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Represents invoice inquiries associated with invoices sent to customers and handles disputes and adjustments on individual charges, invoices, and accounts.&lt;br/&gt;&lt;b&gt;Customer Statistic ABE (not fully developped)&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer Statistic ABE represents the analysis of customer usage patterns, customer profitability statistics and churn and retention statistics.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/23/2022 6:07:48 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B9874BF1-8BA0-4853-B96E-5125786F1E73}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

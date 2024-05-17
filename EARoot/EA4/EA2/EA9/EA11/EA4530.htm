@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-30 - Policy Management Overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4531.png" usemap="#EA4531" border="0" />
+
+<MAP NAME="EA4531">
+<area shape="rect" coords="9,202,163,232" href="../../EA4/EA4/EA1476.htm" target="_self">
+<area shape="rect" coords="290,364,457,394" href="../../EA4/EA4/EA1477.htm" target="_self">
+<area shape="rect" coords="654,232,821,262" href="../../EA5/EA3/EA1943.htm" target="_self">
+<area shape="rect" coords="739,32,906,62" href="../../EA5/EA3/EA1942.htm" target="_self">
+<area shape="rect" coords="307,142,439,172" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="159,289,249,319" href="../../EA4/EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="649,131,755,180" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="399,24,566,83" href="./EA4/EA4630.htm" target="_self">
+<area shape="rect" coords="121,10,345,83" href="./EA4/EA4631.htm" target="_self">
+<area shape="rect" coords="512,278,609,308" href="../../EA5/EA1/EA1638.htm" target="_self">
+<area shape="rect" coords="345,277,499,307" href="../../EA10/EA1/EA8/EA5559.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-30 - Policy Management Overview diagram</div>
+	<div class="ObjectDetailsNotes">The purpose of this section is to describe how policy can be used to manage different types of managed entities. This version of this Addendum will describe a simple example in which Policy can be used to manage Resources and Services using a PartyRole. The next version of this Addendum will add detail to each of these sections and provide a more detailed definition of these as well as other SID domains. &lt;br/&gt;A PartyRole defines the function that a Party takes on. PartyRoles can represent the ability to manage, configure, use, and perform other types of interactions with LogicalResources. A simple starting model is shown in Figure below. One can see that the Service and Resource management methods are symmetrical.&lt;br/&gt;The OwnsResource association defines the set of Resources (PhysicalResources and/or LogicalResources) that a particular PartyRole owns. Note that this is a very different relationship than the AdministersResource association. The OwnsResource association defines the PartyRole that is the owner of the Resource. Here, &#8220;owner&#8221; is the person or group that is responsible (e.g., organizational, financial, and so forth) for the Resource. Note that the cardinality of the OwnsResource association on the PartyRole side is 1 &#8211; this means that a Resource MUST have at least one PartyRole to manage it. Furthermore, the cardinality of this association on the Resource side is 0..n, which ensures that a PartyRole doesn&#8217;t have to own a Resource.&lt;br/&gt;The AdministersResource association defines the set of Resources (PhysicalResources and/or LogicalResources) that a particular Party, playing the role of ValueNetworkRole, administers. From a business perspective, the Owner must either appoint or give permission to the Administrator to administer the Resource that is owned. This is done using the GrantsResourceAdminRights association. Note that a ValueNetworkRole, not just a PartyRole, is required to administer the Service. This is because a ValueNetworkRole possesses additional skills that a PartyRole doesn&#8217;t necessarily have. &lt;br/&gt;The GrantsResourceAdminRights association defines which ValueNetworkRoles are allowed to administer a particular owned Resource. Different ValueNetworkRoles will in general have different administration rights for the same Resource. For example, different types of Administrators will in general each have the ability to make more changes than different types of Technicians.&lt;br/&gt;Policies can be defined for controlling the specific rights of administering a Resource. This is the function of the ResourceManagementPolicy class. Since this is the business view of this relationship, only a simple single attribute is shown. &lt;br/&gt;The ResourceManagementPolicy class defines the particular policies that are used to define how different aspects of the Resource are managed and maintained. For example, assume that a Resource is made up of several different Equipment entities. One of these Equipment entities might require multiple PartyRoles to approve changes to its configuration, whereas another Equipment entity might not require any approvals to change its configuration. Since Policy uses the composite pattern, if a set of Policies are needed, these can be aggregated into a single Policy.&lt;br/&gt;Note the power of this pattern &#8211; the ManagementPolicyForResource association, along with its ResourceManagementPolicy class, provide a generic template for defining which set of PartyRoles can perform which type of management function for which type of Resource. Following Figure shows that Services and Resources can be managed using the same pattern, even though the contents of the classes will be different.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 9:20:37 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{6FCA0020-392E-4b8a-8468-C79CCCEE54DF}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

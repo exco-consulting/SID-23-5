@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.21-I03 - Product Price Rule Model – DSL Service and Router Rebate</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1057.png" usemap="#EA1057" border="0" />
+
+<MAP NAME="EA1057">
+<area shape="rect" coords="5,10,794,481" href="EA1093.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.21-I03 - Product Price Rule Model – DSL Service and Router Rebate diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;The next example is a ProductOffering that combines ordering DSL service with one of several types of routers that offer varying functionality.&#160;&#160;If both the DSL service and either of the routers are purchased, a subscriber (customer) gets a fifty-dollar rebate on the router of choice (we&#8217;ll keep it simple and assume that there are only two types of routers to choose from in this example).&#160;&#160;In this case the ProductOffering instance, &#8220;Buy DSL Service and Router, Get $50 Back!&#8221;, has as its product offering components, the DSL service and one of two different routers.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Since the price rule involves purchasing two products, a composite PolicyCondition is employed.&#160;&#160;The model for representing a composite PolicyCondition follows the Composite/Component pattern used throughout the SID model and in the Product domain, so the PolicyConditionComposite class is not shown here.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The price rule has six condition instances, three atomic condition instances and three composite condition instances (the composite instances aggregate two or more atomic instances).&#160;&#160;The first atomic condition&#8217;s ProdOfferPolicyVariable is related to the quantity for the DSL service.&#160;&#160;The PolicyOperator is &#8220;equals&#8221;.&#160;&#160;The PolicyValue is &#8220;1&#8221;.&#160;&#160;The second atomic condition&#8217;s ProdOfferPolicyVariable is related to the quantity for one type of router.&#160;&#160;The PolicyOperator is &#8220;equals&#8221;.&#160;&#160;The PolicyValue is &#8220;1&#8221;.&#160;&#160;The third atomic condition&#8217;s ProdOfferPolicyVariable is related to the quantity for the other type of router.&#160;&#160;The Policy Operator is &#8220;equals&#8221;.&#160;&#160;The Policy Value is &#8220;1&#8221;.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In order to represent the completed composite PolicyCondition, two of the composite conditions join the DSL service with the routers using an &#8220;and&#8221; Boolean operator.&#160;&#160;The third composite joins these two composites using an &#8220;or&#8221; Boolean operator.&#160;&#160;This entire condition is: (DSL service &#8220;and&#8221; router #1) or (DSL service &#8220;and&#8221; router #2).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The ProdOfferPriceAction is related to the $50 rebate for the DSL service.&#160;&#160;The action is: &#8220;Set allowed quantity for the DSL service rebate equal to 1&#8221;.&#160;&#160;The description of the price indicates it is a rebate on the purchased router.&#160;&#160;The figure below shows the instances of these business entities within the context of the model.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 11:32:23 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/17/2022 3:44:52 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{45A578C7-88EA-4779-AFFE-3FAAB8E499E2}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

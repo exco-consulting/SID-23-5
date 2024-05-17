@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Proj.01 - basic structure</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4712.png" usemap="#EA4712" border="0" />
+
+<MAP NAME="EA4712">
+<area shape="rect" coords="151,291,324,321" href="EA4790.htm" target="_self">
+<area shape="rect" coords="451,10,624,124" href="./EA3/EA4857.htm" target="_self">
+<area shape="rect" coords="278,401,407,431" href="./EA6/EA4890.htm" target="_self">
+<area shape="rect" coords="130,452,303,482" href="./EA6/EA4891.htm" target="_self">
+<area shape="rect" coords="25,402,151,432" href="./EA6/EA4889.htm" target="_self">
+<area shape="rect" coords="10,216,101,246" href="EA4794.htm" target="_self">
+<area shape="rect" coords="812,337,930,503" href="./EA1/EA4815.htm" target="_self">
+<area shape="rect" coords="576,415,749,477" href="./EA8/EA4910.htm" target="_self">
+<area shape="rect" coords="406,175,536,315" href="EA4781.htm" target="_self">
+<area shape="rect" coords="602,149,775,341" href="./EA3/EA4856.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Proj.01 - basic structure diagram</div>
+	<div class="ObjectDetailsNotes">Projects are made up of Sub-Projects, Work Breakdown Structure (WBS) Elements and Activities, as shown in figure 1. &lt;br/&gt;Projects can be established for many reasons in an Enterprise and Activities can cover any task in the Enterprise, from Strategic work, Product Development through to Repair and Maintenance. A Project can be thought of as a grouping of Activities to achieve one or more business goals.&lt;br/&gt;We will define an abstract entity &#8220;ProjectElement&#8221; that contains the common attributes and associations of Project, WBS Element and Activity. This will help in making the model simpler, more robust and more flexible.&lt;br/&gt;Note that in the model, many of the relationships have been generalized to link to ProjectElement. This allows the relationships to be defined at a high level (e.g. per Project) or at the lowest level (e.g. per Activity). To reduce data entry and data maintenance, the linkages should be made at the highest practical level. For example, if a Project is all at a certain Location then this linkage should be done at the Project level. If the Project is at 3 locations then link to the Locations at the highest level practical (e.g. a t the WBS or Activity level).&lt;br/&gt;Projects can be decomposed into smaller parts (sub-projects) forming a hierarchy.&lt;br/&gt;Similarly, WBS Elements are broken down using a strict hierarchy.&lt;br/&gt;Activities can also be formed into a hierarchy, allowing us to deal with them at both a summary and a detailed level.&lt;br/&gt;&lt;i&gt;Note that Project, WBS Element &amp; Activity are linked at the abstract level, allowing for greater flexibility.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/6/2023 7:28:00 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{9AD93A73-C0AD-4f5b-B0B0-9D2F849B7161}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

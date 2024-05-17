@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Tpgy.08 Topology Specification Entity Relationships</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5321.png" usemap="#EA5321" border="0" />
+
+<MAP NAME="EA5321">
+<area shape="rect" coords="543,401,715,494" href="../EA2/EA3820.htm" target="_self">
+<area shape="rect" coords="796,248,922,346" href="EA5359.htm" target="_self">
+<area shape="rect" coords="340,248,500,346" href="EA5337.htm" target="_self">
+<area shape="rect" coords="552,14,696,73" href="EA5339.htm" target="_self">
+<area shape="rect" coords="18,403,225,462" href="EA5360.htm" target="_self">
+<area shape="rect" coords="104,145,311,204" href="EA5338.htm" target="_self">
+<area shape="rect" coords="10,14,217,73" href="EA5340.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Tpgy.08 Topology Specification Entity Relationships diagram</div>
+	<div class="ObjectDetailsNotes">In developing the TMF920A Topology Discovery Service and the supporting TMF686 API Topology graph API it was realized that the Information Model Framework&#160;&#160;needed to separate the specification of Graphs, Vertices and Edges from instances of Graphs, Vertices and Edges. For example there may be multiple Vertex Specification for different types of Router (ProviderEdge, Core,etc.), Router shelves ( self powered unpowered) Router Slide in Card(Wired Gigabit&#160;&#160;Ethernet, Optical), Power Supplies, Power Distribution Bars, communication&#160;&#160;links, etc.; that each require their own specification of parameters that need to be modeled and instantiated in instances of vertices and edges. Instance normally comply to one specification type. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">10/30/2023 11:44:31 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/6/2023 9:44:46 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Dave Milham</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B234CEA8-9A2A-47fb-9CC9-3505DC3472A7}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

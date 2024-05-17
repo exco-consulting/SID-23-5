@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.17 - Managing ResourceRoles Using PartyRoles</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1855.png" usemap="#EA1855" border="0" />
+
+<MAP NAME="EA1855">
+<area shape="rect" coords="195,270,350,339" href="./EA3/EA2036.htm" target="_self">
+<area shape="rect" coords="190,170,344,214" href="EA1943.htm" target="_self">
+<area shape="rect" coords="167,10,321,51" href="EA1942.htm" target="_self">
+<area shape="rect" coords="10,103,105,153" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="17,332,114,384" href="EA1947.htm" target="_self">
+<area shape="rect" coords="403,89,509,148" href="EA1944.htm" target="_self">
+<area shape="rect" coords="399,232,516,268" href="./EA3/EA2028.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.17 - Managing ResourceRoles Using PartyRoles diagram</div>
+	<div class="ObjectDetailsNotes">The ResourceRole is extensible to related interactions between Resources and other business entities, such as PartyRoles. &lt;br/&gt;For example, the following Figure associates specific PartyRoles, which are defined in the Policy Guide Book, with specific ResourceRoles such as device roles.&lt;br/&gt;This is an example of a real-world business case: since the core of a Provider network in general uses different devices than the (edge) devices used to access the core, and since the role of the core is different than that of the edge, different management personnel having different skill sets are often assigned to manage devices in the core versus devices in the edge.&lt;br/&gt;The association class ResourceRolePartyRoleDetails defines the set of ResourceRoles that are managed by a particular PartyRole. Oftentimes, there are important functional differences between different types of Resources that require very different skill sets, methods, and so forth to be used by the PartyRole that is managing that Resource. For example, different management personnel may be assigned to manage core routers compared to edge routers. This applies not just to the router as a whole, but to its physical (e.g., line cards) and logical (e.g., DeviceInterfaces) components as well.&lt;br/&gt;This association enables these relationships to be captured. The semantics of this association are implemented by the ResourceRolePartyRoleDetails association class. &lt;br/&gt;We will apply this concept to our MPLS VPN Example in the Section titled Roles in More Detail once more entities of the Resource and LogicalResource hierarchies have been described.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:11:44 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{399CCA9E-E754-4f52-8DEC-DBDF4EAA7C46}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

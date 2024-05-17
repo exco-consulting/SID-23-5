@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.01 - Primary Product Domain Business Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA907.png" usemap="#EA907" border="0" />
+
+<MAP NAME="EA907">
+<area shape="rect" coords="283,10,453,81" href="../../EA9/EA2/EA3820.htm" target="_self">
+<area shape="rect" coords="283,136,453,195" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="283,533,453,592" href="../EA4/EA1194.htm" target="_self">
+<area shape="rect" coords="484,81,674,140" href="../EA3/EA1109.htm" target="_self">
+<area shape="rect" coords="41,84,248,143" href="EA984.htm" target="_self">
+<area shape="rect" coords="41,268,211,320" href="EA982.htm" target="_self">
+<area shape="rect" coords="312,323,425,357" href="EA966.htm" target="_self">
+<area shape="rect" coords="283,403,453,462" href="../EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="476,264,646,323" href="../EA3/EA1108.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.01 - Primary Product Domain Business Entities diagram</div>
+	<div class="ObjectDetailsNotes">An overview of how the main Product domain business entities are related is shown in the figure below.&#160;&#160;This model is developed as we work through this document.&lt;br/&gt;The Product domain is essential to the overall SID model.&#160;&#160;Customers need to be able to express their needs in plain English in order to determine which ProductOfferings can support their requirements and Service Providers need to be able to match these requirements to technical specifications to realize the ProductOffering. &lt;br/&gt;A ProductOffering represents what is externally presented to the market for the market&#8217;s use. &lt;br/&gt;The class ProductOffering is abstract. Using the atomic/composite pattern, it further specializes into two concrete classes: SimpleProductOffering and BundledProductOffering (equivalent to atomic / composite).&lt;br/&gt;The class ProductSpecification is abstract. Using the atomic/composite pattern, it further specializes into two concrete classes: AtomicProductSpecification and CompositeProductSpecification.&lt;br/&gt;A SimpleProductOffering is always associated with exactly one ProductSpecification, which itself can be atomic or composite.&lt;br/&gt;A BundledProductOffering is not directly associated with any ProductSpecification. Instead it contains ProductOfferings, each of which may in turn be a SimpleProductOffering that is associated with a ProductSpecification, or a BundledProductOffering.&lt;br/&gt;An example of a BundledProductOffering is a home-based internet service representing the aggregation of three SimpleProductOfferings: internet connection, email service, and web hosting. The home-based internet service ProductOffering is not related to any ProductSpecification, since it merely represents a grouping of other offerings.&lt;br/&gt;&lt;br/&gt;Vice versa, a ProductSpecification may be made available as one or more simple ProductOfferings (which in turn may be components of a BundledProductOffering).&lt;br/&gt;For example, an email ProductSpecification may be used in a number of different ProductOfferings: one such offering may be bundled as part of a Broadband Internet offering, while another offering may represent stand-alone email.&lt;br/&gt;&lt;br/&gt;&lt;i&gt;Note that ProductSpecification and ProductOffering inherit the lifecycleStatus and validFor attributes from EntitySpecification, and ID, name and description from RootEntity.&lt;/i&gt;&lt;br/&gt;A Product represents the instantiation of a ProductOffering or ProductSpecification by a Party playing a PartyRole, such as a Customer. If the product can be used (based on a contract) over a period of time (and not for example a one-time purchase of a device), this is colloquially known as a Subscription. For example, Helen has subscribed to company ABC&#8217;s internet ProductOffering. Typically, when a Customer acquires a ProductOffering, a Product will be instantiated for the parent ProductOffering, for each contained ProductOffering, and for each ProductSpecification referred to by the contained SimpleProductOfferings in the offering tree.&lt;br/&gt;This enables a customer or other party to report problems about a product which was not marketed as an offering or for a product to appear on a bill, and so forth.&#160;&#160;For example, a composite high-speed internet ProductSpecification may include email and personal web pages atomic ProductSpecifications which are not instantiated as separate offerings but still must be instantiated as Products.&#160;&#160;This is also necessary if a ProductSpecification not instantiated as a ProductOffering has configurable characteristics or prices associated with one or more characteristics.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/20/2023 9:48:39 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{23BEC417-57B7-4af3-BA55-2F2E3B61708E}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.15 - Links to Other Parts of the SID Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5881.png" usemap="#EA5881" border="0" />
+
+<MAP NAME="EA5881">
+<area shape="rect" coords="1007,10,1143,94" href="EA5923.htm" target="_self">
+<area shape="rect" coords="810,63,925,121" href="EA5922.htm" target="_self">
+<area shape="rect" coords="677,477,781,551" href="EA5921.htm" target="_self">
+<area shape="rect" coords="640,84,755,120" href="EA5960.htm" target="_self">
+<area shape="rect" coords="813,517,966,561" href="../EA1/EA5484.htm" target="_self">
+<area shape="rect" coords="442,112,609,148" href="EA5959.htm" target="_self">
+<area shape="rect" coords="897,332,1059,403" href="./EA2/EA6038.htm" target="_self">
+<area shape="rect" coords="402,378,582,452" href="EA5957.htm" target="_self">
+<area shape="rect" coords="484,586,596,638" href="../EA1/EA1/EA5490.htm" target="_self">
+<area shape="rect" coords="205,155,380,207" href="./EA1/EA1/EA5996.htm" target="_self">
+<area shape="rect" coords="897,621,994,673" href="../EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="151,568,295,620" href="./EA1/EA1/EA6005.htm" target="_self">
+<area shape="rect" coords="605,368,769,420" href="./EA2/EA6047.htm" target="_self">
+<area shape="rect" coords="972,120,1069,172" href="EA5958.htm" target="_self">
+<area shape="rect" coords="631,586,728,621" href="../EA1/EA5469.htm" target="_self">
+<area shape="rect" coords="813,423,910,475" href="./EA2/EA6037.htm" target="_self">
+<area shape="rect" coords="663,174,777,226" href="../../EA5/EA3/EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="815,260,911,303" href="./EA2/EA6039.htm" target="_self">
+<area shape="rect" coords="25,648,166,681" href="../../EA9/EA4/EA3948.htm" target="_self">
+<area shape="rect" coords="194,421,348,473" href="./EA1/EA1/EA6001.htm" target="_self">
+<area shape="rect" coords="125,301,258,353" href="./EA1/EA1/EA6000.htm" target="_self">
+<area shape="rect" coords="30,452,147,504" href="./EA1/EA1/EA6003.htm" target="_self">
+<area shape="rect" coords="42,122,178,174" href="./EA1/EA5973.htm" target="_self">
+<area shape="rect" coords="9,226,133,278" href="./EA1/EA5979.htm" target="_self">
+<area shape="rect" coords="268,10,402,62" href="./EA1/EA5977.htm" target="_self">
+<area shape="rect" coords="289,686,428,719" href="./EA1/EA1/EA6004.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.15 - Links to Other Parts of the SID Model diagram</div>
+	<div class="ObjectDetailsNotes">&lt;b&gt;Location &amp; Address Role&lt;/b&gt;&lt;br/&gt;In the Party SID model facet, we defined roles that parties (people and organizations) may play. In a similar fashion, we may find it useful to define location and address roles. This will allow us to use a single location or address for different purposes, e.g. a single address may be a:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Customer billing address&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Phone directory address&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	CPE equipment location address and a&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Geographic plant reference address (pillar outside the front of &#8230;).&lt;br/&gt;Because the role requirements are simpler than in the Party SID model facet, Location roles have been modeled as associations. [Fowler-role]&lt;br/&gt;Care should be taken not to confuse when to create address &amp; location subtypes versus address &amp; location roles.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Interworking with the rest of the SID model&lt;/b&gt;&lt;br/&gt;Fig 15 shows some possible connections from Location to other parts of the SID model. This diagram is intended to be illustrative rather than prescriptive.&lt;br/&gt;The SID model doesn&#8217;t store GeoSpatial information as a part of every entity. As each entity is modeled, we determine whether the entity has GeoSpatial attributes or refers to GeoSpatial attributes. For network equipment, we create abstract GeoSpatial entities of location and route section etc. and reference these from the network elements.&lt;br/&gt;To reiterate; Location information should not be stored in Product, Party or Network Resource entities but associated with a Place. &lt;br/&gt;If a Place exists, it should be shared and not duplicated.&lt;br/&gt;This allows queries that would otherwise require GeoSpatial queries to be done textually, i.e. to check if two network elements are at the same location, just see if the place ids are the same. &lt;br/&gt;When placing a Resource or a Product, the choice is to associate to an:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	address, or&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	site, or&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	location &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/28/2023 9:46:44 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{6B8F04C0-A71F-4f9c-B0D8-DFF0926E34FA}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

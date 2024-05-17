@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Cat.02 – Catalog Entities and Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4053.png" usemap="#EA4053" border="0" />
+
+<MAP NAME="EA4053">
+<area shape="rect" coords="195,295,367,367" href="../../EA4/EA3/EA3/EA1459.htm" target="_self">
+<area shape="rect" coords="204,202,367,266" href="../../EA5/EA2/EA5/EA1830.htm" target="_self">
+<area shape="rect" coords="772,13,935,87" href="./EA1/EA4074.htm" target="_self">
+<area shape="rect" coords="638,313,783,376" href="../../EA3/EA3/EA2/EA1140.htm" target="_self">
+<area shape="rect" coords="10,31,125,115" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="385,188,511,240" href="../../EA4/EA3/EA3/EA1461.htm" target="_self">
+<area shape="rect" coords="641,577,780,629" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="114,604,224,656" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="385,604,518,656" href="../../EA4/EA3/EA1406.htm" target="_self">
+<area shape="rect" coords="646,188,775,240" href="../../EA3/EA3/EA2/EA1141.htm" target="_self">
+<area shape="rect" coords="632,435,788,496" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="378,13,528,119" href="EA4063.htm" target="_self">
+<area shape="rect" coords="46,376,192,487" href="../../EA5/EA2/EA5/EA1831.htm" target="_self">
+<area shape="rect" coords="379,372,523,483" href="../../EA4/EA3/EA3/EA1460.htm" target="_self">
+<area shape="rect" coords="29,187,170,239" href="../../EA5/EA2/EA5/EA1832.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Cat.02 – Catalog Entities and Associations diagram</div>
+	<div class="ObjectDetailsNotes">A CatalogSpecification defines one or many Catalogs. The business entities that inherit from catalog: are ProductCatalog, ServiceCatalog and ResourceCatalog, EntityCatalog, and FederatedCatalog. EntityCatalog and FederatedCatalog will be described in a later section of this guide book.&lt;br/&gt;The following Figure depicts the relationship of Catalog entities to the existing entities of information framework in the Product, Service and Resource domains. &lt;br/&gt;In this figure there are two more entities that are introduced through this guidebook. They are ServiceCandidate and ResourceCandidate. These two entities are defined to enable the respective specifications (ServiceSpecification and ResourceSpecification) to be available for inclusion in respective catalogs. As such the instances of &#8220;candidate&#8221; entities represent a subset of all the respective &#8220;specification&#8221; entities. For example, obsolete replacement ResourceSpecifications may not be of interest from a catalog perspective.&lt;br/&gt;The PartyRole who provides the Catalog can also be specified. For example, a Product Catalog provided by an application developer.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 12:04:18 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C852DCF2-90CF-420c-9B1B-155C5A428767}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

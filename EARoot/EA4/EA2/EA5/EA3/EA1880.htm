@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.09 -The Concept of a DeviceRole</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1881.png" usemap="#EA1881" border="0" />
+
+<MAP NAME="EA1881">
+<area shape="rect" coords="25,10,122,62" href="./EA3/EA4/EA2079.htm" target="_self">
+<area shape="rect" coords="338,11,435,63" href="./EA3/EA4/EA2080.htm" target="_self">
+<area shape="rect" coords="523,129,620,181" href="./EA3/EA4/EA2081.htm" target="_self">
+<area shape="rect" coords="388,131,485,183" href="./EA3/EA4/EA2082.htm" target="_self">
+<area shape="rect" coords="259,130,356,182" href="./EA3/EA4/EA2083.htm" target="_self">
+<area shape="rect" coords="147,130,244,182" href="./EA3/EA4/EA2085.htm" target="_self">
+<area shape="rect" coords="10,129,107,181" href="./EA3/EA4/EA2084.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.09 -The Concept of a DeviceRole diagram</div>
+	<div class="ObjectDetailsNotes">Before we dive deeper, let&#8217;s clear up one thing that we previously hinted at. We have defined previously a Switch and a Router as types of Devices. We all know the basic difference between a Switch and a Router &#8211; the former forwards traffic, while the latter routes and forwards traffic. But what about the so-called &#8220;Layer 3&#8221; switches, which are Switches that have Routing capability?&lt;br/&gt;Assume that our model actually did implement a router and a switch subclass of PhysicalDevice. One would then be tempted to invent a new subclass, called Layer3Switch, which subclasses a Switch and adds routing capabilities, to handle this new type of device. However, this is a poor solution, because now every time routing changes, we have to update the Router and the Layer3Switch class. Besides, this implies that a Layer3Switch can do everything that a full-blown Router can do, which is almost never the case. There are other problems too, but this is enough for now.&lt;br/&gt;One may then be tempted to use multiple inheritance to solve this problem. However, this creates a new problem &#8211; one of extensibility. What if there is a &#8220;Layer4Switch&#8221; (unfortunately, some vendors do define such an animal!)? What if we want to differentiate between the type of routing done in a Router vs. those done in the Layer3Switch vs. those done in the Layer4Switch? What if there is a Router that has firewalling capabilities? The list is endless. Multiple inheritance cannot be used to solve all of these problems, and besides, many implementations don&#8217;t support multiple inheritance. We don&#8217;t want to compromise our ability to build a system view out of this business view!&lt;br/&gt;Instead, a much more elegant and extensible solution is available &#8211; we can use the notion of roles. In fact, one of the strengths of a good model is to be able to reuse the same set of patterns over and over. Roles form a core part of the Party model, which (among other things) describes People, Organizations, and the functions (i.e., roles) that they play. This is documented in GB922 Common guide book (the Common Business Entity Addendum that defines Party and PartyRole).&lt;br/&gt;Our approach is now simplified. Instead of trying to either define many subclasses or introduce multiple inheritance, we can instead define a set of roles that the device is meant to play. (It should be noted that this is another reason why the concept of a managed device is a good one &#8211; now, we can define a base concept of a managed device, and model its functionality by associating one or more roles to it as appropriate). This solves the mess of having the same generic function (such as routing) assigned to two different types of devices that implement that same generic function in different ways, producing different subsets of functionality.&lt;br/&gt;Since the networking industry has shown to be ever-evolving, inheritance is not appropriate for capturing this behavior, as the behavior itself changes over time. In addition, by capturing the key functional concepts as roles, we can model present and future Devices as entities that can play many roles at one time.&lt;br/&gt;Thus, by modelling DeviceRole as a separate concept from Device, we can represent these complex behaviors in an extensible manner.&lt;br/&gt;The following Figure shows a simple model introducing the concept of a DeviceRole.&lt;br/&gt;It should be noted that the Figure does not define all of the different types of roles that a Device can take on. This concept is clearly not a physical one, but rather a logical one, and will show up in other Addenda. It is brought up in this Addendum because this is a critical concept for modelling different types of devices, and the Physical Resource model must be able to interface with this concept. It also inspires us to see if there isn&#8217;t a similar concept that can be used to abstract similar differences in the physical world. In fact, there is a similarity, and is defined in the following section.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:26:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{68E225E4-1B0F-407d-92F9-9F1336A1CCF6}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

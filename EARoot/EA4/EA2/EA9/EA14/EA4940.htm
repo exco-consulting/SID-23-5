@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.02 - Usage Specification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4941.png" usemap="#EA4941" border="0" />
+
+<MAP NAME="EA4941">
+<area shape="rect" coords="605,445,760,504" href="../EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="946,613,1115,756" href="../EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="942,348,1118,504" href="../EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="17,641,182,706" href="../EA2/EA2/EA3850.htm" target="_self">
+<area shape="rect" coords="10,296,182,439" href="../EA2/EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="36,34,163,107" href="../EA2/EA3820.htm" target="_self">
+<area shape="rect" coords="32,162,167,223" href="../EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="243,359,378,387" href="./EA2/EA5012.htm" target="_self">
+<area shape="rect" coords="221,641,401,690" href="./EA2/EA5013.htm" target="_self">
+<area shape="rect" coords="525,534,722,562" href="EA4972.htm" target="_self">
+<area shape="rect" coords="717,660,897,689" href="./EA2/EA5015.htm" target="_self">
+<area shape="rect" coords="736,359,905,389" href="./EA2/EA5014.htm" target="_self">
+<area shape="rect" coords="508,183,623,243" href="EA4971.htm" target="_self">
+<area shape="rect" coords="246,183,380,212" href="./EA2/EA5017.htm" target="_self">
+<area shape="rect" coords="720,169,921,226" href="./EA2/EA5011.htm" target="_self">
+<area shape="rect" coords="223,10,404,107" href="./EA2/EA5016.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.02 - Usage Specification diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows abstract business entities that are used to model usage. The model shown below is generic.&lt;br/&gt;The UsageSpecification class describes a type of usage. In order to achieve a flexible structure of the UsageSpecification all its attributes are stored as characteristics.&#160;&#160;Alternatively, different types of usage could be modeled as sub-classes of the Usage entities (Usage, ProductUsage, ServiceUsage, ResourceUsage).&lt;br/&gt;The UsageSpecification is comprised of UsageSpecCharacteristics that define all characteristics (attributes) known by a particular type of usage. Each characteristic is described by its name, category, presence and a set of allowed values.&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Name defines a unique name that identifies the characteristic.&lt;/li&gt;&lt;li&gt;Category defines one of the high-level aspects of the usage information described by the characteristic. These categories are commonly referred to as: Who, When, What, Where, and Why.&lt;/li&gt;&lt;li&gt;Min and Max cardinalities that defines whether the characteristic is required or optional.&lt;/li&gt;&lt;/ul&gt;<br />Additional details about the Characteristic pattern can be found in GB922-1R Root Business Entities addendum.&lt;br/&gt;The set of allowed values is modeled with UsageSpecCharacteristicValue. This class describes all allowed values or value ranges.&lt;br/&gt;The Usage class represents a usage event. It is described by the UsageSpecification and comprised of UsageCharacteristicValues that hold data attributes of a usage specified by UsageSpecCharacteristics. The UsageCharacteristic can either store its value in the usageCharValue property or reference predefined UsageSpecCharacteristicValue.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 12:52:13 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{5E6A30D0-8727-4713-BFA0-796CF8B63386}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

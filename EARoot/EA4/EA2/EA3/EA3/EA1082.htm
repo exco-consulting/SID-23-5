@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Tax.02 - Tax ProductOfferingPriceAlteration and ProductPriceAlteration</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1083.png" usemap="#EA1083" border="0" />
+
+<MAP NAME="EA1083">
+<area shape="rect" coords="13,467,182,503" href="../../EA7/EA13/EA3113.htm" target="_self">
+<area shape="rect" coords="13,392,217,428" href="../../EA2/EA6/EA781.htm" target="_self">
+<area shape="rect" coords="10,239,147,275" href="../EA4/EA3/EA1218.htm" target="_self">
+<area shape="rect" coords="730,254,888,290" href="./EA3/EA1153.htm" target="_self">
+<area shape="rect" coords="190,303,351,339" href="./EA5/EA1176.htm" target="_self">
+<area shape="rect" coords="634,5,780,88" href="./EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="64,5,200,76" href="../EA4/EA3/EA1219.htm" target="_self">
+<area shape="rect" coords="183,239,341,275" href="../EA4/EA3/EA1217.htm" target="_self">
+<area shape="rect" coords="53,108,210,179" href="../EA4/EA3/EA1213.htm" target="_self">
+<area shape="rect" coords="519,383,710,419" href="./EA5/EA1175.htm" target="_self">
+<area shape="rect" coords="634,119,801,190" href="./EA3/EA1146.htm" target="_self">
+<area shape="rect" coords="521,254,705,313" href="./EA3/EA1152.htm" target="_self">
+<area shape="rect" coords="331,392,477,499" href="./EA5/EA1173.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Tax.02 - Tax ProductOfferingPriceAlteration and ProductPriceAlteration diagram</div>
+	<div class="ObjectDetailsNotes">As part of defining a ProductOfferingPrice in the product catalog, the implementor will need to define the taxes that will potentially be levied for the price. This will also allow the tax amounts to be presented as part of sales and ordering processes. Taxes are defined as alterations on the price, specifically TaxProdOfferPriceAlteration. The alteration points to the definition of the tax.&lt;br/&gt;When a Product is instantiated, the actual taxes to be levied are represented as alterations on the ProductPrice, specifically TaxProdPriceAlteration. Again, the alteration points to the definition of the tax.&lt;br/&gt;Finally, the tax amounts are invoiced and collected as part of the billing process. This is represented by the entities AppliedCustomerBillingTaxRate (customer-centric model) and AppliedPartyBillingTaxRate (engaged party model).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/21/2023 8:50:48 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{27287475-9BB9-4f8f-B6D3-57E9A1B84B8B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

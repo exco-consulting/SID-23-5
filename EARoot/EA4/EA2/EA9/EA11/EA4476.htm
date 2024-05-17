@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-1.  Frameworx Viewpoints</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4477.png" usemap="#EA4477" border="0" />
+
+<MAP NAME="EA4477">
+<area shape="rect" coords="10,10,489,407" href="EA4562.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-1.  Frameworx Viewpoints diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Introduction&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Policy management has been portrayed as an effective mechanism to orchestrate the behavior of distributed systems. Different versions of policy management have concentrated on different aspects of this problem, ranging from defining business goals to specifying low-level configuration changes in a device. Unfortunately, such efforts have been scattered and uncoordinated.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Frameworx (formerly known as NGOSS) specifications prescribe an architectural framework, supplemented with principles and procedures, which can be used to guide the development of distributed computing solutions through the creation and re-use of Frameworx artifacts. The set of Frameworx artifacts, available through the Frameworx Knowledge Base, form a comprehensive set of information that enables business needs to drive the implementation of Frameworx using commercial off the shelf software. The concept of the knowledge base is central to the methodology because it provides a way to &#8220;link&#8221; work efforts and activities as the progressive views of the system solution are developed. The reader is encouraged to read [053Main], which describes the Frameworx architecture as a whole and the Frameworx viewpoints in particular.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This approach is shown in Figure 1P-1.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Policy, of course, plays a critical role across all four Frameworx viewpoints. Since policy can be used to represent, define and manage entities of all types, its integration into the SID framework takes the form of defining a new Common Business Entities ABE to contain the policy information model. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;To find the Information framework figure, refer to &#8220;GB991 Core Frameworks Concepts and Principles&#8221; guide book.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The purpose of this phase of the SID is to define a set of business entities that can be used to describe Frameworx business artifacts. One of the goals of the SID model is to enable a seamless transition from business concepts and definitions to other domains, such as networking. This becomes critical in order for business people to be able to properly leverage highly technical concepts, as well as concepts that are critical to the operation of the business. Policy is one of those concepts that has the potential to be used in multiple domains, and for multiple purposes. Thus, what is needed is the ability to define:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A common representation that can be used for all four Frameworx viewpoints&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;How management applications can use policy&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;How policy entities of one viewpoint can specify and interact with policy entities of another viewpoint&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;This addendum covers the business definition of the Policy model. This model is used to define formal definitions for entities that are part of a policy management methodology, be it an application, the issuing of a command, or something in-between.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Policy management means many things to many people. The most common categorizations of Policy are for business use, networking use, and architectural use. To point out the important link between policy and Frameworx (specifically, the work in [053C] and [053D]), these three categorizations will be rephrased as follows:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Policy is a set of business rules and is meant for use by business people&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Policy is a means to control Quality of Service (QoS), and is meant for use by networking people&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Policy is a means to scale the system, and is meant for use by systems architects&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;These three definitions all have a common theme: policy is used only by a specific set of users. In contrast, the Frameworx Behavior and Control Specification ([053C]) posits that a Frameworx system must simultaneously address the needs of different constituencies of users. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This Addendum abstracts the representation and application of policy into a set of concepts that are appropriate for use by business people. This set of abstractions can then be used for the following tasks:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define a canonical model for policy&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Standardize the &lt;i&gt;representation&lt;/i&gt; of policy &lt;i&gt;independent&lt;/i&gt; of the &lt;i&gt;content&lt;/i&gt; of the policy&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Provide an infrastructure that supports extending policy to support application-specific domain information&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;This paragraph will also start to explore the rich set of interactions and relationships with other business entities defined in the SID. This is meant to be a very comprehensive work, and as such will proceed over several SID phases. This is necessary because of two reasons. First, the business entities in other SID Addenda are evolving. As more detail is added to them, richer relationships are uncovered. Second, the model described in this Addendum is a high-level framework for policy. As more experience is gained using this model, more relationships and entities will be defined.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The reader conversant with other SID Addenda will note that other SID Addenda have a strong correspondence with the eTOM [eTOM]. This is harder to do for policy, as policy is only defined in a very high-level, abstract sense of the eTOM. This can be seen in Figure below. Policy doesn&#8217;t appear as a top-level process, and it shouldn&#8217;t. This is because policy is an infrastructural component that affects ALL of the SIP and Operations processes of the eTOM.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The reader is encouraged to refer to [eTOM] for an explanation of the various business processes that are defined to support the concepts in the above domains.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/11/2022 9:20:58 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/7/2022 9:10:41 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{262DC70A-E431-48cc-9465-A58A08678A43}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

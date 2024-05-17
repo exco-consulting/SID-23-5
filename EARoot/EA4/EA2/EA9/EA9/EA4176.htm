@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Me.07b - Metric Definition Threshold Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4177.png" usemap="#EA4177" border="0" />
+
+<MAP NAME="EA4177">
+<area shape="rect" coords="5,164,240,237" href="./EA4/EA1/EA4322.htm" target="_self">
+<area shape="rect" coords="109,16,354,91" href="./EA4/EA1/EA4320.htm" target="_self">
+<area shape="rect" coords="659,353,917,405" href="./EA4/EA1/EA4321.htm" target="_self">
+<area shape="rect" coords="703,10,908,64" href="./EA4/EA4311.htm" target="_self">
+<area shape="rect" coords="409,193,659,253" href="./EA4/EA1/EA4323.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Me.07b - Metric Definition Threshold Associations diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows the detailed associations for MetricDefMeasureThresholdRule.&lt;br/&gt;The MetricDefMeasureThreshConsDependency specifies the type of dependency that may exist between MetricDefMeasureConsequence and MetricDefMeasureThresholdRule. For example, &quot;the consequence is triggered only if the rule has been applied previously&quot;, or &quot;if the rule has already been applied then do not trigger the consequence&quot;.&lt;br/&gt;The two associations MetricDefMeasureConsequenceDependentUpon, MetricDefMeasureThresholdRuleDefines and the entity MetricDefMeasureThreshConsDependency are summarized through the derived association &#8220;/MetricDefMeasureConsequenceDependsOn&#8221; on the Figure Me.07a - Metric Threshold Definition - Derived Associations.&lt;br/&gt;The MetricDefMeasureThresholdConsequence specifies the sequence of application when several MetricDefMeasureConsequence have to be applied for a specific MetricDefMeasureThresholdRule.&lt;br/&gt;The two associations MetricDefMeasureThresholdRuleResultsIn, MetricDefMeasureConsequenceDeterminedBy and the entity MetricDefMeasureThresholdConsequence are summarized through the derived association &#8220;/MetricDefMeasureThresholdRuleResultsIn&#8221; on the Figure Me.07a - Metric Threshold Definition - Derived Associations.&lt;br/&gt;Note: A derived association enables more synthetic views and is less accurate than the real detailed associations but has not to be implemented.&lt;br/&gt;The MetricDefMeasureThresholdRelationship enables specifying any kind of relationships between MetricDefMeasureThresholdRule such as depends on, follows, and so forth.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/9/2022 2:27:23 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{10056283-C4F9-431c-A669-3627359CC0F4}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

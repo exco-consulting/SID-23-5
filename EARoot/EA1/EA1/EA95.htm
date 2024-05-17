@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">In addition to the &lt;a href=&quot;javascript:top.guidLink(&#39;{61E9723E-0DC0-4b80-84C9-AE735CD121A2}&#39;)&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;project browser&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;, Hyperlinks play an essential role in navigating MODA although they might seem like basic tools. Here&#39;s where you can find hyperlinks:&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;They can be included in diagrams as elements or references, helping to connect different parts of your MODA visually.&lt;/li&gt;&lt;li&gt;You can also find hyperlinks within the descriptions or notes of various MODA objects (for example in this text) . This can help provide additional details or background information.&lt;/li&gt;&lt;/ul&gt;<br />&lt;br/&gt;These hyperlinks can lead you to various places, such as:&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Different parts of the MODA, including packages, elements, diagrams, attributes, or operations. This helps you move around the project easily.&lt;/li&gt;&lt;li&gt;External files that contain relevant data or information.&lt;/li&gt;&lt;li&gt;Websites that offer additional context or resources.&lt;/li&gt;&lt;li&gt;Images of diagrams and other visuals that are part of your project.&lt;/li&gt;&lt;/ul&gt;<br />&lt;br/&gt;In essence, hyperlinks act like bridges connecting various parts of your project and a wealth of additional information, making MODA navigation and comprehension a smoother experience.&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">7/11/2023 9:11:21 AM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA56.htm">MODA Navigation: type of Links</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{60D3C785-5C04-4883-827A-FA89E220222B}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">6/2/2023 10:38:11 AM</td>
+		</tr>
+	</table>
+
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

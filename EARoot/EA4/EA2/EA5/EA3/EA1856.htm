@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.29 - Overview of the Top-Level Protocol Classes</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1857.png" usemap="#EA1857" border="0" />
+
+<MAP NAME="EA1857">
+<area shape="rect" coords="157,298,284,350" href="./EA3/EA6/EA7/EA2203.htm" target="_self">
+<area shape="rect" coords="475,298,596,350" href="./EA3/EA6/EA1/EA2153.htm" target="_self">
+<area shape="rect" coords="349,298,446,350" href="./EA3/EA6/EA2/EA2163.htm" target="_self">
+<area shape="rect" coords="414,233,524,285" href="./EA3/EA6/EA8/EA2214.htm" target="_self">
+<area shape="rect" coords="248,230,369,282" href="./EA3/EA6/EA6/EA2198.htm" target="_self">
+<area shape="rect" coords="88,230,204,282" href="./EA3/EA6/EA5/EA2192.htm" target="_self">
+<area shape="rect" coords="10,298,126,350" href="./EA3/EA6/EA4/EA2178.htm" target="_self">
+<area shape="rect" coords="535,235,682,283" href="./EA3/EA6/EA3/EA2168.htm" target="_self">
+<area shape="rect" coords="257,10,481,137" href="./EA3/EA6/EA2144.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.29 - Overview of the Top-Level Protocol Classes diagram</div>
+	<div class="ObjectDetailsNotes">A protocol is a formal set of rules and conventions that governs how two entities exchange information (usually over one or more types of network media). This is an abstract base class for representing protocols that can be managed. This class represents a convenient aggregation point for defining how protocols are managed and used. The Figure below shows the structure of the Protocol class hierarchy.&lt;br/&gt;The purpose of the taxonomy is to form an extensible classification structure to enable contributions from other TMF programs and other industry standards to be added. Note that there is a large amount of disagreement in the network management space over how to model protocols. By building taxonomy to normalize how different protocols are used, some of this confusion will be cleared up. Note also that this taxonomy specifically avoids any use of &#8220;layers&#8221;, since multiple protocol families (e.g., ATM and MPLS) do not fit neatly into a &#8220;layered&#8221; classification scheme.&lt;br/&gt;A ManagementProtocol is an abstract superclass for protocols that are dedicated to exchanging management information between network devices. This type of protocol is an application layer protocol, and is used for configuring, monitoring, and gathering information about devices. An example of this type of protocol is SNMP.&lt;br/&gt;RoutingProtocols is an abstract base class for representing different types of routing protocols that can be managed. Routing protocols are used to determine how information is routed (e.g., how it traverses an intermediate system). Examples of this type of protocol include OSPF, IS-IS, and BGP.&lt;br/&gt;RoutedProtocols is an abstract base class for representing different types of routed protocols that can be managed. Routed protocols are those protocols that can be routed by a router. Specifically, the router must be able to interpret the logical internetwork as specified by that routed protocol. This class represents a convenient aggregation point for defining how routed protocols are managed and used. Examples of this type of protocol include IP and IPX.&lt;br/&gt;In a network that uses standard routing, frames pass from a source to a destination in a hop-by-hop basis. Transit routers look at each frame&#8217;s Layer 3 header and perform a route table lookup to determine the next hop toward the destination. This means that layer 2 information is effectively ignored. A SwitchingProtocol replaces the above hop-by-hop method with a method to specify a path in the network. This path may be based on any number of different attributes, such as cost of the path and QoS. The most popular implementation of this approach is MPLS.&lt;br/&gt;LANProtocols operate at the lowest two levels of the OSI model (i.e., physical and data link) and are used to define communications over different types of local area media. Bridging Protocols operate at the data link layer of the OSI model and are used to define communications over different types of homogeneous and heterogeneous local area networks. Examples of this type of protocol include Ethernet andToken Ring.&lt;br/&gt;WANProtocols operate at the lowest three levels of the OSI model (i.e., physical, data link, and network) and are used to define communications over different types of wide-area media. Examples of this type of protocol include ATM, Frame Relay, and PPP.&lt;br/&gt;SignalingProtocols is an abstract base class for representing different types of signaling protocols that can be managed. Signaling protocols are used to convey information along a specific path. This class represents a convenient aggregation point for defining how signaling protocols are managed and used. Examples of this type of protocol include RSVP and COPS.&lt;br/&gt;Each of the Protocol subclasses described in the Figure above has multiple subclasses, but these are system-oriented and beyond the scope of this (business-oriented) document.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:13:16 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E6FFEED3-DE99-4651-99B8-53C59F2B43F5}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

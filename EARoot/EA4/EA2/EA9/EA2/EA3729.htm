@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.41 - Association Class Specification Meta-Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3730.png" usemap="#EA3730" border="0" />
+
+<MAP NAME="EA3730">
+<area shape="rect" coords="363,179,555,274" href="./EA1/EA3837.htm" target="_self">
+<area shape="rect" coords="378,5,540,98" href="./EA1/EA3838.htm" target="_self">
+<area shape="rect" coords="10,179,145,278" href="EA3822.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.41 - Association Class Specification Meta-Model diagram</div>
+	<div class="ObjectDetailsNotes">The specification of this association is simple, because it assumes no history when an instance of a Base Station Controller&#8217;s association (SupportedBy) to a Mobile Switching Center is changed from one instance of a Mobile Switching Center to another. Otherwise the specification for the association would be an *-*, which means the specification for an association class (entity) should be introduced into the meta-model, as shown in Figure As.04 &#8211; Association Class Specification.&lt;br/&gt;The model shown in the figure provides the capability to define a specification for an association class or not. The 0,1 multiplicity from AssociationSpecification to RootEntityType defines this capability.&lt;br/&gt;It should be kept in mind that another meta-modeling option is to not add the association between AssociationSpecification and RootEntityType.&#160;&#160;The equivalent support could be provided by adding an instance of RootEntityType that represents a class, rather than an association class.&#160;&#160;This instance would be related to the two instances of the RootEntityTypes involved in the *-* association by creating two instances of AssocationSpecification. In modeling, this represent what is often referred to as an intersection or link entity, which represents the resolution of a *-* association.&lt;br/&gt;The association meta-model is only part of the solution to support the dynamic addition of associations.&#160;&#160;Application functionality, including user interfaces, must also be developed. A representative set of insights into functionality, excluding user interface details, will be described next.&lt;br/&gt;An application could provide the capability (user interface and logic) to add instances of associations when adding an instance of a RootEntity.&#160;&#160;This capability would determine if the RootEntityType that describes the RootEntity has any related instances of AssociationSpecification. The dynamicAttrAssoc attribute of RootEntityType would be used to determine this.&lt;br/&gt;Implementing the meta-model to support the dynamic addition of classes and subclasses, both implicit and explicit, means that inheriting associations must be supported. For existing SID entities, this should be handled by transformation of the information model to the data model by rolling down the super-classes.&lt;br/&gt;Application logic can be employed to support inheriting associations by copying instances of AssociationSpecifications and AssociationRoleSpecifications to subclasses for dynamically added classes and subclasses, both implicit and explicit. If copying, rather than true inheritance, is provided, then the ability to change the properties (attributes) of the specifications (Association and AssociationRole) of the subclasses should be prevented by the application to avoid inconsistencies. When an instance of an entity is created/updated the application can ask if an instance of an association must/may be added/updated.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/8/2022 7:00:31 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8E0FA191-F311-455b-9542-0E38D68BE187}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

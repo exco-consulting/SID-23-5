@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SC.02 Sales Commission Specification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2723.png" usemap="#EA2723" border="0" />
+
+<MAP NAME="EA2723">
+<area shape="rect" coords="747,207,884,235" href="../EA5/EA2705.htm" target="_self">
+<area shape="rect" coords="216,322,365,350" href="EA2738.htm" target="_self">
+<area shape="rect" coords="242,396,339,424" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="534,334,689,362" href="../../EA10/EA1/EA5483.htm" target="_self">
+<area shape="rect" coords="10,10,220,61" href="../../EA9/EA2/EA3781.htm" target="_self">
+<area shape="rect" coords="88,109,256,172" href="../../EA9/EA2/EA3780.htm" target="_self">
+<area shape="rect" coords="433,109,571,169" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="37,205,261,233" href="EA2740.htm" target="_self">
+<area shape="rect" coords="403,205,601,264" href="EA2739.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SC.02 Sales Commission Specification diagram</div>
+	<div class="ObjectDetailsNotes">The Figure &#8220;SC.02 &#8211; Sales Commission Specification&#8221; presents the SalesCommissionSpecification main entities.&lt;br/&gt;The primary business entities in the Sales Commission Specification model are SalesCommissionSpecification, SalesCommissionSpecificationType and SalesCommissionRule. &lt;br/&gt;SalesCommissionSpecification are further managed by the SalesCommissionRule. Additional business entities, unique to a given enterprise, can be added to extend this model.&lt;br/&gt;A SalesCommissionRule is a type of PolicyRule. The SalesCommissionRule is used to add complex rule, as the formula supplied as part of the SalesCommissionSpecification is simple in nature. The SalesCommissionRule specifies:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Events triggering the evaluation of the rule (Sales Events)&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: Every first of a month, on reaching a predefined amount of sale or on the request of an employee/agent&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Conditions that need to be checked&lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: If the invoice amount is above 100 $, If more than 2 hours of international call etc.,&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;Actions that should be performed if the condition clause is evaluated to TRUE &lt;/li&gt;&lt;/ul&gt;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Ex: Calculate the Sales Commission based upon percentage of the Sales Value.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/18/2023 6:58:23 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{485C0D39-D778-4e61-BFF6-756B825EB895}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

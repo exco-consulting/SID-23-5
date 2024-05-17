@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.18 - Identifying Entities Using an Associated EntitySpecification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3654.png" usemap="#EA3654" border="0" />
+
+<MAP NAME="EA3654">
+<area shape="rect" coords="452,155,606,206" href="./EA3/EA3868.htm" target="_self">
+<area shape="rect" coords="477,12,582,50" href="EA3775.htm" target="_self">
+<area shape="rect" coords="49,10,182,74" href="EA3779.htm" target="_self">
+<area shape="rect" coords="10,153,221,227" href="./EA3/EA3870.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.18 - Identifying Entities Using an Associated EntitySpecification diagram</div>
+	<div class="ObjectDetailsNotes">The next thing that must be known about an EntityIdentitySpecification is what type of business Entity the EntityIdentitySpecification applies to.&#160;&#160;There are two different means of doing this. The difference is whether the Entity being identified has an associated EntitySpecification or not. For example, a Market Entity has no associated Specification, whereas a Resource Entity or a Service Entity often do have an associated EntitySpecification.&lt;br/&gt;The first option is shown in Figure EI.06 &#8211; Identifying Entities Using an Associated EntitySpecification. In this option, an EntitySpecification defines a Entity as well as a set of EntityIdentificationSpecs. Any of these EntityIdentitySpecs may be used to identify the EntityIdentification object that is used to identify the associated Entity. Looking at Figure EI.06 &#8211; Identifying Entities Using an Associated EntitySpecification below, we see that the EntitySpecification that characterizes the Entity contains, in addition to its invariant attributes, zero or more EntityIdentificationSpecs. The EntityIdentitySpecification in turn specifies the set of EntityIdentification objects that can be used to identify the Entity that the EntitySpecification applies to. This enables the EntitySpecification to in effect direct the usage of a subordinate specification (the EntityIdentitySpecification) to indirectly define EntityIdentification objects that can be used to identify the Entity to which the EntitySpecification applies to, providing a great deal of inherent flexibility in determining how the Entity will be identified.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 6:27:52 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E6231BAC-7889-4b02-A725-76627BB1671F}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

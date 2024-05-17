@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SE.00 - Security Overview</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3318.png" usemap="#EA3318" border="0" />
+
+<MAP NAME="EA3318">
+<area shape="rect" coords="377,10,546,90" href="./EA4/EA1/EA3445.htm" target="_self">
+<area shape="rect" coords="608,322,754,381" href="./EA4/EA3433.htm" target="_self">
+<area shape="rect" coords="388,381,589,548" href="./EA3/EA3415.htm" target="_self">
+<area shape="rect" coords="10,438,197,506" href="./EA2/EA3405.htm" target="_self">
+<area shape="rect" coords="388,222,534,305" href="./EA4/EA3434.htm" target="_self">
+<area shape="rect" coords="10,173,219,329" href="./EA5/EA3466.htm" target="_self">
+<area shape="rect" coords="22,10,154,62" href="./EA1/EA3394.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SE.00 - Security Overview diagram</div>
+	<div class="ObjectDetailsNotes">&lt;b&gt;Security Domain&lt;/b&gt;&lt;br/&gt;When incorporating key Security Management concepts into the SID model, the modelers focused on the five primary concepts: assets, threats, vulnerabilities, events, and incidents, related information, and their relationships.&#160;&#160;&lt;br/&gt;Security was added to the Enterprise Risk area of the SID because of their very nature.&#160;&#160;Each entity was qualified by the name &#8220;Security&#8221; to distinguish these types of entities as specific to Security.&#160;&#160;For example, there are other types of entities that deal with Incidents and Events.&lt;br/&gt;Also, the Device (Asset) entity was generalized to accommodate Vulnerabilities, Threats, Events, and Incidents associated with any type of SID entity, such as Services, Products, and other types of Resources, such as connections.&lt;br/&gt;The key entities actually represent groups of entities. Therefore, they were added as ABEs.&#160;&#160;&lt;br/&gt;&lt;b&gt;Overview of Security&lt;/b&gt;&lt;br/&gt;When incorporating key Security Management concepts into the SID model, the modelers focused on the five primary concepts: assets, threats, vulnerabilities, &lt;br/&gt;The following entities are core to the security model: &lt;br/&gt;SecurityEntity: Used to describe any asset that exposes security related vulnerabilities, and has the potential for security related events.&#160;&#160;&lt;br/&gt;SecurityVulnerability: Potential weakness that may be exploited by an adversary or threat.&lt;br/&gt;SecurityThreatExploit and SecurityThreatTechnique: Threats represent entities and characteristics of entities that may maliciously or non-maliciously exploit vulnerabilities.&lt;br/&gt;SecurityThreatActor: Use &#8220;techniques&#8221; such as social engineering, or phishing to maneuver assets into positions where they can use &#8220;exploits&#8221; to take advantage of weaknesses to gain access or information that is either inherently valuable, or can be used to gain further access.&lt;br/&gt;SecurityEvents and SecurityIncidents: Incidents and events are recorded and reported. The primary difference is that incidents result from assessment(s) of event(s).&lt;br/&gt;SecurityIncidentImpact: Supports information such as, how the incident was allowed to happen, what threat actor caused it, and how &#8220;bad&#8221; the damage is.&#160;&#160;&#160;&lt;br/&gt;The model shows that a Security Entity, such as a network element, exhibits Vulnerabilities, which may be taken advantage of by a Security Threat Technique, specifically targeted by a Security Threat Exploit.&#160;&#160;A Security Event exposes the	e Vulnerability and may result in a Security Incident being created to resolve and fix the Vulnerability.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/24/2023 4:24:54 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BB8139FB-CA1E-4b5b-AF8D-4C7D5BA892AE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.02 - Interaction between ProductSpecification and ResourceSpecification (OLD LR.65)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1647.png" usemap="#EA1647" border="0" />
+
+<MAP NAME="EA1647">
+<area shape="rect" coords="126,350,231,409" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="375,365,514,417" href="./EA4/EA1820.htm" target="_self">
+<area shape="rect" coords="80,83,202,135" href="../../EA4/EA3/EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="558,365,707,417" href="./EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="297,83,419,135" href="../../EA4/EA3/EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="754,83,876,135" href="../../EA4/EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="481,238,655,290" href="EA1699.htm" target="_self">
+<area shape="rect" coords="545,83,667,135" href="../../EA4/EA4/EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="746,372,894,424" href="./EA2/EA1766.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.02 - Interaction between ProductSpecification and ResourceSpecification (OLD LR.65) diagram</div>
+	<div class="ObjectDetailsNotes">The ProductSpecification represents a product specification as perceived by the business user and specifies what the marketing operator wants to sell at a functional level (i.e. what are the capacities, which usages are available&#8230;).&lt;br/&gt;It can represent:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	material goods (Terminal, phone, mobile, fax, modem)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	or intangible goods (like an Anti-Spam service for email &#8211; that will be deployed on a traditional network or in a cloud)&lt;br/&gt;When the ProductSpecification represents tangible goods, it is associated with a ResourceSpecification. Corresponding Resources are stored in warehouses or bought to a supplier on demand.&lt;br/&gt;When the ProductSpecification is intangible goods, it is either realized as a CustomerFacingService (when the Service Provider is able to realize it) or bought as a ProductSpecification proposed by a Supplier (when the Service Provider is not able to realize it). For example, a Broadband know-how might be built or bought depending on the location of it.&lt;br/&gt;Since a CustomerFacingServiceSpec defines which ResourceFacingServiceSpecs (i.e. technical solution) can answer the CFSSpec requirements, the ResourceFacingServiceSpec can be used to determine which ResourceSpecifications might be required for a given Product. &lt;br/&gt;A CompoundResourceSpec can of course be used as &#8220;shorthand&#8221; to refer to the appropriate set of PhysicalResourceSpecs and / or LogicalResourceSpecs, if desired.&lt;br/&gt;&lt;br/&gt;For now, the basic relationship between ResourceFacingServiceSpec and ResourceSpec as defined previously is sufficient. &lt;br/&gt;&lt;i&gt;Note that the SID QoS defines further detail on the relationships defined in the following figures.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:17:01 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{94AB5655-B560-4ebb-A429-D7B86D5797EB}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

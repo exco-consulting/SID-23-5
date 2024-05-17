@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.08 - Anomaly Indicator Entity Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5068.png" usemap="#EA5068" border="0" />
+
+<MAP NAME="EA5068">
+<area shape="rect" coords="778,335,936,386" href="./EA1/EA5102.htm" target="_self">
+<area shape="rect" coords="463,327,615,390" href="./EA1/EA5103.htm" target="_self">
+<area shape="rect" coords="781,456,933,513" href="./EA1/EA5095.htm" target="_self">
+<area shape="rect" coords="71,448,223,505" href="./EA1/EA5100.htm" target="_self">
+<area shape="rect" coords="121,150,273,217" href="./EA2/EA5138.htm" target="_self">
+<area shape="rect" coords="121,290,273,358" href="./EA1/EA5099.htm" target="_self">
+<area shape="rect" coords="121,10,273,67" href="./EA2/EA5143.htm" target="_self">
+<area shape="rect" coords="408,10,560,67" href="./EA1/EA5091.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.08 - Anomaly Indicator Entity Associations diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;This figure details the relationship between AnomalyIndicator , AnomalySpecification, and AnomalyIndicatorSpecification along with AnomalyNotification and AnomalyConsequence&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;AnomalyIndicatorSpecification defines AnomayIndicator. AnomalyThresholdSet can have one or more AnomalyThresholdRules.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;AnomalyIndicator is evaluated using AnomalyThresholdSet and one AnomalyIndicator may have multiple AnomalyThresholdRules&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;AnomalyIndicator can have multiple AnomalyNotification associated with it. AnomalyNotification is used to notify any variations in the AnomalyIndicator value which can further be used for initiating other Anomaly Management correlation &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;AnomalyIndicator can result in multiple AnomalyConsequence(s) associated with it; which is defined by the AnomalyIndicatorThresholdRule.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/2/2023 6:10:07 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/14/2023 6:38:21 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{FC623DF1-00EF-47e2-891B-EF932E31D65B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

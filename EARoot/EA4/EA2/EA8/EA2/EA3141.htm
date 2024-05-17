@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.03 - Work / Work Specification</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3142.png" usemap="#EA3142" border="0" />
+
+<MAP NAME="EA3142">
+<area shape="rect" coords="485,309,639,368" href="../../EA9/EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="475,507,649,650" href="../../EA9/EA2/EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="34,492,192,647" href="../../EA9/EA2/EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="10,271,216,414" href="../../EA9/EA2/EA2/EA3848.htm" target="_self">
+<area shape="rect" coords="41,157,185,185" href="./EA2/EA3199.htm" target="_self">
+<area shape="rect" coords="479,174,646,221" href="./EA3/EA1/EA3220.htm" target="_self">
+<area shape="rect" coords="479,10,646,57" href="./EA3/EA1/EA3221.htm" target="_self">
+<area shape="rect" coords="10,10,216,57" href="./EA2/EA3201.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.03 - Work / Work Specification diagram</div>
+	<div class="ObjectDetailsNotes">Following the Entity/EntitySpecification pattern, with WorkSpecification we also introduce the Work ABE. It contains the entities of Work and WorkRole.&lt;br/&gt;Work is instantiated from WorkSpecification, with template invariant characteristics, and the addition of specific attributes with values of the work for a specific context.&lt;br/&gt;This Figure depicts the Work and WorkSpecification entities, along with their related instance entities, WorkRole and WorkSpecificationRole. They represent an application of the SID EntitySpecification/Entity pattern, CharacteristicUse, etc.&lt;br/&gt;&lt;i&gt;Note: Instead of modeling WorkSpecificationCharacteristic, WorkSpecCharacteristicValue, and WorkCharacteristicValue as new classes, we relate WorkSpecification to EntitySpecCharUse, and relate Work with CharacteristicValue.&lt;/i&gt;&lt;br/&gt;Role class model can be used to simplify the modeling of different types of WorkSpecification and Work, to make the model inherently more extensible.&lt;br/&gt;Instead of trying to define many subclasses (one for each different type of Work) or introduce multiple inheritances (so that a new Work would derive from a set of existing Works), we can instead define a set of roles that a Work is meant to play. For example, a Work of fiber rollout at a location on a date can be a build task in an infrastructure project, or a role of installation task in a service fulfillment project. So the specification of these variants of the work can be a bit different. Instead of making sub-classes of this work to cover these cases, two roles of fiber rollout for network build, and fiber rollout for service delivery, can be introduced.&lt;br/&gt;The Cardinality is 1-* because Work can have more than one role with different characteristics in different contexts.&lt;br/&gt;Similarly, WorkSpecficationRole can extend the invariant characteristics of a WorkSpecification (a set of roles is used to characterize different sets of functionalities of the WorkSpecification) in different contexts. For example, a CPE installation work specification may have in addition, via WorkSpecificationRoles, the specifications of ONT installation, Cable modem installation, or DSL modem installation.&lt;br/&gt;&lt;i&gt;Note: Project ABE can interact with Workforce ABE via Work Order. WorkOrderItem is associated with Work. &lt;/i&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 6:53:58 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{6FECB066-0DA6-4360-A67B-0E0F1C52CE7D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

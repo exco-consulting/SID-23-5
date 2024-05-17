@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SI.04 - StockItemShipment detailed view</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2491.png" usemap="#EA2491" border="0" />
+
+<MAP NAME="EA2491">
+<area shape="rect" coords="343,207,393,243" href="EA2531.htm" target="_self">
+<area shape="rect" coords="560,456,675,503" href="../../EA10/EA1/EA1/EA5490.htm" target="_self">
+<area shape="rect" coords="283,465,398,511" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="885,331,992,378" href="EA2536.htm" target="_self">
+<area shape="rect" coords="686,515,825,554" href="EA2544.htm" target="_self">
+<area shape="rect" coords="25,155,131,199" href="../../EA10/EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="18,328,152,394" href="EA2545.htm" target="_self">
+<area shape="rect" coords="640,325,826,384" href="EA2543.htm" target="_self">
+<area shape="rect" coords="643,10,810,62" href="../../EA3/EA2/EA2/EA1004.htm" target="_self">
+<area shape="rect" coords="649,111,820,164" href="../../EA3/EA2/EA2/EA1003.htm" target="_self">
+<area shape="rect" coords="57,20,173,72" href="../../EA2/EA2/EA1/EA705.htm" target="_self">
+<area shape="rect" coords="356,147,493,199" href="../../EA2/EA2/EA1/EA706.htm" target="_self">
+<area shape="rect" coords="165,185,297,229" href="EA2541.htm" target="_self">
+<area shape="rect" coords="332,328,489,410" href="EA2542.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SI.04 - StockItemShipment detailed view diagram</div>
+	<div class="ObjectDetailsNotes">A StockItemShipment is composed of items (StockItemShipmentItem) in charge of shipping one type of StockItem.&lt;br/&gt;A StockItemShipment requests the delivery of one or many StockItems &lt;br/&gt;Shipment from a StockLocation to another,&lt;br/&gt;Shipment from a StockLocation to a place (customer&#8217;s home or a Pick Up &amp; Go place),&lt;br/&gt;By-hand delivery from a StockLocation in a Store.&lt;br/&gt;The actionRequested specifies the action requested such as Realize or Cancel.&lt;br/&gt;The shipmentType specifies the type of shipment such as Shipment or By-hand delivery.&lt;br/&gt;A StockItemShipment triggered by a CustomerProductOrder will move StockItems either to a StockLocation (Ex: if the Customer will pick up in a Store) or to a place (Ex: at customer&#8217;s home or a Pick Up &amp; Go place)&lt;br/&gt;A StockItemShipment triggered by a StrockItemRequest will move StockItems to a StockLocation as the aim of the request is a StockItemLevel replenishment.&lt;br/&gt;A StockItemShipment always move StockItems from a StockLocation.&lt;br/&gt;Information used to build the StockItemShipmentItem comes either from the CustomerProductOrderItem of GoodsProductSpec or from the StockItemRequest&lt;br/&gt;The StockItemShipmentItem Specifies the StockItemLevel from which the StockItem(s) will be picked-up and possibly the StockItemLevel that will collect them.&lt;br/&gt;The StockItemShipment might be reported to a PartyRole. Usually if the StockItemShipment is related to ProductOrderItems then it&#8217;s the customer that will be contacted for follow-up, but if it corresponds to a by-hand delivery to the Customer realized by the technician in charge of installation, it&#8217;s the technician that will receive the follow-up to be able to pick-up the goods products.&lt;br/&gt;When StockItemShipment corresponds to replenishment request the follow-up will be received by the Employee in charge of the StockLocation replenishment follow-up.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">3/10/2023 9:27:13 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{83C99177-3F54-4f54-97E1-941E6C8ABC67}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

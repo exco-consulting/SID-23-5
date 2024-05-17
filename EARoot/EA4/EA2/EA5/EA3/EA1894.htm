@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.16 - PhysicalPort in More Detail</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1895.png" usemap="#EA1895" border="0" />
+
+<MAP NAME="EA1895">
+<area shape="rect" coords="237,160,360,278" href="./EA4/EA4/EA2294.htm" target="_self">
+<area shape="rect" coords="10,160,133,278" href="./EA4/EA4/EA2295.htm" target="_self">
+<area shape="rect" coords="99,10,280,68" href="./EA4/EA4/EA2292.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.16 - PhysicalPort in More Detail diagram</div>
+	<div class="ObjectDetailsNotes">PhysicalPorts are an important type of object to keep track of. This is where communication begins and/or ends on a PhysicalDevice. PhysicalPorts also play a prominent role in topology and FCAPS applications, and enable Service Providers to determine what Customers are running what Services where in the network. &lt;br/&gt;A PhysicalPort represents an actual or potential end point of a topological (physical) link, and corresponds directly to a physical port on a topology map. PhysicalPorts are always contained by another physical object - they can&#39;t exist by themselves. The two most common examples are PhysicalPorts on a Card and on a Chassis. These are represented using separate aggregations, and will be described in the sections that explain Card and Chassis. &lt;br/&gt;&lt;i&gt; Note: relationships between PhysicalPort and Card &amp; Chassis are only examples and could complemented with other relationships.&lt;/i&gt;&lt;br/&gt;The following Figure illustrates the concept of a PhysicalPort.&lt;br/&gt;PhysicalContainer, as we will see in the next section, is the superclass for Equipment, EquipmentHolders, PhysicalComponents, and AuxiliaryComponents. Note that a PhysicalPort is not a type of PhysicalContainer. This is because a PhysicalPort contains logical components. &lt;br/&gt;The ifType attribute is an enumerated integer, and specifies the particular media type of the link. This is closely related to the typeOfPort attribute, which is an enumerated integer that defines the particular type of PhysicalPort this instance is (e.g., Ethernet vs. ATM). The portNumber attribute is the number of this physical port as defined by the application, and the vendorPortName is a critical attribute that contains the name of the port according to the vendor. This enables an enterprise-wide naming scheme to be correlated with vendor-specific names, which are necessary for configuring the port.&lt;br/&gt;For example, an enterprise may need to assign either special strings, or a monotonically increasing number to distinguish all of their PhysicalPorts. Or, an enterprise may want to reuse PhysicalPort numbers, so that &#8220;port 1&#8221; on any device has special significance. Both of these schemes are very common, and must be accommodated in the model.&lt;br/&gt;However, if an enterprise chooses to use their own naming scheme, then this makes it difficult, if not impossible, to program the device. This is because a (logical) DeviceInterface is contained within a PhysicalPort. Programming a device also means programming its device interfaces.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:31:17 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D048DCCD-F529-4dfb-B542-C7F524A975B2}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

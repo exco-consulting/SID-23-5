@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure MS.16 - Product Domain Entities Support of Competitor Product Information</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2609.png" usemap="#EA2609" border="0" />
+
+<MAP NAME="EA2609">
+<area shape="rect" coords="21,273,137,309" href="../../EA3/EA3/EA2/EA1141.htm" target="_self">
+<area shape="rect" coords="10,140,169,203" href="../../EA3/EA3/EA2/EA1140.htm" target="_self">
+<area shape="rect" coords="558,61,655,89" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="283,135,450,203" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="290,7,443,36" href="../../EA3/EA3/EA3/EA1154.htm" target="_self">
+<area shape="rect" coords="297,259,435,293" href="../../EA3/EA2/EA982.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure MS.16 - Product Domain Entities Support of Competitor Product Information diagram</div>
+	<div class="ObjectDetailsNotes">The Competitor Product Correlation ABE compares an enterprise&#8217;s ProductOfferings with its Competitors&#8217; ProductOfferings.&lt;br/&gt;Gathering Competitor intelligence includes information about the ProductOfferings a Competitor markets, the ProductPrices for which payment is expected, ProductPromotions offered by Competitors, and so forth.&#160;&#160;Therefore, it would be expected that the SID model would contain these Product domain entities for Competitors.&#160;&#160;And, some modelers would expect to find entities such as CompetitorProductOffering, CompetitorProductPrice, and so forth.&#160;&#160;SID team members working in the Product and Marketing domains have in the past constructed a separate information model of these Competitor-related entities.&#160;&#160;And, when complete, have found striking similarities to Product domain entities.&lt;br/&gt;It&#8217;s really all a matter of perspective.&#160;&#160;Suppose a Competitor used the SID as the basis for an information model.&#160;&#160;The Competitor Product domain model would the same model as used by a competing enterprise.&#160;&#160;The perspective is provided by introducing the PartyRole entity into the Product domain as shown in the figure below.&#160;&#160;&lt;br/&gt;When a Competitor is associated with an instance of ProductOffering, all related Product domains &#8220;inherit&#8221; the association to Competitor via their associations with ProductOffering.&#160;&#160;An enterprise can decide how much detail, in the form of instances of entities related to are necessary.&#160;&#160;For example, an enterprise may not be interested in keeping ProductPriceRules associated with a Competitor&#8217;s ProductOfferings.&#160;&#160;Using PartyRole also provides a means for an enterprise to segregate ProductOfferings made available by different organizations within the enterprise.&lt;br/&gt;&lt;i&gt;Note:&#160;&#160;From an implementation view, an enterprise may choose to develop a database that only contains the enterprise&#8217;s Product domain entities, and a separate one that contains the enterprise&#8217;s Competitors&#8217; Product domain entities.&#160;&#160;Both data bases are based on the same information model.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/8/2022 10:11:59 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E04DA7E2-A07A-411e-BB9D-520449A6448D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

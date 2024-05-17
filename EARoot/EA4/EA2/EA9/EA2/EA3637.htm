@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.11 - ManagementDomain</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3638.png" usemap="#EA3638" border="0" />
+
+<MAP NAME="EA3638">
+<area shape="rect" coords="10,231,120,283" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="431,10,634,70" href="EA3812.htm" target="_self">
+<area shape="rect" coords="203,161,361,189" href="EA3813.htm" target="_self">
+<area shape="rect" coords="230,10,335,85" href="EA3820.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.11 - ManagementDomain diagram</div>
+	<div class="ObjectDetailsNotes">ManagementDomain represents a special grouping of ManagedEntities that has two important properties. First, it is used to partition managed objects into a meaningful logical grouping. One important use of such a grouping is to provide a means to define which EMS (as well as which NMS) manages, monitors, etc. which set of devices. Another important use of such a grouping is to provide a means to show how management functions are distributed and scaled.&lt;br/&gt;Second, this grouping defines a common administrative domain that is used to administer the managed objects that it contains. This implies that all of the managed objects contained in this ManagementDomain are administered similarly &#8211; either by the same user, group of users or policy.&lt;br/&gt;A ManagementDomain is the superclass of several important entities in the SID. One of the most important of these is the PolicyDomain class. A PolicyDomain is a collection of entities and services that are administered in a coordinated fashion using a set of policies. The policies are used to control the set of services and entities according to a common methodology, such as a finite state machine. This is defined in Policy addendum.&lt;br/&gt;The ManagementDomain class also enables relationships to be defined that convey various semantics, such as containment, scoping, administration, and more generic management functions.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/8/2022 5:58:57 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{21A63A1B-3A64-481d-8596-FA04168BE33C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Proj.07 - project roles</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4738.png" usemap="#EA4738" border="0" />
+
+<MAP NAME="EA4738">
+<area shape="rect" coords="346,422,504,458" href="./EA5/EA4885.htm" target="_self">
+<area shape="rect" coords="143,422,287,458" href="./EA5/EA4883.htm" target="_self">
+<area shape="rect" coords="820,10,964,202" href="./EA3/EA4856.htm" target="_self">
+<area shape="rect" coords="493,79,637,141" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="78,70,188,132" href="../../EA10/EA1/EA5469.htm" target="_self">
+<area shape="rect" coords="162,218,281,293" href="../../EA10/EA1/EA5467.htm" target="_self">
+<area shape="rect" coords="10,224,133,351" href="../../EA10/EA1/EA5462.htm" target="_self">
+<area shape="rect" coords="798,321,942,357" href="./EA5/EA4880.htm" target="_self">
+<area shape="rect" coords="615,321,759,357" href="./EA5/EA4879.htm" target="_self">
+<area shape="rect" coords="432,321,576,357" href="./EA5/EA4884.htm" target="_self">
+<area shape="rect" coords="249,321,393,357" href="./EA5/EA4881.htm" target="_self">
+<area shape="rect" coords="478,202,622,238" href="./EA5/EA4882.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Proj.07 - project roles diagram</div>
+	<div class="ObjectDetailsNotes">Parties (Organizations and Individuals) can play various Roles in a Project. This could be at the Project, WBS or Activity level and so this has been abstracted to the ProjectElement level in this model.&lt;br/&gt;We will define an abstract role that all ProjectRoles will be derived from. A few concrete roles are shown as examples. Other roles may also be appropriate.&lt;br/&gt;Note that for implementation, PartyRole is most likely to be an Interface with ProjectPartyRole a root abstract class implementing the PartyRole interface.&lt;br/&gt;There will be other Role sets that may also be important for a Project. Only a few Project specific ones are shown here.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 10:19:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{11EE1791-3608-4cc9-B78B-26C2FBE84180}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

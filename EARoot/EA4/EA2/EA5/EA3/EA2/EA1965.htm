@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure ResCS.02 - Software Resource Specification Relationship</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1966.png" usemap="#EA1966" border="0" />
+
+<MAP NAME="EA1966">
+<area shape="rect" coords="9,5,227,173" href="../../EA2/EA3/EA3/EA1/EA1799.htm" target="_self">
+<area shape="rect" coords="571,228,806,299" href="../../EA2/EA3/EA3/EA1/EA1800.htm" target="_self">
+<area shape="rect" coords="408,309,674,372" href="../../EA2/EA3/EA3/EA1/EA1801.htm" target="_self">
+<area shape="rect" coords="264,246,494,298" href="../../EA2/EA3/EA3/EA1/EA1802.htm" target="_self">
+<area shape="rect" coords="432,36,652,135" href="../../EA2/EA3/EA3/EA1/EA1798.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure ResCS.02 - Software Resource Specification Relationship diagram</div>
+	<div class="ObjectDetailsNotes">There can be many types of relationships that exist among SoftwareResourceSpecifications.&#160;&#160;These are shown in the Figure below.&lt;br/&gt;The SoftwareResourceSpecRelationship entity has purposely been made non-abstract so that new types of simple relationships can be defined in addition to those shown.&#160;&#160;If base set of attributes in it are not sufficient then new subclasses can be explicitly modelled or the Characteristic pattern can be used to dynamically add the attributes to a new type.&lt;br/&gt;The SoftwareSpecRefinementRelationship subclass defines divisions of a SoftwareResourceSpecification into two or more other specifications.&#160;&#160;Or fusions of two or more specifications into a single specification.&#160;&#160;Or one specification can be substituted for another.&#160;&#160;&lt;br/&gt;The SoftwareSpecConstraintRelationship subclass allows additional constraints to be defined for involved specification.&#160;&#160;The SymmetricConstraint attribute of this subclass is used indicate if the relationship is from the perspective of just one specification or from both for example, A constrains B, and B constrains A.&lt;br/&gt;The SoftwareSpecAlternativeRelationship subclass defines specifications that are alternates of others.&#160;&#160;Its attributes indicate if the alternate is an exact alternate.&#160;&#160;The symmetric attribute indicates whether A is an alternate for B and B is an alternate for A, or A is an alternate for B only.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:58:06 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E0613919-A2A5-4e6c-9186-22A2B7D231C8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

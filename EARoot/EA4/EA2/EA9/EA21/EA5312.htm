@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure TPGY.04 - Topology example - Query for paths between core routers</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5313.png" usemap="#EA5313" border="0" />
+
+<MAP NAME="EA5313">
+<area shape="rect" coords="10,8,541,295" href="EA5345.htm" target="_self">
+<area shape="rect" coords="62,328,516,377" href="EA5352.htm" target="_self">
+<area shape="rect" coords="625,327,740,382" href="EA5332.htm" target="_self">
+<area shape="rect" coords="620,514,735,569" href="EA5331.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure TPGY.04 - Topology example - Query for paths between core routers diagram</div>
+	<div class="ObjectDetailsNotes">Based on example in Tpgy.05&lt;br/&gt;This case shows graph queries can filter the overall graph into graph views for specific operational purposes, in this case to establish resilience of links between core routers.&lt;br/&gt;More modern language would describe this as a query on a Digital Twin of the network assets.&lt;br/&gt;&lt;b&gt;Open Cypher &lt;/b&gt;&lt;br/&gt;Uses Open Cypher Create code in TPGY.06&lt;br/&gt;Query Code:&lt;br/&gt;&lt;font color=&quot;#6a9955&quot;&gt;//Core and interfaces&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#c586c0&quot;&gt;MATCH&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt; &lt;/font&gt;&lt;font color=&quot;#9cdcfe&quot;&gt;p&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt;= (&lt;/font&gt;&lt;font color=&quot;#9cdcfe&quot;&gt;n&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt;:&lt;/font&gt;&lt;font color=&quot;#4ec9b0&quot;&gt;CoreRouter&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt;) - [:&lt;/font&gt;&lt;font color=&quot;#4ec9b0&quot;&gt;CONTAINS_INTERFACE&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt;*..&lt;/font&gt;&lt;font color=&quot;#b5cea8&quot;&gt;5&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt; ] - (&lt;/font&gt;&lt;font color=&quot;#9cdcfe&quot;&gt;m&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt;)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#c586c0&quot;&gt;RETURN&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt; &lt;/font&gt;&lt;font color=&quot;#9cdcfe&quot;&gt;n&lt;/font&gt;&lt;font color=&quot;#d4d4d4&quot;&gt;, &lt;/font&gt;&lt;font color=&quot;#9cdcfe&quot;&gt;p&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">10/31/2023 10:49:52 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/6/2023 9:43:45 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{32CB44EB-7409-4abf-9E58-99991E1A14FE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

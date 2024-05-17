@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.33 TIP Service Management - Service Activation</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1603.png" usemap="#EA1603" border="0" />
+
+<MAP NAME="EA1603">
+<area shape="rect" coords="368,10,514,38" href="../EA4/EA1477.htm" target="_self">
+<area shape="rect" coords="55,481,200,509" href="../EA3/EA1408.htm" target="_self">
+<area shape="rect" coords="657,298,825,347" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="19,246,175,274" href="../EA4/EA1479.htm" target="_self">
+<area shape="rect" coords="594,189,746,251" href="../../EA9/EA2/EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="326,298,481,386" href="EA1612.htm" target="_self">
+<area shape="rect" coords="506,71,621,133" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="10,379,162,407" href="../EA3/EA1402.htm" target="_self">
+<area shape="rect" coords="326,454,520,516" href="EA1611.htm" target="_self">
+<area shape="rect" coords="149,51,358,152" href="../EA4/EA1478.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.33 TIP Service Management - Service Activation diagram</div>
+	<div class="ObjectDetailsNotes">The service configuration and activation process involves the instantiation of both Customer Facing Services, and associated Resource Facing Services. The CFS and RFS are constructed based upon their respective Service Definitions, ServiceTemplates, and real-time ServiceCharacteristicValues passed over the activation interface. The interface context will determine whether the Service Template being referenced is for a CFS (SAI) or an RFS (SCAI).&lt;br/&gt;The CFS and RFS are accessed via one or more ServiceAccessPoints (SAPs) that are characterized by SapSpecifications. There is a relationship between the SAPs and the underlying Resources serving as access points. The following diagram illustrates the classes and relationships as required for Service Activation.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/24/2023 6:56:02 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A10799FB-22C1-497e-A41E-16B8D7FF46BD}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

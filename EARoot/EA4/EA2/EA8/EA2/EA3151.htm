@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.08 - Workforce Assignment to Pool</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3152.png" usemap="#EA3152" border="0" />
+
+<MAP NAME="EA3152">
+<area shape="rect" coords="309,162,482,221" href="./EA3/EA3212.htm" target="_self">
+<area shape="rect" coords="602,405,767,452" href="./EA3/EA3215.htm" target="_self">
+<area shape="rect" coords="21,414,227,461" href="./EA3/EA3210.htm" target="_self">
+<area shape="rect" coords="574,283,795,316" href="./EA3/EA3214.htm" target="_self">
+<area shape="rect" coords="10,283,239,316" href="./EA3/EA3209.htm" target="_self">
+<area shape="rect" coords="594,136,775,183" href="./EA3/EA3213.htm" target="_self">
+<area shape="rect" coords="31,136,217,183" href="./EA3/EA3208.htm" target="_self">
+<area shape="rect" coords="320,10,470,43" href="../../EA9/EA12/EA4/EA4869.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.08 - Workforce Assignment to Pool diagram</div>
+	<div class="ObjectDetailsNotes">The assignment of Employee and Resource to a pool is recorded in an assignment class &#8212; WorkforcePoolAssignment. Its subclasses are WorkforceEmployeePoolAssignment and WorkforceResourcePoolAssignment. The parent class of WorkforcePoolAssignment has the attributes for the validity period, as well as the restriction of this assignment. The restriction is any rule that keeps the assignment valid other than time period. For example, this employee to Pool assignment can be 50% of his capacity during that period only.&lt;br/&gt;The assignment of employees to an organization&#8217;s Pool must correspondingly update the WorkFulfillmentRate of the organization. &lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/17/2022 8:08:33 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{02813FC1-2F5D-4e0b-BF5E-E3A1B36A007B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

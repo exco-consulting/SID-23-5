@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.23 - ServiceCharacteristicValue and ServiceSpecCharacteristicValue</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1381.png" usemap="#EA1381" border="0" />
+
+<MAP NAME="EA1381">
+<area shape="rect" coords="293,36,437,70" href="EA1400.htm" target="_self">
+<area shape="rect" coords="365,176,563,210" href="EA1403.htm" target="_self">
+<area shape="rect" coords="379,307,563,341" href="../EA4/EA1479.htm" target="_self">
+<area shape="rect" coords="588,39,755,73" href="EA1402.htm" target="_self">
+<area shape="rect" coords="384,427,563,461" href="../../EA3/EA4/EA1191.htm" target="_self">
+<area shape="rect" coords="10,173,145,268" href="../EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="22,37,168,71" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.23 - ServiceCharacteristicValue and ServiceSpecCharacteristicValue diagram</div>
+	<div class="ObjectDetailsNotes">The purpose of the ServiceCharacteristicValue and ServiceSpecCharacteristicValue objects is to define how instances of these objects can be populated. Again, it was influenced from the earlier work done on similar Product objects. The ServiceCharacteristicValue and the ServiceSpecCharacteristicValue classes, shown in the following Figure define this concept.&lt;br/&gt;A ServiceSpecCharacteristicValue object is used to define a set of attribute values, each of which can be assigned to a corresponding attribute in a ServiceSpecCharacteristic object. This is represented by the ServiceSpecCharEnumeratedBy association. The values of the attributes in the ServiceSpecCharacteristicValue object describe the values of the attributes that a corresponding ServiceCharacteristicValue object can take on.&lt;br/&gt;Note that we have elected to use classes instead of OCL to model these constraints. Therefore classes can be used to create reusable &#8220;constraints&#8221;, which are in effect what the ServiceSpecCharacteristicValue are.&lt;br/&gt;The following Figure also shows how a ProductCharacteristicValue has been translated to a ServiceCharacteristicValue.&lt;br/&gt;For example, consider the definition of a VPNService, as previously shown in Figure SO.09. A set of ServiceSpecCharacteristicValue could, for example, be used to define the types of VPN that are being offered. A corresponding ServiceCharacteristicValue would then represent the salient features of a particular instance of a Service VPN.&#160;&#160;For example, a Service Provider may be constrained to offer either an MPLS or an Ipsec VPN (as opposed to other types) of VPNs. These would be examples of ServiceSpecCharacteristicValues. Similarly, perhaps the MPLS VPN could only support a defined upper limit of CE devices. This upper limit would be an example of a ServiceCharacteristicValue.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/24/2023 4:59:13 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E520298B-E3BA-439f-933C-4DD813DB1A7F}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

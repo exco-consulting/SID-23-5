@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure BT.01 - Base Types</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3539.png" usemap="#EA3539" border="0" />
+
+<MAP NAME="EA3539">
+<area shape="rect" coords="10,10,129,78" href="EA3549.htm" target="_self">
+<area shape="rect" coords="153,116,243,205" href="EA3559.htm" target="_self">
+<area shape="rect" coords="296,10,386,99" href="EA3555.htm" target="_self">
+<area shape="rect" coords="296,116,416,188" href="EA3560.htm" target="_self">
+<area shape="rect" coords="10,222,137,311" href="EA3561.htm" target="_self">
+<area shape="rect" coords="153,10,280,99" href="EA3551.htm" target="_self">
+<area shape="rect" coords="153,222,281,294" href="EA3565.htm" target="_self">
+<area shape="rect" coords="10,116,100,205" href="EA3557.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure BT.01 - Base Types diagram</div>
+	<div class="ObjectDetailsNotes">This paragraph covers the Base Types ABE from Common Business Domain that have been found to be useful during the documentation of the SID business models.&lt;br/&gt;Standard types like String, Integer etc are not covered as these are usually provided by commonly used programming languages.&lt;br/&gt;It is not intended to define simplistic restricted fundamental types like String(7) or Number(3).&lt;br/&gt;These Base Types are not intended to have their own identity (they don&#8217;t have an id like a Managed Entity). This means that these entities would not normally be shared, but would be private attributes of an entity.&lt;br/&gt;Fowler defines entities like these as &#8220;value objects&#8221;, which he defines as:&lt;br/&gt;&lt;i&gt;&#8220;A small simple object, like money or a date range, whose equality isn&#39;t based on identity&#8221; [Fowler-PoEAA]&lt;/i&gt;&lt;br/&gt;When there is a need to show that a Business Entity is only valid for a certain time, this will be shown by an attribute called validFor, of type TimePeriod. In the design model, temporal support may be implemented in other ways, [Fowler-time] but this approach has been chosen for the analysis model as it shows the requirement without cluttering up the model.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/8/2022 8:18:13 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0D6A46BE-1FF5-43a8-BCAE-0CD903D03587}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

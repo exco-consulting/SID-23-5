@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure DI.01 - Digital Identity overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5740.png" usemap="#EA5740" border="0" />
+
+<MAP NAME="EA5740">
+<area shape="rect" coords="650,7,829,69" href="EA5751.htm" target="_self">
+<area shape="rect" coords="639,374,739,405" href="../../EA5/EA3/EA1947.htm" target="_self">
+<area shape="rect" coords="409,374,509,405" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="270,374,370,405" href="../EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="62,374,162,405" href="../EA1/EA5469.htm" target="_self">
+<area shape="rect" coords="478,74,598,105" href="../EA1/EA1/EA5490.htm" target="_self">
+<area shape="rect" coords="10,192,123,223" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="605,166,720,249" href="EA5752.htm" target="_self">
+<area shape="rect" coords="493,268,679,299" href="EA5759.htm" target="_self">
+<area shape="rect" coords="132,268,294,299" href="EA5758.htm" target="_self">
+<area shape="rect" coords="294,112,409,183" href="EA5753.htm" target="_self">
+<area shape="rect" coords="18,64,115,134" href="EA5749.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure DI.01 - Digital Identity overview diagram</div>
+	<div class="ObjectDetailsNotes">A DigitalIdentity enables identification / authentification of Party or Resource in order to allow Party or Resource to use their permission.&lt;br/&gt;The DigitalIdentity needs an ID, a status and a valid period during which the DigitalIdentity can be used.&lt;br/&gt;A PartyDigitalIdentity enables identification / authentication of a unique Party or many PartyRoles.&lt;br/&gt;A PartyDigitalIdentity identifying only PartyRoles might be used for permissions delegated.&lt;br/&gt;Or a PartyDigitalIdentity may identify a Party but only for a subset of the PartyRoles he plays. For example, it can be used to have a PartyDigitalIdentity carrying all professional PartyRoles delegated by the employer and another one carrying all PartyRoles played personally.&lt;br/&gt;A ResourceDigitalIdentity enables identification / authentication of a unique Resource.&lt;br/&gt;Thanks to the ResourceRoles played by a Resource, it will be granted by the permissions carried by each ResourceRole.&lt;br/&gt;The ResourceDigitalIdentity helps controlling Machine to Machine activities.&lt;br/&gt;At least one Credential is needed for a DigitalIdentity. A Credential enables identification / authentification.&lt;br/&gt;One or many ContactMedium might be defined for each Credential to be used for reset.&lt;br/&gt;The role attribute specifies the type of use such as &quot;for first step of password reset&quot;, &quot;for password reset confirmation&quot; or &quot;for password reset information&#8220;&lt;br/&gt;The Credential needs an ID, a status and a valid period during which the Credential can be used.In addition, the Credential carries a trustLevel specifying the Credential reliability level. According to the level some permissions might be available or not. For example, with a low level of trust, a customer won&#8217;t have the right to buy something.&lt;br/&gt;A DigitalIdentity might be seen as an Avatar. The Avatar is used to welcome when connecting.&lt;br/&gt;The Avatar might be represented by an Attachment such as a picture.&lt;br/&gt;The Avatar might contain a name and a nick name used to welcome when connecting.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/9/2023 12:29:40 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{68DC6E3C-3085-4c70-BB7D-30DEB6BFD11F}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

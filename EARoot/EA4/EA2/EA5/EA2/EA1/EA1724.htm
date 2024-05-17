@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Table 3</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1725.png" usemap="#EA1725" border="0" />
+
+<MAP NAME="EA1725">
+<area shape="rect" coords="5,5,835,377" href="EA1753.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Table 3 diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Scenario 2&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In this second scenario, the SP does not find on the market place the 4 functions (IPRouting, NAT, DHCP and Firewall) bundled together in a single VNF. Instead he will purchase IPRouting, NAT, DHCP bundled together in one VNF and Firewall in a separate VNF. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;To bundle together these 4 functions, the SP will have to create a NS.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The SP purchases 3 separate VNFs:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	VNF1 with 3 software functions in it (IP Routing, NAT, DHCP)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	VNF2 with 1 software function in it (Firewall)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;	VNF3 with 3 software functions in it (PVR, Smartcard, VoD Client)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The SP purchasing these three products will get three independent &#171; VNF packages &#187;.&#160;&#160;The VNF Packages contain Descriptors; Descriptors come with &#171; Flavors &#187; specifying how the&#160;&#160;&#160;functions inside the VNFs can be deployed.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In this second scenario, we assume that the vRGW is &lt;b&gt;built by the SP&lt;/b&gt; &lt;b&gt;as a NS&lt;/b&gt; by combining VNF 1 and VNF 2 together.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;From a deployment perspective the two constituent VNFs are deployed using their respective unique VDU (as specified by the corresponding vendors). &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Creating another flavor where the two VNFs will be deployed together on the same VM by defining another (unique) VDU (VDU 2) is not possible.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In terms of composition, there are 3 levels: two NS lev&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;els (composite and nested) and VNF/PNF.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 10:00:55 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">1/21/2023 7:06:06 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{1D15F02D-8D9B-4ffb-84FB-53792F295143}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

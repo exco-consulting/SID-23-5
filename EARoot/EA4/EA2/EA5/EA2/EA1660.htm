@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.09 - Resource Number - Number Specification (OLD RN.01)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1661.png" usemap="#EA1661" border="0" />
+
+<MAP NAME="EA1661">
+<area shape="rect" coords="463,10,588,106" href="../EA3/EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="37,28,174,80" href="./EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="10,176,201,228" href="../EA3/EA3/EA7/EA2220.htm" target="_self">
+<area shape="rect" coords="442,185,617,237" href="../EA3/EA3/EA7/EA2219.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.09 - Resource Number - Number Specification (OLD RN.01) diagram</div>
+	<div class="ObjectDetailsNotes">This new ABE has only two entities, since it inherits everything needed and a figure to represent the relationship between them.&lt;br/&gt;This new entity called ResourceNumber exists not to only manage the specification, but to associate it with portability. The number is a very complex and broad entity, with specific things like format, ranges, area code and other characteristics for the number that vary for each country. Its purpose is to fill the number specification according to Number Portability, but it can be used for number inventory. Both, ResourceNumber and ResourceNumberSpecification, inherit from existing entities, LogicalResourceSpec (from LogicalResource Specification ABE) and LogicalResource (from LogicalResource ABE).&lt;br/&gt;ResourceNumber, as it shows, is a sub-class of the abstract class LogicalResource. This is the main class for numbers that relates to the number portability. It has an ID, name, description (inherited by RootEntity), a status (inherited by LogicalResource) and a dialedNumber (For Mobile, Fixed, or IP type of numbers). This entity encapsulates the whole concept of a number in the most general idea and has a relation of many-to-0.1 with the specification (new entity, as well).&lt;br/&gt;ResourceNumberSpecification is a sub-class of LogicalResourceSpec (existing entity) from LogicalResource Specification ABE. It defines the number and follows the path for the Characteristic/CharacteristicValue pattern to complete the complexity of the number itself.&lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Resource Function: Support for Virtualization and Resource Abstraction&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;ResourceFunction is a concept that allows resources to be represented by their functional capabilities, features and characteristics rather than exposing the detailed resources and their interconnection and configuration.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The ResourceFunction abstraction mechanism is a solution responding to several significant concurrent changes in the industry:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Virtualization:&lt;/b&gt; the transition from delivering communications using Network Appliances - such as core routers to Network Applications running on compute infrastructure such as with Network Function Virtualization and use of virtual Machine and Cloud Infrastructure. In these virtualization solutions tight static coupling of services to resources is infeasible as the resource and their relationships are changing dynamically in the course of providing communication services &#8211; hence, abstraction of the Functions from how they are realized is essential to handle volume and velocity of change especial in resource inventories.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Network Service Abstraction:&lt;/b&gt; Network as a Service (NaaS) is based on the notion of exposing Network Connectivity Capabilities as services to BSS and OSS systems. The exposed services - the &#8216;what &#8216; - published in a catalog are decoupled from the detail of the &#8216;how&#8217; the NaaS realized those service on resources. This is needed to decouple commerce systems from technical systems see IG 1187 ODA Functional Architecture [3] and IG 1194 Focus on Services not Slices [4] which is a practical 5G example of how decouple service and their features from resources. Abstraction is also referred to as Generalization.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Intent Management:&lt;/b&gt; Traditional Network management standards have been based on exposing detailed resource models with their relationship and constraints. This requires the consuming BSS and OSS to understand these models and lead to high coupling and detailed orchestration by the consuming systems. Use of ResourceFunction supports Intent based management interfaces which in turn enable autonomic resource management with use of Closed Control Loop, AI and Big Data analytics that realize the self-configuring, self-healing, self-optimizing, self-evolving networks of the future.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The following sections provide more detail on the practical use of ResourceFunctions for Virtualization, and Network Abstraction using Intent Based Management.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Virtualization in the Telecom Domain and Beyond&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Virtualization of functions, now very common in the Telecom domain, is not specific and is used in many other domains, as we know.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;If we agree on the extremely simple definition of the very general term &#8220;function&#8221; below&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Function: 	A mechanism that transforms inputs and generates outputs.&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;&lt;br/&gt;&lt;/i&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;Then, we realize that depending on the context (e.g. IT, Telecom, game) and the layers, different, but more or less equivalent terms, may be used: application, service, network function.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Below are three examples of the evolution of &#171; Functions &#187; from traditional style to virtual style:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A single game as a single Function&lt;br/&gt;or a suite of games Functions Group (Backgammon, Chess, Othello, War games)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A single office application (e.g. text editor) as a single Function&lt;br/&gt;or a suite of office applications (text editor, spreadsheet, presentation)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A xDSL modem as a single network Function &lt;br/&gt;or a network Functions Group such as Firewall, NAT, DNS and routing function.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;As will be described later the concepts of Functions and Function Group are modeled in the Information Framework as Resource Functions that can be composed. In the Open APIs Resource Functions are composed by using the &#8216;is bundled attribute of a ResourceFunctionSpecification. This avoids requiring two types of class and object. &lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:42:51 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B48EE6B1-7534-4a86-8D90-66E980E785A8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

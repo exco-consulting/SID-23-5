@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SI.03 - StockItemShipment overview</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2489.png" usemap="#EA2489" border="0" />
+
+<MAP NAME="EA2489">
+<area shape="rect" coords="526,124,576,162" href="EA2530.htm" target="_self">
+<area shape="rect" coords="436,395,660,465" href="../../EA3/EA2/EA2/EA1004.htm" target="_self">
+<area shape="rect" coords="10,395,234,465" href="../../EA3/EA2/EA2/EA1003.htm" target="_self">
+<area shape="rect" coords="162,41,278,93" href="../../EA2/EA2/EA1/EA705.htm" target="_self">
+<area shape="rect" coords="206,223,418,314" href="../../EA2/EA2/EA1/EA706.htm" target="_self">
+<area shape="rect" coords="660,215,837,298" href="EA2541.htm" target="_self">
+<area shape="rect" coords="458,10,645,93" href="EA2542.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SI.03 - StockItemShipment overview diagram</div>
+	<div class="ObjectDetailsNotes">A StockItemShipment represents the order of Shipping received by the Supply Chain.&lt;br/&gt;A StockItemShipment might be triggered by a CustomerProductOrderItem of a ShippingProductSpec.&lt;br/&gt;Several StockItemShipments might be requested for example if all GoodsProductSpec are not available in the same StockLocation.&lt;br/&gt;Information coming from the ShippingProductSpec configuration are described at StockItemShipping level (to location, shipping delay&#8230;).&lt;br/&gt;A StockItemShipment might be triggered by one or many StockItemRequest. &lt;br/&gt;In this case information will come from the StockItemRequest(s).&lt;br/&gt;A StockItemShipment might be triggered by one or many StockItemRequest or exclusively by a CustomerProductOrderItem.&lt;br/&gt;&lt;i&gt;The Supply Chain is in charge of optimizing the Shipments.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">3/8/2023 3:03:05 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4B5656D8-E2B7-4811-9330-846C6BE2F391}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

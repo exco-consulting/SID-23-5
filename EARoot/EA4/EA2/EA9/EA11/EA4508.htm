@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-19 - Simple PolicyAction</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4509.png" usemap="#EA4509" border="0" />
+
+<MAP NAME="EA4509">
+<area shape="rect" coords="399,60,581,109" href="./EA5/EA1/EA4646.htm" target="_self">
+<area shape="rect" coords="25,10,207,60" href="./EA5/EA1/EA4642.htm" target="_self">
+<area shape="rect" coords="611,272,708,300" href="./EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="193,110,290,162" href="./EA5/EA1/EA4643.htm" target="_self">
+<area shape="rect" coords="602,121,716,193" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="117,363,241,401" href="./EA5/EA4/EA4670.htm" target="_self">
+<area shape="rect" coords="282,239,438,314" href="./EA5/EA1/EA4644.htm" target="_self">
+<area shape="rect" coords="465,239,591,313" href="./EA5/EA1/EA4647.htm" target="_self">
+<area shape="rect" coords="10,239,181,326" href="./EA5/EA1/EA4645.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-19 - Simple PolicyAction diagram</div>
+	<div class="ObjectDetailsNotes">PolicyAction is an abstract base class that represents how to form the action clause of a PolicyRule. This consists of a single occurrence of a PolicyStatement, which is of the form:&#160;&#160;{variable, operator, value}. It is shown in Figure below.&lt;br/&gt;Policy actions have the semantics of &#8220;SET variable to value&#8221;, which is implemented by a PolicyStatement. In order to provide flexibility, SID defines two types of actions:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	pass actions are invoked if the condition clause was TRUE&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	fail actions are invoked if the condition clause was FALSE&lt;br/&gt;&lt;br/&gt;For simplicity, this Addendum will discuss the former type of actions (i.e., &#8220;pass actions&#8221;) only.&lt;br/&gt;The ContainedPolicyActions aggregation is used for two distinct purposes. First, it is used to gather together discrete PolicyActions to form a PolicyAction clause. In this usage, the set of individual PolicyActionAtomic objects are aggregated by a PolicyActionComposite object.&lt;br/&gt;The second use is to form compound PolicyActions. In this case, the PolicyActionAtomic object aggregates PolicyActionAtomic and/or PolicyActionComposite objects. The former provides a simple nested PolicyAction, while the latter provides structure for grouping the sub-actions that are dependent on a higher-level action.&lt;br/&gt;The PolicyActionInPolicyRule aggregation defines the set of PolicyActions that are contained in this PolicyRule. This aggregation is implemented as a class in order to capture additional semantics that define how the PolicyActions operate.&lt;br/&gt;A PolicyRule is considered malformed unless it defines at least one PolicyAction term. This is because otherwise, there is nothing for the PolicyRule to do.&lt;br/&gt;The PolicyActionRuleDetails and ContainedPolicyActionDetails implement the semantics of the PolicyActionInPolicyRule and ContainedPolicyActions aggregations, respectively. Both of these classes define an attribute (order and containedActionOrder, respectively) that can be used to prioritize the execution order of PolicyActions in a PolicyRule. The difference is that the ContainedPolicyActionDetails is used to prioritize the execution of PolicyActions for nested and grouped PolicyActions.&lt;br/&gt;&lt;b&gt;PolicyActionAtomic&lt;/b&gt;&lt;br/&gt;The PolicyActionAtomic class is the base class for all simple PolicyActions. A simple PolicyAction consists of a single Boolean clause, which is used to perform a single action. This consists of a single occurrence of a PolicyStatement, which is of the form:&lt;br/&gt;&#160;&#160;&#160;&#160;{SET | CLEAR} PolicyVariable to PolicyValue&lt;br/&gt;The above is an example of an action type of PolicyStatement. The fact that a PolicyActionAtomic contains a PolicyStatement is a distinguishing characteristic of the PolicyActionAtomic class. It is distinctly different from the PolicyActionVendor, which does not use a PolicyStatement, and from PolicyActionComposite, which contains multiple PolicyAction objects.&lt;br/&gt;The PolicyActionAtomic class has three attributes. The actionSequenceNumber attribute is a non-negative integer and represents the particular sequence in which this element is executed as part of the overall policy structure. This will allow a policy engine to reference externally supplied arguments to this object as it is executed.&lt;br/&gt;The hasExecuted attribute is an enumerated integer that is set by a policy application to define the state of execution of this policyAction. Different values define whether this entity has executed or not, and whether any errors were associated with its execution.&lt;br/&gt;Finally, hasSubActions is a Boolean attribute that, if TRUE, signifies that this PolicyAction has one or more sub-actions. Sub-actions are used to enforce a hierarchical nesting of actions, so that parent actions may control the evaluation and other semantics of the sub-actions that they contain.&lt;br/&gt;The PolicyStatementInPolicyAction aggregation models the binding of a PolicyStatement object to a PolicyActionAtomic object. It is implemented as an aggregation (instead of an association) to emphasize the whole-part nature of this relationship.&lt;br/&gt;The PolicyStatement serves as the main body of the PolicyActionAtomic object. This means that the design of the PolicyActionAtomic object is simplified &#8211; the PolicyActionAtomic object becomes an intelligent container that adds semantics to the PolicyStatement.&lt;br/&gt;&lt;b&gt;PolicyActionComposite&lt;/b&gt;&lt;br/&gt;PolicyActionAtomic objects can also be used to form more complex action structures. A PolicyActionComposite object can be used to contain a group of PolicyActionAtomic objects &#8211; this grouping enables multiple PolicyActionAtomic objects to be executed as a group. Alternatively, a PolicyActionAtomic object can contain one or more PolicyActionAtomic objects (and PolicyActionComposite groups if desired) to provide the semantics of a nested PolicyAction. The difference is that a group of PolicyActions (i.e., PolicyActions contained in a PolicyActionComposite) are executed as a discrete set of actions, whereas a nested PolicyAction (i.e., PolicyActions embedded in another PolicyAction) execute as sub-actions of one larger action.&lt;br/&gt;The PolicyActionComposite class is the base class for serving as a generic container in which to place PolicyActionAtomic, PolicyActionVendor, or PolicyActionComposite classes. The first two provide actions that this container groups, while the latter establishes a hierarchy in which to order the execution of PolicyActions. Each of these objects is linked to this object using the ContainedPolicyActions association.&lt;br/&gt;The actionSequence attribute fulfills the same purpose as the actionSequenceNumber attribute of the PolicyActionAtomic class; the difference is that the actionSequence attribute applies to the entire PolicyActionComposite object.&lt;br/&gt;The actionExecutionStrategy attribute is an enumerated integer that defines the execution strategy to be used upon the sequenced actions aggregated by this PolicyActionComposite object. Four different execution strategies are defined in this version of this spec. &#8220;Do Until Success&#8221; means that actions should be executed according to their predefined order, until successful execution of a single action. At that point, the process should stop (even if there are additional actions that could be executed). &#8220;Do All&#8221; means that all actions should be executed that are part of the set, according to their predefined order. This should continue, even if one or more of the actions fails. In contrast, &#8220;Do Until Failure&#8221; means that actions should be executed according to their predefined order until an action fails to execute. At that point, the entire sequence should be stopped. Finally, &#8220;Do All Without Failure or Do Nothing&#8221; means that ALL actions specified should be performed. However, if a failure occurs, then NONE of the actions should be performed. This implies EITHER the ability to look-ahead and ensure that the actions will be able to be performed successfully, or the ability to perform a rollback of that action and all previous actions when an error is encountered.&lt;br/&gt;Finally, hasSubPolicyActions is a Boolean attribute that, if TRUE, signifies that this PolicyAction has one or more sub-actions. Sub-actions are used to enforce a hierarchical nesting of actions, so that parent actions may control the evaluation and other semantics of sub-actions that they contain.&lt;br/&gt;&lt;b&gt;PolicyActionVendor&lt;/b&gt;&lt;br/&gt;The PolicyActionVendor class is a concrete base class that provides a general extension mechanism for representing PolicyActions that have not been modeled with the attributes specified in this model. This class uses two of its properties (actionData and actionEncoding) for defining the content and format of a vendor-specific condition. Its third property (actionResponse) is used to provide a standard result, so that this object can be placed with other PolicyAction objects in a PolicyRule object. Standardized extensions are not expected to use this class.&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Reusable vs. Ad-Hoc Policy Entities&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are two fundamental ways in which a particular policy element (i.e., a PolicyCondition, PolicyAction, PolicyEvent, PolicyStatement, PolicyRule, or PolicyGroup, or any of their subclasses) is intended to be used. A reusable policy element is one that is designed to be used by multiple applications (or even multiple other policy elements). In contrast, an ad-hoc policy element is one that is not designed to be reusable. Conceptually, ad-hoc policy elements are designed to be used in a stand-alone fashion. An ad-hoc PolicyCondition, PolicyAction, or PolicyEvent can be thought of as being embedded inside a PolicyRule. Similarly, an ad-hoc PolicyStatement can be thought of as being embedded within either a PolicyCondition or a PolicyAction, and so forth.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The different class hierarchies reviewed up to this point are all inherently suitable as either reusable or ad hoc policy elements. This means that the only difference between building a reusable versus an ad-hoc policy element is in how that policy element is accessed and used.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Reusable policy elements need to be generally accessible by multiple applications. This is subject, of course, to access control and other security requirements. Therefore, it makes sense to define the concept of a Reusable Policy Container &#8211; a common repository that can be used to contain policy elements that are intended to be reusable. This enables such reusable policy elements to be easily managed and queried for. In contrast, ad-hoc policy elements should probably be placed in the same area of the local data store that contains the containing policy element.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;It should be emphasized that this does not change the design of any of the previously described class hierarchies. Reusability is in the eye of the developer, and the only thing that changes is the intent of the developer to treat this policy element as a reusable policy element.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The fact that a policy element is reusable means that it will be accessed from a common repository. This means that potentially, a reusable PolicyRule whose elements are all reusable will take multiple accesses from this repository in order to retrieve all of its reusable policy elements so that it can then be processed. This is compared with an ad hoc PolicyRule, which could conceivably be stored and retrieved as a single atomic object.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 8:58:57 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{17A123AD-A954-4841-AAD4-16C754355441}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

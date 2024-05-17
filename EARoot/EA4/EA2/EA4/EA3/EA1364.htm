@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.09 - VPNService – VPNServiceSpecification Example </title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1365.png" usemap="#EA1365" border="0" />
+
+<MAP NAME="EA1365">
+<area shape="rect" coords="429,137,591,165" href="../EA4/EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="222,137,397,165" href="./EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="623,137,793,165" href="../EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="20,137,197,165" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="10,345,206,373" href="./EA1/EA1/EA1422.htm" target="_self">
+<area shape="rect" coords="648,345,769,373" href="../EA4/EA1/EA1/EA1493.htm" target="_self">
+<area shape="rect" coords="23,256,193,284" href="./EA1/EA1/EA1423.htm" target="_self">
+<area shape="rect" coords="559,10,690,38" href="../EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="134,10,287,38" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.09 - VPNService – VPNServiceSpecification Example  diagram</div>
+	<div class="ObjectDetailsNotes">Let&#8217;s now examine a practical example. A ProductSpecification will be used to definea ProductOffering. A ServiceSpecification will define how to build a VPN to implement the defined in the ProductSpecification. Now, there are many different types of VPNs. For example, there are network-based VPNs, VPNs based on tunneling, VPNs based on encryption, hybrid VPNs such as MPLS VPNs, and others. All of these VPNs have certain things in common, which can be represented by a VPNServiceSpecification. &lt;br/&gt;Consider an MPLS VPN built to the RFC2547bis specification. The MPLS VPN is an example of a CustomerFacingService. This particular type of MPLS VPN is characterized by having three different types of routers. Each of these &#8211; the CustomerPremise, ProviderEdge, and Provider routers &#8211; can run a different set of protocols, perform a different function, and be managed in a different way.&lt;br/&gt;An MPLS VPN is implemented in a significantly different manner than other types of VPNs. Thus, an MPLSVPNService is a different type of object than (for example) an IPsecVPNService. However, they have three important things in common. First, they are both defined through a ProductSpecification and realized as a Product. Second, they can both be related to the same CustomerFacingServiceSpec. This is useful if, for example, the Service Provider is defining multiple types of VPNs that the Customer could use. Third, it is possible that they could both use the same CustomerFacingServices and/or ResourceFacingServices.&lt;br/&gt;Note that a more complete picture would also show that the two VPNs could use the same PhysicalResources and/or LogicalResources as well. However, this complicates the above figure and is out of scope for this Addendum.&lt;br/&gt;The difference between the MPLSVPNService and the IPsecVPNService is in the protocols and architecture used, which in turn cause additional system-specific differences that don&#8217;t show up in a business model. Rather, the SID identifies these two CustomerFacingServices and relates them to zero or more ResourceFacingServices through the CFServiceRequiresRFServices association (as well as the RequiresResourceFacingServiceSpec association from the template point-of-view).&lt;br/&gt;A ResourceFacingServiceSpec is related to a ResourceSpecification by the RFServiceSpecHasResourceSpecs association. Furthermore, a ResourceSpecification can be used to define the set of Resources that it requires using the SpecifiesResource association. This combination of associations means that conceivably, the same Resource could be used to support both types of VPNServices, assuming that it has the software and/or hardware to do so.&lt;br/&gt;Note that in the following Figure, the VPNServiceSpecification is an abstract class that contains the basic attributes and relationships and constraints for defining a VPNService without specifying the specific type and technology used (e.g., Ipsec vs. MPLS) to implement the VPNService. For example, the VPNServiceSpecification can be used to define the set of SLSs that will be used to measure performance of the VPN. Both an MPLS VPN as well as an Ipsec VPN specification are derived from the VPNServiceSpecification class.&lt;br/&gt;The MPLSVPNServiceSpecification and IPsecVPNServiceSpecification are related to the MPLSVPNService and the IPsecVPNService through the SpecifiesMPLSVPNServices and the SpecifiesIPsecVPNServices associations, respectively. This enables different MPLSVPNServices (as well as IPsecVPNServices) to be specified by the same MPLSVPNServiceSpecification (or IPsecVPNServiceSpecification, respectively). This enables the Service Provider to define a number of characteristics for each of the CustomerFacingServices and thereby templatize the definition of each. Combined with the LogicalResource and QoS Addenda, a complete roadmap will be developed for configuring this templatized definition.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 6:37:18 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{E3AEF3AA-ED43-4638-A7DF-C75C1F2D50FD}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

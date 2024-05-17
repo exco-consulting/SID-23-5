@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Configuration and Profiling ABE</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<div id="name_classifier" style="display: none;"></div>
+	<span class="ObjectTitle"><script type="text/javascript">document.write(nameClassifier("Configuration and Profiling ABE", " : "))</script>    </span>
+	
+		<div class="ObjectDetailsNotes">A Configuration (also referred to as a Profile) defines how a Resource, Service, or Product operates or functions in terms of Characteristic Specifications and related Product/Service/Resource Specifications as well as Characteristics and related Product/Service/Resource entities.&lt;br/&gt;A Configuration may contain one or more parts (which is realized by using the Atomic/Composite pattern, but it is represented as a single entity - ConfigurationRelationship), and each part may contain zero or more fields. Each field may have attributes that are statically or dynamically defined. Some of these fields have fixed values, while others provide values from which a choice or choices can be made (e.g., using the EntitySpec/Entity and/or CharacteristicSpec/CharacteristicValue patterns).&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The SID framework has defined both a Service Configuration ABE as well as a Resource Configuration ABE. There are eTOM L2 core processes that deal with configuring services (Service Configuration &amp; Activation) and provisioning resources (Resource Provisioning), as well as TAM applications that support these processes and ABEs. The purpose of this document is to define these two key concepts from these ABEs, and describe how they can be used to aid in the configuration process. There is also a Product Configuration ABE that has been added to the SID framework that is included in this guide book and the model. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The supporting requirements and use cases for configuration and profiling can be found in the document Configuration and Profiling Business Agreement, Version 1.1.2. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Introduction and Motivation&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The configuration of products, services and resources may consist of a number of very complex processes. An approach to reducing the complex of the configuration process is to identify common patterns that can be re-used. To that end, this document and the associated business agreement (mentioned previously) sets out to identify common re-usable patterns in the area of product, service and resource configuration.&#160;&#160;These are modeled within the Configuration and Profiling ABE in the Common Business Entities domain. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;It is envisioned that SID implementers will begin to use the Service Configuration ABE as an alternative to Resource Facing Service Specification and Resource Facing Service ABEs.&#160;&#160;The reason is that the Service Configuration ABE provides a more complete model that represents how services are configured.&#160;&#160;However, the current Resource Facing Service ABEs will not be removed from the model to preserve backward compatibility and to not impact conformance to them.&lt;/font&gt;&lt;br/&gt;</div>
+
+	
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+
+		<tr>
+			<td class="ObjectDetailsTopic">Release:</td>
+			<td class="ObjectDetailsValue">23.5</td>
+		</tr>
+				<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">1/3/2024 12:04:54 PM</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Status:</td>
+			<td class="ObjectDetailsValue">Team Approved</td>
+		</tr>
+		<tr >
+			<td class="ObjectDetailsTopic">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA645.htm">SID  Map</a>, [ComD-01] Common ABEs Level 1, <a href="EA3514.htm">[PatternD-01] Pattern ABEs Level 1</a></td>
+		</tr>
+
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{4371DF9C-E9E3-4f64-97B8-E422B672862C}</td>
+		</tr>
+			<tr id="proj04" style="display: none;">
+				<td class="ObjectDetailsTopic" style="padding-left: 18px;">Created:</td>
+				<td class="ObjectDetailsValue">1/10/2022 12:02:42 PM</td>
+		</tr>
+	</table>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('TaggedVal');" id="TaggedValTitle">Tagged Values</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+<div class="ObjectDetails" id="TaggedValTable">
+	<table align="center" border="0" cellspacing="0" cellpadding="0" class="ObjectDetails">
+		<tr>
+			<td width="50%" class="TableHeading">Property</td>
+			<td width="50%" class="TableHeading">Value</td>
+		</tr>
+					<tr>
+				<td width="50%" class="TableRow" valign="top">RefGUID</td>
+				<td width="50%" class="TableRow" valign="top">{A2D2F734-242F-4420-8D24-5E2F719DA385}</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario15550" onclick="parent.toggleDiv('detailsDIVScenario15550','DetailsImageScenario15550')" />Specification:
+						<div id="detailsDIVScenario15550" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow" valign="top">rsa_guid</td>
+				<td width="50%" class="TableRow" valign="top">_5Ras0IR3EeOHCrPbIPkYwA</td>
+			</tr>	
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="2">
+					<div class="DetailsDivParent"><img src="../../../../images/minus03.gif" align="absmiddle" id="DetailsImageScenario15551" onclick="parent.toggleDiv('detailsDIVScenario15551','DetailsImageScenario15551')" />Specification:
+						<div id="detailsDIVScenario15551" class="DetailsDiv" >
+						&nbsp;
+						</div>
+					</div>
+				</td>
+			</tr>
+	</table>
+</div>		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="10%" class="TableHeading">Connection</td>
+					<td width="10%" class="TableHeading">Direction</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA10/EA5/EA5712.htm">Communication Interaction ABE</a></td>
+					<td width="10%" class="TableRow" valign="top">Package</td>
+					<td width="10%" class="TableRow" valign="top">Nesting</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+ </div>
+   <div align="center"></div>
+  <div align="center">©2023 TM Forum</div> 
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.32 - Example Instance Implementation of a CompoundResource</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1863.png" usemap="#EA1863" border="0" />
+
+<MAP NAME="EA1863">
+<area shape="rect" coords="102,147,250,186" href="./EA1/EA1957.htm" target="_self">
+<area shape="rect" coords="336,10,442,69" href="EA1944.htm" target="_self">
+<area shape="rect" coords="47,258,169,304" href="./EA1/EA1959.htm" target="_self">
+<area shape="rect" coords="315,357,464,409" href="./EA4/EA7/EA2316.htm" target="_self">
+<area shape="rect" coords="310,258,469,304" href="./EA4/EA7/EA2315.htm" target="_self">
+<area shape="rect" coords="194,355,291,407" href="./EA3/EA4/EA2084.htm" target="_self">
+<area shape="rect" coords="512,147,629,186" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="319,147,460,186" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="181,258,299,304" href="./EA1/EA1960.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.32 - Example Instance Implementation of a CompoundResource diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows a Router modeled as a type of ResourceElement.&#160;&#160;The PhysicalResource entities and LogicalResource entities are identified in different colors on the Figure to help show their different instances. &lt;br/&gt;A Router is a shorthand notation for a set of PhysicalResources, LogicalResources, and optionally CompoundResources that collectively represent the physical and logical aspects of the Router. The concept of a CompoundResource helps simplify representing complex devices and ensures that commands and policies that affect the physical and logical aspects of a device are sent to both the physical and logical components of the device.&lt;br/&gt;CompoundResource has two subclasses, called ResourceElement and ResourceCollection. Both of these subclasses represent managed entities that may have physical and logical aspects.&lt;br/&gt;It should be noted that this is, in reality, another use of the composite pattern.&lt;br/&gt;A ResourceElement is an entity that is individually manageable. For example, a Router can be modeled as a ResourceElement. Different PhysicalResource objects can model the physical aspects of the Router in detail, and different LogicalResource objects can model the logical aspects of the Router in detail. If the Router was a modular Router that was made up of different PhysicalDevices having different logical capabilities, then each of these &#8220;sub-devices&#8221; could be represented as a CompoundResource. ResourceElement aggregates an appropriate set of PhysicalResource, LogicalResource, and CompoundResource objects, enabling a high-level view of all of the aspects of the Resource to be provided.&lt;br/&gt;A ResourceCollection is an entity that is also individually manageable. If we &#8220;look inside&#8221; a ResourceCollection object, we find an aggregate entity consisting of at least one ResourceElement and zero or more ResourceCollection entities. This is represented by the HasCompoundResources aggregation. For example, a Network can be modeled as a subclass of ResourceCollection. A Network can be made up of other Networks and/or SubNetworks. Each Network or SubNetwork can, be made up of physical and logical components. Each node in the network can be represented by a ResourceElement. Thus, the ResourceCollection enables a single entity to represent a set of ResourceElements. This is very convenient for many different types of applications. One important example is topology applications that support the &#8216;drill-down&#39; of elements. That is, imagine a network appearing as a single icon in a topology map. This would be a ResourceCollection. Now, imagine the user double-clicks on that icon, bringing up the next level of detail. This would show the different components of the Network, such as SubNetworks and individual network devices. These would be examples of ResourceElements. The process can continue for as many levels as desired because the HasCompoundResources cardinality on the component side is 1..*.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:17:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{1DA72F70-896B-4562-9B14-1766B4220BB4}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

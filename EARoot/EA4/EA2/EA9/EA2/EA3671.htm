@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Root Business Entities/Characteristic ABE Illustration</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3672.png" usemap="#EA3672" border="0" />
+
+<MAP NAME="EA3672">
+<area shape="rect" coords="10,10,574,500" href="EA3749.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Root Business Entities/Characteristic ABE Illustration diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;Figure Ch.01 &#8211; Characteristic Specification depicts the basic CharacteristicSpecification pattern.&#160;&#160;The pattern enables attributes unique to a type of entity to be created via its association to EntitySpecification and enables attributes unique to a certain entity to be created via its association to RootEntityType.&#160;&#160;A RootEntityType is an entity in the SID.&#160;&#160;For example, characteristics could be defined for entities (instances of RootEntityType) such as Product, Customer, and ProductSpecification that apply to all instances of those entities. Instance diagrams are shown in Figure Ch.03 &#8211; Characteristic Spec Instance &#8211; Example 1 and Figure Ch.04 &#8211; Characteristic Spec Instance &#8211; Example 2. Definitions of entities and attributes are provided in the data dictionary at the end of this document.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An example of the use of the pattern will also be illustrated using the following figure.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The EntitySpecification, which could be a ProductSpecification, instance is for a Linksys USB Ethernet Cable Modem DOCSIS.&#160;&#160;Each tab, Features, Description, Additional Info, and Shipping Info is an instance of CharacteristicSpecification.&#160;&#160;The Features CharacteristicSpec is a composite that is comprised of an instance of CharacteristicSpec for each feature line.&#160;&#160;Instances of the CharacteristicSpecRelationship are used to compose the Features of the instances of feature line.&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In this example, the CharacteristicSpecValue and CharSpecValueRelationship entities are not used. An example of their use could be for a set of coordinated colors for the modem.&#160;&#160;For example, if a choice for a faceplate color (CharacteristicSpec) is blue (CharacteristicSpecValue), then the only color for the case color is black.&#160;&#160;This rule would be implemented by an instance of CharSpecValueRelationship that relates the color blue with the color black with a value for charValueRelationshipType of &#8220;inclusive&#8221;.&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;See an example in Annex: More Details on Characteristics.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/11/2022 10:31:07 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/6/2022 9:56:43 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{91CC7C58-BFA5-46b4-BB77-CECF22282BEC}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

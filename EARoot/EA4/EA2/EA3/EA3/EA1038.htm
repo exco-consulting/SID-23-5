@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.15 - Policy Rule Components</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1039.png" usemap="#EA1039" border="0" />
+
+<MAP NAME="EA1039">
+<area shape="rect" coords="472,80,677,129" href="../../EA9/EA11/EA5/EA1/EA4642.htm" target="_self">
+<area shape="rect" coords="10,80,224,142" href="../../EA9/EA11/EA5/EA2/EA4651.htm" target="_self">
+<area shape="rect" coords="247,10,426,57" href="../../EA9/EA11/EA5/EA3/EA4661.htm" target="_self">
+<area shape="rect" coords="35,218,152,246" href="../../EA9/EA11/EA5/EA2/EA4652.htm" target="_self">
+<area shape="rect" coords="559,218,656,246" href="../../EA9/EA11/EA5/EA1/EA4643.htm" target="_self">
+<area shape="rect" coords="294,218,391,246" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.15 - Policy Rule Components diagram</div>
+	<div class="ObjectDetailsNotes">The price of a ProductOffering is governed by a PolicySet.&#160;&#160;The PolicySet may be a single PolicyRule or a PolicyGroup which ties together a number of PolicyRules.&#160;&#160;&#160;The use of both single rules and grouped rules will be explained via examples.&lt;br/&gt;For example, suppose there is a ProductOffering called &#8220;Subscribe for a Year, Get Two Accessories Free&#8221;.&#160;&#160;The free accessories can be selected from list of available accessories.&#160;&#160;In this example, the accessories are a cell phone re-charger, hands-free holder, cell phone wallet, or earphone and microphone.&#160;&#160;Included in the offering are the cell phone service and the accessories.&#160;&#160;There is an instance of PolicySet rule related to this offering.&#160;&#160;&lt;br/&gt;All PolicyRules consist of three types of components, which define the semantics of the rule.&#160;&#160;(Please see Policy guide book for more information.) This is shown in the figure below.&lt;br/&gt;&lt;br/&gt;The semantics of a rule that governs the price of a ProductOffering builds upon this generic structure. The first component is a PolicyEvent, which triggers the evaluation of the PolicyRule. The second defines the PolicyCondition(s) of the PolicyRule being evaluated.&#160;&#160;The third defines the PolicyAction(s) that are taken if the PolicyCondition(s) of the rule are met.&#160;&#160;In the &#8220;Subscribe for a Year&#8221; offering:&lt;br/&gt;The PolicyEvent is the time of purchase&lt;br/&gt;The PolicyCondition is the particular type of cell phone service offering being purchased (since different pricing rules could be attached to different types of cell phone offerings)&lt;br/&gt;The PolicyAction taken as a result of this particular condition being true is that two of the accessories are free.&lt;br/&gt;Note that a PolicyRule aggregates at least one or more PolicyConditions and at least one or more PolicyActions. (Policy guide book defines a general set of semantics that specify how a PolicyRule is evaluated, including the concepts of rule priority and a decision strategy for combining different PolicyConditions.) In addition, there are other constructs, such as a Policy Group, that can aggregate multiple PolicyRules. This enables more complex pricing rules to be developed by defining appropriate subclasses of PolicyRule, PolicyCondition and PolicyAction. Note that PolicyCondition and PolicyAction both use the composite pattern; please see Policy guide book for more information.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/8/2022 6:00:41 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{07C41A4C-7B34-4073-A12D-94202E23B17A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

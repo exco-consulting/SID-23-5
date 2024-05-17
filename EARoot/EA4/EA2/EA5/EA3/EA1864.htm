@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.54 - Concepts of ManagementInfo and ManagementMethodEntity</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1865.png" usemap="#EA1865" border="0" />
+
+<MAP NAME="EA1865">
+<area shape="rect" coords="344,245,523,275" href="./EA3/EA5/EA2/EA2109.htm" target="_self">
+<area shape="rect" coords="950,163,1064,234" href="EA1935.htm" target="_self">
+<area shape="rect" coords="655,239,810,269" href="./EA3/EA5/EA2/EA2104.htm" target="_self">
+<area shape="rect" coords="483,133,671,163" href="../../EA9/EA2/EA3812.htm" target="_self">
+<area shape="rect" coords="143,133,328,163" href="./EA3/EA5/EA2/EA2105.htm" target="_self">
+<area shape="rect" coords="823,133,939,163" href="../../EA9/EA2/EA3814.htm" target="_self">
+<area shape="rect" coords="800,443,934,473" href="./EA3/EA5/EA8/EA2137.htm" target="_self">
+<area shape="rect" coords="563,362,721,392" href="./EA3/EA5/EA7/EA2133.htm" target="_self">
+<area shape="rect" coords="186,454,326,484" href="./EA3/EA5/EA2/EA2106.htm" target="_self">
+<area shape="rect" coords="136,381,233,411" href="./EA3/EA5/EA2/EA2110.htm" target="_self">
+<area shape="rect" coords="52,440,175,470" href="./EA3/EA5/EA2/EA2108.htm" target="_self">
+<area shape="rect" coords="56,538,172,568" href="./EA3/EA5/EA2/EA2107.htm" target="_self">
+<area shape="rect" coords="10,388,96,418" href="./EA3/EA5/EA2/EA2103.htm" target="_self">
+<area shape="rect" coords="897,362,994,392" href="./EA3/EA5/EA6/EA2129.htm" target="_self">
+<area shape="rect" coords="960,443,1073,473" href="./EA3/EA5/EA3/EA2114.htm" target="_self">
+<area shape="rect" coords="730,362,850,392" href="./EA3/EA5/EA1/EA2099.htm" target="_self">
+<area shape="rect" coords="491,440,646,470" href="./EA3/EA5/EA5/EA2122.htm" target="_self">
+<area shape="rect" coords="403,362,519,392" href="./EA3/EA5/EA4/EA2118.htm" target="_self">
+<area shape="rect" coords="538,10,635,62" href="../../EA9/EA2/EA3775.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.54 - Concepts of ManagementInfo and ManagementMethodEntity diagram</div>
+	<div class="ObjectDetailsNotes">If we are to manage and control ManagedEntities, then we need two additional things: (1) a means to manage ManagedEntities, and (2) a means to represent management information. These concepts are shown in the Figure below.&lt;br/&gt;A ManagedEntity is an abstract base class that is used to represent entities in a managed environment that have the following semantics in common: (1) a PartyRole owns or is otherwise responsible for them, (2) management of the entity is critical for providing a service and/or maintaining the environment, and (3) the entity is &#8220;important&#8221; from a management point-of-view. Thus, ManagedEntity is the base class for representing manageable parts of a Product (such as PhysicalResources and CustomerFacingServices).&lt;br/&gt;ManagementInfo is an abstract base class that is used to represent management information obtained from one or more managed entities in a managed environment. Specifically, in the process of managing an entity, information of various forms is created. A ManagementInfo entity represents different types of management information that describes the state of a particular Resource or Service. A Finite State Machine management model is used to represent the lifecycle of a managed entity. This class represents one state of that Finite State Machine. Note that the Finite State Machine is derived from the UML Metamodel State Machine metaclass.&lt;br/&gt;ManagementMethodEntity is an abstract base class for representing the different types of management methods that can be used to gather a particular type of management information. For example, this enables configuration setting classes to be defined as using CLI, while configuration monitoring classes could be defined as using a different method, such as SNMP. The subclasses of ManagementMethodEntity are system concepts and are shown for illustrative purposes only.&lt;br/&gt;Thus, ManagementMethodEntities can be defined to produce specific types of ManagementInfo for a particular ManagedEntity. This is done through the use of three relationships that tie these concepts together. The SupportedMgmtMethods aggregation defines the set of different management methods that can be used to manage and control a particular ManagedEntity. The DescribedByManagementInfo aggregation is used to define the different types of management information that a particular ManagedEntity can produce. Finally, the MgmtInfoObtainedBy association defines which set of ManagementMethodEntities were used to obtain a particular type of management data.&lt;br/&gt;There are four primary subclasses of ManagementMethodEntity &#8211; CLIMethod, SNMPMethod, TL1Method, and ProprietaryMethod. (These are not inclusive, but rather representative, of the most popular methods of managing Resources and Services that are currently available.) CLIMethod is an abstract base class for using a device-specific CLI to obtain management information. Similarly, the SNMPMethod, TL1Method, and ProprietaryMethod entities are abstract base classes for using device-specific SNMP, TL1, and proprietary methods to obtain management method. RMONMethod uses SNMP, and thus is a subclass of SNMPMethod.&lt;br/&gt;It should be noted that these are all abstract base classes. While there are standard objects defined for SNMP, RMON, and TL1, the majority of information obtained using these approaches (with the possible exception of TL1) comes in the form of proprietary objects. In addition, CLI is essentially proprietary, so no standard exists to define information obtainable from CLI.&lt;br/&gt;The nine subclasses of ManagementInfo are also exemplary in nature and are not meant to be all-inclusive.&lt;br/&gt;ResourceStateInfo is an abstract base class for representing different types of management information that describes the state of a particular Resource. A Finite State Machine management model is used to represent the lifecycle of a managed entity. This class represents one state of that Finite State Machine. (Note that the Finite State Machine is derived from the UML Metamodel State Machine metaclass.) Subclasses of this class include classes to represent Faults, Outages, Alarms, the usage of this Resource, and its current operational state.&lt;br/&gt;ResourceStatisticalInfo is an abstract base class for representing different types of statistical information that describes the state of a particular Resource or set of Resources (or a particular Service or set of Services). Subclasses of this class represent domain-specific information, including:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	specific LogicalResource statistics, such as those for a DeviceInterface (e.g., number of packets dropped)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	specific PhysicalResource statistics, such as a fiber cut&lt;br/&gt;ServiceStateInfo is an abstract base class for representing different types of management information that describes the state of a particular Service. This can be a CustomerFacingService or a ResourceFacingService. As with a ResourceStateInfo, this represents the lifecycle of a Service as one state of the Finite State Machine.&lt;br/&gt;ServiceStatisticalInfo is an abstract base class for representing different types of statistical information that describes the state of a particular Resource or set of Resources (or a particular Service or set of Services). Subclasses of this class represent domain-specific information, including:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	generic Service statistics (e.g., uptime and current status)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	specific Service statistics (e.g., number of SLA violations, current QoS data, etc.)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	generic Customer statistics (e.g., number of Customers using a particular network, number of Subscribers and their subscription levels)&lt;br/&gt;The remaining five entities are generic in nature and apply to Resources and Services.&lt;br/&gt;AccountingInfo is the base class for defining how accounting is performed for a particular ManagedEntity. AccountingInfo keeps track of how a Resource or Service is being used (both quantity as well as by which PartyRole). Accounting is associated with a particular Resource or Service using the DescribedByMgmtInfo aggregation. Subclasses of the Accounting class define the detailed characteristics and behavior of how accounting is performed. Accounting is implemented by associating the parent of this class, ManagementInfo, with the appropriate ManagementMethodEntity class through a combination of the DescribedByMgmtInfo and the MgmtInfoObtainedBy aggregation.&lt;br/&gt;PerformanceInfo is the base class for all performance monitoring classes. Resource Performance is the act of collecting, correlating, consolidating, and validating various performance statistics and other operational characteristics of PhysicalResource, LogicalResource, CompoundResource, and Network entities. Service Performance is similar, except that it applies to CustomerFacingServices and ResourceFacingServices. Both of these entities also include specific subclasses for conducting network performance assessment against planned goals, performs various aspects of trend analysis, including error rate and cause analysis and Resource degradation. Different types of performance indicators are associated with a particular Resource or Service using the DescribedByMgmtInfo aggregation. Performance information Subclasses of this class defines the detailed characteristics and behavior of this class. Performance monitors are reported by associating the parent of this class, ManagementInfo, with the ManagementMethodEntity class through a combination of the DescribedByMgmtInfo and the MgmtInfoObtainedBy aggregation.&lt;br/&gt;SecurityInfo is the base class for all security classes. Different types of security settings and semantics are associated with a particular Resource or Service using the DescribedByMgmtInfo aggregation. Subclasses of this class define the detailed characteristics and behavior of this class. Examples of security subclasses include AuthenticationEntity, AuthorizationEntity, and AuditingEntity. Security settings are implemented and reported on by associating the parent of this class, ManagementInfo, with the ManagementMethodEntity class through a combination of the DescribedByMgmtInfo and the MgmtInfoObtainedBy aggregation.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:20:42 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D8C6BE23-1C62-41dd-A5AD-76964672F4F8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RA.07 - RA Consequence</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3242.png" usemap="#EA3242" border="0" />
+
+<MAP NAME="EA3242">
+<area shape="rect" coords="17,10,200,44" href="./EA3/EA3296.htm" target="_self">
+<area shape="rect" coords="442,93,650,207" href="./EA3/EA3291.htm" target="_self">
+<area shape="rect" coords="17,114,200,148" href="./EA3/EA3295.htm" target="_self">
+<area shape="rect" coords="10,224,206,310" href="./EA3/EA3292.htm" target="_self">
+<area shape="rect" coords="53,382,163,410" href="../../../EA9/EA11/EA5/EA1/EA4643.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RA.07 - RA Consequence diagram</div>
+	<div class="ObjectDetailsNotes">In the complex rule example, where a bill was generated for higher or lower bandwidth than provided, there would be a complex condition composed as &#8220;IF BilledBandwidth #gt; ProvidedBandwidth&#8221; &#8220;OR&#8221; &#8220;IF BilledBandwidth#lt; ProvidedBandwidth&#8221;.&#160;&#160;These three attributes would be derived using a derivation algorithm defined in an existing subclass (ProdOfferPricePolicyVariable) of PolicyVariable. The action would be composed as &#8220;SET BandwidthBilledError to true&#8221;.&lt;br/&gt;See GB922 Common Domain section Policy ABE for detail.&lt;br/&gt;If the RevenueAssurranceObjective is not met then a consequence results as shown in figure RA.07.&#160;&#160;The RevenueAssuranceConsequence is characterized by a prescribedAction attribute. This simple attribute may not be sufficient to specify the consequence.&#160;&#160;If so, then the association to PolicyAction allows for a more complex action to be specified. For example, &#8230;Note that the prescribed action may also result in the creation of a RevenueAssuranceViolation or a RevenueAssuranceTroubleTicket as shown in Figure RA.08.&lt;br/&gt;Additionally, parameters, objectives and consequences may be applicable, or not, at certain times.&#160;&#160;For example, if objectives may be checked during the week, but not on the weekend; consequences may be less severe during the day than during the evening.&#160;&#160;These scenarios are handled by the RevenueAssuranceApplicability business entity, also shown in Figure RA.07.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/3/2022 5:56:22 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0448E5E2-E32E-48ae-9317-4BB4C16E0EFE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

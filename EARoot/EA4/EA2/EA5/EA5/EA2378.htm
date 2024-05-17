@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure RO.06 - Resource Number - Number Portability Roles</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2379.png" usemap="#EA2379" border="0" />
+
+<MAP NAME="EA2379">
+<area shape="rect" coords="530,10,754,94" href="../EA3/EA3/EA2036.htm" target="_self">
+<area shape="rect" coords="358,340,564,392" href="./EA2/EA2402.htm" target="_self">
+<area shape="rect" coords="657,378,832,482" href="./EA1/EA2396.htm" target="_self">
+<area shape="rect" coords="667,241,821,293" href="./EA2/EA2403.htm" target="_self">
+<area shape="rect" coords="696,130,793,182" href="../EA3/EA1947.htm" target="_self">
+<area shape="rect" coords="456,279,580,331" href="../../EA8/EA1/EA3134.htm" target="_self">
+<area shape="rect" coords="326,279,423,331" href="../../EA2/EA1/EA687.htm" target="_self">
+<area shape="rect" coords="388,119,503,203" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="10,273,139,360" href="../../EA10/EA1/EA5467.htm" target="_self">
+<area shape="rect" coords="151,273,281,408" href="../../EA10/EA1/EA5462.htm" target="_self">
+<area shape="rect" coords="112,120,227,209" href="../../EA10/EA1/EA5469.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure RO.06 - Resource Number - Number Portability Roles diagram</div>
+	<div class="ObjectDetailsNotes">The Resource Number Portability Role ABE contains the entity NumberPortabilityRole and the entities needed to complete the roles associated, like the clearinghouse, which is strongly related with the number portability.&lt;br/&gt;NumberPortabilityRole is a class that gives a specific behavior and responsibilities to the requests, depending of many factors and the source provided. It has a portabilityStatus as a specific attribute and a generalization to an existing entity called LogicalResourceRole. This entity helps with the management and tracking of the status for the portability requests, since it can be initiated, started, completed, among others. This track is made for the requests through the continuous communications with other sources, like the entity NumberPortabilityClearinghouse as a party role, since the service providers don&#8217;t communicate directly for the number portability, and use the NumberPortabilityClearinghouse as an intermediary. Therefore, NumberPortability, because of its complexity, its management of different states between its flows with other sources, works with a NumberPortabilityRole through an aggregation. &lt;br/&gt;All the number portability requests have a behavior with and affinity and dependency to the different parties created and added. (Number Portability Clearinghouse, Service Provider, Customer). This relation affects directly to the tracking for the portability through a status (portabilityStatus attribute).&lt;br/&gt;In this figure it shows the relation of PartyRole (from Party ABE) with Party (Also from Party ABE) and how it relates with the role for number portability. For instance, there is a new subclass for PartyRole in order to reach every party who participates in the process. This new entity is NumberPortabilityClearinghouse, a very relevant party when a number portability is involved. &lt;br/&gt;On the side for the roles, the new entity is called NumberPortabilityRole, with an aggregation of many to 0.1 with the NumberPortabilityRequest. This role entity inherits form LogicalResourceRole (from Logical Role ABE), who inherits from the main parent, ResourceRole (from Resource ABE). This last entity is the one who has the association with PartyRole, through this, the whole communication flows perfectly.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/7/2023 6:55:50 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{3044F212-DE59-4ba1-A3D4-C2CEFED006B1}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

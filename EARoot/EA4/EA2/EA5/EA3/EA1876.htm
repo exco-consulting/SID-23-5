@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.05 - The Concept of “Holding” Hardware - Illustrative</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1877.png" usemap="#EA1877" border="0" />
+
+<MAP NAME="EA1877">
+<area shape="rect" coords="318,356,433,453" href="EA1938.htm" target="_self">
+<area shape="rect" coords="536,268,693,311" href="./EA4/EA3/EA2268.htm" target="_self">
+<area shape="rect" coords="318,144,444,188" href="./EA4/EA4/EA2291.htm" target="_self">
+<area shape="rect" coords="536,363,693,406" href="./EA4/EA2/EA2260.htm" target="_self">
+<area shape="rect" coords="10,144,155,188" href="./EA4/EA7/EA2315.htm" target="_self">
+<area shape="rect" coords="536,454,693,497" href="./EA4/EA1/EA2251.htm" target="_self">
+<area shape="rect" coords="180,10,310,68" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="519,216,813,534" href="EA1934.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.05 - The Concept of “Holding” Hardware - Illustrative diagram</div>
+	<div class="ObjectDetailsNotes">Neither the LineCard nor the PowerSupply can simply exist in the ether, disconnected from the Router! Clearly, both need to be physically contained in the Chassis, which is associated with the Router. Now the question is, are they contained in the same EquipmentHolder, or are there different EquipmentHolders for different types of Equipment and AuxiliaryComponents?&lt;br/&gt;The answer depends on the manufacturer as well as the type and complexity of the device. Some use a single Chassis as a &#8220;frame&#8221; into which other components plug into, and others use a set of nested EquipmentHolders. Therefore, we must provide the ability for both options to be modelled.&lt;br/&gt;What&#8217;s an example of nested EquipmentHolders? For large Routers and Switches, it is quite common to see a Chassis with a number of Slots into which different types of Cards are plugged in. The Slot functions as a type of EquipmentHolder. Therefore, we can define a single relationship, HoldsHardware, to enable an EquipmentHolder to hold any type of Hardware. This is exactly analogous to our earlier use of the ContainsHardware relationship. &lt;br/&gt;&lt;i&gt;Note: the three inheritance relationships are for illustrative purposes only. The real inheritance will be shown later in this Addendum.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:23:48 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{8ADE5CE5-1A6B-423e-8BBE-5D21FFA97496}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.28 - Relationship Between ServiceBundleSpec and ServicePackageSpec</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1391.png" usemap="#EA1391" border="0" />
+
+<MAP NAME="EA1391">
+<area shape="rect" coords="447,400,647,459" href="./EA2/EA2/EA1452.htm" target="_self">
+<area shape="rect" coords="112,363,262,410" href="./EA1/EA3/EA1428.htm" target="_self">
+<area shape="rect" coords="10,489,195,517" href="./EA1/EA3/EA1430.htm" target="_self">
+<area shape="rect" coords="827,353,977,400" href="./EA2/EA2/EA1449.htm" target="_self">
+<area shape="rect" coords="886,489,1074,517" href="./EA2/EA2/EA1451.htm" target="_self">
+<area shape="rect" coords="247,489,418,517" href="./EA1/EA3/EA1429.htm" target="_self">
+<area shape="rect" coords="684,489,867,517" href="./EA2/EA2/EA1450.htm" target="_self">
+<area shape="rect" coords="655,150,840,178" href="./EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="766,266,1006,294" href="./EA2/EA1442.htm" target="_self">
+<area shape="rect" coords="158,150,344,178" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="10,266,244,294" href="./EA1/EA1418.htm" target="_self">
+<area shape="rect" coords="518,266,729,294" href="./EA2/EA1441.htm" target="_self">
+<area shape="rect" coords="258,266,480,294" href="./EA1/EA1417.htm" target="_self">
+<area shape="rect" coords="382,10,531,38" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.28 - Relationship Between ServiceBundleSpec and ServicePackageSpec diagram</div>
+	<div class="ObjectDetailsNotes">The next concept to introduce is that of ServiceBundles.&lt;br/&gt;Just as ServicePackageSpecs and ServicePackages define the templates and instances of a set of CustomerFacingServices, ServiceBundleSpecs and ServiceBundles define the templates and instances of a set of ResourceFacingServices. Note the symmetry &#8211; this is once again indicative of an extensible, robust information model. The extensibility is, of course, in the use of the ServicePackageSpec and ServiceBundleSpec entities. Once the desired specifications have been defined, it is relatively easy to instantiate those templates (thereby producing ServicePackage and ServiceBundle entities). Furthermore, this enables different instances to be easily differentiated while ensuring that their important characteristics remain constant. This also greatly simplifies their definition and management.&lt;br/&gt;The following Figure shows the relationship between a ServicePackageSpec and a ServiceBundleSpec. &lt;br/&gt;A ServiceBundleSpecification is the base class for defining the different classes of bundled ResourceFacingServiceSpecifications that a Customer can obtain via a Product. The preferred way to represent a Customer subscription to a Product of this nature is by using the association class ServicePackageBundleDetails to define the set of specific ServiceBundleSpecifications that are used by a particular ServicePackage.&lt;br/&gt;Conceptually, a ServiceBundle is thought of as a collection to enable the needs of different sets of ResourceFacingServices to be grouped together. The &#8220;bundle&#8221; conveys the concept of grouped Services that are related. Since these are ResoureFacingSpecifications, they define reusable templates for implementing the ResourceFacingServices that are required by a particular CustomerFacingService (as represented by a ServicePackage).&lt;br/&gt;The following Figure shows four exemplary subclasses of ServiceBundle for defining four different groups of Class of Service (CoS). The idea is to use each CoSBundle class to represent the Class of Service settings for a specific ServiceBundle. This enables different CoS settings to be associated with the different CustomerFacingServices that are defined by a particular ServicePackage, which is what the Customer obtains via a Product. For example, CoS1 could be used for VoIP, CoS2 could be used for mission-critical applications, CoS3 could be used for all other applications that are not mission-critical but require better than best-effort delivery, and CoS4 could define best effort service delivery.&lt;br/&gt;The combination of ServicePackage and ServiceBundle enables a Service Provider to abstract the notion of different classes of service that are sold to subscribers. For example, the troublesome use case of provisioning a Customer&#8217;s request to upgrade to a higher-level Service (or downgrade to a lower-level Service) can now be much more easily and efficiently handled. More importantly, this enables a single link to be defined between the low-level QoS model (which controls the mechanisms used in the devices to condition traffic appropriately) and this higher-level, business-oriented model.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:08:04 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D4C99017-4134-4340-9B9B-161061093B8A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

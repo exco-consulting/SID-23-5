@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure P.04a8 - PartyRoles in Common</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5399.png" usemap="#EA5399" border="0" />
+
+<MAP NAME="EA5399">
+<area shape="rect" coords="725,326,822,378" href="./EA8/EA5560.htm" target="_self">
+<area shape="rect" coords="669,157,834,209" href="./EA8/EA5559.htm" target="_self">
+<area shape="rect" coords="715,10,844,73" href="./EA8/EA5558.htm" target="_self">
+<area shape="rect" coords="588,326,703,378" href="./EA8/EA5557.htm" target="_self">
+<area shape="rect" coords="444,157,631,209" href="./EA8/EA5556.htm" target="_self">
+<area shape="rect" coords="538,10,701,62" href="./EA8/EA5555.htm" target="_self">
+<area shape="rect" coords="201,10,336,62" href="../../EA9/EA12/EA5/EA4882.htm" target="_self">
+<area shape="rect" coords="10,10,172,92" href="./EA4/EA5527.htm" target="_self">
+<area shape="rect" coords="350,10,522,62" href="./EA4/EA5526.htm" target="_self">
+<area shape="rect" coords="229,329,424,400" href="./EA4/EA5525.htm" target="_self">
+<area shape="rect" coords="444,325,569,377" href="../../EA6/EA3/EA2616.htm" target="_self">
+<area shape="rect" coords="41,334,216,397" href="../../EA8/EA2/EA3/EA3211.htm" target="_self">
+<area shape="rect" coords="18,157,191,220" href="../../EA8/EA2/EA3/EA3210.htm" target="_self">
+<area shape="rect" coords="277,183,404,248" href="EA5479.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure P.04a8 - PartyRoles in Common diagram</div>
+	<div class="ObjectDetailsNotes">In addition to roles identified in specific Domains, the Common Domain contains roles related to common ABEs. The Common Domain roles presently identified are:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;ProjectPartyRole&lt;/b&gt;: A role played in the context of a Project.&lt;/li&gt;&lt;li&gt;&lt;b&gt;WorkforceEmployeeRole&lt;/b&gt;: This is a PartyRole that represents individuals who are involved in the workforce process as employees with particular skills. For example, Field Technician, Network Engineer, Supervisor, etc.&lt;/li&gt;&lt;li&gt;&lt;b&gt;WorkforceOrganizationRole&lt;/b&gt;: This is a PartyRole that represents organizations involved in field operations. It can be the CSP Field Technician department itself, or a 3rd-party contractor company. Note that OrganizationRole has Calendar, inherited from Calendar of PartyRole.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;Community&lt;/b&gt;: A Community is a PartyRole, played by an Organization. CommunityMembers can commit to a Community, contribute Contributions to the Community and consume Assets from a Community.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;CommunityMember&lt;/b&gt;: A CommunityMember is a PartyRole, played by an Individual, who is committing to a Community, contributes to it and consumed Assets from the Community.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;CommunityAdministrator&lt;/b&gt;: A CommunityAdministrator is a PartyRole, played by a Party, who administers a Community.&lt;/li&gt;&lt;/ul&gt;<br />Other PartyRoles are identified only as examples.&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;BusinessOperationEntity&lt;/b&gt;: An entity operating its business independently based on its business objective and which a Customer, Partner or other business related PartyRole has an agreement with. For example, from Enterprise&#8217;s perspective, BusinessOperationEntity can be used to model MVNO and MVNE. For BusinessOperationEntity, the type of Organization might be company.&lt;/li&gt;&lt;li&gt;&lt;b&gt;FunctionOrProcessProvider&lt;/b&gt;: A type of PartyRole that provides functions or processes.&lt;/li&gt;&lt;li&gt;&lt;b&gt;Intermediary&lt;/b&gt;: A Party playing a PartyRole, such as a broker or consultant, who acts as a mediator on a link between parties to a business deal, investment decision, negotiation, and so forth.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;OrganizationPost&lt;/b&gt;: An OrganizationPost is a PartyRole that is used to model where one or more employees share a function.&lt;/li&gt;&lt;li&gt;&lt;b&gt;TechnologyAdministrator&lt;/b&gt;: A PartyRole who manages and maintains Resources and Services. Potential subclasses of this class administer specific types of Resources and Services. In general, an Administrator can configure and provision many more features and functions of a Resource or a Service than a Technician can.&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;b&gt;Vendor&lt;/b&gt;: An individual or organization that sells goods or products to someone else in the value fabric.&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/12/2023 9:45:29 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7D0C4EFB-075D-47cf-A574-D28CEED1D1FE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

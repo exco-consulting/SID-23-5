@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.31 TIP Service Management - Service Definition and Service Template</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1599.png" usemap="#EA1599" border="0" />
+
+<MAP NAME="EA1599">
+<area shape="rect" coords="651,70,825,117" href="../EA3/EA3/EA1459.htm" target="_self">
+<area shape="rect" coords="520,398,687,457" href="../EA3/EA1404.htm" target="_self">
+<area shape="rect" coords="520,151,667,246" href="../EA3/EA3/EA1460.htm" target="_self">
+<area shape="rect" coords="20,297,159,392" href="../EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="540,10,659,45" href="../EA3/EA3/EA1461.htm" target="_self">
+<area shape="rect" coords="43,10,183,117" href="../EA3/EA1405.htm" target="_self">
+<area shape="rect" coords="239,10,400,45" href="../EA3/EA1408.htm" target="_self">
+<area shape="rect" coords="268,322,453,357" href="../EA3/EA1406.htm" target="_self">
+<area shape="rect" coords="510,553,716,624" href="EA1614.htm" target="_self">
+<area shape="rect" coords="5,553,187,612" href="EA1613.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.31 TIP Service Management - Service Definition and Service Template diagram</div>
+	<div class="ObjectDetailsNotes">The abstract class ServiceSpecification has been extended to support two new concepts introduced in the TIP Service Management interfaces:&lt;br/&gt;&lt;b&gt;ServiceDefinition&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	used during service design time to define the characteristics of a service, their associated data types, and default values. These characteristics, known as ServiceSpecCharacteristics (SSC), may be globally set, which implies they can be defined in a service template, or otherwise only passed in real-time over an activation interface&lt;br/&gt;&lt;br/&gt;&lt;b&gt;ServiceTemplate	&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	defines specific ServiceSpecCharacteristicsValues (SSCVs) for the SSCs that were defined in the Service Definition as being globally settable. The Service Template is checked against its associated Service Definition by verifying the presence of the SSCs and the validity of the corresponding assigned SSCVs. Only Service Templates that contain SSCs/SSCVs that are in conformance with their specification in the Service Definition are considered valid.&lt;br/&gt;&lt;br/&gt;Both Service Activation interfaces make use of the Service Definition and Service Template concepts in the activation of CustomerFacingServices and ResourceFacingServices.&lt;br/&gt;The ServiceDefinition and ServiceTemplate further define the Service Specification through their respective associations, with the versions being identified through the ServiceSpecVersion. The association class ServiceSpecRelationship allows for Service Specifications to contain other Service Specifications, which thus holds true for Service Definitions and Service Templates.&#160;&#160;For example, there may be a type of Service Definition for Ethernet Services, and contained within that type are E-LINE, E-LAN, and E-TREE Service Definitions. &lt;br/&gt;The ServiceAccessPoint (SAP) represents a unique (logical and/or physical) resource where the Service can be accessed. The Sap Specification defines a set of attributes and associated values that may be applied to one or more SAPs. The relationship between the Service Specification and the Sap Specification illustrates that for every Service Specification, there may be associated multiple Sap Specifications. For example, given an Ethernet E-LINE Service Specification, there may be multiple Sap Specifications that correspond to various Bandwidth Profile Specifications that can be applied to the Sap &#8211; one for GOLD, one for SILVER, and one for BRONZE. Likewise, there may be a single Sap Specification , or in this case Bandwidth Profile Specification, that is used for multiple Ethernet Service Specifications &#8211; E-LINE and E-LAN. A Bandwidth Profile Specification defines Service Level Agreement guarantees and may be applied per UNI, per EVC, or per CoS Id. They contain frame delivery per Service Level Objectives (Committed Information Rate, Committed Burst Size), and amount of excess frame delivery allowed (Excess Information Rate, Excess Burst Size).&lt;br/&gt;A ServiceCatalog represents a grouping of Service Specifications and SSCs.&#160;&#160;For example, a catalog could group all internet related Service Specifications. The following figure illustrates the Service Definition, and Service Template concepts, and the relationship between the Service Catalog and the Service Specification.&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/24/2023 6:50:14 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{9EDEF11D-E5BE-4abd-B4D5-44AC40C41A2A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

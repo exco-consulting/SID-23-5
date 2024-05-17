@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-3.  Level Two of the Policy Domain of the SID Framework</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4481.png" usemap="#EA4481" border="0" />
+
+<MAP NAME="EA4481">
+<area shape="rect" coords="10,10,645,350" href="EA4564.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-3.  Level Two of the Policy Domain of the SID Framework diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;In the following Figure, the outermost rounded rectangle represents the Policy Domain as a whole. The four rounded rectangles inside the outermost rounded rectangle are the four level one ABEs that make up the Policy Domain.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The four rounded rectangles inside the outermost rounded rectangle are the four level one ABEs that make up the Policy Domain. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Policy ABE is used to define the four core groups of entities that are used to represent policy, independent of the content of the policy. The Policy Specification ABE uses the Entity-EntitySpecification pattern used throughout the SID to templatize these five entities. The Policy Application ABE defines how policy applications can be built, and the Policy Management ABE is used to associate policy entities with other SID entities. These are shown in Figure 1P-3.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Figure above shows two levels of Policy ABEs. Again, the Policy Domain is represented by the outermost rounded rectangle. The first level of Policy ABEs is defined by the four rounded rectangles labeled &#8220;Policy&#8221;, &#8220;Policy Specification&#8221;, &#8220;Policy Application&#8221;, and &#8220;Policy Management&#8221;. Each of these four level one Policy ABEs has three or more level two ABEs. In other words, the Policy level one ABE is in reality made up of five different ABEs &#8211; Policy Set, Policy Condition, Policy Action, Policy Statement, and Policy Event.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Put another way, the five level two Policy ABEs just mentioned define the level one Policy ABE in greater detail. The ABEs not only group similar managed entities together, but also help define important relationships between different ABEs (not just in the Policy Domain, but between the Policy Domain and other Domains).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This Addendum defines the simplest business aspects of each of the entities defined in Figure above. Please note that the Policy Application and Policy Management ABEs, and each of their level two ABEs, are still under construction as of this writing (Phase III of the SID).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Approach&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In a previous figure, the Policy Specification ABE and Policy ABE are unique in the Policy Applications sub-domain, in that their entities provide the ability to represent policy rules independent of the content of the policy rules. That is, the same representation can be used regardless of what the policy is managing or being used to control. Thus, they form a &#8220;core&#8221; functionality that can be used by other policy ABEs. In this respect, the Policy Specification ABE provides the ability to build policy templates, and the Policy ABE represents instances of those templates. Templates are a very important concept in policy management, as they provide a means to standardize how policy is applied and used independent of the contents of the policy.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The Policy Application and Policy Management ABEs therefore use the Policy Specification and Policy ABEs to provide a standard representation of policy, and add business entities to model the application and management of policy, respectively.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Figure 1P-3 can be seen in previous Figure above, the second level of the Policy Domain is complex. The nature of this complexity lies both in the nature of each of the Aggregate Business Entities (ABEs) that are in the Policy Domain as well as in the interaction between entities of different ABEs in the Policy domain. A third area of complexity is the interaction between entities in the Policy Domain and managed entities in other Domains.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Conceptually, the Policy Domain entities must achieve two different goals:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Demonstrate that the Policy Specification and Policy ABEs can indeed represent policy in a standard way regardless of the content of the policies&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Demonstrate that the managed entities that each Policy Domain ABE defines can be easily extended to meet the needs of different applications&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;This model reflects policy from a business-oriented point-of-view, and uses the best of standard modeling patterns for this area to build in extensibility. For example, patterns are used to capture common relationships and occurrences of policy for managing and controlling SID entities. This helps make the model inherently extensible.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Three important patterns utilized in this Addendum are:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Composite pattern, which provides a common structure for stand-alone and aggregate objects of a given type&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Entity-EntitySpecification pattern, which separates the common and invariant characteristics and behavior of an object from its individual characteristics and behavior&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Role Object pattern, which uses the notion of roles to dynamically extend the behavior of an object by delegation&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Use Cases&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The following are the most important use cases that drove the design of the Policy model:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Standardize the representation of policy for any application or use&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Show how policy can be used to manage other managed entities&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Show how formal policy models can be used to:&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define how policy decisions are made&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define how policy can be enforced&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define how policy can be triggered&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Important Future Use Cases&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Two important areas exist that will help further integrate Policy with Frameworx. These are:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define in detail how Policy is related to eTOM processes, and&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Define how Policy is used to manage and control the behavior of an Frameworx system&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;As previously stated, policy is not defined at a detailed level in the eTOM. The Behavior and Control Frameworx Addendum ([053C]) states that policy and process should be able to be used together to manage a Frameworx system. One way of doing this is to use an active policy to select the appropriate process, and use the result of the executing process to affect the set of policies that are active at any current time. In order to do this work, additional work in the Frameworx Metamodel ([053D]) must first be done. For example, this will enable defining policies to manage how Services and Resources (and even Products!) can be configured, accessed, and used in a standard way to support service creation, activation, measurement, and other processes defined by the eTOM.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Once the Metamodel work is done, this use case ties into the second use case, which is to define how policy is used to manage and control managed entities in a Frameworx system. Part of this work will be to provide a set of abstractions that can be used in all four of the Frameworx viewpoints [053 Main] to represent the appropriate aspects of policy in each of these viewpoints.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;For example, the Frameworx computational viewpoint focuses on functional decomposition of the system into a set of managed objects which interact at interfaces. Policy can be used to manage and/or control how these interactions occur.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;There are countless examples of dependent use cases that come into play when considering the above two use cases. For example, one important use case is to be able to understand how policy interacts with process, and how policy can be used to automate (or support the automation of) managing Frameworx system components.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Scope&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This paragraph will focus on defining a framework for representing policy, and specify two uses of policy: management of a system using policy, and management of SID entities using policy.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An important goal of the SID effort is to reuse standards (as opposed to reinventing the same concepts) wherever possible. There are several important sources of information for these concepts used in this Addendum. This model represents the business view of the information model. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Consistent terminology in a federated model is critical. This terminology, as the model itself, will be introduced in stages. This enables more complex ideas to build on simpler concepts, thereby enabling both an easier as well as a more thorough understanding of the Policy Domain and its relationship to other Domains as defined in the SID Framework [GB922]. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Regarding terminology, it is important to be able to relate this view (i.e., the &#8220;business&#8221; view) of the Policy model to other views (e.g., the &#8220;system&#8221; and the &#8220;implementation&#8221; views) of these same concepts. By doing this, we achieve the important goal of being able to connect the business requirements to the system representation to how the system is implemented.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Thus, the next section (up to the Error: Reference source not found Section) first discusses policy terminology, and then leads the reader step by step through the design of the Policy framework model (e.g., the Policy and Policy Specification level two ABEs). The Policy Application and Policy Management ABEs are then briefly discussed.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The final section of this document contains a detailed data dictionary that defines the derivation of classes, attributes, relationships (e.g., associations, aggregations and compositions) presented in this model. Note that this section has a special &#8220;synonyms / aliases&#8221; section to provide easy correlation to these external documents. This section also presents the results of mining information from other models into the baseline provided by the Policy model.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/11/2022 9:27:09 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/7/2022 9:15:35 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{3DC94052-AA78-445b-BD29-29F70661B03B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure WFM.14 - Employee Pay</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3164.png" usemap="#EA3164" border="0" />
+
+<MAP NAME="EA3164">
+<area shape="rect" coords="388,329,551,443" href="./EA1/EA3188.htm" target="_self">
+<area shape="rect" coords="411,163,529,238" href="./EA1/EA3193.htm" target="_self">
+<area shape="rect" coords="652,95,783,153" href="./EA1/EA3192.htm" target="_self">
+<area shape="rect" coords="10,10,176,59" href="./EA3/EA3210.htm" target="_self">
+<area shape="rect" coords="387,10,521,85" href="./EA1/EA3190.htm" target="_self">
+<area shape="rect" coords="656,339,781,414" href="./EA1/EA3189.htm" target="_self">
+<area shape="rect" coords="657,177,779,291" href="./EA1/EA3191.htm" target="_self">
+<area shape="rect" coords="40,319,194,433" href="./EA1/EA3182.htm" target="_self">
+<area shape="rect" coords="40,157,168,258" href="./EA1/EA3181.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure WFM.14 - Employee Pay diagram</div>
+	<div class="ObjectDetailsNotes">PaySpecification specifies PayComponents that are part of a Pay in a PayRange. &lt;br/&gt;PayRange defines a pay range for Employees. It specifies minimum, average and maximum amounts in the range.&lt;br/&gt;Each PaySpecification is grouped in a PayGroup specifying the frequency of Payroll and related to the PayRollAgency in charge of executing payrolls.&lt;br/&gt;A PaySpecification is composed of PayComponentSpecification.&lt;br/&gt;PayComponentSpecification specifies components of a pay that might correspond to fixed salary, bonus...&lt;br/&gt;When a PayComponentSpecification corresponds to a rate (e.g. 10%), it specifies on which other PayComponentSpecification it applies on.&lt;br/&gt;In a company, each employee (WorforceEmployeeRole) benefits from an EmployeePay.&lt;br/&gt;The EmployeePay is composed of EmployeePayComponent.&lt;br/&gt;The EmployeePayComponent specifies the validity period of the component and the amount (unit -any currency- and the value such as $10) for the employee.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">11/18/2022 2:04:35 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/7/2022 6:22:03 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Cecile ludwichowski</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{76A67798-CF5D-4e1a-9928-772DFCAC1C98}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

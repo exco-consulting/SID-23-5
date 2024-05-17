@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Table 4</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1739.png" usemap="#EA1739" border="0" />
+
+<MAP NAME="EA1739">
+<area shape="rect" coords="10,10,850,527" href="EA1760.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Table 4 diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#e0121d&quot;&gt;&lt;b&gt;Mapping ETSI NFV Model to SID&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;/li&gt;&lt;br/&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;In this section, we propose a mapping of some of the key artefacts of the ETSI NFV model to artefacts from the SID.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Key references used in this proposal are listed below:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;From ETSI : &lt;/font&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ETSI GS NFV 003, v1.3.1, 2018-01&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Terminology for Main Concepts in NFV&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ETSI GS NFV-IFA 015, v2.1.1, 2017-01&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Report on NFV Information Model&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ETSI GS NFV-IFA 011, v2.1.1, 2016-10&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;VNF Packaging Specification&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ETSI GS NFV-IFA 013, v2.1.1, 2016-10&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Interface and Information Model Specification&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ETSI GS NFV-IFA 014, v2.1.1, 2016-10&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Network Service Templates Specification&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;ETSI IFA24&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;TouchPoints with TM Forum Service Model&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;From TM Forum: &lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;ol&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;TR255 Resource Function &#8211; Activation and Configuration R17.5.0&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;TR255A Connectivity Patterns for Virtualized Management R17.5.0&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Some aspects that have been taken into consideration to drive this work:&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;As discussed in [7], the distinction between NS and NF was deemed to be artificial, and it was decided that the same functionality could be handled by one or the other.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;There was an issue with the word &#8220;Network&#8221; as this limits the scope. Resource Function is more general as &#8220;Resource&#8221; can refer to &#8220;Network&#8221; but also other types of resources such as storage and compute.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Further, the concept of Resource Function was designed to cover VNF Forwarding Graph, and the SDN concepts of Service Function and Service Function Chain.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Consequently, the term Resource Function (RF) has been used to replace Network Service (NS) and Network Function. Moreover, it was decided that RF composite would be used to replace NS (both atomic and composite) and composite NFs, and RF atomic would be used to replace atomic NFs. It was decided that having atomic and composite NS and NF is redundant.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Sometimes the mapping cannot be represented one to one, as a concept used in the ETSI model may correspond to several concepts from the SID. Example: VNF is a &#8220;function&#8221; but also a &#8220;software&#8221;.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;It is one of the reasons, among others, why it was decided not to try to integrate the ETSI artefacts as specialization (using inheritance or other mechanisms) of SID artefacts in the model, but, instead use a table to capture the mapping information. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This mapping tables are shown below.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 10:20:04 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/13/2023 3:54:52 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DACD7699-FE2E-431b-BD3C-368D09B054B8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

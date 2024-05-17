@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SE.07 - Security Event Types</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3332.png" usemap="#EA3332" border="0" />
+
+<MAP NAME="EA3332">
+<area shape="rect" coords="765,461,897,496" href="./EA2/EA3410.htm" target="_self">
+<area shape="rect" coords="694,278,859,359" href="./EA2/EA3411.htm" target="_self">
+<area shape="rect" coords="461,278,593,306" href="./EA2/EA3403.htm" target="_self">
+<area shape="rect" coords="512,489,669,550" href="./EA2/EA3407.htm" target="_self">
+<area shape="rect" coords="586,169,748,254" href="./EA2/EA3404.htm" target="_self">
+<area shape="rect" coords="334,393,511,445" href="./EA2/EA3402.htm" target="_self">
+<area shape="rect" coords="356,183,488,249" href="./EA2/EA3401.htm" target="_self">
+<area shape="rect" coords="212,485,309,516" href="../../../EA5/EA3/EA3/EA1/EA2042.htm" target="_self">
+<area shape="rect" coords="199,278,357,337" href="./EA2/EA3400.htm" target="_self">
+<area shape="rect" coords="80,195,248,258" href="./EA2/EA3399.htm" target="_self">
+<area shape="rect" coords="10,278,174,323" href="./EA2/EA3398.htm" target="_self">
+<area shape="rect" coords="329,6,516,87" href="./EA2/EA3405.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SE.07 - Security Event Types diagram</div>
+	<div class="ObjectDetailsNotes">Several event types are defined, primarily as placeholders, pending development of better standards and guidance on how the data elements they may contain are defined.&#160;&#160;&lt;br/&gt;&lt;b&gt;Anomaly Event &lt;/b&gt;&lt;br/&gt;The Anomaly Event type is one of these types.&#160;&#160;The elements that are used to extend the base event type for anomalies consist of a text field to describe the anomaly and a text field to contain log data.&lt;br/&gt;&lt;b&gt;Network Access Control (NAC)&lt;/b&gt;&lt;br/&gt;Network Access Control (NAC) events are generated whenever new devices and/or users attempt to gain access to a network.&#160;&#160;The NAC event record will record the name of the network where access was attempted, the access decision (permit/deny), IP and MAC address of the device/user, and the name provided on the credential that was used to gain access &#8211; X.509 subject name, MAC address, or another name.&#160;&#160;Network access may be granted on the basis of either device or user credentials depending on the local security policy.&lt;br/&gt;&lt;b&gt;Network Address Translation (NAT) &lt;/b&gt;&lt;br/&gt;Network Address Translation (NAT) events are recorded so that network defenders can discover the true originating IP address and port number of a device, which has sent information through a firewall proxy or another type of proxying device, which changes the internal source IP address.&#160;&#160;The NAT event will record the internal source IP address and port number, the IP address and port number it was translated to, as well as the external destination IP address and port number.&lt;br/&gt;&lt;b&gt;Signature &lt;/b&gt;&lt;br/&gt;Signature events are the most mature of the event model.&#160;&#160;The signature event model is composed to meet the reporting requirement of signature-based applications, to include IDSs, IPSs, antivirus applications, anti-spyware applications, and any other sensing technology that is signature based.&#160;&#160;Core signature event information includes data the sensor collected, including the total amount of packets collected and the total bytes of data collected.&lt;br/&gt;&lt;b&gt;Network Flow&lt;/b&gt;&lt;br/&gt;The Network Flow event type directly mirrors a network flow as transmitted by the Internet Protocol Flow Information eXport (IPFIX) standard.&#160;&#160;A net flow is a summary set of metadata about a one-way portion of a network session.&#160;&#160;A net flow will not provide any layer 7 information about the data that was transmitted but will instead summarize information about where the transaction originated, where it terminated, how long it lasted, how many bytes were passed, and what ports and protocols were used.&#160;&#160;These flows, while not exclusively security events, do aid attack analysis by highlighting traffic trends that is abnormal to normal business and could indicate a variety of security incidents.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/2/2022 2:55:47 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B934705C-90A2-4158-A2DC-1DED73F42243}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

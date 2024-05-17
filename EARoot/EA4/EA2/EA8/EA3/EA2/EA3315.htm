@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure B – Illustration from NSA “Network Defense Data Model, An Overview and Implementation Guide” </title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3316.png" usemap="#EA3316" border="0" />
+
+<MAP NAME="EA3316">
+<area shape="rect" coords="10,10,710,502" href="EA3377.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure B – Illustration from NSA “Network Defense Data Model, An Overview and Implementation Guide”  diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;In January 2010, the TM Forum received a generous contribution of intellectual property from the National Security Agency (NSA).&#160;&#160;This contribution, a Net-Defense (NetD) data model, Implementation Guide, and accompanying data dictionary, has provided the TM Forum valuable insight on how to model information related to threats, incidents, events, assets, and vulnerabilities.&#160;&#160;Several standards, such as the National Institute of Standards and Technology (NIST) Security Content Automation Protocol (SCAP) suite of standards, were embraced during the creation of the NetD model.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This contribution combined with strong member commitments to this topic have expedited projects aimed at integrating Security Management into the TM Forum Frameworx.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;At the highest level, key information revolves around understanding:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;assets&lt;/u&gt; defenders are charged with protecting&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;vulnerabilities&lt;/u&gt; the assets have&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;threats&lt;/u&gt; are targeting the vulnerabilities on those assets&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;events&lt;/u&gt; are occurring on the network&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;incidents&lt;/u&gt; result from assessments of the events&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;systems&lt;/u&gt; are, or may be impacted by successful exploits of vulnerabilities&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Where assets, and their associated vulnerabilities, exist within the defense-in-depth infrastructure represented by surrounding &lt;u&gt;networks&lt;/u&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;What &lt;u&gt;policies&lt;/u&gt; are in effect that direct how devices and networks should be configured, how vulnerabilities are remediated, and how incidents and events are to be recorded and reported?&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;i&gt;Note: While the TM Forum has incorporated the NSA&#8217;s &#8220;Network Defense Data Model&#8221; into the Information Framework (SID), classes and attributes associated with &#8220;missions&#8221;, &#8220;operations&#8221;, &#8220;policies&#8221;, and &#8220;systems&#8221; were intentionally excluded.&lt;/i&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In order to align with the NIST SCAP Release 1.2, the TM Forum extended the Information Framework Enterprise Security ABE with Security Vulnerability Scoring for the Frameworx 12.5 release.&#160;&#160;The NIST SCAP standard supports three types of scoring to calculate the severity of a particular vulnerability: the Common Configuration Scoring System (CCSS)&lt;sup&gt;1&lt;/sup&gt;, the Common Vulnerability Scoring System (CVSS)&lt;sup&gt;2&lt;/sup&gt;, and the Common Misuse Scoring System (CMSS)&lt;sup&gt;3&lt;/sup&gt;. While each of the scoring systems applies a different algorithm to calculate a score, the approach to scoring (use of metrics, standard values, and interim calculations) between the three systems is quite similar.&#160;&#160;So, the TM Forum was able to model the Security Vulnerability Scoring classes, attributes and relationships in a generalized way that in the end supports all three scoring systems.&#160;&#160;&lt;/font&gt;&lt;br/&gt;-------------------------&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;sup&gt;1&lt;/sup&gt; &lt;/font&gt;&lt;a href=&quot;file://http://csrc.nist.gov/publications/nistir/ir7502/nistir-7502_CCSS.pdf&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;http://csrc.nist.gov/publications/nistir/ir7502/nistir-7502_CCSS.pdf&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#29313b&quot;&gt; &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;sup&gt;2&lt;/sup&gt; &lt;/font&gt;&lt;a href=&quot;file://http://csrc.nist.gov/publications/nistir/ir7435/NISTIR-7435.pdf&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;http://csrc.nist.gov/publications/nistir/ir7435/NISTIR-7435.pdf&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#29313b&quot;&gt; &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;sup&gt;3&lt;/sup&gt; &lt;/font&gt;&lt;a href=&quot;file://http://csrc.nist.gov/publications/drafts/nistir-7517/Draft-NISTIR-7517.pdf&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;u&gt;http://csrc.nist.gov/publications/drafts/nistir-7517/Draft-NISTIR-7517.pdf&lt;/u&gt;&lt;/font&gt;&lt;/a&gt;&lt;font color=&quot;#29313b&quot;&gt; &lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 11:41:18 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/13/2022 1:49:07 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D3537DBD-617F-4edb-8099-236C5C3DE114}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

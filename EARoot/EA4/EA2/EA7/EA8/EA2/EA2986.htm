@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PRS.05 - Party Revenue Share Product Offering Item</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2987.png" usemap="#EA2987" border="0" />
+
+<MAP NAME="EA2987">
+<area shape="rect" coords="17,10,126,62" href="../../../EA3/EA3/EA4/EA1163.htm" target="_self">
+<area shape="rect" coords="680,165,795,252" href="../../../EA3/EA4/EA3/EA1219.htm" target="_self">
+<area shape="rect" coords="544,20,695,91" href="../../EA13/EA3110.htm" target="_self">
+<area shape="rect" coords="496,412,702,499" href="./EA2/EA3037.htm" target="_self">
+<area shape="rect" coords="496,296,707,348" href="./EA2/EA3035.htm" target="_self">
+<area shape="rect" coords="87,306,305,358" href="./EA2/EA3033.htm" target="_self">
+<area shape="rect" coords="270,171,485,246" href="./EA2/EA3040.htm" target="_self">
+<area shape="rect" coords="285,18,470,93" href="./EA2/EA3039.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PRS.05 - Party Revenue Share Product Offering Item diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows the remainder of the entities that make up this ABE.&lt;br/&gt;ProductRevenueShareProdOfferItem is an item that is used to determine revenue shared with another party for a ProductOffering. ComponentReveShareProdOfferItem is an item that is used to determine revenue shared with another party for a ProductOffering. The item may be a ProductPrice paid to acquire an offering if a bill/invoice charge is not created for it or an AppliedParty/CustomerBillingRate, which could be a charge, discount, usage charge, and so forth. AggregateRevShareProdOfferItem is an aggregation of revenue, units acquired/used, or some other measure contained in other PartyRevenueShareProdOfferItems that is used to determine the revenue shared with another party or parties. For example, for a tiered based revenue sharing model the total number of acquisitions for a product offering may need to be calculated in order to determine the revenue share. In some cases, such as the one just mentioned, a PolicyAction is associated with ProductRevenueShareProdOfferItem in order to specify the ProductOfferingPrice used to calculate the revenue share that is contained in PartyRevenueShareProdOffer.&lt;br/&gt;During the party revenue share reconciliation process adjustments to ProdRevenueShareProdOfferItems may need to be made. PartyRevenueShareAdjustment represents an adjustment to the revenue to be shared among an enterprise and one or more other parties. This could be required, but not limited to, based on changes to a revenue sharing model associated with a party revenue sharing agreement or based on discrepancies found by the Party Revenue Share Reconciliation process. For example, an enterprise&#39;s calculated revenue share for a product offering may be missing a product that has been acquired that appears on a bill/invoice from another party.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">11/26/2023 7:19:49 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{0E229FBE-7C91-4c0f-82DE-BC24F9B6ECA1}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

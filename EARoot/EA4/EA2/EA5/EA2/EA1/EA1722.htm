@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Table 2</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1723.png" usemap="#EA1723" border="0" />
+
+<MAP NAME="EA1723">
+<area shape="rect" coords="10,10,858,415" href="EA1752.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Table 2 diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Scenario 1&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;vRGW and vSTB are purchased from the same or different vendors as two independent &lt;b&gt;VNFs&lt;/b&gt;. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The vRGW comes with 4 functions: IPRouting, NAT, DHCP and Firewall.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The SP purchasing these two products will get two independent &#171; VNF packages &#187;. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;From a functional view point each of these two VNFs are made of functions. &lt;br/&gt;A VNF Package contains: &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;VNFD&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Software Images (or pointers to images)&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Scripts&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Other files.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;The package is a signed and immutable artefact. It is provided by the vendor and cannot be changed by the SP. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In the VNFD, it is possible to have one or more deployment flavors. A deployment flavor describes a given internal topology of the VNF in terms of deployment. It can be related to support some features like HA, or some specific additional functions.&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In our case, we assume that for the vRGW (same consideration would go for the vSTB), the vendor has defined 2 flavors illustrated in columns 4 and 5 in the table below:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Flavor 1: In column 4, the Firewall is associated with one specific VDU (VDU 2) and the 3 others (IP Routing, NAT, DHCP) are associated with a separate VDU (VDU 1).&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;(Recall that a VDU is a unit of deployment specifying how to deploy a VNF Component to a single VM. The mapping of the functions to the VNFC/VDU is not described in the VNFD;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;The VDU would have a bootable SW image. The storage desc, attached to the VDU, might also have attached an image (non- bootable).&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;SW Images are just something that is part of the package (or have references in the package). The SW Images are pushed to the VIM before instantiation of the VNF). &lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Flavor 2: In column 5, the 4 functions are associated with one single VDU (VDU 3) meaning that these 4 functions will be deployed to the same VM.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;As a consequence, in scenario 1, there are 3 VDUs:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;(Flavor 1) VDU 1 is associated with a SW image implementing the 3 functions: IP Routing, NAT and DHCP&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;(Flavor 1) VDU 2 is associated with a SW image implementing the single function Firewall&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;(Flavor 2) VDU 3 is associated with a SW image implementing the 4 functions:&#160;&#160;IP Routing, NAT, DHCP and Firewall.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt; &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;These 2 flavors are the only ones available to the SP for deploying the vRGW. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The one shown in the last column (where IP Routing and NAT will be deployed together on one VM and DHCP and Firewall together on another VM) is not possible as it is not part of the Descriptor of the vRGW in the delivered package. To add this 3&lt;sup&gt;rd&lt;/sup&gt; flavor, the SP would have to ask his vendor to change the Descriptor by adding this 3&lt;sup&gt;rd&lt;/sup&gt; flavor, and resubmit the vRGW package.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In terms of composition, there are only 2 levels: NS (the vCPE) and VNF/PNF.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The VNFC is what is deployed on a VM. It is more than the image, as it includes description of the Virtual Compute (CPU, Memory), of the connection points (interface/ port, LTP&#8230;).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The image is associated to the VDU and will be running on the VM, but the VNFC is the information that the VNFM maintains on this component for deployment purpose.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;1 VM = 1 VNFC, it is possible to have multiple VNFCs on the same host. This is specified by affinity rules: at the VNFD level for rules between VNFCs and at NSD level between VNFs of the same NS.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 9:59:22 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 10:16:31 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2EB6B691-1B0E-435c-8E50-ED38D9BEBBC9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

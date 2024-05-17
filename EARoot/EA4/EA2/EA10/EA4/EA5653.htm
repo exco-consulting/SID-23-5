@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PAY.01 - Payment Method and Payment Plan</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5654.png" usemap="#EA5654" border="0" />
+
+<MAP NAME="EA5654">
+<area shape="rect" coords="814,411,971,497" href="EA5662.htm" target="_self">
+<area shape="rect" coords="34,567,164,619" href="./EA2/EA5685.htm" target="_self">
+<area shape="rect" coords="749,283,933,382" href="./EA2/EA5688.htm" target="_self">
+<area shape="rect" coords="34,373,234,432" href="EA5669.htm" target="_self">
+<area shape="rect" coords="732,14,847,98" href="../EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="929,33,1101,88" href="EA5670.htm" target="_self">
+<area shape="rect" coords="168,217,351,289" href="./EA1/EA5675.htm" target="_self">
+<area shape="rect" coords="961,575,1133,650" href="./EA2/EA5689.htm" target="_self">
+<area shape="rect" coords="252,567,371,619" href="./EA2/EA5686.htm" target="_self">
+<area shape="rect" coords="871,755,988,807" href="./EA2/EA5684.htm" target="_self">
+<area shape="rect" coords="677,753,800,805" href="./EA2/EA5683.htm" target="_self">
+<area shape="rect" coords="145,627,242,690" href="./EA2/EA5682.htm" target="_self">
+<area shape="rect" coords="394,634,499,686" href="./EA2/EA5681.htm" target="_self">
+<area shape="rect" coords="770,563,906,674" href="./EA2/EA5680.htm" target="_self">
+<area shape="rect" coords="528,562,666,614" href="./EA2/EA5679.htm" target="_self">
+<area shape="rect" coords="428,28,571,163" href="EA5666.htm" target="_self">
+<area shape="rect" coords="10,10,234,181" href="EA5668.htm" target="_self">
+<area shape="rect" coords="409,388,555,495" href="./EA2/EA5687.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PAY.01 - Payment Method and Payment Plan diagram</div>
+	<div class="ObjectDetailsNotes">A PartyPayment represents the transfer of wealth from one Party to another. So it is received from a PartyRole and made to a PartyRole.&lt;br/&gt;The PartyPayment might be either inbound or outbound and always uses a PaymentMethod.&lt;br/&gt;A PartyPayment might specify the BankAccount to which the payment is transferred.&lt;br/&gt;The diagram below shows different types of PaymentMethods identified at the present time, currently allowed for paying due amounts such as CheckPM, DigitalWalletPM, LoyaltyBurnPM...&lt;br/&gt;A PaymentMethod is declared and owned by a PartyRole that has the right to use it.&lt;br/&gt;As all the PaymentMethod might not be yet described as a sub-class of PaymentMethod, a PaymentMethod might be described by a PaymentMethodSpecification defining the characteristics.&lt;br/&gt;ThirdPartyCollectionPM is an example of payment method, using which payment can be made through the third party, such as bank transfer, payment tool(like PayPal, Alipay).&lt;br/&gt;A PaymentMethod is owned by a PartyRole.&lt;br/&gt;A PaymentPlan may specify PaymentMethods to use for auto-pay. If several PaymentMethod are specified, a priority is given to each of them. Over time, PartyPayments are collected according to the PaymentPlan.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/24/2023 7:10:59 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{1FE6EB66-7EA6-46da-9CCF-65FA50169B63}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

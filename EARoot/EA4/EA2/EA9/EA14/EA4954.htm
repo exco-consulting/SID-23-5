@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure U.09 - IPDR Base Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4955.png" usemap="#EA4955" border="0" />
+
+<MAP NAME="EA4955">
+<area shape="rect" coords="440,10,537,44" href="./EA1/EA5007.htm" target="_self">
+<area shape="rect" coords="293,68,390,102" href="./EA1/EA5000.htm" target="_self">
+<area shape="rect" coords="156,68,253,102" href="./EA1/EA5004.htm" target="_self">
+<area shape="rect" coords="10,68,107,102" href="./EA1/EA5006.htm" target="_self">
+<area shape="rect" coords="293,10,390,44" href="./EA1/EA5005.htm" target="_self">
+<area shape="rect" coords="156,10,253,44" href="./EA1/EA5003.htm" target="_self">
+<area shape="rect" coords="10,10,107,44" href="./EA1/EA5002.htm" target="_self">
+<area shape="rect" coords="210,126,307,178" href="./EA1/EA4992.htm" target="_self">
+<area shape="rect" coords="197,315,294,367" href="./EA1/EA4998.htm" target="_self">
+<area shape="rect" coords="337,315,481,367" href="./EA1/EA4986.htm" target="_self">
+<area shape="rect" coords="34,126,131,178" href="./EA1/EA4985.htm" target="_self">
+<area shape="rect" coords="10,237,154,325" href="./EA1/EA4987.htm" target="_self">
+<area shape="rect" coords="19,395,146,457" href="./EA1/EA4988.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure U.09 - IPDR Base Model diagram</div>
+	<div class="ObjectDetailsNotes">&lt;b&gt;First approach: IPDRDoc&lt;/b&gt;&lt;br/&gt;The IPDRDoc is the detail records container. It includes reference to zero or more IPDRType instances (the reference name is IPDR) and reference to some conclude-record (IPDRDocEnd). We consider the IPDRDoc and its conclude-records as implementation artifacts. The following Figure presents the IPDR base model.&lt;br/&gt;IPDRType is an abstract representation of usage record. The most basic abstract representation of usage record in IPDR model has optional reference to two attributes (creation time and sequence number that presented by IPDRCreationTim and seqNum classes accordingly).&lt;br/&gt;The IPDR base model defines set of simple types in addition to the primitive types defined by the schema (dateTimeMsec, dateTimeUsec, ipV4Addr, ipV6Addr, UUID, macAddress).&#160;&#160;&lt;br/&gt;The following Figure describes the IPDR base model.&lt;br/&gt;&lt;i&gt;Grey Entities are out of scope&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/5/2022 12:54:14 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CCDA1B06-4296-40fb-B9FB-61B944141639}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

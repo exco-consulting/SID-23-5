@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Illustration Pr.25 – I01 - Pricing Logic Algorithm</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1063.png" usemap="#EA1063" border="0" />
+
+<MAP NAME="EA1063">
+<area shape="rect" coords="10,10,664,246" href="EA1097.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Illustration Pr.25 – I01 - Pricing Logic Algorithm diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;The PricingLogicAlgorithm (PLA) entity is designed to support the link to a &#8220;black box&#8221; that is used for rating events. This is the common case for usage rating but this scenario exists also for rating recurring and one-time charges. In such cases the price is not kept in the catalog nor the rules used to determine the price, only the interface to the black box algorithm is modelled and prices are determined by sending the relevant information using the interface, and getting the rate for the event from this black box algorithm. The PricingLogicAlgorithm and its related entities (especially PricingLogicAlgorithmSpec) are designed to model flexible interface definition in order to provide maximal reuse for existing rating algorithms.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Use Case 1: Linear Call Rating&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This use case describes one of the simplest possible rating algorithms for call usage events &#8211; a linear rating according to call duration. Such an algorithm may require two parameters in order to be instantiated (just an example):&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Rate for a minute&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Interval for calculating the rate&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This algorithm is charging the call based on call duration in intervals according to the second parameter, so if the interval is 5 seconds, a call between 1 and 5 seconds would be charged for 5 seconds, between 6 and 10 seconds would be charged for 10 seconds and so on. In any case the charge will be for a whole number multiplication of 5 seconds.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The following table illustrates such an algorithm &#8211; in all cases the rate is $0.30/minute&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Using such an algorithm, instantiation of $.12/minute and interval of 5 seconds will always yield a whole number (in cents) and so $.10/minute and 6 seconds interval. On the other hand, a rate of $.07/minute and 1 second interval will almost always yield charges with fractions of cents. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Note that in order to calculate the rate you need to set the rate and interval (which is something that is communicated to the customer and typically done during the customer order), and also pass the Usage event details (Usage class in SID) to the rating algorithm (in order to get event relates data, in our use case only the call duration is important). &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 11:44:17 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/19/2022 4:08:41 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{445F98AD-A39D-4f2d-8C27-C92B1A291BA3}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

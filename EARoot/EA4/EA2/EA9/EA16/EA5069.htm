@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure An.09 - Anomaly Lifecycle</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5070.png" usemap="#EA5070" border="0" />
+
+<MAP NAME="EA5070">
+<area shape="rect" coords="122,443,148,477" href="./EA1/EA5108.htm" target="_self">
+<area shape="rect" coords="813,270,833,290" href="./EA1/EA5116.htm" target="_self">
+<area shape="rect" coords="689,358,763,384" href="./EA1/EA5112.htm" target="_self">
+<area shape="rect" coords="604,447,678,473" href="./EA1/EA5121.htm" target="_self">
+<area shape="rect" coords="453,447,527,473" href="./EA1/EA5111.htm" target="_self">
+<area shape="rect" coords="261,447,335,473" href="./EA1/EA5113.htm" target="_self">
+<area shape="rect" coords="195,384,269,410" href="./EA1/EA5114.htm" target="_self">
+<area shape="rect" coords="195,310,269,336" href="./EA1/EA5122.htm" target="_self">
+<area shape="rect" coords="390,253,487,294" href="./EA1/EA5109.htm" target="_self">
+<area shape="rect" coords="12,447,86,473" href="./EA1/EA5123.htm" target="_self">
+<area shape="rect" coords="39,270,59,290" href="./EA1/EA5120.htm" target="_self">
+<area shape="rect" coords="12,174,852,530" href="./EA1/EA5110.htm" target="_self">
+<area shape="rect" coords="807,138,827,158" href="./EA1/EA5115.htm" target="_self">
+<area shape="rect" coords="582,45,702,105" href="./EA1/EA5118.htm" target="_self">
+<area shape="rect" coords="414,58,440,94" href="./EA1/EA5107.htm" target="_self">
+<area shape="rect" coords="192,45,312,105" href="./EA1/EA5117.htm" target="_self">
+<area shape="rect" coords="54,65,74,85" href="./EA1/EA5119.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure An.09 - Anomaly Lifecycle diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#172b4d&quot;&gt;The following diagram shows the state model for Anomaly management. There are two set of states represented - namely the administrative state and operational state. The administrative states (IDLE, INACTIVE and ACTIVE). The administrative state represents the view point from the administrative role the states that Anomaly Management activity may pass through. Anomaly management task is started in an IDLE state where no specific action is carried out from management perspective except for instantiation of the administrative instance of the Anomaly. The state transistions to ACTIVE when&#160;&#160;the anomaly management activity is administratively initiated by administrator. The operational state which represents the runtime operational view of the Anomaly management transitions through various stages depending on the specific operational stage of the Anomaly sequence. The operational state is reported and transitioned based on to AnomalyReport . The handler of the AnomalyReport , i.e the comeponent or the closed loop activity may decide the operational state transition across - PREPARING, PREDICTING,DETECTING,ASSESSING,ANALYZING,MITIGATING, ABORTING, ARCHIVING state for a particular managed anomaly sequence (or an episode of a managed Anomaly). A brief detail of the Operational states is as follows &lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Preparing stage indicates the management activity preparing for the collection of sufficient data to be used for Anomaly detection. Preparation may include any required training of the AI model as part of the Anomaly management&#160;&#160;&#160;&#160;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Predicting stage indicates the prediction of the occurrence of Anomaly based on the collected data&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Detecting stage indicates the detection of Anomaly either based on prediction or based on available data which can be a stream of data&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Assessing stage indicates the assessment of the detected Anomaly in terms of priority, relevance or constraints&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Analysis stage indicates Analysis like Root cause, impact, associated problems, and potential mitigation actions which may be guided through the consequences defined as part of the indicators&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Mitigation stage indicates the particular actions being carried out to mitigate the effect of the Anomaly which can be a simple notification or generation of problem report or it can be execution of a provisioning task&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Aborting task which is common across all stages is used to address any errors in the Anomaly management process flow&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#172b4d&quot;&gt;Archiving state is used for addressing any data archival required like logging and knowledge management&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#172b4d&quot;&gt;The administrative user can transition the administrative state from Active to Inactive and any pending Anomaly management operation may be Aborted or archived depending on specific implementation. From an InActive administrative state the Anomaly management can be resumed by transitioning to an Active state and the operational state may either start from where it stopped or start from the initial stage depending on the specific implementation.&#160;&#160;&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/30/2023 6:48:34 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/14/2023 6:42:37 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">2.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F35AD35E-7346-4615-B603-1A679EB792C2}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

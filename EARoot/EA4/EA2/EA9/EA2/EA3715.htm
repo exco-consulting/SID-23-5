@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure As.01a – Root Entity Instances and Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3716.png" usemap="#EA3716" border="0" />
+
+<MAP NAME="EA3716">
+<area shape="rect" coords="5,5,714,398" href="EA3755.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure As.01a – Root Entity Instances and Associations diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;Figure As.01a &#8211; Root Entity Instances and Associations shows an Object diagram that contains all the examples of RootEntityType instances described to this point.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Note that in the figure, the Customer instance is an explicit subclass of PartyRole, but the instance of this association is not shown in the figure. Also, this model can support the dynamic addition of entities and subclasses not contained in the SID model. Examples of this are not shown in the figure either.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The meta-model is only part of the solution to support dynamic extensibility.&#160;&#160;Application functionality, including user interfaces, must also be developed. A representative set of insights into functionality, excluding user interfaces, will be described next.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;When creating/updating an instance of an EntitySpecification in a database, such as a CompoundResourceSpecAtomic, the application can ask if it is to be dynamically extended. If the answer is yes, an instance of RootEntityType is created. Once the extensions have been created/updated, then the value of the attribute &#8220;dynamicAttrAssoc&#8221; can be set to indicate whether attributes or associations or both have been added. The database for the meta-model, including implementation considerations for it, will be shown later after all meta-modeling concepts have been described.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;When adding an instance of a specification, the application could ask if a corresponding entity should be created. Adding the corresponding entity will enable the creation of dynamic associations between the entity and other entities. This follows from the fact that an association between specifications is often mirrored for the entities described by the specification. This will also assist the application to automatically create instances of RootEntity, which may participate in instances of the associations.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/22/2022 1:37:55 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/6/2022 9:56:53 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{86C82860-F927-4131-8373-14D21B5E34FE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

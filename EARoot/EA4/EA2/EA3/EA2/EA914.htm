@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.02a - Product, Service, Resource Domain Relationships</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA915.png" usemap="#EA915" border="0" />
+
+<MAP NAME="EA915">
+<area shape="rect" coords="616,102,694,128" href="EA966.htm" target="_self">
+<area shape="rect" coords="10,47,193,81" href="EA975.htm" target="_self">
+<area shape="rect" coords="386,10,485,44" href="../../EA9/EA11/EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="809,107,955,141" href="../EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="120,121,266,155" href="EA982.htm" target="_self">
+<area shape="rect" coords="412,57,558,112" href="../EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="782,399,928,454" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="764,295,934,350" href="../../EA4/EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="92,399,238,454" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="79,295,266,350" href="../../EA4/EA3/EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="282,295,468,350" href="../../EA4/EA3/EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="607,185,753,219" href="../../EA4/EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="275,185,421,219" href="../../EA4/EA3/EA1406.htm" target="_self">
+<area shape="rect" coords="499,295,679,350" href="../../EA4/EA4/EA2/EA1500.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.02a - Product, Service, Resource Domain Relationships diagram</div>
+	<div class="ObjectDetailsNotes">The figure below depicts the relationship among Product, Service, and Resource domain business entities.&lt;br/&gt;Business entities in the Product domain have a close relationship with business entities in the Service and Resource domains.&#160;&#160;&lt;br/&gt;While Product business entities represent what the market sees of a provider&#8217;s offerings, Service and Resource business entities represent the realization of the offerings from a provider&#8217;s perspective. &lt;br/&gt;For example, a Broadband Internet ProductOffering is realized by two Services, one is a bandwidth connectivity service to the provider&#8217;s network; the second is a virtual connectivity service to the Internet Service Provider.&lt;br/&gt;Each ProductSpecification may be derived from CustomerFacingServiceSpecifications, or realized as StockItems or realized as ProductSpecifications proposed by Suppliers.&lt;br/&gt;The relation between ProductSpecification and StockItems only concerns tangible products such as Box (represented as a CompoundResourceSpec -Physical and Logical-) or such as a PSTN phone.&lt;br/&gt;The relation between ProductSpecification and CustomerFacingServiceSpecification concerns non-tangible products such as mobile line, call forwarding&#8230;&lt;br/&gt;And the relation between ProductSpecification and ProductSpecification proposed by Suppliers (through ProdSpecBPProdSpecChoice) concerns tangible or non-tangible products that we can buy to a Supplier.&lt;br/&gt;If it corresponds to a tangible goods it will be shipped directly to the customer by the supplier.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/20/2023 9:49:43 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BE4387B9-B9B8-4cfd-B1AD-92F74FCA33A7}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

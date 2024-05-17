@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.27 - ServicePackageSpecs and ServicePackages</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1389.png" usemap="#EA1389" border="0" />
+
+<MAP NAME="EA1389">
+<area shape="rect" coords="733,454,852,486" href="../EA4/EA1/EA1491.htm" target="_self">
+<area shape="rect" coords="590,225,743,272" href="../EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="691,352,898,384" href="../EA4/EA1/EA1490.htm" target="_self">
+<area shape="rect" coords="242,13,434,45" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="66,123,318,155" href="./EA1/EA1418.htm" target="_self">
+<area shape="rect" coords="488,352,671,384" href="../EA4/EA1/EA1489.htm" target="_self">
+<area shape="rect" coords="146,225,291,272" href="./EA1/EA3/EA1428.htm" target="_self">
+<area shape="rect" coords="10,352,194,384" href="./EA1/EA3/EA1430.htm" target="_self">
+<area shape="rect" coords="402,468,562,500" href="./EA1/EA3/EA1/EA1432.htm" target="_self">
+<area shape="rect" coords="328,532,462,564" href="./EA1/EA3/EA1/EA1433.htm" target="_self">
+<area shape="rect" coords="138,532,284,564" href="./EA1/EA3/EA1/EA1436.htm" target="_self">
+<area shape="rect" coords="252,468,379,500" href="./EA1/EA3/EA1/EA1434.htm" target="_self">
+<area shape="rect" coords="77,469,234,501" href="./EA1/EA3/EA1/EA1435.htm" target="_self">
+<area shape="rect" coords="220,352,398,384" href="./EA1/EA3/EA1429.htm" target="_self">
+<area shape="rect" coords="324,123,533,155" href="./EA1/EA1417.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.27 - ServicePackageSpecs and ServicePackages diagram</div>
+	<div class="ObjectDetailsNotes">The link between a ServicePackageSpec and a ServicePackage is shown in the Figure below.&lt;br/&gt;A ServicePackage is derived from an associated ServicePackageSpec. The ServicePackageSpec defines the invariant attributes, methods, relationships, and constraints for all ServicePackage instances that are derived from it. This enables each individual ServicePackage to add its own application-specific changeable characteristics.&lt;br/&gt;Note that there is no specific association used to relate a particular ServicePackage to the ServicePackageSpec that it is derived from. This is because the ServicePackageSpec and ServicePackage both inherit the SpecifiesService association.&lt;br/&gt;Finally, while the composite pattern could be applied to ServicePackage, there is no perceived need to do so. Multiple ServicePackages will simply be related to a ProductBundle, and appear as separate ProductComponents.&lt;br/&gt;Thus, we see that ServicePackage is a way to define the set of CustomerFacingServiceSpecifications that are to be used by a particular ProductSpecification.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:06:11 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{979C712A-FF55-48d8-BE06-4ABECEEAB942}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

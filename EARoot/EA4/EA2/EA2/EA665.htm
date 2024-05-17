@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>[CuD-03] Customer main BEs</title>
+<link href="../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA666.png" usemap="#EA666" border="0" />
+
+<MAP NAME="EA666">
+<area shape="rect" coords="886,105,983,157" href="./EA5/EA754.htm" target="_self">
+<area shape="rect" coords="870,52,1043,176" href="./EA5/EA745.htm" target="_self">
+<area shape="rect" coords="606,469,768,521" href="./EA7/EA800.htm" target="_self">
+<area shape="rect" coords="503,248,676,384" href="./EA8/EA830.htm" target="_self">
+<area shape="rect" coords="156,175,272,227" href="./EA9/EA2/EA864.htm" target="_self">
+<area shape="rect" coords="86,70,183,122" href="./EA9/EA1/EA859.htm" target="_self">
+<area shape="rect" coords="99,487,215,539" href="./EA2/EA1/EA705.htm" target="_self">
+<area shape="rect" coords="631,79,728,131" href="./EA1/EA687.htm" target="_self">
+<area shape="rect" coords="894,429,1079,481" href="./EA6/EA778.htm" target="_self">
+<area shape="rect" coords="42,36,294,410" href="./EA9/EA833.htm" target="_self">
+<area shape="rect" coords="580,432,795,526" href="./EA7/EA792.htm" target="_self">
+<area shape="rect" coords="870,384,1101,526" href="./EA6/EA758.htm" target="_self">
+<area shape="rect" coords="50,448,286,553" href="./EA2/EA689.htm" target="_self">
+<area shape="rect" coords="559,57,779,177" href="./EA1/EA679.htm" target="_self">
+<area shape="rect" coords="480,205,700,405" href="./EA8/EA816.htm" target="_self">
+<area shape="rect" coords="10,10,1122,569" href="EA661.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">[CuD-03] Customer main BEs diagram</div>
+	<div class="ObjectDetailsNotes">The diagram below lists the Customer Domain&#39;s ABEs and presents in each ABE the main Business Entities and relationships between these entities.&lt;br/&gt;&lt;b&gt;Customer Party Roles ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The Customer represents a Party (person or legal entity or part of a legal entity) that has a contractual relationship with the CSP by buying ProductOfferings. A Customer is a type of PartyRole and may be the Holder, the User, the Payer&#8230;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A Customer may order offers and products through CustomerOrders.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A customer may pay for one or several CustomerBillingAccounts.&lt;br/&gt;&lt;b&gt;Customer Bill ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A CustomerBillingAccount is an entity that receives all charges (recurring, one-time charge and usage) of the Products assigned to it and logs accounting events on a FinancialAccount (financial entity).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	According to the billing cycle, CustomerBills are produced for a CustomerBillingAccount.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Between two billing cycles, AppliedCustomerBillingRates are calculated and assigned to a CustomerBillingAccount. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	An AppliedCustomerBillingRates is an amount, usually of money, for which a Party is financially liable and may be recurring, non-recurring or usage charge.&lt;br/&gt;&lt;b&gt;Customer Problem ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	When a Customer has a problem and points it out, a CustomerProblem is traced.&lt;br/&gt;&lt;b&gt;Customer Bill Collection ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	When a Customer enters a dunning process, i.e. he has not paid his invoice, a DunningCase is created. At the beginning, this DunningCase concerns the debt of his CustomerBillingAccount and it contains all details pertaining to the debt. Later if the debt is still not covered, the DunningCase will concern the FinancialAccount.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A CustomerPayment is received from a Customer and may concern many CustomerBillingAccounts.&lt;br/&gt;&lt;b&gt;Customer Product Order ABE&lt;/b&gt;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A CustomerProductOrder orders ProductOfferings and concerns Products.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/29/2022 5:35:54 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">TMF</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{07DA6FF0-57FD-461f-BA8B-3A25943A6D9D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

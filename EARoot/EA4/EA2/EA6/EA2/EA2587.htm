@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Illustration Figure MS.03- I01 - Market Segment Characteristics</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2588.png" usemap="#EA2588" border="0" />
+
+<MAP NAME="EA2588">
+<area shape="rect" coords="10,8,1198,665" href="EA2594.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Illustration Figure MS.03- I01 - Market Segment Characteristics diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;There are some additional details of the model not shown in the example figure above.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The first is the use of the Characteristic/Characteristic Value pattern.&#160;&#160;The association from MarketSegmentCharacteristic to DemographicCharacteristic is optional.&#160;&#160;This member of the association is optional so that non-demographic characteristics can be used to define the MarketSegment. For example, the full complement of video conferencing offerings may define a MarketSegment.&#160;&#160;Similarly, the association from MarketSegmentCharacteristicValue back to DemoCharacteristicValidValue is optional.&#160;&#160;This member of the association is optional for two reasons.&#160;&#160;One is so that values not associated with demographics can be entered.&#160;&#160;The second is so that values can be entered for MarketSegmentCharacteristicValue that do not exist as a DemoCharacteristicValidValue.&#160;&#160;For example, one characteristic is the exact count of subscribers using a product; it doesn&#8217;t make sense to put an extensive list of valid values together that ranges from one to some very large number.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The second is the association between MarketSegmentCharacteristic and ProductOffering.&#160;&#160;This association exists to enable tracking of the sales, inquiries made, and so forth of one or more ProductOfferings.&#160;&#160;If a MarketSegment&#8217;s characteristics include the individual use of a number of ProductOfferings, then one instance of MarketSegmentCharacteristic is created for each ProductOffering; If a MarketSegment&#8217;s characteristic includes the total use of a number of ProductOfferings, then a single MarketSegmentCharacteristic is created and associated with each of the ProductOfferings.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The third is that, as with all SID ABEs, this model provides a framework for a MarketSegment information model that is meant to be extended.&#160;&#160;For example, one extension could be the association of a MarketSegmentCharacteristic to the Product entity.&#160;&#160;This could be used to track the actual use of a product by a subscriber.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 9:12:57 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/24/2022 3:42:23 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{CBCE5037-E18F-4ddf-AAF9-67E388DAB9A0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

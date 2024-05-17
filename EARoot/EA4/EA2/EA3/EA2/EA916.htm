@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Pr.02b - StockItem and other domains overview (copy from SI.01 in Resource Domain)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA917.png" usemap="#EA917" border="0" />
+
+<MAP NAME="EA917">
+<area shape="rect" coords="8,10,678,558" href="../../EA5/EA10/EA2440.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Pr.02b - StockItem and other domains overview (copy from SI.01 in Resource Domain) diagram</div>
+	<div class="ObjectDetailsNotes">A StockItem represents items used by Supply Chain for Stock and Shipping Management.&lt;br/&gt;The codeModel specifies the type of codification used for the stockItemCode.&lt;br/&gt;Two main types exist: EAN (European Article Numbering) or GTIN (Global Trade Item Numbering). A GTIN consists of a GS1 Company Prefix, an Item Reference Number and a Check Digit. &lt;br/&gt;Each of them is further defined by the length of the number such as EAN 13, GTIN-12 (USA / Canada for individual products), GTIN-13 (Rest of World for Individual products) and GTIN-14 (Worldwide for Product groupings).&lt;br/&gt;A ProductConfigSpec corresponds to a configuration of the related ProductSpecification. Ex: A Red Iphone with 128 GB memory. A GoodsProductSpec is realized by a unique StockItem according to the ProductConfigSpec.&lt;br/&gt;A StockItem might be realized by several ResourceSpecifications when different manufacturers produce the same StockItem (same characteristics and behaviour).&lt;br/&gt;&lt;i&gt;A GoodsProductSpec might be created but it can&#8217;t be modified! I.e. only Create and Return operations are available for a GoodsProductSpec. For example, if the disk space of a TV decoder&#8217;s record capacity can be enhanced (realized through Software update), then we create a specific ProductSpecification for the Record Capacity.&lt;/i&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/25/2023 5:44:19 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/25/2023 5:50:51 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Cecile ludwichowski</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{60669844-0CDD-40d0-99E4-26EEAFB78DCE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

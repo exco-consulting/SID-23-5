@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure A-8 Example of Use of Refined NIST metrics model to represent response time metrics</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4270.png" usemap="#EA4270" border="0" />
+
+<MAP NAME="EA4270">
+<area shape="rect" coords="5,6,810,531" href="EA4282.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure A-8 Example of Use of Refined NIST metrics model to represent response time metrics diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;Figure A-8 is an example of object instances following the refined model in Figure A-7, representing an example of the actual specification of some response time metrics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The ultimate goal of this work is to specify a set of templates which can be used to define actual Cloud Computing metrics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Comparison of the Metric Models&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This section describes how each of the Models summarized in the preceding sections represent concepts regarding Metrics and their evaluation. They present a high-level view of the differences between these models.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Representing kinds of target for a metric definition&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In OMG SMM the Scope class has a pointer to a single named class in the MOF metamodel for the target system.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;NIST Metrics Model has an attribute targetCharacterization in ContextCondition class. However, the NIST Metrics model does not assume a model for the target systems is available. &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In TM Forum SID Metrics, the relationships between MetricDefinition and RootEntityType and Specification convey the target for a Metric.&#160;&#160;SMM Scope is not restricted to a single class from the underlying system model.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OSI Systems Management Metric Objects are installed at run time, and there is no restriction to what classes of Managed object can be observed by a Metric Object.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Binding a measurement to a specific target for a single metric evaluation&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In OMG SMM the Measurement class has a pointer to a single MofElement instance in the target system.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The NIST model currently only specifies definitions applicable to use in Metric templates.&#160;&#160;There are no pointer attributes in the Measure class (to be renamed MeasurementResult) to indicate the run time target for the Metric evaluation.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The TM Forum SID Metrics model has an association &quot;MetricCollectedFor&quot; from Metric class to RootEntity class.&#160;&#160;This can point at an instance of any element defined in the model for the target system.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OSI Systems Management MonitorMetric and its subclasses have a pointer to the observed managed object instance, and its attribute being observed.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Periodic scanning of a target by a Metric&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This is the primary purpose for the OSI Systems Management Metric Objects.&#160;&#160;The MonitorMetric class has a granularity period for subsequent scans (using a get operation) of attribute values of Observed managed objects.&#160;&#160;The MeanMonitorMetric class has an attribute to specify the moving time period over which the estimate is calculated.&#160;&#160;The metric objects also have optional attributes to specify scheduling of when the Metric object is enabled to scan.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OMG SMM and TM Forum SID metrics model are static in nature.&#160;&#160;The assumption is that the Metric will be evaluated for the state of the system at the time of observation.&#160;&#160;Neither of these models specifies facilities for evaluating statistical quantities over time.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The NIST Metrics model is also a static model.&#160;&#160;The concept of periodic scanning of resource attributes is not currently supported. There is no way specified to force a measurement to be taken using a periodic test stimulus.&#160;&#160;The examples assume measurements will be taken upon natural stimuli (i.e., not driven by a test driver). However, the group is investigating how statistical quantities (such as mean and variance) can be evaluated from a set of measurement results taken on a single target over some time interval (e.g., calculating a mean response time for a target over a time period using all available response time measurements taken for that target over that interval).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Representation of a metric Measurement result&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OMG SMM has the Measurement class to represent the result of a measurement.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;NIST Metrics model currently has the Measure class to represent the result of a measurement.&#160;&#160;However, the NIST WG is considering changing the name of this class to MeasurementResult, to avoid confusion.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;TM Forum metrics model has the Metric class to represent the result of a measurement.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OSI Systems Management Metric Objects have a derivedValue attribute in the MonitorMetric class which stores the current value associated with the Metric.&#160;&#160;The subclasses also add attributes for the estimate of the statistical quantity taken over a Moving Time Period.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Representation of a metric Measure Definition &lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OMG SMM has the Measure class to specify the definition for a measurement.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;NIST Metrics Model has the MeasureDefinition class to specify the definition for a measurement.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;TM Forum metrics model has the MetricDefinition class to specify the definition for a measurement.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OSI Systems management does not allow arbitrary measurement definitions.&#160;&#160;The behavior of the Metric objects is restricted to operations over time on observed attributes, and is hard coded into the behavior definitions for the Metric objects.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Representation of composite metric measures definitions and measurement results&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The OMG SMM specifies:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;A BinaryMeasure class which evaluates a binary operation (e.g., +, -, /, *) on the values of two&lt;/b&gt; other Measures.&#160;&#160;More complicated combination operations need to be expressed by breaking the calculation into a series of binary operation steps.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;A CollectiveMeasure class which evaluates an accumulation operation (sum, min, max, mean, standard deviation) over a set of entities which are involved in a similar relationship with a scoped class.&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;No other forms of calculating composite metrics are specified.&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;In the NIST Metrics model a primary MeasureDefinition can be composed using underlying MeasureDefinitions and an expression in the primary MeasureDefinition).&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In the TM Forum Metrics model, a MetricDefinition can be composed using other MetricDefinitions through the use of MetricDefinitionMethodArgument.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;OSI Systems management Metric Objects has no facilities to compose multiple metrics.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 1:16:55 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/4/2022 3:05:06 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D1D5ECAF-D5E7-46ef-88BE-67091FEBB24D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

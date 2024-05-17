@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PR.06 - Our Simple Example Router - Illustrative</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1879.png" usemap="#EA1879" border="0" />
+
+<MAP NAME="EA1879">
+<area shape="rect" coords="672,389,777,416" href="EA1941.htm" target="_self">
+<area shape="rect" coords="98,202,155,247" href="EA1940.htm" target="_self">
+<area shape="rect" coords="404,207,637,270" href="EA1939.htm" target="_self">
+<area shape="rect" coords="481,121,589,160" href="./EA4/EA4/EA2291.htm" target="_self">
+<area shape="rect" coords="599,305,696,355" href="./EA4/EA3/EA2268.htm" target="_self">
+<area shape="rect" coords="72,126,180,165" href="./EA4/EA7/EA2315.htm" target="_self">
+<area shape="rect" coords="443,305,540,355" href="./EA4/EA2/EA2260.htm" target="_self">
+<area shape="rect" coords="604,447,701,483" href="./EA4/EA3/EA2/EA2281.htm" target="_self">
+<area shape="rect" coords="723,447,820,483" href="./EA4/EA3/EA1/EA2276.htm" target="_self">
+<area shape="rect" coords="303,408,406,441" href="./EA4/EA1/EA2254.htm" target="_self">
+<area shape="rect" coords="555,511,652,566" href="./EA4/EA2/EA2264.htm" target="_self">
+<area shape="rect" coords="447,511,544,539" href="./EA4/EA2/EA2262.htm" target="_self">
+<area shape="rect" coords="335,511,432,539" href="./EA4/EA2/EA2261.htm" target="_self">
+<area shape="rect" coords="443,408,540,441" href="./EA4/EA2/EA2258.htm" target="_self">
+<area shape="rect" coords="144,276,241,313" href="./EA3/EA4/EA2085.htm" target="_self">
+<area shape="rect" coords="10,276,107,313" href="./EA3/EA4/EA2084.htm" target="_self">
+<area shape="rect" coords="307,305,404,355" href="./EA4/EA1/EA2251.htm" target="_self">
+<area shape="rect" coords="292,10,389,62" href="./EA4/EA2246.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PR.06 - Our Simple Example Router - Illustrative diagram</div>
+	<div class="ObjectDetailsNotes">Recapping, this is what we know:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A Router is-a type of Device&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	There are two types of EquipmentHolders, Slots and Chassis&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A PowerSupply is-a type of AuxiliaryComponent&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A LineCard is-a type of Card, which is-a type of Hardware (for a more concrete illustration, we are substituting different types of cards that are part of the &#8220;real&#8221; model that is being developed; a LineCard is a synonym for a NetworkCard, but the following Figure shows other types of Cards as well)&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A NetworkCard fits into a Slot of a Chassis&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A PowerSupply fits directly into the Chassis&lt;br/&gt;The physical part of the Router consists of all of the above Equipment and EquipmentHolders&lt;br/&gt;&lt;br/&gt;Thus, what we conceptually have is the following model of our simple Router (note that not all subclasses are shown; rather, this is a simple example to define the concepts that we have developed to date).&lt;br/&gt;&lt;i&gt;Router and Switch are for illustrative purposes only. Such classes are modelled using roles, but roles haven&#8217;t been introduced to the reader yet.&lt;/i&gt;&lt;br/&gt;&lt;i&gt;Chassi and Slot inheritance relationships are for illustrative purposes only. The real inheritance will be shown later in this Addendum.&lt;/i&gt;&lt;br/&gt;The power of inheritance works well for us. Since PowerSupply and NetworkCard both ultimately inherit from Hardware, they also inherit the attributes and relationships that Hardware participates in. Thus, both a PowerSupply as well as a LineCard can be contained in an EquipmentHolder (not necessarily the same one) via the HoldsHardware aggregation. Similarly, both can be used to build a Router via the ConsistsOf aggregation.&lt;br/&gt;As for the two EquipmentHolders, we&#8217;ve chosen to make them siblings. That is, they are two separate objects that are derived from a common superclass (EquipmentHolder). This is an example of the object-oriented concept of specialization. Specialization is used to take a single concept and add detail to it. The added detail is in the form of subclasses that inherit all of the attributes and relationships (and, in the System view, methods and constraints as well) of their parent superclasses, but add their own characteristics and behavior (in the form of attributes and relationships, as well as methods and constraints in the System view).&lt;br/&gt;In this case, there is a fundamental difference between a Slot and a Chassis. However, since both of these classes are subclasses (i.e., types) of EquipmentHolder, we can simply reuse the HoldsHardware composition to enable a Chassis to contain Slots. Finally, the HoldsHardware aggregation can also be used to nest EquipmentHolders, as previously discussed.&lt;br/&gt;We&#8217;ve also added some additional detail, showing that there are (for now) three different types of Cards &#8211; MemoryCards, NetworkCards, and SystemCards. A MemoryCard is a type of Card that is dedicated to providing additional memory for use by other components of a Resource. Such Cards can be used to expand memory, or provide different types of memory.&lt;br/&gt;A NetworkCard is a type of Card that is dedicated to providing networking functions, such as routing and forwarding. Line cards and port adapter cards are examples of this type of card.&lt;br/&gt;Finally, a SystemCard is a type of Card that is dedicated to providing system functions. Main processor boards and controller boards are examples of this type of Card.&lt;br/&gt;Given this introduction, we will now introduce the concept of Roles. Roles are a fundamental means of providing an extensible model. An innovative feature is that it has physical as well as logical roles.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:25:50 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{42E93A29-71FA-4aad-A460-82D73608DE6D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

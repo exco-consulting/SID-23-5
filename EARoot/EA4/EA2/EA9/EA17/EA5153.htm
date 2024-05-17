@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure I.04 - IntentHandler State Machine</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5154.png" usemap="#EA5154" border="0" />
+
+<MAP NAME="EA5154">
+<area shape="rect" coords="357,192,477,252" href="EA5166.htm" target="_self">
+<area shape="rect" coords="569,64,689,124" href="EA5168.htm" target="_self">
+<area shape="rect" coords="350,64,470,124" href="EA5165.htm" target="_self">
+<area shape="rect" coords="116,68,236,128" href="EA5169.htm" target="_self">
+<area shape="rect" coords="669,249,689,269" href="EA5167.htm" target="_self">
+<area shape="rect" coords="10,172,30,192" href="EA5170.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure I.04 - IntentHandler State Machine diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#1a2746&quot;&gt;We introduce the state machine as a consistent communication about handling state and progress with the intent owner. The intent handler maintains state information individual for each intent. The following states within the intent handler are defined:&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Received&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#1a2746&quot;&gt;&lt;br/&gt;This is the initial handling state of an intent when it is received by an intent handler. This state is valid only before the intent handler can send a first report to the owner. The first report would either accept or reject the intent. If it is rejected, the state machine transitions to the state &quot;Finalizing&quot; and ends after all needed cleanup is done. The intent is not handled and no further actions about it are taken by the handler.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Compliant&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#1a2746&quot;&gt;&lt;br/&gt;All expectations of the intent are met according to the current state of the system determined by measurements and analytics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Degraded&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#1a2746&quot;&gt;&lt;br/&gt;The intent handling is in this state if any of the expectations from the intent is not met.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Finalizing&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#1a2746&quot;&gt;&lt;br/&gt;The removal of the intent was ordered and the intent handler has stopped considering the intent in operation. The intent handler is doing final clean-up actions before ending the state machine.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#1a2746&quot;&gt;The operation decisions and actions of the intent handler try to transition the intent handling state into &quot;compliant&quot; and keep it there until the intent is removed. External factors, such as resource shortage, user actions or errors of any kind can lead to the intent to become degraded. If this is happening the intent handler would immediately start to plan corrective actions trying to actively transition the system back into a compliant state.&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/2/2022 9:21:36 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/3/2022 7:09:28 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{46F9EF79-D24B-4a05-95F8-74CD00DAC186}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

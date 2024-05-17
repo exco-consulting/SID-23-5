@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.04 - Simplified SID Product Model</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1361.png" usemap="#EA1361" border="0" />
+
+<MAP NAME="EA1361">
+<area shape="rect" coords="298,96,348,123" href="EA1399.htm" target="_self">
+<area shape="rect" coords="10,56,153,115" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="272,168,387,247" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="466,51,622,123" href="../../EA3/EA3/EA1108.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.04 - Simplified SID Product Model diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure is a simple model of how a Product is modeled.&lt;br/&gt;A ProductOffering represents what is externally presented to the market for the market&#8217;s use and can be simple or bundled (atomic / composite pattern).&lt;br/&gt;A ProductOffering represents how the ProductSpecification is sold (i.e. packaging rules, prices, alterations, commitments&#8230;).&lt;br/&gt;The ProductSpecification represents a product specification as perceived by the business user and specifies what the marketing operator wants to sell at a functional level (i.e. what are the capacities, which usages are available&#8230;).&lt;br/&gt;It can represent:&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;material goods (Terminal, phone, mobile, fax, modem)&lt;/li&gt;&lt;li&gt;or intangible goods (like an Anti-Spam service for email).&lt;/li&gt;&lt;/ul&gt;<br />A ProductOffering makes available at least one ProductSpecition directly or indirectly (through contained ProductOfferings).&lt;br/&gt;Vice versa, a ProductSpecification may be made available as one or more simple ProductOfferings.&lt;br/&gt;A Product represents exclusively the instantiation of a ProductOffering or ProductSpecification by a Party playing a PartyRole, such as a Customer. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/29/2023 6:57:31 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4A8275B4-C564-4c7f-A244-A2CF2A9568D0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-15 - Simple PolicyStatement</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4501.png" usemap="#EA4501" border="0" />
+
+<MAP NAME="EA4501">
+<area shape="rect" coords="372,234,552,283" href="./EA5/EA4/EA4668.htm" target="_self">
+<area shape="rect" coords="84,228,260,277" href="./EA5/EA5/EA4681.htm" target="_self">
+<area shape="rect" coords="10,128,107,180" href="./EA5/EA5/EA4679.htm" target="_self">
+<area shape="rect" coords="264,10,403,62" href="./EA5/EA4/EA4670.htm" target="_self">
+<area shape="rect" coords="274,146,393,198" href="./EA5/EA6/EA4701.htm" target="_self">
+<area shape="rect" coords="552,128,657,204" href="./EA5/EA4/EA4669.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-15 - Simple PolicyStatement diagram</div>
+	<div class="ObjectDetailsNotes">There is significant similarity between the most common types of PolicyConditions and PolicyActions. Specifically:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	PolicyConditions are of the form: &#8220;IF&#160;&#160;is TRUE&#8221;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	PolicyActions are of the form: &#8220;SET&#160;&#160;to #lt;value#gt;&lt;br/&gt;Both the condition clause and the action clause are in reality of the same form:&lt;br/&gt;{ variable, operator, value }&lt;br/&gt;where the braces are used to denote a tuple. To see this, we can write a PolicyCondition as:&lt;br/&gt;IF #lt;variable#gt; #lt;operator#gt; #lt;value#gt; is TRUE	(1)&lt;br/&gt;For example, consider:&lt;br/&gt;IF sourcePort == 21	(2)&lt;br/&gt;In equation (2), sourcePort is an example of a variable, &#8220;==&#8221; is an example of an operator, and &#8220;21&#8221; is an example of a value. More formally, equation (2) tests the value of the sourcePort variable, to see if it is equal to the value 21 or not.&lt;br/&gt;Similarly, a PolicyAction can be represented as:&lt;br/&gt;#lt;operator&#160;&#160;#lt;variable#gt; to #lt;value#gt;&lt;br/&gt;For example, consider:&lt;br/&gt;SET ToS = 5	(3)&lt;br/&gt;In equation (3), ToS is an example of a variable, &#8220;=&#8221; is an example of an operator, and &#8220;5&#8221; is an example of a value. More formally, equation (3) sets the value of the ToS (type of service) field in the IP header to the value of 5.&lt;br/&gt;Clearly, values can have different data types besides integers, and variables can represent any concept, not just fields in the IP header. In fact, the Policy model provides a standard set of variables and values, as well as the ability to represent custom variables and values, so that different applications can use the same set of classes to represent different policy expressions (which are called PolicyStatements in this model).&lt;br/&gt;&lt;br/&gt;More specifically, this enables the model to generalize the standard form of a PolicyCondition and a PolicyAction into an object that is called a PolicyStatement. This has important implications, since a Policy Decision Point, a Policy Enforcement Point, and a Policy Execution Point can now share the same basic syntax. Both PolicyConditions as well as PolicyActions share the same variables and values; the difference in semantics is reflected in the types of operators that are allowed to be used for PolicyConditions versus PolicyActions. For conditions, we want the semantics of &#8220;variable relates to value&#8221;, where &#8220;relates to&#8221; is usually the match operator, but could also be other applicable operators (e.g., a comparison operator). For actions, we want the semantics of &#8220;set variable to value&#8221;. These semantics are enforced using OCL, but that is beyond the scope of this Addendum. A simplified representation of the PolicyStatement entity is shown in Figure below.&lt;br/&gt;The cardinality of each of the three aggregations that involve PolicyStatement (i.e., UsesValue, UsesOperator, and UsesVariable) are each 0..n on the PolicyStatement side. This means that a given PolicyValue, PolicyOperator, and PolicyVariable can be used in zero or more PolicyStatement entities, respectively. The 0..n is used to enable the design of each of these three entities independent of the PolicyStatement.&lt;br/&gt;The cardinality on the PolicyValue and PolicyVariable ends of the UsesValue and UsesVariable compositions is each 1..n. This means that a PolicyStatement must contain at least one or more PolicyValue and PolicyVariable entities, respectively, in order to be a valid PolicyStatement. Similarly, the cardinality on the PolicyOperator end of the UsesOperator composition is 1, because a PolicyStatement is a single clause, and therefore requires only a single PolicyOperator.&lt;br/&gt;The ValueConstraintInVariable association enables a PolicyVariable to use a constrained, or limited, set of PolicyValues, compared to what it would normally use. Similarly, the OperatorConstraintInVariable association limits the type of operators that could be used with a given PolicyVariable to a smaller subset. The power of these two association classes lies in the fact that an external policy application can adjust these constraints at run-time by populating the attributes of these classes. This enables the same generic model to be used for multiple applications for consistency. At the same time, it enables the effects of the changing environment to be taken into account at run-time in the form of these constraints.&lt;br/&gt;A PolicyOperator is a concrete class for modeling different types of operators in a PolicyStatement. By restricting the type of operator used in a PolicyStatement, one can effectively restrict the semantics of that PolicyStatement. This is done using the OperatorConstraintInVariable association.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/9/2022 3:56:50 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A680D34C-86FC-47b1-87E0-BC99A98D4DA5}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.07 - Representing BGP as a LogicalResource</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1466.png" usemap="#EA1466" border="0" />
+
+<MAP NAME="EA1466">
+<area shape="rect" coords="467,80,617,111" href="./EA2/EA1497.htm" target="_self">
+<area shape="rect" coords="352,406,426,437" href="../../EA5/EA3/EA3/EA6/EA5/EA2182.htm" target="_self">
+<area shape="rect" coords="292,322,487,353" href="../../EA5/EA3/EA3/EA6/EA5/EA2190.htm" target="_self">
+<area shape="rect" coords="315,143,463,174" href="../../EA5/EA3/EA3/EA6/EA2144.htm" target="_self">
+<area shape="rect" coords="312,10,467,57" href="./EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="18,143,143,174" href="../../EA5/EA3/EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="315,231,464,262" href="../../EA5/EA3/EA3/EA6/EA5/EA2192.htm" target="_self">
+<area shape="rect" coords="5,10,156,57" href="../../EA5/EA3/EA1944.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.07 - Representing BGP as a LogicalResource diagram</div>
+	<div class="ObjectDetailsNotes">Let&#8217;s consider the simple example of a Customer purchasing a VPN. The VPN itself may be both a Product and a CustomerFacingService, since the VPN provides a number of functions (e.g., connectivity) that people commonly refer to as Services. Suppose the VPN is a particular type of VPN, defined by RFC2547bis. This specification mandates that BGP (the Border Gateway Protocol, which is an inter-domain routing protocol that is used to exchange reachability information with other BGP systems) is used for route advertisement. The Customer doesn&#8217;t buy BGP services, yet BGP is required for this type of VPN to function. Therefore, BGP is a ResourceFacingService.&lt;br/&gt;The following Figure takes an extract from the LogicalResource model and shows that BGP is a particular type of RoutingProtocol. This model defines several different types of Protocols. A RoutingProtocol is a particular type of protocol that accomplishes routing through the implementation of a specific algorithm. Protocols are modeled as a type of LogicalResource.&lt;br/&gt;Note: Routing is defined as the process of finding a path to a destination.&lt;br/&gt;To connect this properly, we also need the concept of a LogicalDevice. This is the logical analog to the PhysicalDevice class. A LogicalDevice is an abstract base class for all logical resources that are inherently manageable and make up a Product. It is used to describe different types of logical features and services that constitute a Product. It has two main purposes: (1) to collect common attributes and relationships for all logical resources, and (2) to provide a convenient, single point where relationships with other managed objects can be defined.)&lt;br/&gt;Thus, BGP is associated with a ResourceFacingService through the RFServiceUsesProtocol aggregation.&lt;br/&gt;The ProtocolServiceDetails association class defines the Protocols that are required by a particular ResourceFacingService.&lt;br/&gt;Thus, BGP is associated with a ResourceFacingService through the ProtocolServiceDetails association class. The ProtocolServiceDetails association class defines the Protocols that are required by a particular ResourceFacingService.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:28:50 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B4A23AB0-58B9-481a-A777-53B8E919219A}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

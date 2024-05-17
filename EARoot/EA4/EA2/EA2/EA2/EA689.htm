@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure C.03 - Customer Product Order Business Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA690.png" usemap="#EA690" border="0" />
+
+<MAP NAME="EA690">
+<area shape="rect" coords="16,412,131,484" href="../../EA10/EA1/EA1/EA5490.htm" target="_self">
+<area shape="rect" coords="48,614,187,662" href="../../EA9/EA5/EA4002.htm" target="_self">
+<area shape="rect" coords="388,129,559,183" href="../../EA10/EA5/EA5725.htm" target="_self">
+<area shape="rect" coords="531,502,697,633" href="../../EA9/EA2/EA6/EA3889.htm" target="_self">
+<area shape="rect" coords="5,159,131,231" href="../../EA6/EA11/EA2802.htm" target="_self">
+<area shape="rect" coords="567,415,723,477" href="../EA9/EA1/EA859.htm" target="_self">
+<area shape="rect" coords="205,6,321,133" href="../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="588,74,709,142" href="../EA8/EA830.htm" target="_self">
+<area shape="rect" coords="274,285,427,396" href="./EA1/EA705.htm" target="_self">
+<area shape="rect" coords="689,295,866,347" href="./EA1/EA706.htm" target="_self">
+<area shape="rect" coords="595,696,719,748" href="../../EA3/EA5/EA1238.htm" target="_self">
+<area shape="rect" coords="239,573,429,737" href="../../EA3/EA5/EA1237.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure C.03 - Customer Product Order Business Entities diagram</div>
+	<div class="ObjectDetailsNotes">A Customer might place orders with the Service Provider. This is represented by the CustomerProductOrder.&lt;br/&gt;CustomerProductOrder / CustomerProductOrderItem are sub-classes from the pattern ProductOrder / ProductOrderItem. For further details about ProductOrder / ProductOrderItem refer to the Common Domain guide book section Product Order ABE.&lt;br/&gt;A ProductOrder represents a request used to procure, update or remove one or many Products in the context of a ProductOffering through all its ProductOrderItems.&lt;br/&gt;The particularity of the CustomerProductOrder is to procure, update or remove Products for Customer even if, for example, the CustomerProductOrder might be placed by the Service Provider when applying precautionary measures in case of bad debt.&lt;br/&gt;At least one CommunicationInteraction is the source of a CustomerProductOrder. Then, additional interactions might happen such as the Customer asking why his order isn&#8217;t yet delivered or the Service Provider informing the Customer his order is completed.&lt;br/&gt;A CustomerProductOrder uses a SalesChannel to be requested.&lt;br/&gt;A CustomerProductOrder might refer to an Agreement specifying all what has been approved by the PartyRoles involved in the CustomerProductOrder.&lt;br/&gt;&lt;br/&gt;One or many PartyRoles might be involved in a CustomerProductOrder / CustomerProductOrderItem such as Distributor, Holder, Buyer, Product User or DeliveryDriver.&lt;br/&gt;The CustomerProductOrder and CustomerProductOrderItems may specify the CustomerBillingAccount to which the Products&#8217; are charged to.&lt;br/&gt;When CustomerProductOrder / CustomerProductOrderItems are not charged to a CustomerBillingAccount and carry one-time charges, they might be directly paid through one or many CustomerPayments.&lt;br/&gt;A CustomerProductOrderItem may need other CustomerProductOrderItems to be completed; this dependency is represented through the &quot;/CustomerProductOrderItemRefrencesReferencedBy&quot; relationship. For example, using this relationship you can specify that CustomerProductOrderItem &#8220;2 hours call bundle&#8221; requires CustomerProductOrderItem &#8220;Mobile Line&#8221;.&lt;br/&gt;A CustomerProductOrder and CustomerProductOrderItems might be further described by Attachments.&lt;br/&gt;&lt;i&gt;Relationships with SalesChannel, CustomerBillingAccount and CustomerPayment are not shared with Business Partner orders.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/21/2023 6:11:20 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{35AF2686-378B-44f0-BE44-CE86CE19A7B3}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

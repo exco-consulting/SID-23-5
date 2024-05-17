@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-33 - PolicySetSpec</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4537.png" usemap="#EA4537" border="0" />
+
+<MAP NAME="EA4537">
+<area shape="rect" coords="31,332,172,381" href="./EA3/EA4625.htm" target="_self">
+<area shape="rect" coords="10,176,192,238" href="./EA2/EA4614.htm" target="_self">
+<area shape="rect" coords="356,176,476,205" href="./EA5/EA4/EA4670.htm" target="_self">
+<area shape="rect" coords="217,176,331,205" href="./EA5/EA2/EA4652.htm" target="_self">
+<area shape="rect" coords="501,176,596,205" href="./EA5/EA1/EA4643.htm" target="_self">
+<area shape="rect" coords="271,10,373,72" href="./EA2/EA4607.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-33 - PolicySetSpec diagram</div>
+	<div class="ObjectDetailsNotes">This aggregation defines the set of PolicySets that can be defined from a particular PolicySetSpec. This enables the PolicySetSpec to define the invariant attributes, methods, relationships, and constraints that different PolicySets all contain. This standardizes the construction and usage of a PolicySet, and enables different PolicySets to define different variations of the PolicySetSpec to suit the needs of different applications. &lt;br/&gt;The PolicySetSpec defines a single attribute called decisionStrategy. This attribute is an enumerated integer that specifies the particular decision strategy to be used in this PolicySet. This attribute defines how PolicyRules in a PolicyGroup or a PolicyRule are to be evaluated. &lt;br/&gt;The values of this attribute can include:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	0:&#160;&#160;Unknown&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	1:&#160;&#160;MatchFirst&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	2:&#160;&#160;MatchAll&lt;br/&gt;Unknown can be used at initialization time, or if an error occurs, as an easy way to signify that an error in this PolicySet has occurred, since the two legal values of this attribute are MatchFirst and MatchAll.&lt;br/&gt;MatchFirst looks for the first PolicyRule whose condition clause evaluates to TRUE in a PolicySet; and then evaluates that PolicyRule. Policy evaluation in this PolicySet then STOPS, and all subsequent PolicySets are no longer evaluated.&lt;br/&gt;In contrast, MatchAll evaluates all PolicyRules. Those whose condition clauses evaluate to TRUE are (conceptually) put in a bucket. When all PolicyRules have been evaluated, a second pass is performed that executes all the PolicyRules that are in the (conceptual) bucket. Execution of these rules is controlled through the Priority attribute, which is defined as part of the PolicySetComponent aggregation, and prescribes the order in which the PolicyRules execute.&lt;br/&gt;Thus, a PolicySet can be configured to either execute the first PolicyRule whose condition clause evaluates to TRUE, or to execute all PolicyRules whose condition clauses evaluate to TRUE.&lt;br/&gt;The semantics of this attribute are identical for PolicyGroups as well as for PolicyRules. In a PolicyGroup, this attribute defines how to evaluate the set of PolicyRules that are contained in a PolicyGroup. In a PolicyRule, this attribute defines how to evaluate nested PolicyRules within a higher-level PolicyRule.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 9:25:08 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7A2A58C0-F0F3-4069-BAC1-F3FFE99DFB9C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

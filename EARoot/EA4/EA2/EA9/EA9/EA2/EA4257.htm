@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure A-2 SMM Measure Relationships</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4258.png" usemap="#EA4258" border="0" />
+
+<MAP NAME="EA4258">
+<area shape="rect" coords="6,5,820,562" href="EA4275.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure A-2 SMM Measure Relationships diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;A Measure expresses the specification of a calculation that can be evaluated against a set of measurands to create an instance of a Measurement.&#160;&#160;&#160;A Measure has a Scope, which specified a single class of element expressed in the Meta model for the system being analyzed. SMM defines a &quot;measurand&quot; relationship between the Measurement and a MofElement, which points at a particular instance of a class in the target Meta model.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;An SMMModel is comprised by a set of observations. The Observation class represents some of the contextual information which may be unique to a measurement, such as date, measurer, and tool used. The ObservationScope class represents the model(s) or sub models that are the subject of the related observation.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The binding of a Measure to a particular Measurement is expressed by the ObservedMeasure relationship class, which ties a Measure to a set of Measurements resulting from an Observation, on a set of related measurands, evaluated at an instance of time.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A Measure has a Scope, which specified a single class of element expressed in the Meta model for the system being analyzed.&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A Measure is associated with a single named Characteristic. The Characteristic class represents a property or trait of the members in its scope, a set of MOF Elements, which may be characterized by applying a measure to those members. Characteristic provides for a representation of a hierarchy of measures based upon the abstraction of measured trait. For example, a length characteristic may be the parent of the fileLength and programLength characteristics.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A MeasureCategory has measures and other categories as its elements. A category represents the measures directly associated with an &#8216;element&#8217; and the measures of each sub-category likewise associated with an &#8216;element.&#8217;&#160;&#160;A measure may appear in multiple categories. A category can be a subcategory of other categories indicating only that its measures also are measures of these other categories. This class may be used to represent a family of similar measures that apply to different scopes. The category of a metric may indicate the kind of purpose for which the metric is used.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;When a SMM model is run against a set of software artifacts, the measurands are the targets for evaluating the SMM Model to determine the values of a set of Measurements expressed as instances of the SMM metamodel.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;A Measure expresses the specification of a calculation that can be evaluated against a set of measurands to create an instance of a Measurement.&#160;&#160;&#160;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;MeasureRelationship is an abstract class representing any relationship between two measures.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The MeasureLibrary class represents libraries of measures.&#160;&#160;A library of measures defines a reference set of measures that can be applied over and over in a way that is independent and decoupled from the models under observation.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The structure of the Measure relationships is expressed in the SMM metamodel, as shown in Figure A-2. &lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 12:56:37 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/10/2022 1:03:41 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Natha Paquette</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{027AB140-2252-4c21-9E48-E6EA9AEA79C8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

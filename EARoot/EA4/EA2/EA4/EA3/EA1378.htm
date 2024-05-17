@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.22a - Service and Resource Characteristic Associations</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1379.png" usemap="#EA1379" border="0" />
+
+<MAP NAME="EA1379">
+<area shape="rect" coords="20,204,174,240" href="../../EA5/EA2/EA1693.htm" target="_self">
+<area shape="rect" coords="10,106,185,142" href="../../EA5/EA2/EA1695.htm" target="_self">
+<area shape="rect" coords="401,106,610,142" href="../../EA5/EA2/EA1696.htm" target="_self">
+<area shape="rect" coords="10,5,184,41" href="EA1402.htm" target="_self">
+<area shape="rect" coords="28,302,167,338" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="407,5,604,41" href="EA1403.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.22a - Service and Resource Characteristic Associations diagram</div>
+	<div class="ObjectDetailsNotes">Service Features and Service Parameters are two other synonyms for a ServiceSpecCharacteristic, and are used in models from other TM Forum member companies.&lt;br/&gt;ServiceSpecCharacteristics and ServiceSpecCharacteristicValues capture the differentiating features of a particular Service. However, ServiceSpecCharacteristics are not versionable objects. This is because ServiceSpecCharacteristics do not add any information in and of themselves &#8211; rather, they are used to emphasize key features of a ServiceSpecification.&lt;br/&gt;There are cases when an instance of a ServiceSpecCharacteristic and/or a ServiceSpecCharacteristicValue must be translated to a corresponding ResourceSpecCharacteristic and/or a ResourceSpecCharacteristicValue. For example, there may be a ServiceSpecCharactertistic that represents the size of an email box as defined by associated 10MB instance of SerivceSpecCharacteristicValue. This value may be translated into the actual size of 10.5MB as defined by the ResourceSpecCharacteristicValue associated to an email box size ResourceSpecCharacteristic.&lt;br/&gt;The following Figure shows the associations between characteristics in the Service and Resource domains that enable this translation.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/4/2023 5:56:43 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{074DAB44-4700-494c-99A2-5BDF923FE2AE}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

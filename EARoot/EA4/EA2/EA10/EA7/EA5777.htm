@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Cal.09 - Entry Types</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5778.png" usemap="#EA5778" border="0" />
+
+<MAP NAME="EA5778">
+<area shape="rect" coords="770,86,888,174" href="EA5821.htm" target="_self">
+<area shape="rect" coords="733,374,877,436" href="EA5795.htm" target="_self">
+<area shape="rect" coords="203,273,349,365" href="EA5799.htm" target="_self">
+<area shape="rect" coords="418,137,527,216" href="../EA8/EA5958.htm" target="_self">
+<area shape="rect" coords="618,145,728,237" href="EA5800.htm" target="_self">
+<area shape="rect" coords="497,374,641,436" href="EA5815.htm" target="_self">
+<area shape="rect" coords="292,458,451,563" href="EA5811.htm" target="_self">
+<area shape="rect" coords="114,458,224,524" href="EA5808.htm" target="_self">
+<area shape="rect" coords="10,273,146,339" href="EA5809.htm" target="_self">
+<area shape="rect" coords="162,10,302,182" href="EA5801.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Cal.09 - Entry Types diagram</div>
+	<div class="ObjectDetailsNotes">We will now look at the Calendar Entry Types in more detail.&lt;br/&gt;CalendarEntry contains the common attributes for Journal, Event and ToDo entries.&lt;br/&gt;AccessClassification refers to an entry being public or private and controls access to the entry by other than the CalendarOwner. IsRSVPRequested identifies if a return message is to be created when the entry is received.&lt;br/&gt;Journal Entries allow notes to be added to the Calendar.&lt;br/&gt;CalendarEvents relate to real world events. These may reserve Resources or Parties for a period of time in the calendar.&lt;br/&gt;ToDo entries relate to reminders to check on progress for a task.&lt;br/&gt;Events and ToDo entries can have associated Alarms. When the alarm conditions are satisfied, then the CalendarOwner can be notified in some way. The alarm trigger can be an absolute DateTimePoint and can be made relative to the start or end of the owning CalendarEntry, offset before or after the start/end by a given duration. The alarm can also be set to repeat, until the notification is responded to.&lt;br/&gt;e.g. A meeting has been set for 9:00am on Tues 25 Mar 2003. An alarm is set to activate 5 minutes before the meeting starts and the alarm sound is to go for 10 seconds, repeating every minute for 10 minutes or until a response is recorded.&lt;br/&gt;&lt;i&gt;Note that an Alarm activation is really a type of Event. The Event could send messages to initiate various actions.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/24/2023 7:54:43 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F7D5C2A4-3EF2-44ed-B688-CB7514F7FB7B}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

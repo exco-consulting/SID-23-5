@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.10 - Resource Specification Inheritance Context</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1667.png" usemap="#EA1667" border="0" />
+
+<MAP NAME="EA1667">
+<area shape="rect" coords="134,10,321,103" href="../../EA9/EA2/EA3820.htm" target="_self">
+<area shape="rect" coords="134,143,321,225" href="../../EA9/EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="217,430,428,482" href="./EA2/EA1766.htm" target="_self">
+<area shape="rect" coords="478,125,692,200" href="EA1701.htm" target="_self">
+<area shape="rect" coords="134,285,321,367" href="EA1699.htm" target="_self">
+<area shape="rect" coords="26,429,189,481" href="./EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="10,513,208,565" href="./EA3/EA1776.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.10 - Resource Specification Inheritance Context diagram</div>
+	<div class="ObjectDetailsNotes">To address these virtualization examples and network abstraction requirements described later, the concept of &#8220;ResourceFunctionSpecification&#8221; is introduced as a specialization of a LogicalResourceSpec which itself is a subclass of ResourceSpecification.&lt;br/&gt;&lt;i&gt;The designer/conceiver in charge of inventing a new transformation behavior and documenting it must be able to do it without considering whether it will ultimately be of use as a resource or a service in the CSP context.&lt;/i&gt;&lt;br/&gt;ResourceFunctionSpec inherits the composition pattern from ResourceSpecification and it can model relationships between ResourceFunctionsSpec using ResourceSpecificationRelationship (RHS). It is rooted via Entity Specification (LHS).&lt;br/&gt;Introducing the concept of ResourceFunctionSpec permits the following:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Separating the description of a function from its realization&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Definition from the existing SID 16.0 &#8220;Software&#8221; artefact: &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	&#8220;A set of programs, procedures, functions and processes that are used by a Resource.&#8221;&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The proposed approach is to explicitly separate the concept of function from the concept of its software realization.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	This way, it will be possible to model a function as a behavior to transform inputs of any nature into outputs of any nature independently from the way it is realized. This realization may be achieved by different ways; examples: manually or automated by software or hardware implementing algorithms etc.&#8230; without any impact on the definition of the functions itself.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Doing so, the notion of function is not anymore part of the definition of &#8220;Software&#8221; but appears as an explicit separate concept associated to &#8220;Software. This separation permits the life cycle of a function (Resource Function) to be different from the underlying resource. Thus, the realization for a given function can change without the function changing (This flexibility can apply to both specifications and Instances).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Distinguishing Software as data packaged to be exchanged and for future deployment vs. Software as data actually installed on an executable machine.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Another separation is to explicitly distinguish the software material as it is acquired by the consumer from the software vendor, from the software installed on a machine ready to be executed.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Abstraction /Generalization&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	As discussed in previous sections, the concept of function as a behavioral mechanism to transform input data into output data is not specific to the network business areas; it is very general, and it is applicable to many different business areas. &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The creation of a specific artefact to represent the concept of function supports the adoption of a more general approach with the principle of not restricting to network related functions but allowing for a representation of any kind of functions from any business areas.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The result is a generalized model flexible/open enough to be specialized or extended with specific artefacts requested for more specific business areas.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:43:57 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{DA3545AA-C9EB-4262-8FA7-93FBFD9AAD82}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

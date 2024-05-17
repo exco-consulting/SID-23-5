@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Cal.12 - Schedule Definition</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5784.png" usemap="#EA5784" border="0" />
+
+<MAP NAME="EA5784">
+<area shape="rect" coords="785,20,950,86" href="./EA1/EA5828.htm" target="_self">
+<area shape="rect" coords="625,151,785,203" href="./EA1/EA5827.htm" target="_self">
+<area shape="rect" coords="383,142,585,260" href="./EA1/EA5831.htm" target="_self">
+<area shape="rect" coords="794,198,956,303" href="./EA1/EA5834.htm" target="_self">
+<area shape="rect" coords="599,323,801,402" href="./EA1/EA5830.htm" target="_self">
+<area shape="rect" coords="10,173,208,239" href="./EA1/EA5833.htm" target="_self">
+<area shape="rect" coords="455,407,668,473" href="./EA1/EA5829.htm" target="_self">
+<area shape="rect" coords="320,329,478,395" href="./EA1/EA5826.htm" target="_self">
+<area shape="rect" coords="181,420,388,486" href="./EA1/EA5835.htm" target="_self">
+<area shape="rect" coords="440,5,577,81" href="./EA1/EA5832.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Cal.12 - Schedule Definition diagram</div>
+	<div class="ObjectDetailsNotes">The Schedule Definition model is targeted to answer the need of applications to schedule jobs either on a recurring basis or at specific dates and times. The base entity for Schedule Definition is the ScheduleDefinition entity. A ScheduleDefinition entity is associated with a management job entity when it is scheduled. ScheduleDefinition is an abstract entity as any schedule definition has specific parameters that need to be defined by using its sub-entities.&lt;br/&gt;The following diagram shows the data model of the Schedule Definition.&lt;br/&gt;A Schedule Definition may be either Recurring or Fixed. A Recurring schedule definition is composed of four parts: &lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The base RecurringScheduleDefinition entity. This entity has the general attributes necessary for any definition of a recurring schedule. RecurringScheduleDefinition is an abstract entity as any schedule definition having a specific recurrence pattern needs to be defined by using its sub-entities. The general attributes of a base recurring schedule definition entity are:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	scheduleDefinitionStartTime -- The start time of a schedule definition.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	scheduleDefinitionEndTime -- The end time of a schedule definition.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	recurringFrequency -- An optional intra-day schedule recurrence, such as: every 5 minutes, 15 minutes, 30 minutes, 1 hour.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	scheduleDefinitionHoursRange -- A list of time ranges within a specific day when the schedule should be active, for example 08:00-12:00, 16:00-19:00.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	scheduleStartOffset -- An offset relating to the recurring interval. For example, if the recurring interval is 1 hour and the offset is 10 minutes, a job will be executed at 1:10, 2:10, 3:10, etc.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The supported recurrence patterns are defined via the sub-entities of the RecurringScheduleDefinition:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	WeeklyScheduleDefinition -- A schedule definition based on days of the week, for example every Saturday and Sunday. For this schedule an additional dayOfWeekRecurrence is added to define the list of the requested days. If no day is defined the schedule will be executed every day.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	MonthlyScheduleDaysofMonthDefinition -- A schedule definition based on days of the month, such as: 1st, 20th, 30th. For this schedule an additional dayOfMonthRecurrence is added to define the list of days.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	MonthlyScheduleDaysofWeekDefinition -- A schedule definition based on instances of days of week in the month, for example: the 1st Monday in a month. Two attributes are added to support this schedule: recurringWeekSequence for selecting the requested week and daysOfWeekRecurrence to indicate the requested days(s).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	DateScheduleDefinition -- This schedule definition supports the selection of specific dates such as: January&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	1st 2012, July 4th 2015, etc. A scheduledDates attribute is used to define the list of the requested dates.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A recurring schedule may optionally define the exclusion of specific dates from the scheduling definition is defined by associating a ScheduleDefinitionExclusion with the RecurringScheduleDefinition entity.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	The scheduleDefinitionExcludedDates Entity is optimally used to define the list of dates that should be excluded from the schedule.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Finally, a Schedule Duration may optionally be defined by associating a Scheduled Duration Entity to the Recurring Schedule. A duration of a schedule is defined by specifying a base duration, an expected duration for the execution of a job. Extensions to the base duration may be optionally specified. It is possible to define expected duration for the extensions, the mean number of expected extensions and the maximal number of the expected extensions.&lt;br/&gt;Unlike the Recurring schedule definition; it is possible to define a schedule containing exact execution times. This is done by using the FixedScheduleDefinition entity. Each fixed schedule is composed of a list of fixed scheduleitems. A fixed schedule item provides the schedule for a specific execution, supplying the fixScheduleStartTime and Schedule duration (as explained above).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/24/2023 7:57:05 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{7E7C3CAE-548D-43c8-918C-E5A6456878A0}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

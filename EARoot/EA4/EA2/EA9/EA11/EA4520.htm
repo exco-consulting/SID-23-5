@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-25 - Principal Relationships of a PolicyExecutionPoint</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4521.png" usemap="#EA4521" border="0" />
+
+<MAP NAME="EA4521">
+<area shape="rect" coords="435,87,550,140" href="EA4554.htm" target="_self">
+<area shape="rect" coords="206,266,350,313" href="./EA1/EA1/EA4589.htm" target="_self">
+<area shape="rect" coords="481,273,627,320" href="./EA1/EA1/EA4591.htm" target="_self">
+<area shape="rect" coords="10,266,181,313" href="./EA1/EA1/EA4590.htm" target="_self">
+<area shape="rect" coords="463,10,666,69" href="../EA2/EA3812.htm" target="_self">
+<area shape="rect" coords="271,133,412,161" href="./EA1/EA4577.htm" target="_self">
+<area shape="rect" coords="649,274,762,320" href="./EA1/EA1/EA4592.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-25 - Principal Relationships of a PolicyExecutionPoint diagram</div>
+	<div class="ObjectDetailsNotes">A PolicyExecutionPoint is an entity that is used to execute a prescribed set of PolicyActions on a set of PolicyTargets. The PolicyExecutionPoint is an entity that executes a policy decision give to it by a PDP. A high-level drawing of the PXP and its important relationships is shown in Figure below.&lt;br/&gt;The PolicyActionPerformedOn association defines the set of PolicyActions that are performed on a ManagedEntity as a part of the policy management process. The semantics of this association are implemented by the PolicyActionPerformedDetails association class (not shown in the figure). The system view of the Model defines much more detailed semantics to implement this association, such as policies that control what types of actions can be performed on which entities during what time periods. However, this is beyond the scope of this Addendum, and consequently is not shown in Figure below. &lt;br/&gt;The EnforcesExecutionOf association defines the set of PolicyExecutionPoints whose actions are enforced by a particular PolicyEnforcementPoint.&lt;br/&gt;In contrast to the DirectsExecution association, the cardinality of this association is 1..n on both sides. Each side is 1..n because all PolicyExecutionPoints must have at least one associated PolicyEnforcementPoint, but may have more (if, for example, different PolicyEnforcementPoints are used for different functions that are controlled in a PolicyExecutionPoint). This ensure that the PolicyActions sent by a PolicyExecutionPoint can be checked (by the PolicyEnforcementPoint). Some PolicyEnforcementPoints, however, are capable of enforcing multiple PolicyExecutionPoints, and a PolicyEnforcementPoint is only relevant if it enforces the actions of a PolicyExecutionPoint.&lt;br/&gt;The semantics of the EnforcesExecutionOf association are implemented by the PXPEnforcementDetails association class (not shown in the figure). This association defines the set of PolicyExecutionPoints whose actions are enforced by this PolicyEnforcementPoint. However, its description is beyond the scope of this Addendum, and consequently is not shown in Figure below.&lt;br/&gt;Note that the EnforcesExecutionOf, DirectsExecutionOf, and PolicyActionPerformedOn associations are all implemented by association classes. This is because each of these associations has rich semantics that require a class to be properly expressed.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/16/2023 8:33:55 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BBFBACEF-D4C0-4129-9776-177DFE9CFF05}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

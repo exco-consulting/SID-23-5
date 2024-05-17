@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PT.01 - Product, Service and Resource Test Entities</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4923.png" usemap="#EA4923" border="0" />
+
+<MAP NAME="EA4923">
+<area shape="rect" coords="843,217,982,245" href="../../EA3/EA9/EA1317.htm" target="_self">
+<area shape="rect" coords="670,217,794,245" href="../../EA4/EA8/EA1548.htm" target="_self">
+<area shape="rect" coords="145,263,256,291" href="../../EA4/EA8/EA1547.htm" target="_self">
+<area shape="rect" coords="10,262,130,290" href="../../EA3/EA9/EA1316.htm" target="_self">
+<area shape="rect" coords="855,412,970,440" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="663,412,802,440" href="../../EA4/EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="838,311,987,339" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="664,311,801,339" href="../../EA4/EA3/EA1406.htm" target="_self">
+<area shape="rect" coords="467,412,577,440" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="375,7,529,35" href="EA4933.htm" target="_self">
+<area shape="rect" coords="60,7,190,35" href="EA4932.htm" target="_self">
+<area shape="rect" coords="449,311,596,339" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="455,217,589,245" href="../../EA5/EA7/EA2413.htm" target="_self">
+<area shape="rect" coords="659,116,811,144" href="EA4936.htm" target="_self">
+<area shape="rect" coords="373,107,523,178" href="EA4935.htm" target="_self">
+<area shape="rect" coords="39,95,202,190" href="EA4931.htm" target="_self">
+<area shape="rect" coords="279,263,386,291" href="../../EA5/EA7/EA2412.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PT.01 - Product, Service and Resource Test Entities diagram</div>
+	<div class="ObjectDetailsNotes">The following Figure shows one way to support tests for Product, Services, and Resources by applying the Entity/EntityRole pattern.&#160;&#160;This allows the same &#8220;Test Specification&#8221; to be used for many &#8220;Product TestSpecifications&#8221;, &#8220;ServiceTestSpecifications&#8221;, and &#8220;Resource TestSpecifications&#8221;. &lt;br/&gt;Product, Service, and Resource Tests are defined to be generalizations of the abstract &#8220;Test&#8221; class. In this way, the &#8220;Test&#8221; model may be used for the specification of all three types of tests. Each test, such as &#8220;ServiceTest&#8221; is associated to its relative entity under test, which in this case is &#8220;Service&#8221;.&#160;&#160;The relationships therefore between products, services, and resources, are maintained to the associated tests. As an example, a service test measure such as &#8220;Frame Loss Ratio&#8221; may translate to resource test measures &#8220;Number of frames sent&#8221; and &#8220;Number of frames received&#8221;. The metric &#8220;Number of Frames Lost&#8221; is derived from the resource test measures, and the &#8220;Frame Loss Ratio&#8221; is further calculated by dividing the number of frames lost by the number of frames sent.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/17/2023 12:34:58 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{B417DF2B-8C16-415c-9DF4-B1080E078C85}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

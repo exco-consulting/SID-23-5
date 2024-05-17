@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure CL.01 - Basic Closed Loop</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5172.png" usemap="#EA5172" border="0" />
+
+<MAP NAME="EA5172">
+<area shape="rect" coords="293,131,456,187" href="EA5197.htm" target="_self">
+<area shape="rect" coords="10,10,140,64" href="../EA2/EA3812.htm" target="_self">
+<area shape="rect" coords="599,16,758,58" href="../EA2/EA3779.htm" target="_self">
+<area shape="rect" coords="324,16,426,58" href="../EA2/EA3775.htm" target="_self">
+<area shape="rect" coords="597,131,760,187" href="EA5210.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure CL.01 - Basic Closed Loop diagram</div>
+	<div class="ObjectDetailsNotes">The model below justifies the inclusion of ClosedLoop as a managed entity derived from SID&#39;s Entity ABE. A ClosedLoop can have a goal or multiple goals and thus needs a specification to elaborate on its scope of application.&lt;br/&gt;The scope of application of closedLoop can be on any other entity, such as Product, Service, Resource, Customer, Partner based operations. ClosedLoops are also associated to workflows, and typically more than one workflow makes up a ClosedLoop, in that, a ClosedLoop will require a control workflow and a feedback workflow to be complete. The control workflow (controlflow) is responsible for the learning, analysis, and decision-making that enables optimization, planning, and intelligent execution to happen. &lt;br/&gt;A simplified view based on the SID pattern is presented in this figure where ClosedLoop is derived from Root Entity and ClosedLoopSpecification is derived from EntitySpecification. This view presents ClosedLoop as a managed entity, with information required to define and design the closedloop based on a full set of description.&#160;&#160;&lt;br/&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">8/11/2022 8:46:36 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/3/2022 6:53:25 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Kevin Scaggs</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C62B1C7F-E459-423c-B7A5-AEC767B66295}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

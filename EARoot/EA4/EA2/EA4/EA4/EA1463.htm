@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.06 - Basic Service Model – A Starting Point</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1464.png" usemap="#EA1464" border="0" />
+
+<MAP NAME="EA1464">
+<area shape="rect" coords="379,243,541,302" href="../../EA5/EA3/EA1946.htm" target="_self">
+<area shape="rect" coords="21,14,195,73" href="EA1481.htm" target="_self">
+<area shape="rect" coords="514,346,651,378" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="470,43,585,102" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="379,179,520,211" href="../../EA3/EA4/EA1190.htm" target="_self">
+<area shape="rect" coords="650,448,802,480" href="../../EA5/EA3/EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="192,255,345,287" href="./EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="21,341,192,388" href="./EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="409,448,534,480" href="../../EA5/EA3/EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="558,179,709,211" href="../../EA3/EA4/EA1192.htm" target="_self">
+<area shape="rect" coords="39,142,178,174" href="EA1478.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.06 - Basic Service Model – A Starting Point diagram</div>
+	<div class="ObjectDetailsNotes">A ComprisedOf recursive association on Service is tempting to add, because it defines the ability to aggregate subordinate Services into a higher-level Service. However, this aggregation is a bad idea, as it enables ResourceFacingServices to aggregate CustomerFacingServices, which destroys the point of separating them in the first place. Hence, it will not be defined in this model.&lt;br/&gt;Specifically, a CustomerFacingService is what is bound to a Product, not a Service. ResourceFacingService is not linked directly to Product; rather, it is linked to Resource. &lt;br/&gt;The Figure shows that zero or more CustomerFacingServices are optionally used to realize a Product. The cardinality is zero or more in order to allow for the development of Services in a Service Provider or Enterprise before they are offered as a Product or ProductOffering.&lt;br/&gt;The CFServiceRequiresRFServices association defines the set of ResourceFacingServices that are required by a particular CustomerFacingService in order for that CustomerFacingService to operate correctly.&lt;br/&gt;A ResourceFacingService is related to LogicalResources and PhysicalResources through two associations classes, ServiceLRDependency and ServicePRDependency. These association classes define the set of LogicalResources and PhysicalResources, respectively, which are required for this ResourceFacingService to function correctly. The ServiceLRDependency is used to define the set of LogicalResources, such as memory and DeviceInterfaces, which are required for this particular ResourceFacingService to function correctly. The ServicePRDependency have a slightly different connotation. This defines the set of PhysicalResources, such as PhysicalDevices and PhysicalPorts, which are required for this particular ResourceFacingService to function correctly. Thus, the former association class defines the operational aspects of the ResourceFacingService, while the latter defines its hosting aspects. This separation is, of course, facilitated by the design of the Service (CustomerFacingServices vs. ResourceFacingServices) and Resource (PhysicalResource vs. LogicalResource) models.&lt;br/&gt;&lt;i&gt;Note that a Product has two subclasses, ProductComponent and ProductBundle. A ProductComponent represents a stand-alone Product, while a ProductBundle represents Products formed from other Products. Clearly, either of these can serve as the instance that is being realized through a combination of CustomerFacingServices and Resources.&lt;/i&gt;&lt;br/&gt;The model shown was built to distinguish between two types of Services &#8211; those that are used to realize a Product, and those that are required to implement the functionality provided by a Product. These are called CustomerFacingServices and ResourceFacingServices, respectively.&lt;br/&gt;In addition, note the strong link between infrastructure entities and business entities, such as a Product. In particular, this model ensures that Customers access Resources and Services through their packaging in a Product. This particular modeling of the complex abstractions and relationships between Customer, Product, Service and Resource provides some of the key underpinnings that support what the SID is all about.&lt;br/&gt;The important point of this example is that the VPN Product requires a set of Services. Specifically, our VPN Product requires a combination of the BGP ResourceFacingService (and others, but let&#8217;s keep it simple for the time being) and the VPN CustomerFacingService. The utility of this Figure is that it provides the ability to &#8220;package&#8221; multiple heterogeneous Services together to realize a Product. This models a CustomerFacingService requiring a set of ResourceFacingServices through the CFServiceRequiresRFServices association.&lt;br/&gt;Continuing the example, the VPN Product that the Customer bought may already have a router that the Customer can use to access the VPN, or the Customer may need to purchase one. This is represented using the ProductHasPhysicalResources association. &lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:28:10 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{A9A8F918-5FA6-4e8e-A6B0-A851B7BC809D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

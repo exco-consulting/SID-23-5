@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Res.13 - Resource Function Spec inheritance (OLD RS.03)</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1681.png" usemap="#EA1681" border="0" />
+
+<MAP NAME="EA1681">
+<area shape="rect" coords="688,86,866,150" href="EA1691.htm" target="_self">
+<area shape="rect" coords="61,474,249,524" href="./EA4/EA1816.htm" target="_self">
+<area shape="rect" coords="10,346,188,396" href="./EA2/EA1767.htm" target="_self">
+<area shape="rect" coords="209,414,356,464" href="./EA4/EA1818.htm" target="_self">
+<area shape="rect" coords="672,609,839,656" href="./EA3/EA2/EA1790.htm" target="_self">
+<area shape="rect" coords="959,530,1095,580" href="./EA3/EA2/EA1789.htm" target="_self">
+<area shape="rect" coords="854,595,1022,657" href="./EA3/EA2/EA1788.htm" target="_self">
+<area shape="rect" coords="762,532,929,578" href="./EA3/EA2/EA1787.htm" target="_self">
+<area shape="rect" coords="456,609,643,656" href="./EA3/EA2/EA1786.htm" target="_self">
+<area shape="rect" coords="554,672,730,759" href="./EA3/EA2/EA1785.htm" target="_self">
+<area shape="rect" coords="402,414,581,463" href="./EA3/EA3/EA2/EA1811.htm" target="_self">
+<area shape="rect" coords="837,374,994,462" href="./EA3/EA1776.htm" target="_self">
+<area shape="rect" coords="649,396,819,447" href="./EA3/EA1771.htm" target="_self">
+<area shape="rect" coords="491,494,730,545" href="./EA3/EA3/EA2/EA1809.htm" target="_self">
+<area shape="rect" coords="259,603,433,651" href="./EA3/EA3/EA2/EA1812.htm" target="_self">
+<area shape="rect" coords="273,478,464,523" href="./EA3/EA3/EA1/EA1799.htm" target="_self">
+<area shape="rect" coords="218,255,410,304" href="./EA4/EA1820.htm" target="_self">
+<area shape="rect" coords="562,254,747,305" href="./EA3/EA1774.htm" target="_self">
+<area shape="rect" coords="25,259,188,310" href="./EA2/EA1766.htm" target="_self">
+<area shape="rect" coords="308,9,599,72" href="EA1701.htm" target="_self">
+<area shape="rect" coords="336,132,573,183" href="EA1699.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Res.13 - Resource Function Spec inheritance (OLD RS.03) diagram</div>
+	<div class="ObjectDetailsNotes">The ResourceFunction / ResourceFunctionSpec concept is very broad and can be applied to many different domains:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	NetworkFunction / NetworkFunctionSpec would correspond to the description of the behavior of a function running in the network domain.&lt;br/&gt;Instances of such artefacts can be specific function for a given layer (RouterFunction, SwichingFunction, GatewayFunction&#8230;).&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	OfficeFunction / OfficeFunctionSpec and GameFunction / GameFunctionSpec would be respective specialization in the Office domain and Game domain.&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	Another example could be MeteoFunction / MeteoFunctionSpec in the Meteo domain, consisting of describing how meteo data (pressure, temperature, wind) would be transformed to create meteo reports.&lt;br/&gt;Instances of such MeteoFunction / MeteoFunctionSpec artefacts would be specifically created for different kinds of meteo reports: national, regional, local, mountain, see, storm, etc.&#8230;).&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;i&gt;The 16.0 model represented explicitly VNFSpecification as inheriting from SoftwareSpecification. After discussions it was considered being confusing. In the ETSI-NFV sense, a VNF is an &#8220;implementation of a NetworkFunction&#8221;; while the software that is used to realize this function is necessary, it is not the function in itself. &lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;i&gt;The 16.0 model represented explicitly PNFSpecification as an explicit class inheriting from CompoundSpecification. After discussions it was considered that from a general perspective what matters is the fact that a PhysicalResource may be associated with an EmbeddedSoftware.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;i&gt;The general model need to be extended if more specialized classes to represent NVF concepts are requested, such as NF, VNF, PNF.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;i&gt;It can be done either by creating new derived classes, or also by documenting &#8220;touch points&#8221; to external models from other SDOs (ex from ETSI-NFV or from OASIS-TOSCA).&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;ul&gt;<br />&lt;li&gt;&lt;i&gt;The explicit separation of function from its various possible realizations (as pure software &#8211; SoftwareSpecification -, pure hardware &#8211; PhysicalBlackBoxSpecification &#8211; or software embedded in a box &#8211; SoftBlackBoxSpecification -) helps organizing specialized artefacts supporting virtualization.&lt;/i&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/1/2023 6:49:17 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{BB814069-46F3-440f-BF68-3F7800BF3500}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

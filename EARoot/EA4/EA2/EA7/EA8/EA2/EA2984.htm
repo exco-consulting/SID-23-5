@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure PRS.04 - Party Revenue Share and Product Offering</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA2985.png" usemap="#EA2985" border="0" />
+
+<MAP NAME="EA2985">
+<area shape="rect" coords="629,10,841,114" href="../../../EA10/EA5/EA5727.htm" target="_self">
+<area shape="rect" coords="702,241,845,280" href="../../../EA10/EA4/EA5666.htm" target="_self">
+<area shape="rect" coords="52,208,149,291" href="../../EA12/EA3080.htm" target="_self">
+<area shape="rect" coords="648,332,859,407" href="./EA2/EA3042.htm" target="_self">
+<area shape="rect" coords="379,27,572,102" href="./EA2/EA3041.htm" target="_self">
+<area shape="rect" coords="535,500,723,552" href="./EA2/EA3034.htm" target="_self">
+<area shape="rect" coords="197,500,371,552" href="./EA2/EA3032.htm" target="_self">
+<area shape="rect" coords="10,303,253,347" href="./EA5/EA3060.htm" target="_self">
+<area shape="rect" coords="149,43,306,87" href="../../../EA9/EA4/EA3965.htm" target="_self">
+<area shape="rect" coords="327,407,535,482" href="./EA2/EA3039.htm" target="_self">
+<area shape="rect" coords="636,146,848,183" href="./EA2/EA3038.htm" target="_self">
+<area shape="rect" coords="379,191,522,311" href="./EA2/EA3036.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure PRS.04 - Party Revenue Share and Product Offering diagram</div>
+	<div class="ObjectDetailsNotes">The Party Revenue Share ABE represents the amount of revenue shared among parties involved in a revenue sharing agreement. Revenue share is determined using existing artifacts such as usage, invoices, product prices, and applied billing rates. The revenue share may result in a payment to/from a party and/or a bill/invoice to/from a party. It may also be shown as a reduction of or increase to a bill/invoice sent to or received from a party, or a credit/debit to a party&#39;s account balance. There are a variety of revenue sharing models that determines how revenue may be split among an enterprise and other parties. Based on the type of revenue sharing model different determinants are used to calculate the final bill/invoice or payment. Flat rate and usage based revenue sharing models are just two of a number of models, which also include but are not limited to tiered, commitment, progressive, along with multi-party variations of each. &lt;br/&gt;A party revenue sharing agreement defines the period for which a revenue share for a product offering is determined.&lt;br/&gt;PartyRevenueShare represents the amount of revenue shared among parties involved in a revenue sharing agreement. Revenue share is determined using existing artifacts such as usage, invoices, product prices, and applied billing rates. The revenue share may result in a payment to/from a party and/or a bill/invoice to/from a party. It may also be shown as a reduction of or increase to a bill/invoice sent to or received from a party, or a credit/debit to a party&#39;s account balance. (Note that the Party Account Balance ABE needs to be added to the model.) PartyRevenueShareRelationship is a categorization of the relationship, such as reconciled to, replaces, and so forth. PartyRevenueShareNotification is a communication of the revenue to be shared to processes and/or a party with whom revenue will be shared. The notification includes the revenue to be shared for all product offerings. For example, to a Party Revenue Sharing Reconciliation process for reconciliation with a received bill/invoice, to Party Payment Management to make a payment to another party, or to a party so that they can reconcile what is to be shared before sending or receiving a bill/invoice.&lt;br/&gt;PartyRevenueShareProdOffer is a ProductOffering which qualifies for revenue sharing, including the quantity of offerings and the amount of revenue to be shared for the offering. RevenueShareProdOfferRelationship is a relationship between two PartyRevenueShareProdOffers. For example, after shares are reconciled a new PartyRevenueShareProdOffer may be determined that replaces the original share that was determined.&lt;br/&gt;ComponentRevShareProdOffer is a base amount of revenue shared for a ProductOffering. AggregateRevShareProdOffer is the total revenue to be shared for a product offering when the party revenue sharing agreement specifies an aggregation must be provided. The aggregation is performed after the determination of the revenue share represented by ComponentRevShareProdOffer. For example, a flat rate model calculates a revenue share for each acquisition of a product offering, and AggregateRevShareProdOffer contains the total revenue share for the offering.&lt;br/&gt;The following Figure shows an initial view of the Party Revenue ABE.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">12/2/2023 6:19:57 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{2130C688-90C6-4c81-8FD7-04F61C7973C9}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

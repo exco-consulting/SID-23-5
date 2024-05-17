@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.24 - CharacteristicSpecification for RootEntity RootEntityType</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3676.png" usemap="#EA3676" border="0" />
+
+<MAP NAME="EA3676">
+<area shape="rect" coords="209,630,463,691" href="./EA2/EA3855.htm" target="_self">
+<area shape="rect" coords="547,577,742,637" href="./EA2/EA3842.htm" target="_self">
+<area shape="rect" coords="201,10,428,82" href="./EA2/EA3853.htm" target="_self">
+<area shape="rect" coords="558,11,754,82" href="./EA2/EA3844.htm" target="_self">
+<area shape="rect" coords="526,345,631,379" href="EA3820.htm" target="_self">
+<area shape="rect" coords="301,261,444,321" href="./EA2/EA3847.htm" target="_self">
+<area shape="rect" coords="27,401,221,556" href="./EA2/EA3854.htm" target="_self">
+<area shape="rect" coords="40,129,208,275" href="./EA2/EA3852.htm" target="_self">
+<area shape="rect" coords="631,400,797,555" href="./EA2/EA3845.htm" target="_self">
+<area shape="rect" coords="626,133,802,309" href="./EA2/EA3846.htm" target="_self">
+<area shape="rect" coords="10,10,138,40" href="EA3822.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.24 - CharacteristicSpecification for RootEntity RootEntityType diagram</div>
+	<div class="ObjectDetailsNotes">CharacteristicSpecifications can be shared by a number of RootEntityType instances. The &#8220;use&#8221; entity contains attributes that may be specific to a use of the CharacteristicSpecification by an instance of a RootEntityType. &lt;br/&gt;For example, a CharacteristicSpec with &#8220;bandwidth&#8221; value for the name attribute could be named &#8220;download speed&#8221; in one use and &#8220;upload speed&#8221; in another use. &lt;br/&gt;The values assigned to these attributes override the values assigned to an instance of a CharacteristicSpecification. For example, the minCardinality attribute assigned to an instance of CharacteristicSpecification may be zero, indicating that a value does not have to be assigned for an instance of a CharacteristicValue; however, for a particular use of the CharacteristicSpecification, the attribute must be assigned a value. In this case the minCardinality attribute in the &#8220;use&#8221; entity would be assigned a value of one.&lt;br/&gt;The package attribute, also a &#8220;use&#8221; entity attribute, indicates that the attribute represents a composite attribute, similar to the composite/atomic pattern without the explicit sub-classing.&#160;&#160;When this attributes value is set to &#8220;true&#8221; a number of attributes do not apply, such as min and maxCardinality, unique, canBeOverridden, and extensible.&lt;br/&gt;The use of an attribute by a RootEntityType may also require a further restriction on the values that a Characteristic can be assigned. The associations between CharacteristicSpecValue and the &#8220;use&#8221; entities can be used to define the further restriction. For example, the instances of CharacteristicSpecValue for the instance of the &#8220;color&#8221; CharacteristicSpecification may contain the entire rainbow of colors, but only a subset of colors is available for the cable modem.&lt;br/&gt;Similarly, the two &#8220;SpecValueUse&#8221; entities enable different default values to be specified for the use of values associated with the use of a CharacteristicSpecification by a RootEntityType.&lt;br/&gt;&lt;i&gt;CharacteristicSpecification can be related to specification entities in a number of ways. The relationship can be inherited if a specification entity is a subclass of EntitySpecification or via a direct association between the CharacteristicSpecification and the specification entity.&lt;/i&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">9/12/2023 6:11:30 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{3F36A878-0ABA-4298-BDBC-45C1BE2C8D1D}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

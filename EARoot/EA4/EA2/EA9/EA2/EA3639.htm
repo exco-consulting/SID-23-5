@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure R.12 - ManagementInfo Class Hierarchy</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3640.png" usemap="#EA3640" border="0" />
+
+<MAP NAME="EA3640">
+<area shape="rect" coords="250,111,426,185" href="EA3814.htm" target="_self">
+<area shape="rect" coords="362,319,506,347" href="../../EA5/EA3/EA3/EA5/EA8/EA2137.htm" target="_self">
+<area shape="rect" coords="167,268,304,296" href="../../EA5/EA3/EA3/EA5/EA7/EA2133.htm" target="_self">
+<area shape="rect" coords="440,265,537,293" href="../../EA5/EA3/EA3/EA5/EA6/EA2129.htm" target="_self">
+<area shape="rect" coords="534,318,664,346" href="../../EA5/EA3/EA3/EA5/EA3/EA2114.htm" target="_self">
+<area shape="rect" coords="312,268,426,296" href="../../EA5/EA3/EA3/EA5/EA1/EA2099.htm" target="_self">
+<area shape="rect" coords="79,321,228,349" href="../../EA5/EA3/EA3/EA5/EA5/EA2122.htm" target="_self">
+<area shape="rect" coords="10,268,139,296" href="../../EA5/EA3/EA3/EA5/EA4/EA2118.htm" target="_self">
+<area shape="rect" coords="285,5,391,33" href="EA3775.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure R.12 - ManagementInfo Class Hierarchy diagram</div>
+	<div class="ObjectDetailsNotes">ManagementInfo is an abstract class that is used to represent entities that represent management information obtained in a managed environment. Specifically, in the process of managing an entity, information of various forms is created. This class is the superclass for defining different types of management information. Its main subclasses are shown in the Figure below.&lt;br/&gt;The design of how management information is obtained uses this class to gather specific types of information, and the ManagementMethodEntity class to obtain the desired data using an appropriate method. This combination of class hierarchies enables different management methods (e.g., CLI vs. SNMP) to be used to gather different types of management data, and is unique to the SID information model.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/29/2023 6:21:31 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{F227E818-CA7A-4557-B01D-6D9DC425DDA8}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

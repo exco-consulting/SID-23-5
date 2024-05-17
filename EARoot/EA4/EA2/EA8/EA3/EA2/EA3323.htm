@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SE.03 - Security Event - Basic Entities</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA3324.png" usemap="#EA3324" border="0" />
+
+<MAP NAME="EA3324">
+<area shape="rect" coords="559,268,656,302" href="../../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="588,170,685,204" href="../../../EA10/EA1/EA5479.htm" target="_self">
+<area shape="rect" coords="559,10,656,44" href="../../../EA10/EA1/EA5469.htm" target="_self">
+<area shape="rect" coords="5,169,192,228" href="./EA2/EA3405.htm" target="_self">
+<area shape="rect" coords="299,88,437,122" href="../../../EA9/EA2/EA3/EA3868.htm" target="_self">
+<area shape="rect" coords="354,170,559,222" href="./EA2/EA3406.htm" target="_self">
+<area shape="rect" coords="50,88,147,122" href="../../../EA9/EA2/EA3775.htm" target="_self">
+<area shape="rect" coords="50,10,147,44" href="../../../EA9/EA2/EA3820.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SE.03 - Security Event - Basic Entities diagram</div>
+	<div class="ObjectDetailsNotes">The event model is designed to carry information about Security Events &#8211; activities that are sensed on networks and resources.&lt;br/&gt;A small set of core information about any given event is considered to be common across all event reporting.&#160;&#160;That data consists of information such as start time, stop time, unique identifier, a name, and data about the sensor that was used to collect the information.&#160;&#160;However, other information collected about events varies significantly based on the type of activity that is reported.&#160;&#160;In order to deal with the requirement to track multiple event types while still enhancing the probability of successful correlation, the event models described in this section all build on the core event data set, which allows for correlation based on time, sensor, location, unique identifier, and other functions of the collecting sensor.&#160;&#160;Each event type then adds attributes to describe the particular type of activity it monitored.&#160;&#160;&lt;br/&gt;In the NetD Data Model contribution, events were assumed to be sensed, or collected, by a network or host-based sensor, such as an Intrusion Detection System (IDS).&#160;&#160;In the SID, the collection method was generalized to accommodate three types of security event collections methods: Resource, Party, and Party Role.&#160;&#160;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">7/26/2022 4:26:45 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{05FD94C6-9E59-40e9-8278-5D2C8C21684C}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

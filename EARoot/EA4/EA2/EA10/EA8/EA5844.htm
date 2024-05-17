@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure L.02c – Interlinking Geographic & Local Place</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA5845.png" usemap="#EA5845" border="0" />
+
+<MAP NAME="EA5845">
+<area shape="rect" coords="5,5,476,358" href="EA5953.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure L.02c – Interlinking Geographic & Local Place diagram</div>
+	<div class="ObjectDetailsNotes">&lt;font color=&quot;#29313b&quot;&gt;We can see that the actual relationships are dependent on the types of geometries and that there are numerous variations, even with only two very simple objects.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This section has highlighted that spatial functionality is more than just a map pictorial presentation, but is fundamental to the data storage and how the data can be analyzed.&#160;&#160;This should be kept in mind while reading the rest of the document to determine whether a textual only representation can accurately support particular business requirements.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;Place&lt;/b&gt;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will define Place as a generic concept that can answer the question &#8220;Where?&#8221;&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;We will define two types of Places:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;u&gt;Geographic (External)&lt;/u&gt; &#8211; drawn on a map, defined using a geographic co-ordinate system (absolute world centered datum and projection), typically maintained using a GIS&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;u&gt;Local &#8211;&lt;/u&gt; drawn on floor-plans (suite / rack positions), defined using a Cartesian coordinate system relative to a local datum, typically maintained using CAD packages&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;Also see the section &#8220;Contrasting Geographic &amp; Local places&#8221; for further discussion of this.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;Places are an abstract modeling concept, used to generalize Location, Address and Site. In later sections we will explore these three different concepts. Figure 3 shows the main concepts and how they are related.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;This model provides four options for locating something geographically:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;With a defined (named) location {sub class of Geographic Location}&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;With an address of a location {Geographic Address}&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;With a (named) site {Geographic Site}&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;With a survey location (geocode) e.g. a GPS position for an offshore oil rig {Simple Geographic Location}&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;The way that the Place hierarchy is defined is the key to this model. The high level concepts are broken up into two levels of granularity, Geographic and Local, rather than by Address, Location &amp; Site.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;Note that various names for &#8220;Local&#8221; were considered. The following were considered (the reason for not using it is bracketed):&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;internal place (is awkward when referring to things that are attached, not enclosed)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;relative place (confusing due to the use of relative geographic places)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;structural place (confusing if there is no structure)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;So the term Local may not be perfect, but it is the best found to date.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;Figure L.02c &#8211; Interlinking Geographic &amp; Local Place shows how different types of Geographic and Local Places can be combined together.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">5/3/2022 2:46:17 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">5/20/2022 6:06:12 PM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{767060BF-5AD2-4163-BC48-248DED6BC635}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

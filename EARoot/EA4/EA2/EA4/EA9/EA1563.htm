@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.43a - ServiceLevelSpecificationExpression</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1564.png" usemap="#EA1564" border="0" />
+
+<MAP NAME="EA1564">
+<area shape="rect" coords="377,229,577,324" href="./EA1/EA1578.htm" target="_self">
+<area shape="rect" coords="709,102,891,131" href="./EA1/EA1579.htm" target="_self">
+<area shape="rect" coords="655,417,854,446" href="./EA1/EA1576.htm" target="_self">
+<area shape="rect" coords="10,382,205,411" href="./EA1/EA1577.htm" target="_self">
+<area shape="rect" coords="148,102,329,131" href="./EA1/EA1575.htm" target="_self">
+<area shape="rect" coords="368,10,532,57" href="./EA1/EA1580.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.43a - ServiceLevelSpecificationExpression diagram</div>
+	<div class="ObjectDetailsNotes">The ServiceLevelSpecExpression entity is intended to describe strict relations between ServiceLevelSpecification subordinates (ServiceLevelSpecParameter, ServiceLevelObjective, ServiceLevelSpecApplicability, and ServiceLevelSpecConsequence). The baseline idea of ServiceLevelSpecExpression entity resolves the multiple associations among ServiceLevelSpecification subordinate entities. So in this case it is possible to have variety of ServiceLevelSpecification subordinates combined using ServiceLevelSpecExpression. &lt;br/&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;When it is needed to calculate Time-To-Resolve of a customer&#8217;s` issue and the system must notify different departments upon reaching different Time-To-Resolve values.&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;In this case first ServiceLevelObjective_A with thresholdTarget = 15 min and conformanceTarget = 45 min will be created and associated with ServiceLevelSpecConsequence_A (this consequence will raise notification action: Send letter to the user about existed issue when threshold target was reached and apologies letter when conformance target was reached). &lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;On the other hand second ServiceLevelObjective_B with thresholdTarget = 5 min and conformanceTarget = 30 will be created and associated with SevericeLevelSpecConsequence_B (this consequence will raise notification action: Send letter to the engineer about existed issue when threshold target was reached and escalation letter to the management when conformance target was reached)&lt;/font&gt;&lt;br/&gt;&lt;font color=&quot;#29313b&quot;&gt;So in this case it is crucial to understand which ServiceLevelObjective is related to which consequence and this could be done with in Expression in following way:&lt;/font&gt;&lt;br/&gt;&lt;ul&gt;<br />&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;Create ServiceLevelSpecExpression_A were&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelSpecApplicability = &lt;b&gt;Applicability_A&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelSpecConsequence = &lt;b&gt;Consequence_A&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelSpecParameter = &lt;b&gt;Parameter_A&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelObjective = &lt;b&gt;SeviceLevelObjective_A&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;&lt;b&gt;and&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;create second ServiceLevelSpecExpression_B were&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelSpecApplicability = &lt;b&gt;Applicability_A&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelSpecConsequence = &lt;b&gt;Consequence_B&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelSpecParameter = &lt;b&gt;Parameter_A&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font color=&quot;#29313b&quot;&gt;serviceLevelObjective = &lt;b&gt;ServiceLevelObjective_B&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;<br />&lt;font color=&quot;#29313b&quot;&gt;&lt;br/&gt;&lt;/font&gt;&lt;font color=&quot;#29313b&quot;&gt;This section has defined a ServiceLevelSpecification, and its associated related objects, to be compatible with the SLA Handbook and the work done by the WSMT. The next version of this Addendum will seek to align this work with other industry work.&lt;/font&gt;&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 7:42:40 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{D54505C0-E908-4f22-A6DD-F6FE03DDB741}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

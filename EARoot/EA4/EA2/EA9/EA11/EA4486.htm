@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure 1P-09 - PolicyRule</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4487.png" usemap="#EA4487" border="0" />
+
+<MAP NAME="EA4487">
+<area shape="rect" coords="355,271,452,323" href="./EA2/EA4612.htm" target="_self">
+<area shape="rect" coords="313,392,493,493" href="./EA3/EA4624.htm" target="_self">
+<area shape="rect" coords="342,177,465,234" href="./EA2/EA4613.htm" target="_self">
+<area shape="rect" coords="649,177,746,229" href="./EA5/EA1/EA4643.htm" target="_self">
+<area shape="rect" coords="44,180,166,232" href="./EA5/EA2/EA4652.htm" target="_self">
+<area shape="rect" coords="322,44,485,96" href="./EA5/EA3/EA4663.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure 1P-09 - PolicyRule diagram</div>
+	<div class="ObjectDetailsNotes">Like all SID entities, PolicyRules are built from PolicyRuleSpecifications (called PolicyRuleSpec in the model). A PolicyRuleSpec acts as a mechanism to specify the invariant (i.e., non-changeable) features and behavior that makes up a Policy. Thus, all PolicyRules use the attributes, methods, constraints, and relationships that are contained in the PolicyRuleSpec from which they are derived. A PolicyRuleSpec has two important attributes that all PolicyRules have, called executionStrategy and sequencedActions.&lt;br/&gt;The executionStrategy attribute is an enumerated integer that defines the strategy to be used when executing the sequenced actions aggregated by this PolicyRule. Defined execution strategies include:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	1:&#160;&#160;Do Until Success&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	2:&#160;&#160;Do All&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	3:&#160;&#160;Do Until Failure&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	4:&#160;&#160;Do All Without Failure or Do Nothing&lt;br/&gt;&#8220;Do Until Success&#8221; means that actions should be executed according to their predefined priority, until successful execution of a single action. At that point, the process should stop (even if there are additional actions that could be executed).&lt;br/&gt;&#8220;Do All&#8221; means that all actions should be executed that are part of the set, according to their predefined priority. This should continue, even if one or more of the actions fails.&lt;br/&gt;&#8220;Do Until Failure&#8221; means that all actions should be executed according to their predefined priority until an action fails to execute. At that point, the entire sequence should be stopped.&lt;br/&gt;Finally, &#8220;Do All Without Failure or Do Nothing&#8221; means that all actions specified should be performed. However, if a failure occurs, then NONE of the actions should be performed. This implies EITHER the ability to look-ahead and ensure that the actions will be able to be performed successfully, or the ability to perform a rollback of that action and all previous actions in the PolicyRule when an error is encountered.&lt;br/&gt;The sequencedActions attribute is an enumerated integer that defines how the ordering of the PolicyActions associated with this PolicyRule is to be interpreted. Values include:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	1: Mandatory&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	2:&#160;&#160;Recommended&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	3:&#160;&#160;Best Effort&lt;br/&gt;Mandatory means that the actions must be done in the indicated order, or else don&#8217;t do them at all. Recommended means that the actions should be done in the indicated order if possible; if this is not possible, then it is permissible for them to be done in another order. Best effort means that the actions should be done irrespective of whether they can be done in the specified order.&lt;br/&gt;The combination of the executionStrategy and the sequencedActions attributes enables the behavior of PolicyActions to be specified. Note that this is a special case, compared to how PolicyConditions and PolicyEvents are handled. From the perspective of the PolicyRule, a single clause (i.e., a set of expressions) is used to represent conditions as well as events. For the case of the PolicyCondition, the PolicyRule need only check to see if the condition clause evaluated to TRUE &#8211; if it evaluated to FALSE, then no action need be taken . For the case of the PolicyEvent, the PolicyRule sees a trigger to start the evaluation of its condition clause. It usually doesn&#8217;t care which event or how many events triggered the evaluation of the condition &#8211; it simply cares that something happened and now a check needs to be made to see if this PolicyRule is applicable or not.&lt;br/&gt;There are three other important attributes of a PolicyRuleSpec. These are the policyEventSelectCriteria, policyConditionSelectCriteria, and policyActionSelectCriteria attributes. These attributes contain OCL expressions to prescribe any limitations on the types of PolicyEvents, PolicyConditions, and PolicyActions that can be used with any PolicyRules that are derived from this particular PolicyRuleSpec. This enables a PolicyRuleSpec to be built that defines what types of PolicyEvents, PolicyConditions, and PolicyActions can be used to build a particular set of PolicyRules. This in turn ensures that a given set of PolicyRules carry standard functionality. (Nothing further will be said about these three attributes, as they come into play more in the system view).&lt;br/&gt;Conceptually, Figure below shows a more detailed view of the PolicyRuleSpec and PolicyRule.&lt;br/&gt;The PolicyRule entity itself is therefore very simple. It defines two attributes, isCNF and hasSubRules. PolicyConditions can be represented in two different forms, called Conjunctive Normal Form (an AND of Ors) and Disjunctive Normal Form (an OR of ANDs). The isCNF attribute defines which one of these forms the PolicyCondition clause is to be represented in.&lt;br/&gt;The hasSubRules attribute is for querying convenience. As we will soon see, a PolicyRule can contain other PolicyRules. Nested PolicyRules have slightly different evaluation and action execution semantics. This attribute enables the user of a PolicyRule to quickly determine if this is a simple PolicyRule, or if this PolicyRule has nested PolicyRules.&lt;br/&gt;The PolicyRuleSpec was built so that external entities, such as Policy Servers, could build a particular type of PolicyRule dynamically. To see how this works, imagine that a set of Policy components, including one or more PolicyConditions, PolicyActions, and PolicyEvents, exist in a PolicyRepository. Now, given a PolicyRuleSpec, a PolicyRule can be built dynamically that has the exact behavior that is desired by using the three criteria attributes of the PolicyRuleSpec (i.e., policyActionSelectCriteria, policyConditionSelectCriteria, and policyEventSelectCriteria).&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">8/30/2023 10:17:54 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">broth</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{4793A8F1-0C7F-43c9-BC48-2EAD422B8804}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

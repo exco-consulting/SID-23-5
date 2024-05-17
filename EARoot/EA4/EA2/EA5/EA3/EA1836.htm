@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure LR.05 - Relationship between Resource and Product</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1837.png" usemap="#EA1837" border="0" />
+
+<MAP NAME="EA1837">
+<area shape="rect" coords="103,332,209,391" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="457,332,562,391" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="177,51,274,110" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="338,200,457,259" href="./EA4/EA2246.htm" target="_self">
+<area shape="rect" coords="524,200,643,259" href="./EA3/EA2028.htm" target="_self">
+<area shape="rect" coords="436,51,533,110" href="EA1944.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure LR.05 - Relationship between Resource and Product diagram</div>
+	<div class="ObjectDetailsNotes">Before we develop too much of the LogicalResource structure, let&#8217;s link this concept to two other important SID entities: Product and Service. This linking must support the following two basic premises:&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A PhysicalResource may be a part of a Product, that is bought by a Customer&lt;br/&gt;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#8226;	A Resource can support one or more Services&lt;br/&gt;The first relationship is modeled as shown in the Figure below.&lt;br/&gt;The cardinality of the ProductHasPhysicalResources relationship is 0..1 on the Product side and * on the PhysicalResource side. This means that PhysicalResources can be instantiated independent of a Product but may also be bound to a Product. It also means that a Product can have zero or more PhysicalResources. (The Service Guide Book also explains how a Product may be realized as a Service.)&lt;br/&gt;The reason that PhysicalResources are associated to Products is that the definition and use of a Product is essential to the business view of the overall SID model. Customers buy Products, not Resources. Similarly, Enterprise users utilize Products that contain Resources (here, the Enterprise has purchased or manufactured the Product). Both types of users use Services that are supported by Resources. This implies that Resources can&#8217;t exist &#8220;in the ether&#8221; &#8211; rather, they must be bound to a particular Product.&lt;br/&gt;More specifically, a PhysicalResource is an instance of a Resource, just like a Product represents the instance of a Product that a PartyRole (such as a Customer) can buy. &lt;br/&gt;Consider two PhysicalResources &#8211; one is part of a Product that will be shipped to a Customer, and the second is a spare. BOTH of these are indeed PhysicalResources. The difference is that a PhysicalResource can be associated with a Product (the &#8220;1&#8221; in the &#8220;0..1&#8221; part of the ProductHasPhysicalResources) or not (the &#8220;0&#8221; in the &#8220;0..1&#8221; part of this same relationship). Thus, we can distinguish between the PhysicalResource that is a spare and the PhysicalResource that is part of a Product, because the former will not have an association to any Product, and the latter will.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/3/2023 6:05:52 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{1FC70BED-0A34-4113-9F18-70B082BD541E}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

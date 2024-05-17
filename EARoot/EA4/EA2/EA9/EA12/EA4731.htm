@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure Proj.05a Activity lifecycle</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA4732.png" usemap="#EA4732" border="0" />
+
+<MAP NAME="EA4732">
+<area shape="rect" coords="74,100,176,168" href="EA4802.htm" target="_self">
+<area shape="rect" coords="242,191,344,259" href="EA4806.htm" target="_self">
+<area shape="rect" coords="242,100,344,168" href="EA4801.htm" target="_self">
+<area shape="rect" coords="407,100,509,168" href="EA4800.htm" target="_self">
+<area shape="rect" coords="407,191,509,259" href="EA4805.htm" target="_self">
+<area shape="rect" coords="74,191,176,259" href="EA4803.htm" target="_self">
+<area shape="rect" coords="407,23,509,91" href="EA4804.htm" target="_self">
+<area shape="rect" coords="621,123,674,176" href="EA4799.htm" target="_self">
+<area shape="rect" coords="10,25,43,58" href="EA4798.htm" target="_self">
+<area shape="rect" coords="74,10,176,78" href="EA4807.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure Proj.05a Activity lifecycle diagram</div>
+	<div class="ObjectDetailsNotes">Activities have statuses. One possible set of statuses is shown in figure 6, based on those used in BPML [BPML]&lt;br/&gt;The arrows show the allowable state transitions. Note that the Activating, Aborting and Completing statuses will be short lived and in effect are notifications of a transition, which will be useful in implementing an event model.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">6/2/2022 9:45:22 AM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">6/2/2022 9:46:12 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{C04847C9-88B6-4e83-BD8B-88654BDCED67}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>

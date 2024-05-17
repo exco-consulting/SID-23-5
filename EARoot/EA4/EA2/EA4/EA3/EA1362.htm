@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Figure SO.08 - Service Specifications and other Domains</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {	
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+
+function nameClassifier(name, separator)
+{
+  var str = name;
+  var classifierName;
+  var node = document.getElementById('name_classifier');
+  if(node != null)
+  {
+    classifierName = node.innerHTML;
+  }
+  if(classifierName != "")
+  {
+   str += separator + classifierName;
+  }
+  
+  return str;
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="PageBody">
+	
+<img src="EA1363.png" usemap="#EA1363" border="0" />
+
+<MAP NAME="EA1363">
+<area shape="rect" coords="141,10,318,38" href="EA1404.htm" target="_self">
+<area shape="rect" coords="909,559,1033,587" href="../../EA5/EA3/EA1944.htm" target="_self">
+<area shape="rect" coords="494,236,665,264" href="../EA4/EA2/EA1500.htm" target="_self">
+<area shape="rect" coords="553,559,719,587" href="../../EA5/EA2/EA1699.htm" target="_self">
+<area shape="rect" coords="253,236,459,264" href="./EA2/EA1440.htm" target="_self">
+<area shape="rect" coords="710,236,915,264" href="../EA4/EA1/EA1488.htm" target="_self">
+<area shape="rect" coords="10,236,210,264" href="./EA1/EA1416.htm" target="_self">
+<area shape="rect" coords="716,403,825,431" href="../../EA3/EA4/EA1189.htm" target="_self">
+<area shape="rect" coords="55,559,198,587" href="../../EA3/EA2/EA982.htm" target="_self">
+<area shape="rect" coords="280,403,427,431" href="../../EA3/EA3/EA1108.htm" target="_self">
+<area shape="rect" coords="575,122,704,150" href="../EA4/EA1478.htm" target="_self">
+<area shape="rect" coords="153,122,305,150" href="EA1406.htm" target="_self">
+</MAP>
+
+	<div class="ObjectTitle">Figure SO.08 - Service Specifications and other Domains diagram</div>
+	<div class="ObjectDetailsNotes">The Product guide book refers to the concept of a ProductSpecification. &lt;br/&gt;As a reminder, ProductOfferings provide tangible or intangible Products that organizations, such as Service Providers and Enterprises, market, sell or lease to Customers. &lt;br/&gt;A ProductSpecification is a detailed description of a tangible or intangible object made available externally in the form of a ProductOffering to Customers or other Parties playing a particular PartyRole. The information described by a ProductSpecification is a set of invariant data that is common to all realizations of that ProductSpecification. A ProductSpecification may exist as a single ProductSpecification, or consist of a set of ProductSpecifications supplied together as a collection.&lt;br/&gt;&lt;br/&gt;&lt;i&gt;Note that a direct association between Product and Service does not exist. Instead, the ProductSpecRealizedAsCFSSpec association is defined between ProductSpecification and CustomerFacingServiceSpec.&lt;/i&gt;&lt;br/&gt;Remember that the purpose of a Specification is to serve as a template. This enables specific instances of a desired entity to be more easily and consistently created. &lt;br/&gt;The ProductSpecRealizedAsCFSSpec association enables a given ProductSpecification to specify CustomerFacingServiceSpecs restricted by the ProductSpecification. This relationship is only used when the ProductSpecification corresponds to intangible goods.&lt;br/&gt;Note in particular that there is no association defined between a ProductSpecification and a ServiceSpecification. This is because such an association would include ResourceFacingServiceSpecs, and that violates the effort to separate CustomerFacingServices from ResourceFacingServices. Thus, the ProductSpecRealizedAsCFSSpec is defined to enforce this separation.&lt;br/&gt;The ProductSpecRealizedAs association enables a ProductSpecification to define zero or more ResourceSpecifications. This is analogous to the ProductSpecRealizedAsCFSSpec association for ProductSpecification corresponding to tangible goods.&lt;br/&gt;The ProductSpecRealizedAsCFSSpec and ProductSpecRealizedAs relationships are mutualy exclusives.&lt;br/&gt;&lt;br/&gt;A Service may depend on one or more specific PhysicalResources. For example, the Customer connects to the VPN through a PhysicalPort on a Card of a PhysicalDevice. This is represented using the RFServiceConfiguredUsing association, whose purpose is to bind Resources to Services without identifying what type of Service or Resource is being bound. &lt;br/&gt;For example, this enables services to be &#8220;reserved&#8221; on a PhysicalResource for resource planning and consumption purposes, without specifically identifying the low-level system resources required.&lt;br/&gt;The above discussion has been conducted in terms of &#8220;instances&#8221; of these objects. For the most part we will talk about these concepts more generically using the concept of a &#8220;specification&#8221;.&lt;br/&gt;&lt;br/&gt;A ResourceSpecification can classify a set of Resources using the SpecifiesResource association, so its subclasses, PhysicalResourceSpec, LogicalResourceSpec and CompoundResourceSpec, inherit this association. &lt;br/&gt;A Product is realized by zero or more CustomerFacingServices through the ProductRealizedAsCFService association. This enables a Product to in effect customize a CustomerFacingService already defined by a CustomerFacingServiceSpec. In other words, the ProductSpecRealizedAsCFSSpec association is used to define the set of CustomerFacingServiceSpecs for a given ProductSpecification, which means that all Products based off of that ProductSpecification will use that set of CustomerFacingServiceSpecs. Different Products have the ability to add their own features to these CustomerFacingServices, and do so through the ProductRealizedAsCFService association.&lt;br/&gt;Similarly, a Product realizes zero or more Resources through the ProductRealizedAsResource association. Note that the cardinality on the Product side of both of these associations is optional, which means that a Product doesn&#8217;t have to implement these two associations. This is because not all Products are realized through CustomerFacingServices and Resources.&lt;br/&gt;CustomerFacingServices cannot be implemented without ResourceFacingServices to support them. This is reflected by the CFServiceRequiresRFServices association. This relationship is templatized by the RequiresResourceFacingServiceSpec association, which defines the set of ResourceFacingServiceSpecifications that are required by a particular CustomerFacingServiceSpecification. Again, note that the cardinality on the ResourceFacingServiceSpec side is 1,*, meaning that a CustomerFacingServiceSpec cannot be instantiated unless it is bound to at least one ResourceFacingServiceSpec.&lt;br/&gt;</div>
+
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">3/28/2022 3:51:09 PM</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Modified:</td>
+			<td width="85%" class="ObjectDetailsValue">10/28/2023 6:36:11 AM</td>
+		</tr>
+		<tr style="padding-top: 10px;">
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td width="85%" class="ObjectDetailsValue">Giu Platania</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td width="85%" class="ObjectDetailsValue">1.0.0</td>
+		</tr>
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td width="85%" class="ObjectDetailsValue"></td>			
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td width="15%" class="ObjectDetailsTopic" style="padding-left: 18px;">ID:</td>
+			<td width="85%" class="ObjectDetailsValue">{69C93690-F792-4a52-9C65-862CD71CE383}</td>
+		</tr>
+	</table>
+
+</div>
+ 
+</body>
+</html>
